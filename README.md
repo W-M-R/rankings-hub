@@ -1,5 +1,7 @@
 # rankings-hub
 
+**Live site:** https://w-m-r.github.io/rankings-hub/ — the homepage renders the rankings directly (GitHub windows, app risers by region, global risers, open source alternatives).
+
 Daily discovery data: under-the-radar apps that are **new and rising**, plus GitHub repositories ranked over several time windows. Built to be consumed by a mobile app or static site — this repo produces data only, it does not serve traffic.
 
 Every day GitHub Actions collects the raw signals, scores them, and commits small JSON shards plus a manifest.
