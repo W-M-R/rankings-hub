@@ -5,6 +5,7 @@ import { ROOT, readJson, writeJson, writeBrotli, sha, bytes, ensureDir } from '.
 import { selectLists, matrixPenalty } from './lib/score.mjs';
 import { CONFIG } from './lib/regions.mjs';
 import { generateReadme } from './readme.mjs';
+import { generateCharts, snapshotSeries } from './charts.mjs';
 
 rmSync(join(ROOT, 'data'), { recursive: true, force: true });
 mkdirSync(join(ROOT, 'data'), { recursive: true });
@@ -69,7 +70,10 @@ for (const r of readAll(join(ROOT, 'raw/podcasts'))) {
 
 const gh = readJson(join(ROOT, 'raw/github.json'), null);
 if (gh) {
-  for (const [key, items] of Object.entries(gh.windows)) {
+  const snaps = snapshotSeries();
+  const { seriesFor } = await import('./charts.mjs');
+  for (const [key, windowsItems] of Object.entries(gh.windows)) {
+    const items = windowsItems.map((it) => ({ ...it, spark: seriesFor(it, snaps) }));
     emit(`github/${key}.json`, { window: key, generatedAt: gh.generatedAt, items }, items.length);
   }
   if (gh.tracked?.length) emit('github/tracked.json', { window: 'tracked', generatedAt: gh.generatedAt, items: gh.tracked }, gh.tracked.length);
@@ -132,9 +136,10 @@ const manifest = {
 writeJson(out('manifest.json'), manifest, true);
 writeBrotli(out('manifest.json.br'), JSON.stringify(manifest, null, 2));
 
+const chartInfo = generateCharts();
 writeFileSync(join(ROOT, 'README.md'), generateReadme(manifest));
 
 console.log(
   `build: shards=${shards.length} raw=${(rawBytes / 1048576).toFixed(2)}MB br=${(brBytes / 1024).toFixed(0)}KB ` +
-    `apple=${buckets.apple.length} google=${buckets.google.length} mac=${buckets.mac.length} podcasts=${buckets.podcasts.length}`,
+    `apple=${buckets.apple.length} google=${buckets.google.length} mac=${buckets.mac.length} podcasts=${buckets.podcasts.length} charts=${chartInfo.count}`,
 );
