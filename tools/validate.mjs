@@ -32,7 +32,8 @@ const required = ['github/daily.json'];
 for (const r of required) if (!seen.has(r)) problems.push(`缺必需分片 ${r}`);
 if (![...seen].some((p) => p.startsWith('rising/apple/'))) problems.push('缺 rising/apple 分片');
 if (![...seen].some((p) => p.startsWith('charts/apple/'))) problems.push('缺 charts/apple 分片');
-if (process.env.ENABLE_GOOGLE_PLAY === 'true' && ![...seen].some((p) => p.startsWith('rising/google/'))) {
+const platforms = (process.env.PLATFORMS ?? 'apple,mac,podcasts,github').split(',');
+if (platforms.includes('google') && ![...seen].some((p) => p.startsWith('rising/google/'))) {
   problems.push('缺 rising/google 分片');
 }
 

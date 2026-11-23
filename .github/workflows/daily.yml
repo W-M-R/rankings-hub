@@ -17,6 +17,7 @@ jobs:
     env:
       TZ: UTC
       ENABLE_GOOGLE_PLAY: 'true'
+      PLATFORMS: 'apple,mac,podcasts,google,github'
       REGIONS_LIMIT: '0'
       CONCURRENCY: '6'
       APPLE_RPS: '3'
