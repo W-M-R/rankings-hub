@@ -4,264 +4,276 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rankings Hub — rising apps and repos</title>
-<meta name="description" content="Daily rankings: small apps that are new and rising, plus GitHub repositories by day, week, month, quarter and year.">
+<meta name="description" content="Daily rankings: small apps that are new and rising, plus GitHub repositories by day, week, month, quarter and year, with star history charts.">
 <style>
-  :root{
-    --bg:#ffffff; --bg2:#f6f6f7; --line:#e4e4e7; --t1:#18181b; --t2:#52525b; --t3:#8b8b93;
-    --accent:#3451b2; --accent-soft:#eef1fb; --green:#18794e; --warn:#915930; --red:#b8272c;
-    --radius:12px;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{ --bg:#101013; --bg2:#17171b; --line:#27272c; --t1:#f4f4f5; --t2:#a1a1aa; --t3:#71717a;
-           --accent:#7c93f5; --accent-soft:#1b2033; --green:#4ade80; --warn:#fbbf24; --red:#f87171; }
-  }
+  :root{--bg:#fff;--bg2:#f6f6f7;--line:#e4e4e7;--t1:#18181b;--t2:#52525b;--t3:#8b8b93;--accent:#3451b2;--accent-soft:#eef1fb;--green:#18794e;--red:#b8272c;--radius:12px}
+  @media (prefers-color-scheme:dark){:root{--bg:#101013;--bg2:#17171b;--line:#27272c;--t1:#f4f4f5;--t2:#a1a1aa;--t3:#71717a;--accent:#7c93f5;--accent-soft:#1b2033;--green:#4ade80;--red:#f87171}}
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--t1);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB",sans-serif}
+  body{margin:0;background:var(--bg);color:var(--t1);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC",sans-serif}
   a{color:inherit;text-decoration:none}
-  header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
-  .top{display:flex;align-items:center;gap:14px;padding:12px 0}
-  .logo{font-weight:700;font-size:17px;letter-spacing:-.2px}
-  .logo span{color:var(--accent)}
+  .top{display:flex;align-items:center;gap:12px;padding:12px 0}
+  .logo{font-weight:700;font-size:17px;letter-spacing:-.2px}.logo span{color:var(--accent)}
   .meta{margin-left:auto;font-size:12px;color:var(--t3);text-align:right}
   nav{display:flex;gap:6px;padding:0 0 10px;overflow:auto}
   .tab{border:1px solid var(--line);background:var(--bg2);color:var(--t2);padding:6px 12px;border-radius:999px;font-size:13px;cursor:pointer;white-space:nowrap}
   .tab.on{background:var(--accent-soft);border-color:transparent;color:var(--accent);font-weight:600}
   main{padding:18px 0 60px}
-  .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 14px}
+  .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 14px}
   select{background:var(--bg2);color:var(--t1);border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:13px}
-  .sub{display:flex;gap:6px;overflow:auto}
-  .sub .tab{font-size:12.5px;padding:5px 10px}
+  .sub{display:flex;gap:6px;overflow:auto}.sub .tab{font-size:12.5px;padding:5px 10px}
   .list{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-  .item{display:grid;grid-template-columns:34px 1fr auto;gap:10px;padding:10px 12px;border-top:1px solid var(--line);align-items:center;background:var(--bg)}
-  .item:first-child{border-top:0}
-  .item:hover{background:var(--bg2)}
+  .item{display:grid;grid-template-columns:34px 1fr 96px auto;gap:10px;padding:10px 12px;border-top:1px solid var(--line);align-items:center;cursor:pointer}
+  .item:first-child{border-top:0}.item:hover{background:var(--bg2)}
   .rank{font-variant-numeric:tabular-nums;color:var(--t3);font-size:13px;text-align:right}
   .name{font-weight:600;font-size:14.5px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
   .sub2{font-size:12.5px;color:var(--t2);margin-top:2px;display:flex;gap:8px;flex-wrap:wrap}
   .dot{color:var(--t3)}
   .badge{font-size:11px;padding:1px 6px;border-radius:999px;background:var(--bg2);color:var(--t2);border:1px solid var(--line)}
-  .up{color:var(--green);font-weight:600}
-  .down{color:var(--red)}
+  .up{color:var(--green);font-weight:600}.down{color:var(--red)}
   .stat{font-variant-numeric:tabular-nums;text-align:right;font-size:13px;color:var(--t2);white-space:nowrap}
   .stat b{color:var(--t1);font-size:14px}
+  .spark{width:96px;height:26px;display:block}
   .empty{padding:28px;text-align:center;color:var(--t3);border:1px dashed var(--line);border-radius:var(--radius)}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
-  .card{border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;background:var(--bg)}
+  .card{border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px}
   .card h3{margin:0 0 8px;font-size:14px}
   .alt{display:flex;justify-content:space-between;gap:8px;font-size:13px;padding:4px 0;border-top:1px dashed var(--line)}
-  .alt:first-of-type{border-top:0}
-  .alt span:last-child{color:var(--t3);font-size:12px}
-  .sk{height:34px;border-radius:8px;background:linear-gradient(90deg,var(--bg2),var(--line),var(--bg2));background-size:200% 100%;animation:s 1.2s linear infinite}
-  @keyframes s{to{background-position:-200% 0}}
+  .alt:first-of-type{border-top:0}.alt span:last-child{color:var(--t3);font-size:12px}
   footer{border-top:1px solid var(--line);padding:16px 0;color:var(--t3);font-size:12px}
-  img{width:22px;height:22px;border-radius:6px;object-fit:cover;background:var(--bg2)}
-  @media (max-width:640px){ .meta{display:none} .item{grid-template-columns:26px 1fr} .stat{grid-column:2;text-align:left} }
+  img.icon{width:22px;height:22px;border-radius:6px;object-fit:cover;background:var(--bg2)}
+  #overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+  #overlay.on{display:flex}
+  .modal{background:var(--bg);border:1px solid var(--line);border-radius:16px;max-width:640px;width:100%;max-height:80vh;overflow:auto;padding:18px}
+  .modal h2{margin:0 0 4px;font-size:17px}
+  .modal .m-sub{color:var(--t2);font-size:13px;margin-bottom:12px}
+  .modal svg{width:100%;height:180px;display:block}
+  .modal table{width:100%;border-collapse:collapse;font-size:13px;margin-top:10px}
+  .modal td{padding:4px 0;border-top:1px dashed var(--line);font-variant-numeric:tabular-nums}
+  .modal td:last-child{text-align:right;color:var(--t2)}
+  .close{float:right;border:1px solid var(--line);background:var(--bg2);color:var(--t2);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:13px}
+  @media (max-width:640px){.meta{display:none}.item{grid-template-columns:26px 1fr auto}.spark{width:70px}.stat{grid-column:2;text-align:left}}
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <div class="top">
-      <div class="logo">Rankings <span>Hub</span></div>
-      <div class="meta" id="meta">loading…</div>
-    </div>
-    <nav id="tabs">
-      <button class="tab on" data-view="github">GitHub repos</button>
-      <button class="tab" data-view="apps">Apps</button>
-      <button class="tab" data-view="global">Global risers</button>
-      <button class="tab" data-view="alts">Open source alternatives</button>
-    </nav>
-  </div>
-</header>
-
-<main class="wrap">
-  <div id="controls"></div>
-  <div id="content"><div class="list"><div class="item"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div></div></div>
-</main>
-
-<footer><div class="wrap">
-  Data rebuilt daily from App Store RSS, Google Play and the GitHub API. No download counts are published by the stores, so rising lists use rank movement and rating deltas as proxies.
-</div></footer>
+<header><div class="wrap">
+  <div class="top"><div class="logo">Rankings <span>Hub</span></div><div class="meta" id="meta">loading…</div></div>
+  <nav id="tabs">
+    <button class="tab on" data-view="github">GitHub repos</button>
+    <button class="tab" data-view="apps">Apps</button>
+    <button class="tab" data-view="global">Global risers</button>
+    <button class="tab" data-view="alts">Open source alternatives</button>
+  </nav>
+</div></header>
+<main class="wrap"><div id="controls"></div><div id="content"></div></main>
+<footer><div class="wrap">Rebuilt daily. Stores do not publish download counts, so rising lists use rank movement and rating deltas. Star charts use our daily snapshots and grow over time.</div></footer>
+<div id="overlay"><div class="modal" id="modal"></div></div>
 
 <script>
-const DATA = './data';
 const state = { view:'github', ghWindow:'daily', platform:'apple', cc:'us', appList:'risingNow' };
 let MANIFEST = null;
-let REGIONS = { apple: [], google: [] };
-
+const CACHE = new Map();
 const $ = (s) => document.querySelector(s);
-const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
-const num = (n) => n == null ? '—' : (n >= 10000 ? (n/1000).toFixed(1)+'k' : String(n));
+const el = (t,c,x) => { const n=document.createElement(t); if(c)n.className=c; if(x!=null)n.textContent=x; return n; };
+const num = (v) => v == null ? '—' : (v >= 10000 ? (v/1000).toFixed(1)+'k' : String(v));
 
 async function getJson(path){
-  const r = await fetch(`${DATA}/${path}?v=${encodeURIComponent(MANIFEST?.version || '0')}`, { cache:'no-cache' });
-  if (!r.ok) throw new Error(path + ' ' + r.status);
-  return r.json();
+  if (CACHE.has(path)) return CACHE.get(path);
+  const r = await fetch(path + (MANIFEST ? '?v=' + encodeURIComponent(MANIFEST.version) : ''), { cache:'no-cache' });
+  if (!r.ok) throw new Error(path);
+  const j = await r.json(); CACHE.set(path, j); return j;
 }
 
-async function boot(){
-  try{
-    MANIFEST = await getJson('manifest.json');
-    const t = MANIFEST.version.replace('T',' ').replace('Z',' UTC');
-    $('#meta').innerHTML = `updated ${t}<br>${MANIFEST.counts.shards} shards`;
-    for (const s of MANIFEST.shards){
-      const m = /^rising\/(apple|google)\/([a-z]{2})\.json$/.exec(s.path);
-      if (m) REGIONS[m[1]].push(m[2]);
-    }
-    REGIONS.apple.sort(); REGIONS.google.sort();
-    const has = REGIONS[state.platform] || [];
-    if (!has.includes(state.cc)) state.cc = has.includes('us') ? 'us' : (has[0] || 'us');
-  } catch(e){
-    $('#content').innerHTML = '<div class="empty">Could not load data/manifest.json</div>';
-    return;
+function sparkline(points, { w=96, h=26, invert=false, value=null } = {}){
+  const ns='http://www.w3.org/2000/svg';
+  const svg=document.createElementNS(ns,'svg');
+  svg.setAttribute('class','spark'); svg.setAttribute('viewBox',`0 0 ${w} ${h}`); svg.setAttribute('preserveAspectRatio','none');
+  const vals=(points||[]).map(p=>p[1]).filter(v=>v!=null);
+  if (vals.length < 2){
+    const v = value ?? vals[0] ?? 0;
+    const ratio = Math.min(1, Math.log10(1+v)/4.3);
+    svg.innerHTML = `<rect x="1" y="${h/2-4}" width="${w-2}" height="8" rx="4" fill="#d4d4d8" opacity=".5"/><rect x="1" y="${h/2-4}" width="${Math.max(4,(w-2)*ratio).toFixed(1)}" height="8" rx="4" fill="#3451b2"/>`;
+    return svg;
   }
-  render();
+  const min=Math.min(...vals), max=Math.max(...vals), span=max-min||1, pad=2;
+  const pts=points.map((p,i)=>{ if(p[1]==null) return null;
+    const x=pad+(i/Math.max(1,points.length-1))*(w-pad*2);
+    let y=h-pad-((p[1]-min)/span)*(h-pad*2);
+    if (invert) y=h-y;
+    return [x,y];
+  }).filter(Boolean);
+  const up = vals[vals.length-1] >= vals[0];
+  const color = up ? '#18794e' : '#b8272c';
+  const d=pts.map((p,i)=>`${i?'L':'M'}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ');
+  const last=pts[pts.length-1];
+  svg.innerHTML=`<path d="${d}" fill="none" stroke="${color}" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="2" fill="${color}"/>`;
+  return svg;
 }
 
-function tabs(container, items, active, onPick){
-  const bar = el('div','sub');
-  for (const it of items){
-    const b = el('button', 'tab' + (it.key === active ? ' on' : ''), it.label);
-    b.onclick = () => onPick(it.key);
-    bar.appendChild(b);
-  }
-  container.appendChild(bar);
+function bigChart(points, { invert=false, label='' } = {}){
+  const ns='http://www.w3.org/2000/svg', w=600, h=180, pad=10;
+  const svg=document.createElementNS(ns,'svg'); svg.setAttribute('viewBox',`0 0 ${w} ${h}`);
+  const vals=points.map(p=>p[1]).filter(v=>v!=null);
+  if (vals.length<2){ svg.innerHTML='<text x="10" y="95" fill="#8b8b93" font-size="13">not enough history yet — charts grow daily</text>'; return svg; }
+  const min=Math.min(...vals), max=Math.max(...vals), span=max-min||1;
+  const path=points.map((p,i)=>{ if(p[1]==null) return null;
+    const x=pad+(i/Math.max(1,points.length-1))*(w-pad*2);
+    let y=h-pad-((p[1]-min)/span)*(h-pad*2);
+    if (invert) y=h-y;
+    return [x,y];
+  }).filter(Boolean);
+  const d=path.map((p,i)=>`${i?'L':'M'}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ');
+  svg.innerHTML=`<path d="${d}" fill="none" stroke="#3451b2" stroke-width="2" stroke-linejoin="round"/><text x="${pad}" y="14" fill="#8b8b93" font-size="11">${label} max ${max}</text><text x="${pad}" y="${h-2}" fill="#8b8b93" font-size="11">${points[0][0]} → ${points[points.length-1][0]}</text>`;
+  return svg;
 }
 
-function ghWindowLabel(k){ return {daily:'Daily',weekly:'Weekly',monthly:'Monthly',quarterly:'Quarterly',yearly:'Yearly'}[k] || k; }
+function openDetail({ title, subtitle, points, invert, label, unit }){
+  const modal=$('#modal'); modal.innerHTML='';
+  const close=el('button','close','Close'); close.onclick=()=>$('#overlay').classList.remove('on'); modal.appendChild(close);
+  modal.appendChild(el('h2',null,title));
+  if (subtitle) modal.appendChild(el('div','m-sub',subtitle));
+  modal.appendChild(bigChart(points,{invert,label}));
+  const table=el('table');
+  points.slice(-10).reverse().forEach(([d,v])=>{ const tr=el('tr'); tr.appendChild(el('td',null,d)); tr.appendChild(el('td',null, v==null?'—':`${v}${unit||''}`)); table.appendChild(tr); });
+  modal.appendChild(table);
+  $('#overlay').classList.add('on');
+}
+$('#overlay').onclick=(e)=>{ if(e.target.id==='overlay') e.currentTarget.classList.remove('on'); };
 
 function repoRow(r){
-  const row = el('div','item');
+  const row=el('div','item');
   row.appendChild(el('div','rank','#'+r.rank));
-  const mid = el('div');
-  const name = el('div','name');
-  const a = el('a', null, r.fullName); a.href = r.url; a.target = '_blank'; a.rel = 'noopener';
-  name.appendChild(a);
-  if (r.language) name.appendChild(el('span','badge', r.language));
-  if (r.license) name.appendChild(el('span','badge', r.license));
+  const mid=el('div');
+  const name=el('div','name');
+  const a=el('a',null,r.fullName); a.href=r.url||'#'; a.target='_blank'; a.rel='noopener'; name.appendChild(a);
+  if(r.language) name.appendChild(el('span','badge',r.language));
+  if(r.license) name.appendChild(el('span','badge',r.license));
   mid.appendChild(name);
-  const s = el('div','sub2');
-  if (r.description) s.appendChild(el('span', null, r.description.slice(0, 110) + (r.description.length > 110 ? '…' : '')));
-  mid.appendChild(s);
-  row.appendChild(mid);
-  const stat = el('div','stat');
-  stat.innerHTML = `<b>${num(r.stars)}</b> stars` + (r.velocity != null ? `<br><span class="up">+${r.velocity}/day</span>` : (r.hot != null ? `<br>hot ${r.hot}` : ''));
+  const s=el('div','sub2');
+  if(r.description) s.appendChild(el('span',null,r.description.slice(0,110)+(r.description.length>110?'…':'')));
+  mid.appendChild(s); row.appendChild(mid);
+
+  const sw=el('div'); sw.appendChild(sparkline(r.spark,{value:r.stars})); row.appendChild(sw);
+
+  const age = r.createdAt ? Math.max(1, Math.round((Date.now()-Date.parse(r.createdAt))/86400000)) : null;
+  const avg = r.stars!=null && age ? Math.round(r.stars/age) : null;
+  const stat=el('div','stat');
+  stat.innerHTML = `<b>${num(r.stars)}</b> stars` + (r.starsToday!=null
+    ? `<br><span class="${r.starsToday>=0?'up':'down'}">${r.starsToday>=0?'+':''}${r.starsToday}/day</span>`
+    : (avg!=null?`<br><sub>~${avg}/day avg</sub>`:''));
   row.appendChild(stat);
+
+  row.onclick=(e)=>{ if(e.target.tagName==='A') return;
+    openDetail({ title:r.fullName, subtitle:`${r.stars} stars${r.language?' · '+r.language:''}${r.description?' · '+r.description.slice(0,80):''}`, points:(r.spark||[]).map(([d,v])=>[d,v]), label:'stars', unit:' ★' });
+  };
   return row;
 }
 
 function appRow(a){
-  const row = el('div','item');
+  const row=el('div','item');
   row.appendChild(el('div','rank','#'+a.rank));
-  const mid = el('div');
-  const name = el('div','name');
-  if (a.icon){ const img = el('img'); img.src = a.icon; img.loading = 'lazy'; img.onerror = () => img.remove(); name.appendChild(img); }
-  const link = el('a', null, a.name || 'Untitled'); link.href = a.url || '#'; link.target = '_blank'; link.rel = 'noopener';
-  name.appendChild(link);
+  const mid=el('div');
+  const name=el('div','name');
+  if(a.icon){ const img=el('img','icon'); img.src=a.icon; img.loading='lazy'; img.onerror=()=>img.remove(); name.appendChild(img); }
+  const link=el('a',null,a.name||'Untitled'); link.href=a.url||'#'; link.target='_blank'; link.rel='noopener'; name.appendChild(link);
   mid.appendChild(name);
-  const s = el('div','sub2');
-  if (a.seller) s.appendChild(el('span', null, a.seller));
-  if (a.rating) s.appendChild(el('span','dot', '· ' + a.rating + '★'));
-  if (a.ratingCount != null) s.appendChild(el('span','dot', '· ' + num(a.ratingCount) + ' ratings'));
-  if (a.ageDays != null) s.appendChild(el('span','dot', '· ' + a.ageDays + 'd old'));
-  if (a.catalogRank != null) s.appendChild(el('span','dot', '· chart #' + a.catalogRank));
-  else if (a.genreRank != null) s.appendChild(el('span','dot', '· genre #' + a.genreRank));
-  mid.appendChild(s);
-  row.appendChild(mid);
-  const stat = el('div','stat');
-  const delta = a.rankDelta || 0;
-  stat.innerHTML = (delta ? `<span class="${delta>0?'up':'down'}">${delta>0?'+':''}${delta}</span> ranks` : (a.riserScore != null ? `score ${a.riserScore}` : ''));
+  const s=el('div','sub2');
+  if(a.seller) s.appendChild(el('span',null,a.seller));
+  if(a.rating) s.appendChild(el('span','dot','· '+a.rating+'★'));
+  if(a.ratingCount!=null) s.appendChild(el('span','dot','· '+num(a.ratingCount)+' ratings'));
+  if(a.ageDays!=null) s.appendChild(el('span','dot','· '+a.ageDays+'d old'));
+  const rank=a.bestRank??a.catalogRank??a.genreRank;
+  if(rank!=null) s.appendChild(el('span','dot','· #'+rank));
+  mid.appendChild(s); row.appendChild(mid);
+
+  const sw=el('div');
+  const pts=(a.spark||[]).map(([d,r,n])=>[d,r]).filter(p=>p[1]!=null);
+  const rate=(a.spark||[]).map(([d,r,n])=>[d,n]).filter(p=>p[1]!=null);
+  sw.appendChild(sparkline(pts.length>1?pts:rate,{invert:pts.length>1,value:a.ratingCount}));
+  row.appendChild(sw);
+
+  const stat=el('div','stat');
+  const delta=a.rankDelta||0;
+  stat.innerHTML=delta?`<span class="${delta>0?'up':'down'}">${delta>0?'+':''}${delta}</span> ranks`:(a.riserScore!=null?`score ${a.riserScore}`:'');
   row.appendChild(stat);
+
+  row.onclick=(e)=>{ if(e.target.tagName==='A') return;
+    const useRank=pts.length>1;
+    openDetail({ title:a.name||'Untitled', subtitle:[a.seller,a.rating?a.rating+'★':null,useRank?'chart position (lower is better)':'ratings'].filter(Boolean).join(' · '), points:useRank?pts:rate, invert:useRank, label:useRank?'rank':'ratings' });
+  };
   return row;
 }
 
 function list(rows, emptyText){
-  const box = el('div','list');
-  if (!rows.length) { box.className = 'empty'; box.textContent = emptyText; return box; }
-  rows.forEach(r => box.appendChild(r));
-  return box;
+  if(!rows.length) return el('div','empty',emptyText);
+  const box=el('div','list'); rows.forEach(r=>box.appendChild(r)); return box;
+}
+
+function subTabs(container, items, active, onPick){
+  const bar=el('div','sub');
+  for(const it of items){ const b=el('button','tab'+(it.key===active?' on':''),it.label); b.onclick=()=>onPick(it.key); bar.appendChild(b); }
+  container.appendChild(bar);
 }
 
 async function render(){
-  $('#tabs').querySelectorAll('.tab').forEach(b => b.classList.toggle('on', b.dataset.view === state.view));
-  const controls = $('#controls'); controls.innerHTML = '';
-  const content = $('#content'); content.innerHTML = '';
-
-  if (state.view === 'github'){
-    tabs(controls, ['daily','weekly','monthly','quarterly','yearly'].map(k=>({key:k,label:ghWindowLabel(k)})), state.ghWindow, (k)=>{ state.ghWindow=k; render(); });
-    content.appendChild(el('div','empty','Loading…'));
-    try {
-      const d = await getJson(`github/${state.ghWindow}.json`);
-      content.innerHTML = '';
-      content.appendChild(list((d.items||[]).map(repoRow), 'No repositories in this window yet.'));
-    } catch { content.innerHTML = ''; content.appendChild(el('div','empty','No data for this window yet.')); }
-  }
-
-  if (state.view === 'apps'){
-    const platforms = [{key:'apple',label:'iOS'},{key:'google',label:'Android'}];
-    tabs(controls, platforms, state.platform, (k)=>{ state.platform=k; const r=REGIONS[k]||[]; state.cc = r.includes(state.cc)?state.cc:(r.includes('us')?'us':(r[0]||'us')); render(); });
-    const regions = REGIONS[state.platform] || [];
-    const sel = el('select');
-    for (const cc of regions){ const o = el('option', null, cc.toUpperCase()); o.value = cc; if (cc === state.cc) o.selected = true; sel.appendChild(o); }
-    sel.onchange = () => { state.cc = sel.value; render(); };
-    controls.appendChild(sel);
-    tabs(controls, [{key:'risingNow',label:'Rising now'},{key:'justLaunched',label:'Just launched'},{key:'hiddenGems',label:'Hidden gems'}], state.appList, (k)=>{ state.appList=k; render(); });
-
-    content.appendChild(el('div','empty','Loading…'));
-    try {
-      const d = await getJson(`rising/${state.platform}/${state.cc}.json`);
-      content.innerHTML = '';
-      content.appendChild(list((d[state.appList]||[]).map(appRow), 'Nothing matches yet — small apps need a day of snapshots before movement shows up.'));
-    } catch { content.innerHTML = ''; content.appendChild(el('div','empty','No data for this region yet.')); }
-  }
-
-  if (state.view === 'global'){
-    content.appendChild(el('div','empty','Loading…'));
-    try {
-      const d = await getJson('global/risers.json');
-      content.innerHTML = '';
-      const rows = (d.items||[]).map(x => {
-        const row = appRow(x);
-        row.querySelector('.stat').innerHTML = `<b>${x.regionCount}</b> regions`;
-        return row;
-      });
-      content.appendChild(list(rows, 'No app is rising in 3+ regions yet.'));
-    } catch { content.innerHTML = ''; content.appendChild(el('div','empty','No data yet.')); }
-  }
-
-  if (state.view === 'alts'){
-    content.appendChild(el('div','empty','Loading…'));
-    try {
-      const d = await getJson('alternatives.json');
-      content.innerHTML = '';
-      const grid = el('div','grid');
-      for (const cat of d.items || []){
-        const card = el('div','card');
-        card.appendChild(el('h3', null, cat.paid + (cat.category ? ' · ' + cat.category : '')));
-        for (const alt of cat.alternatives || []){
-          const line = el('div','alt');
-          const left = el('span');
-          const a = el('a', null, alt.name); a.href = alt.url; a.target='_blank'; a.rel='noopener';
-          left.appendChild(a);
-          line.appendChild(left);
-          line.appendChild(el('span', null, [alt.license, alt.selfHosted ? 'self-hosted' : null].filter(Boolean).join(' · ')));
+  $('#tabs').querySelectorAll('.tab').forEach(b=>b.classList.toggle('on', b.dataset.view===state.view));
+  const controls=$('#controls'); controls.innerHTML='';
+  const content=$('#content'); content.innerHTML=''; content.appendChild(el('div','empty','Loading…'));
+  try{
+    if(state.view==='github'){
+      subTabs(controls,['daily','weekly','monthly','quarterly','yearly'].map(k=>({key:k,label:k[0].toUpperCase()+k.slice(1)})), state.ghWindow, (k)=>{state.ghWindow=k;render();});
+      const d=await getJson(`./data/github/${state.ghWindow}.json`);
+      content.innerHTML=''; content.appendChild(list((d.items||[]).map(repoRow),'No repositories in this window yet.'));
+      $('#meta').textContent=`${d.items?.length??0} repos · ${state.ghWindow}`;
+    }
+    if(state.view==='apps'){
+      subTabs(controls,[{key:'apple',label:'iOS'},{key:'google',label:'Android'}], state.platform, (k)=>{state.platform=k;state.cc='us';render();});
+      const regs = MANIFEST ? [...new Set(MANIFEST.shards.map(s=>{const m=new RegExp('^rising/'+state.platform+'/([a-z]{2})\\.json$').exec(s.path);return m?m[1]:null;}).filter(Boolean))].sort() : ['us'];
+      if(!regs.includes(state.cc)) state.cc = regs.includes('us')?'us':(regs[0]||'us');
+      const sel=el('select'); for(const cc of regs){ const o=el('option',null,cc.toUpperCase()); o.value=cc; if(cc===state.cc)o.selected=true; sel.appendChild(o); }
+      sel.onchange=()=>{state.cc=sel.value;render();}; controls.appendChild(sel);
+      subTabs(controls,[{key:'risingNow',label:'Rising now'},{key:'justLaunched',label:'Just launched'},{key:'hiddenGems',label:'Hidden gems'}], state.appList, (k)=>{state.appList=k;render();});
+      const d=await getJson(`./data/rising/${state.platform}/${state.cc}.json`);
+      const rows=d[state.appList]||[];
+      content.innerHTML=''; content.appendChild(list(rows.map(appRow),'Nothing here yet — small apps need a day of snapshots before movement shows up.'));
+      $('#meta').textContent=`${state.platform==='apple'?'iOS':'Android'} ${state.cc.toUpperCase()} · ${rows.length}`;
+    }
+    if(state.view==='global'){
+      const d=await getJson('./data/global/risers.json');
+      content.innerHTML='';
+      const rows=(d.items||[]).map(x=>{ const r=appRow(x); r.querySelector('.stat').innerHTML=`<b>${x.regionCount}</b> regions`; return r; });
+      content.appendChild(list(rows,'No app is rising in 3+ regions yet.'));
+      $('#meta').textContent='global risers';
+    }
+    if(state.view==='alts'){
+      const d=await getJson('./data/alternatives.json');
+      content.innerHTML='';
+      const grid=el('div','grid');
+      for(const cat of d.items||[]){
+        const card=el('div','card'); card.appendChild(el('h3',null,cat.paid+(cat.category?' · '+cat.category:'')));
+        for(const alt of cat.alternatives||[]){
+          const line=el('div','alt'); const left=el('span');
+          const a=el('a',null,alt.name); a.href=alt.url; a.target='_blank'; a.rel='noopener'; left.appendChild(a); line.appendChild(left);
+          line.appendChild(el('span',null,[alt.license,alt.selfHosted?'self-hosted':null].filter(Boolean).join(' · ')));
           card.appendChild(line);
         }
         grid.appendChild(card);
       }
-      content.appendChild(grid);
-    } catch { content.innerHTML = ''; content.appendChild(el('div','empty','No data yet.')); }
-  }
+      content.appendChild(grid); $('#meta').textContent='open source alternatives';
+    }
+  }catch(e){ content.innerHTML=''; content.appendChild(el('div','empty','No data yet.')); }
 }
 
-$('#tabs').addEventListener('click', (e) => {
-  const b = e.target.closest('.tab'); if (!b) return;
-  state.view = b.dataset.view;
-  render();
-});
+$('#tabs').addEventListener('click',(e)=>{ const b=e.target.closest('.tab'); if(!b)return; state.view=b.dataset.view; render(); });
 
-boot();
+(async function boot(){
+  try{
+    MANIFEST=await getJson('./data/manifest.json');
+    $('#meta').textContent='updated '+MANIFEST.version.replace('T',' ').replace('Z',' UTC');
+  }catch{ $('#meta').textContent='data unavailable'; }
+  render();
+})();
 </script>
 </body>
 </html>
