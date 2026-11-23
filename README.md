@@ -2,7 +2,7 @@
 
 Rising apps and GitHub repositories, rebuilt every day. Tables and star charts below are regenerated from the latest run.
 
-**Last update:** 2026-11-23 09:33 UTC · **[Open the site](https://w-m-r.github.io/rankings-hub/)**
+**Last update:** 2026-11-23 09:46 UTC · **[Open the site](https://w-m-r.github.io/rankings-hub/)**
 
 ## GitHub · daily
 
@@ -11,14 +11,14 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">1</td>
 <td><a href="https://github.com/omonkeyz/xbox-emulator"><b>omonkeyz/xbox-emulator</b></a><br><code>Rust</code> · GPL-3.0</td>
 <td>Progress notes for running Xbox Series X|S builds on PC (TomBox + rage9)</td>
-<td align="right"><b>1437</b><br><sub>~719/day avg</sub></td>
+<td align="right"><b>1439</b><br><sub>~720/day avg</sub></td>
 <td><img src="charts/spark/omonkeyz__xbox-emulator.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">2</td>
 <td><a href="https://github.com/os6/nospeaker"><b>os6/nospeaker</b></a><br><code>Swift</code> · MIT</td>
 <td>make your macbook's trackpad talk using its haptic motor</td>
-<td align="right"><b>754</b><br><sub>~754/day avg</sub></td>
+<td align="right"><b>764</b><br><sub>~764/day avg</sub></td>
 <td><img src="charts/spark/os6__nospeaker.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -46,7 +46,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">6</td>
 <td><a href="https://github.com/xikhar/papercraft"><b>xikhar/papercraft</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Agent skill to build games, interactive scenes, web pages and animations in a handcrafted pop-up papercraft style</td>
-<td align="right"><b>303</b><br><sub>~152/day avg</sub></td>
+<td align="right"><b>305</b><br><sub>~153/day avg</sub></td>
 <td><img src="charts/spark/xikhar__papercraft.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -79,14 +79,14 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">1</td>
 <td><a href="https://github.com/ItsNotRexed/Leonida"><b>ItsNotRexed/Leonida</b></a><br><code>Python</code> · GPL-3.0</td>
 <td>Leonida Is A Native PC Recompilation Of The Xbox Version Of Grand Theft Auto 6</td>
-<td align="right"><b>17.9k</b><br><sub>~5966/day avg</sub></td>
+<td align="right"><b>18.0k</b><br><sub>~6002/day avg</sub></td>
 <td><img src="charts/spark/ItsNotRexed__Leonida.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">2</td>
 <td><a href="https://github.com/omonkeyz/xbox-emulator"><b>omonkeyz/xbox-emulator</b></a><br><code>Rust</code> · GPL-3.0</td>
 <td>Progress notes for running Xbox Series X|S builds on PC (TomBox + rage9)</td>
-<td align="right"><b>1437</b><br><sub>~719/day avg</sub></td>
+<td align="right"><b>1439</b><br><sub>~720/day avg</sub></td>
 <td><img src="charts/spark/omonkeyz__xbox-emulator.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -100,28 +100,28 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">4</td>
 <td><a href="https://github.com/Lemxy/WinRust"><b>Lemxy/WinRust</b></a><br><code>Rust</code> · Apache-2.0</td>
 <td>Windows shell replacement in Rust: taskbar, file manager, NTFS search, task manager, disk cleaner. One installer exe.</td>
-<td align="right"><b>1305</b><br><sub>~218/day avg</sub></td>
+<td align="right"><b>1306</b><br><sub>~218/day avg</sub></td>
 <td><img src="charts/spark/Lemxy__WinRust.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">5</td>
 <td><a href="https://github.com/os6/nospeaker"><b>os6/nospeaker</b></a><br><code>Swift</code> · MIT</td>
 <td>make your macbook's trackpad talk using its haptic motor</td>
-<td align="right"><b>754</b><br><sub>~754/day avg</sub></td>
+<td align="right"><b>764</b><br><sub>~764/day avg</sub></td>
 <td><img src="charts/spark/os6__nospeaker.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">6</td>
 <td><a href="https://github.com/replit/datacat"><b>replit/datacat</b></a><br><code>TypeScript</code> · Apache-2.0</td>
 <td>Self-hosted observability: metrics, logs, traces, dashboards and alerts. Stores data in PostgreSQL or ClickHouse. Accepts OpenTelemetry data.</td>
-<td align="right"><b>574</b><br><sub>~96/day avg</sub></td>
+<td align="right"><b>575</b><br><sub>~96/day avg</sub></td>
 <td><img src="charts/spark/replit__datacat.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">7</td>
 <td><a href="https://github.com/danielwh2/sprite-stacking"><b>danielwh2/sprite-stacking</b></a><br><code>HTML</code> · MIT</td>
 <td>Agent skill: turn four pixel art views into fake-3D sprites you can spin. Works with Claude Code, Codex, Cursor, OpenCode, Gemini CLI, Pi.</td>
-<td align="right"><b>557</b><br><sub>~186/day avg</sub></td>
+<td align="right"><b>556</b><br><sub>~185/day avg</sub></td>
 <td><img src="charts/spark/danielwh2__sprite-stacking.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -142,7 +142,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">10</td>
 <td><a href="https://github.com/nkjDSLcvanv/antigravity-codex-theme"><b>nkjDSLcvanv/antigravity-codex-theme</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Google Antigravity 桌面端增强插件：Codex 昼夜双主题、原生设置页与一键热更新、1,900+ 中文汉化、四态状态灯与实时用量监控（含旁路提问 / SSH 远端）、可选 Tab 下一句预测。不改安装包，模块化按需安装。</td>
-<td align="right"><b>444</b><br><sub>~74/day avg</sub></td>
+<td align="right"><b>445</b><br><sub>~74/day avg</sub></td>
 <td><img src="charts/spark/nkjDSLcvanv__antigravity-codex-theme.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 </tbody></table>
@@ -154,7 +154,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">1</td>
 <td><a href="https://github.com/storytold/craft-anything"><b>storytold/craft-anything</b></a><br><code>Rust</code> · Apache-2.0</td>
 <td>Craft Anything: understand how any software works, and craft your own.</td>
-<td align="right"><b>41.6k</b><br><sub>~1811/day avg</sub></td>
+<td align="right"><b>41.7k</b><br><sub>~1811/day avg</sub></td>
 <td><img src="charts/spark/storytold__craft-anything.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -175,21 +175,21 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">4</td>
 <td><a href="https://github.com/heydamir/unslop"><b>heydamir/unslop</b></a><br><code>JavaScript</code> · CC-BY-4.0</td>
 <td>A Claude skill that turns vibecoded, AI-looking UI into a designed interface</td>
-<td align="right"><b>20.5k</b><br><sub>~820/day avg</sub></td>
+<td align="right"><b>20.5k</b><br><sub>~821/day avg</sub></td>
 <td><img src="charts/spark/heydamir__unslop.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">5</td>
 <td><a href="https://github.com/ItsNotRexed/Leonida"><b>ItsNotRexed/Leonida</b></a><br><code>Python</code> · GPL-3.0</td>
 <td>Leonida Is A Native PC Recompilation Of The Xbox Version Of Grand Theft Auto 6</td>
-<td align="right"><b>17.9k</b><br><sub>~5966/day avg</sub></td>
+<td align="right"><b>18.0k</b><br><sub>~6002/day avg</sub></td>
 <td><img src="charts/spark/ItsNotRexed__Leonida.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">6</td>
 <td><a href="https://github.com/libracoder/kiri"><b>libracoder/kiri</b></a><br><code>Rust</code> · Apache-2.0</td>
 <td>A small, fast container runtime for macOS, Windows and Linux with free Ngrok alternative</td>
-<td align="right"><b>12.5k</b><br><sub>~594/day avg</sub></td>
+<td align="right"><b>12.5k</b><br><sub>~595/day avg</sub></td>
 <td><img src="charts/spark/libracoder__kiri.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -203,42 +203,42 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">8</td>
 <td><a href="https://github.com/wangzan101/Mika"><b>wangzan101/Mika</b></a><br><code>Kotlin</code> · Apache-2.0</td>
 <td>An on-device AI agent for Android that operates apps and the web to get things done for you.</td>
-<td align="right"><b>9710</b><br><sub>~388/day avg</sub></td>
+<td align="right"><b>9711</b><br><sub>~388/day avg</sub></td>
 <td><img src="charts/spark/wangzan101__Mika.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">9</td>
 <td><a href="https://github.com/RoutineMiku/apkstart"><b>RoutineMiku/apkstart</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Windows 上的安卓应用运行器：双击 APK 即装，应用以独立窗口与桌面图标运行，自持 QEMU 运行时</td>
-<td align="right"><b>9345</b><br><sub>~374/day avg</sub></td>
+<td align="right"><b>9349</b><br><sub>~374/day avg</sub></td>
 <td><img src="charts/spark/RoutineMiku__apkstart.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">10</td>
 <td><a href="https://github.com/huami1314/GestaltX"><b>huami1314/GestaltX</b></a><br><code>Swift</code> · GPL-3.0</td>
 <td>An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups.</td>
-<td align="right"><b>8830</b><br><sub>~631/day avg</sub></td>
+<td align="right"><b>8832</b><br><sub>~631/day avg</sub></td>
 <td><img src="charts/spark/huami1314__GestaltX.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">11</td>
 <td><a href="https://github.com/patch-gg/pixelfx"><b>patch-gg/pixelfx</b></a><br><code>JavaScript</code> · MIT</td>
 <td>244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.</td>
-<td align="right"><b>8814</b><br><sub>~367/day avg</sub></td>
+<td align="right"><b>8816</b><br><sub>~367/day avg</sub></td>
 <td><img src="charts/spark/patch-gg__pixelfx.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">12</td>
 <td><a href="https://github.com/valentderah/totk-pc-recomp"><b>valentderah/totk-pc-recomp</b></a><br><code>C</code> · MIT</td>
 <td>Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows and Linux x86-64, with a Vulkan renderer. Game files not included.</td>
-<td align="right"><b>8082</b><br><sub>~323/day avg</sub></td>
+<td align="right"><b>8085</b><br><sub>~323/day avg</sub></td>
 <td><img src="charts/spark/valentderah__totk-pc-recomp.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">13</td>
 <td><a href="https://github.com/Lee-xeo/Claude-Cage"><b>Lee-xeo/Claude-Cage</b></a><br><code>Go</code> · MIT</td>
 <td>Cage：为 Claude 特化的轻量化虚拟机，彻底杜绝网络泄露。多平台适配，支持多账号管理、远程部署、移动端操控。</td>
-<td align="right"><b>7914</b><br><sub>~344/day avg</sub></td>
+<td align="right"><b>7916</b><br><sub>~344/day avg</sub></td>
 <td><img src="charts/spark/Lee-xeo__Claude-Cage.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -252,7 +252,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">15</td>
 <td><a href="https://github.com/haydenschmitty/floorplan"><b>haydenschmitty/floorplan</b></a><br><code>JavaScript</code> · MIT</td>
 <td>See how your app actually fits together. An interactive, plain-English map of your codebase, drawn by Claude or Codex.</td>
-<td align="right"><b>6322</b><br><sub>~234/day avg</sub></td>
+<td align="right"><b>6326</b><br><sub>~234/day avg</sub></td>
 <td><img src="charts/spark/haydenschmitty__floorplan.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -280,28 +280,28 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">19</td>
 <td><a href="https://github.com/mromidev/claude-animated-shorts"><b>mromidev/claude-animated-shorts</b></a><br><code>TypeScript</code> · MIT</td>
 <td>Free Claude skill: viral animated story shorts (2D characters in a 3D world) with three.js + Remotion</td>
-<td align="right"><b>4627</b><br><sub>~210/day avg</sub></td>
+<td align="right"><b>4628</b><br><sub>~210/day avg</sub></td>
 <td><img src="charts/spark/mromidev__claude-animated-shorts.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">20</td>
 <td><a href="https://github.com/elvarofficial/teardown"><b>elvarofficial/teardown</b></a><br><code>JavaScript</code> · MIT</td>
 <td>A Claude Code skill that turns any machine into a 3D simulator you can take apart</td>
-<td align="right"><b>4055</b><br><sub>~169/day avg</sub></td>
+<td align="right"><b>4056</b><br><sub>~169/day avg</sub></td>
 <td><img src="charts/spark/elvarofficial__teardown.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">21</td>
 <td><a href="https://github.com/jhaizhou-ops/S2Arm"><b>jhaizhou-ops/S2Arm</b></a><br><code>C#</code> · Apache-2.0</td>
 <td>Run your own Switch games natively on iPhone, iPad and Mac: game code rewritten to ARM64, graphics direct to Metal, one app for the whole library. Br…</td>
-<td align="right"><b>3841</b><br><sub>~256/day avg</sub></td>
+<td align="right"><b>3844</b><br><sub>~256/day avg</sub></td>
 <td><img src="charts/spark/jhaizhou-ops__S2Arm.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">22</td>
 <td><a href="https://github.com/havenicec/google-qr-sms-helper"><b>havenicec/google-qr-sms-helper</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Chrome Extension (MV3) to switch Google's mandatory QR code verification back to standard 6-digit SMS verification via iPad Mini profile &amp; [3,null,4]…</td>
-<td align="right"><b>3755</b><br><sub>~134/day avg</sub></td>
+<td align="right"><b>3770</b><br><sub>~135/day avg</sub></td>
 <td><img src="charts/spark/havenicec__google-qr-sms-helper.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -322,7 +322,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">25</td>
 <td><a href="https://github.com/Immortal-Protocols/lastbook"><b>Immortal-Protocols/lastbook</b></a><br><code>Python</code> · MIT</td>
 <td>Offline knowledge AI, maps and videos for survival and rebuilding</td>
-<td align="right"><b>2981</b><br><sub>~298/day avg</sub></td>
+<td align="right"><b>2982</b><br><sub>~298/day avg</sub></td>
 <td><img src="charts/spark/Immortal-Protocols__lastbook.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -336,28 +336,28 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">27</td>
 <td><a href="https://github.com/govijr/terminal-mac"><b>govijr/terminal-mac</b></a><br><code>Swift</code> · MIT</td>
 <td>Entire MacOS running in your terminal.</td>
-<td align="right"><b>2930</b><br><sub>~147/day avg</sub></td>
+<td align="right"><b>2931</b><br><sub>~147/day avg</sub></td>
 <td><img src="charts/spark/govijr__terminal-mac.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">28</td>
 <td><a href="https://github.com/sarpstar/cinecode"><b>sarpstar/cinecode</b></a><br><code>Python</code> · MIT</td>
 <td>Films made with code. Short films, long YouTube videos, ads, explainers and music videos: an AI coding agent writes the script, builds every frame in…</td>
-<td align="right"><b>2896</b><br><sub>~145/day avg</sub></td>
+<td align="right"><b>2898</b><br><sub>~145/day avg</sub></td>
 <td><img src="charts/spark/sarpstar__cinecode.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">29</td>
 <td><a href="https://github.com/Noniv/abyssal-garden"><b>Noniv/abyssal-garden</b></a><br><code>JavaScript</code> · MIT</td>
 <td>A dreamy underwater world you can swim through in your browser: swaying kelp forests, sunbeams, a sunken ship and manta rays. Everything is generated…</td>
-<td align="right"><b>2822</b><br><sub>~257/day avg</sub></td>
+<td align="right"><b>2823</b><br><sub>~257/day avg</sub></td>
 <td><img src="charts/spark/Noniv__abyssal-garden.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">30</td>
 <td><a href="https://github.com/caru-ini/stack-diagram"><b>caru-ini/stack-diagram</b></a><br><code>TypeScript</code> · MIT</td>
 <td>Agent skill: describe your stack in a sentence, get an architecture diagram with official logos</td>
-<td align="right"><b>2795</b><br><sub>~127/day avg</sub></td>
+<td align="right"><b>2796</b><br><sub>~127/day avg</sub></td>
 <td><img src="charts/spark/caru-ini__stack-diagram.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 </tbody></table>
@@ -369,7 +369,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">1</td>
 <td><a href="https://github.com/storytold/craft-anything"><b>storytold/craft-anything</b></a><br><code>Rust</code> · Apache-2.0</td>
 <td>Craft Anything: understand how any software works, and craft your own.</td>
-<td align="right"><b>41.6k</b><br><sub>~1811/day avg</sub></td>
+<td align="right"><b>41.7k</b><br><sub>~1811/day avg</sub></td>
 <td><img src="charts/spark/storytold__craft-anything.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -390,14 +390,14 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">4</td>
 <td><a href="https://github.com/heydamir/unslop"><b>heydamir/unslop</b></a><br><code>JavaScript</code> · CC-BY-4.0</td>
 <td>A Claude skill that turns vibecoded, AI-looking UI into a designed interface</td>
-<td align="right"><b>20.5k</b><br><sub>~820/day avg</sub></td>
+<td align="right"><b>20.5k</b><br><sub>~821/day avg</sub></td>
 <td><img src="charts/spark/heydamir__unslop.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">5</td>
 <td><a href="https://github.com/ItsNotRexed/Leonida"><b>ItsNotRexed/Leonida</b></a><br><code>Python</code> · GPL-3.0</td>
 <td>Leonida Is A Native PC Recompilation Of The Xbox Version Of Grand Theft Auto 6</td>
-<td align="right"><b>17.9k</b><br><sub>~5966/day avg</sub></td>
+<td align="right"><b>18.0k</b><br><sub>~6003/day avg</sub></td>
 <td><img src="charts/spark/ItsNotRexed__Leonida.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -411,7 +411,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">7</td>
 <td><a href="https://github.com/libracoder/kiri"><b>libracoder/kiri</b></a><br><code>Rust</code> · Apache-2.0</td>
 <td>A small, fast container runtime for macOS, Windows and Linux with free Ngrok alternative</td>
-<td align="right"><b>12.5k</b><br><sub>~594/day avg</sub></td>
+<td align="right"><b>12.5k</b><br><sub>~595/day avg</sub></td>
 <td><img src="charts/spark/libracoder__kiri.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -432,35 +432,35 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">10</td>
 <td><a href="https://github.com/wangzan101/Mika"><b>wangzan101/Mika</b></a><br><code>Kotlin</code> · Apache-2.0</td>
 <td>An on-device AI agent for Android that operates apps and the web to get things done for you.</td>
-<td align="right"><b>9710</b><br><sub>~388/day avg</sub></td>
+<td align="right"><b>9711</b><br><sub>~388/day avg</sub></td>
 <td><img src="charts/spark/wangzan101__Mika.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">11</td>
 <td><a href="https://github.com/RoutineMiku/apkstart"><b>RoutineMiku/apkstart</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Windows 上的安卓应用运行器：双击 APK 即装，应用以独立窗口与桌面图标运行，自持 QEMU 运行时</td>
-<td align="right"><b>9345</b><br><sub>~374/day avg</sub></td>
+<td align="right"><b>9349</b><br><sub>~374/day avg</sub></td>
 <td><img src="charts/spark/RoutineMiku__apkstart.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">12</td>
 <td><a href="https://github.com/huami1314/GestaltX"><b>huami1314/GestaltX</b></a><br><code>Swift</code> · GPL-3.0</td>
 <td>An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups.</td>
-<td align="right"><b>8830</b><br><sub>~631/day avg</sub></td>
+<td align="right"><b>8832</b><br><sub>~631/day avg</sub></td>
 <td><img src="charts/spark/huami1314__GestaltX.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">13</td>
 <td><a href="https://github.com/patch-gg/pixelfx"><b>patch-gg/pixelfx</b></a><br><code>JavaScript</code> · MIT</td>
 <td>244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.</td>
-<td align="right"><b>8814</b><br><sub>~367/day avg</sub></td>
+<td align="right"><b>8816</b><br><sub>~367/day avg</sub></td>
 <td><img src="charts/spark/patch-gg__pixelfx.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">14</td>
 <td><a href="https://github.com/rddmwmddr/android-ad-cleaner"><b>rddmwmddr/android-ad-cleaner</b></a><br><code>Python</code> · MIT</td>
 <td>关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。</td>
-<td align="right"><b>8812</b><br><sub>~294/day avg</sub></td>
+<td align="right"><b>8813</b><br><sub>~294/day avg</sub></td>
 <td><img src="charts/spark/rddmwmddr__android-ad-cleaner.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -474,7 +474,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">16</td>
 <td><a href="https://github.com/valentderah/totk-pc-recomp"><b>valentderah/totk-pc-recomp</b></a><br><code>C</code> · MIT</td>
 <td>Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows and Linux x86-64, with a Vulkan renderer. Game files not included.</td>
-<td align="right"><b>8082</b><br><sub>~323/day avg</sub></td>
+<td align="right"><b>8085</b><br><sub>~323/day avg</sub></td>
 <td><img src="charts/spark/valentderah__totk-pc-recomp.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -488,42 +488,42 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">18</td>
 <td><a href="https://github.com/Lee-xeo/Claude-Cage"><b>Lee-xeo/Claude-Cage</b></a><br><code>Go</code> · MIT</td>
 <td>Cage：为 Claude 特化的轻量化虚拟机，彻底杜绝网络泄露。多平台适配，支持多账号管理、远程部署、移动端操控。</td>
-<td align="right"><b>7914</b><br><sub>~344/day avg</sub></td>
+<td align="right"><b>7916</b><br><sub>~344/day avg</sub></td>
 <td><img src="charts/spark/Lee-xeo__Claude-Cage.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">19</td>
 <td><a href="https://github.com/eternity4719/HowToLiveBetter"><b>eternity4719/HowToLiveBetter</b></a><br><code>HTML</code> · CC-BY-4.0</td>
 <td>高性价比人生指南: 长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。</td>
-<td align="right"><b>77.2k</b><br><sub>~1002/day avg</sub></td>
+<td align="right"><b>77.2k</b><br><sub>~1003/day avg</sub></td>
 <td><img src="charts/spark/eternity4719__HowToLiveBetter.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">20</td>
 <td><a href="https://github.com/Niko1221/Strata"><b>Niko1221/Strata</b></a><br><code>C++</code> · MIT</td>
 <td>Qwen3.8-Flash-Next on any consumer hardware: one-click install for Windows / Linux. Strata inference engine, OpenAI/Anthropic API on localhost, optio…</td>
-<td align="right"><b>47.2k</b><br><sub>~787/day avg</sub></td>
+<td align="right"><b>47.3k</b><br><sub>~788/day avg</sub></td>
 <td><img src="charts/spark/Niko1221__Strata.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">21</td>
 <td><a href="https://github.com/Jakeschincariol/day-trader-skill"><b>Jakeschincariol/day-trader-skill</b></a><br><code>Python</code> · MIT</td>
 <td>11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk …</td>
-<td align="right"><b>9234</b><br><sub>~272/day avg</sub></td>
+<td align="right"><b>9238</b><br><sub>~272/day avg</sub></td>
 <td><img src="charts/spark/Jakeschincariol__day-trader-skill.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">22</td>
 <td><a href="https://github.com/anomalyco/rune"><b>anomalyco/rune</b></a><br><code>Rust</code> · MIT</td>
 <td>Rune: Native UI framework</td>
-<td align="right"><b>7840</b><br><sub>~245/day avg</sub></td>
+<td align="right"><b>7841</b><br><sub>~245/day avg</sub></td>
 <td><img src="charts/spark/anomalyco__rune.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">23</td>
 <td><a href="https://github.com/yetone/magpie"><b>yetone/magpie</b></a><br><code>Go</code> · MIT</td>
 <td>Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.</td>
-<td align="right"><b>40.3k</b><br><sub>~660/day avg</sub></td>
+<td align="right"><b>40.3k</b><br><sub>~661/day avg</sub></td>
 <td><img src="charts/spark/yetone__magpie.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -537,7 +537,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">25</td>
 <td><a href="https://github.com/LNPANDY/NX2Apple"><b>LNPANDY/NX2Apple</b></a><br><code>Swift</code> · MIT</td>
 <td>Play your own Switch games on iPhone/iPad — one-click macOS app, no terminal. | 把 Switch 游戏装进 iPhone：图形界面一键构建，不用命令行。Bring your own game.</td>
-<td align="right"><b>8195</b><br><sub>~241/day avg</sub></td>
+<td align="right"><b>8198</b><br><sub>~241/day avg</sub></td>
 <td><img src="charts/spark/LNPANDY__NX2Apple.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -584,7 +584,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">1</td>
 <td><a href="https://github.com/storytold/craft-anything"><b>storytold/craft-anything</b></a><br><code>Rust</code> · Apache-2.0</td>
 <td>Craft Anything: understand how any software works, and craft your own.</td>
-<td align="right"><b>41.6k</b><br><sub>~1811/day avg</sub></td>
+<td align="right"><b>41.7k</b><br><sub>~1811/day avg</sub></td>
 <td><img src="charts/spark/storytold__craft-anything.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -598,14 +598,14 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">3</td>
 <td><a href="https://github.com/eternity4719/HowToLiveBetter"><b>eternity4719/HowToLiveBetter</b></a><br><code>HTML</code> · CC-BY-4.0</td>
 <td>高性价比人生指南: 长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。</td>
-<td align="right"><b>77.2k</b><br><sub>~1002/day avg</sub></td>
+<td align="right"><b>77.2k</b><br><sub>~1003/day avg</sub></td>
 <td><img src="charts/spark/eternity4719__HowToLiveBetter.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">4</td>
 <td><a href="https://github.com/Niko1221/Strata"><b>Niko1221/Strata</b></a><br><code>C++</code> · MIT</td>
 <td>Qwen3.8-Flash-Next on any consumer hardware: one-click install for Windows / Linux. Strata inference engine, OpenAI/Anthropic API on localhost, optio…</td>
-<td align="right"><b>47.2k</b><br><sub>~787/day avg</sub></td>
+<td align="right"><b>47.3k</b><br><sub>~788/day avg</sub></td>
 <td><img src="charts/spark/Niko1221__Strata.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -619,14 +619,14 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">6</td>
 <td><a href="https://github.com/yetone/magpie"><b>yetone/magpie</b></a><br><code>Go</code> · MIT</td>
 <td>Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.</td>
-<td align="right"><b>40.3k</b><br><sub>~660/day avg</sub></td>
+<td align="right"><b>40.3k</b><br><sub>~661/day avg</sub></td>
 <td><img src="charts/spark/yetone__magpie.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">7</td>
 <td><a href="https://github.com/DietrichGebert/ponytail"><b>DietrichGebert/ponytail</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.</td>
-<td align="right"><b>197.1k</b><br><sub>~1202/day avg</sub></td>
+<td align="right"><b>197.2k</b><br><sub>~1202/day avg</sub></td>
 <td><img src="charts/spark/DietrichGebert__ponytail.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -682,7 +682,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">15</td>
 <td><a href="https://github.com/Leonxlnx/taste-skill"><b>Leonxlnx/taste-skill</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages</td>
-<td align="right"><b>120.4k</b><br><sub>~436/day avg</sub></td>
+<td align="right"><b>120.4k</b><br><sub>~435/day avg</sub></td>
 <td><img src="charts/spark/Leonxlnx__taste-skill.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -766,7 +766,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">27</td>
 <td><a href="https://github.com/colbymchenry/codegraph"><b>colbymchenry/codegraph</b></a><br><code>TypeScript</code> · MIT</td>
 <td>Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot, and Herme…</td>
-<td align="right"><b>78.5k</b><br><sub>~255/day avg</sub></td>
+<td align="right"><b>78.5k</b><br><sub>~254/day avg</sub></td>
 <td><img src="charts/spark/colbymchenry__codegraph.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -796,38 +796,40 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 
 | # | app | developer | rating | ratings | age | chart |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | [AreaMap: Measure Land & Acres](https://apps.apple.com/us/app/areamap-measure-land-acres/id6816359797?uo=4) | NATHAN LA MAR BURNETT | 4.6 | 256 | 55d | #23 |
-| 2 | [Untraced: Find the Suspect](https://apps.apple.com/us/app/untraced-find-the-suspect/id6817187484?uo=4) | XUAN TUNG NGO | 4.5 | 801 | 32d | #27 |
-| 3 | [iTell: Second Phone Bridge](https://apps.apple.com/us/app/itell-second-phone-bridge/id6831699886?uo=4) | Amir AKBARZADEH | 4.2 | 15 | 15d | #27 |
-| 4 | [Health100](https://apps.apple.com/us/app/health100/id6760536822?uo=4) | HEALTH 100, L.L.C | 3.9 | 1444 | 145d | #30 |
+| 1 | [AreaMap: Measure Land & Acres](https://apps.apple.com/us/app/areamap-measure-land-acres/id6816359797?uo=4) | NATHAN LA MAR BURNETT | 4.6 | 261 | 55d | #23 |
+| 2 | [Untraced: Find the Suspect](https://apps.apple.com/us/app/untraced-find-the-suspect/id6817187484?uo=4) | XUAN TUNG NGO | 4.5 | 1049 | 32d | #27 |
+| 3 | [iTell: Second Phone Bridge](https://apps.apple.com/us/app/itell-second-phone-bridge/id6831699886?uo=4) | Amir AKBARZADEH | 4.5 | 15 | 15d | #27 |
+| 4 | [Health100](https://apps.apple.com/us/app/health100/id6760536822?uo=4) | HEALTH 100, L.L.C | 3.9 | 1564 | 145d | #30 |
 | 5 | [Empose: Aesthetic Poses](https://apps.apple.com/us/app/empose-aesthetic-poses/id6799978162?uo=4) | Hakan Bayindir | 4.0 | 170 | 91d | #31 |
-| 6 | [SleepSense: Sleep Tracker](https://apps.apple.com/us/app/sleepsense-sleep-tracker/id6791916451?uo=4) | Dualstar Entertainment Group,… | 4.4 | 955 | 124d | #32 |
-| 7 | [melo: Playlists for Sounds](https://apps.apple.com/us/app/melo-playlists-for-sounds/id6832818349?uo=4) | Geronti Liparteliani | 4.1 | 12 | 5d | #35 |
-| 8 | [Rocco - Fast Cash Advance](https://apps.apple.com/us/app/rocco-fast-cash-advance/id6764022479?uo=4) | Rocco Finance, Inc. | 4.6 | 2415 | 104d | #40 |
-| 9 | [Headway Therapy & Psychiatry](https://apps.apple.com/us/app/headway-therapy-psychiatry/id6783091001?uo=4) | Therapymatch, Inc. | 4.6 | 79 | 61d | #48 |
+| 6 | [SleepSense: Sleep Tracker](https://apps.apple.com/us/app/sleepsense-sleep-tracker/id6791916451?uo=4) | Dualstar Entertainment Group,… | 4.4 | 966 | 124d | #32 |
+| 7 | [melo: Playlists for Sounds](https://apps.apple.com/us/app/melo-playlists-for-sounds/id6832818349?uo=4) | Geronti Liparteliani | 4.1 | 23 | 5d | #35 |
+| 8 | [Rocco - Fast Cash Advance](https://apps.apple.com/us/app/rocco-fast-cash-advance/id6764022479?uo=4) | Rocco Finance, Inc. | 4.6 | 2429 | 104d | #40 |
+| 9 | [Headway Therapy & Psychiatry](https://apps.apple.com/us/app/headway-therapy-psychiatry/id6783091001?uo=4) | Therapymatch, Inc. | 4.6 | 81 | 61d | #48 |
 | 10 | [The Floor HQ](https://apps.apple.com/us/app/the-floor-hq/id6764116699?uo=4) | The Floor HQ LLC | 4.5 | 22 | 28d | #48 |
-| 11 | [GeoShare : GPS Tracker](https://apps.apple.com/us/app/geoshare-gps-tracker/id6822730153?uo=4) | sojitra milan | 4.4 | 116 | 33d | #95 |
+| 11 | [GeoShare : GPS Tracker](https://apps.apple.com/us/app/geoshare-gps-tracker/id6822730153?uo=4) | sojitra milan | 4.4 | 157 | 33d | #95 |
 
 ### iOS · Just launched (US)
 
 | # | app | developer | rating | ratings | age | chart |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | [melo: Playlists for Sounds](https://apps.apple.com/us/app/melo-playlists-for-sounds/id6832818349?uo=4) | Geronti Liparteliani | 4.1 | 12 | 5d | #35 |
-| 2 | [iTell: Second Phone Bridge](https://apps.apple.com/us/app/itell-second-phone-bridge/id6831699886?uo=4) | Amir AKBARZADEH | 4.2 | 15 | 15d | #27 |
+| 1 | [melo: Playlists for Sounds](https://apps.apple.com/us/app/melo-playlists-for-sounds/id6832818349?uo=4) | Geronti Liparteliani | 4.1 | 23 | 5d | #35 |
+| 2 | [iTell: Second Phone Bridge](https://apps.apple.com/us/app/itell-second-phone-bridge/id6831699886?uo=4) | Amir AKBARZADEH | 4.5 | 15 | 15d | #27 |
 | 3 | [The Floor HQ](https://apps.apple.com/us/app/the-floor-hq/id6764116699?uo=4) | The Floor HQ LLC | 4.5 | 22 | 28d | #48 |
-| 4 | [Untraced: Find the Suspect](https://apps.apple.com/us/app/untraced-find-the-suspect/id6817187484?uo=4) | XUAN TUNG NGO | 4.5 | 801 | 32d | #27 |
-| 5 | [GeoShare : GPS Tracker](https://apps.apple.com/us/app/geoshare-gps-tracker/id6822730153?uo=4) | sojitra milan | 4.4 | 116 | 33d | #95 |
-| 6 | [AreaMap: Measure Land & Acres](https://apps.apple.com/us/app/areamap-measure-land-acres/id6816359797?uo=4) | NATHAN LA MAR BURNETT | 4.6 | 256 | 55d | #23 |
-| 7 | [Headway Therapy & Psychiatry](https://apps.apple.com/us/app/headway-therapy-psychiatry/id6783091001?uo=4) | Therapymatch, Inc. | 4.6 | 79 | 61d | #48 |
+| 4 | [Untraced: Find the Suspect](https://apps.apple.com/us/app/untraced-find-the-suspect/id6817187484?uo=4) | XUAN TUNG NGO | 4.5 | 1049 | 32d | #27 |
+| 5 | [GeoShare : GPS Tracker](https://apps.apple.com/us/app/geoshare-gps-tracker/id6822730153?uo=4) | sojitra milan | 4.4 | 157 | 33d | #95 |
+| 6 | [AreaMap: Measure Land & Acres](https://apps.apple.com/us/app/areamap-measure-land-acres/id6816359797?uo=4) | NATHAN LA MAR BURNETT | 4.6 | 261 | 55d | #23 |
+| 7 | [Headway Therapy & Psychiatry](https://apps.apple.com/us/app/headway-therapy-psychiatry/id6783091001?uo=4) | Therapymatch, Inc. | 4.6 | 81 | 61d | #48 |
 
 ### iOS · Hidden gems (US)
 
 | # | app | developer | rating | ratings | age | chart |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | [Rocco - Fast Cash Advance](https://apps.apple.com/us/app/rocco-fast-cash-advance/id6764022479?uo=4) | Rocco Finance, Inc. | 4.6 | 2415 | 104d | #40 |
-| 2 | [Headway Therapy & Psychiatry](https://apps.apple.com/us/app/headway-therapy-psychiatry/id6783091001?uo=4) | Therapymatch, Inc. | 4.6 | 79 | 61d | #48 |
-| 3 | [AreaMap: Measure Land & Acres](https://apps.apple.com/us/app/areamap-measure-land-acres/id6816359797?uo=4) | NATHAN LA MAR BURNETT | 4.6 | 256 | 55d | #23 |
-| 4 | [The Floor HQ](https://apps.apple.com/us/app/the-floor-hq/id6764116699?uo=4) | The Floor HQ LLC | 4.5 | 22 | 28d | #48 |
+| 1 | [Radio98](https://apps.apple.com/us/app/radio98/id6832862353?uo=4) | Israel Sundseth | 5.0 | 5 | 7d | — |
+| 2 | [Rocco - Fast Cash Advance](https://apps.apple.com/us/app/rocco-fast-cash-advance/id6764022479?uo=4) | Rocco Finance, Inc. | 4.6 | 2429 | 104d | #40 |
+| 3 | [Headway Therapy & Psychiatry](https://apps.apple.com/us/app/headway-therapy-psychiatry/id6783091001?uo=4) | Therapymatch, Inc. | 4.6 | 81 | 61d | #48 |
+| 4 | [AreaMap: Measure Land & Acres](https://apps.apple.com/us/app/areamap-measure-land-acres/id6816359797?uo=4) | NATHAN LA MAR BURNETT | 4.6 | 261 | 55d | #23 |
+| 5 | [Untraced: Find the Suspect](https://apps.apple.com/us/app/untraced-find-the-suspect/id6817187484?uo=4) | XUAN TUNG NGO | 4.5 | 1049 | 32d | #27 |
+| 6 | [The Floor HQ](https://apps.apple.com/us/app/the-floor-hq/id6764116699?uo=4) | The Floor HQ LLC | 4.5 | 22 | 28d | #48 |
 
 ## Global risers
 
@@ -899,7 +901,7 @@ Trending demos and small AI apps, mostly built by individuals.
 | 13 | [agent-memory-leaderboard/leaderboard](https://huggingface.co/spaces/agent-memory-leaderboard/leaderboard) | 944 | static | 2026-11-20 |
 | 14 | [kulkas2pintu/QWEN_EDIT_IMAGE](https://huggingface.co/spaces/kulkas2pintu/QWEN_EDIT_IMAGE) | 819 | gradio | 2026-09-25 |
 | 15 | [lerobot/visualize_dataset](https://huggingface.co/spaces/lerobot/visualize_dataset) | 772 | docker | 2026-11-16 |
-| 16 | [JCisHERE/wan2-2-i2v-v3](https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3) | 625 | gradio | 2026-08-28 |
+| 16 | [JCisHERE/wan2-2-i2v-v3](https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3) | 627 | gradio | 2026-08-28 |
 | 17 | [aet256/Qwen-Image-Edit-Rapid-AIO-Loras-Experi…](https://huggingface.co/spaces/aet256/Qwen-Image-Edit-Rapid-AIO-Loras-Experimental) | 622 | gradio | 2026-09-25 |
 | 18 | [joelniklaus/harness-leaderboard](https://huggingface.co/spaces/joelniklaus/harness-leaderboard) | 526 | docker | 2026-11-23 |
 | 19 | [AST-1320/Qwen-2511-Plus-Flux.2-klein](https://huggingface.co/spaces/AST-1320/Qwen-2511-Plus-Flux.2-klein) | 491 | gradio | 2026-11-21 |
@@ -931,6 +933,151 @@ Newest open source Android apps added to F-Droid.
 | 18 | [Simple Voice Tool for Trans](https://f-droid.org/packages/com.theforeveriris.simplevoicetool/) | 2026-11-20 | Offline voice pitch, formant and voice-quality tracking for voice training |
 | 19 | [ThothTerm Rolling](https://f-droid.org/packages/com.thothterm.arch/) | 2026-11-20 | An Arch Linux ARM AArch64 terminal environment on your phone. No root needed. |
 | 20 | [ThothTerm Security](https://f-droid.org/packages/com.thothterm.security/) | 2026-11-20 | An Arch Linux ARM AArch64 environment for security work. No root needed. |
+
+<details>
+<summary><b>More indie rankings</b> — Lobsters, Dev.to, Obsidian plugins, Firefox extensions, IzzyOnDroid</summary>
+
+### Lobsters hottest
+
+| # | post | score | comments |
+| --- | --- | --- | --- |
+| 1 | [GitHub Actions accepts invalid YAML](https://lobste.rs/s/leqwqu/github_actions_accepts_invalid_yaml) | 59 | 18 |
+| 2 | [Gliver completes the Guix desktop](https://lobste.rs/s/wc8fla/gliver_completes_guix_desktop) | 43 | 4 |
+| 3 | [Signal is Serious About Protecting Your Privacy](https://lobste.rs/s/vldbcn/signal_is_serious_about_protecting_your) | 11 | 0 |
+| 4 | [Good morning and welcome to my idea of a new web](https://lobste.rs/s/l8u1tj/good_morning_welcome_my_idea_new_web) | 9 | 9 |
+| 5 | [Researcher plants 2m canaries into the AI supply chain. A privacy…](https://lobste.rs/s/32rhzb/researcher_plants_2m_canaries_into_ai) | 133 | 19 |
+| 6 | [Falsehoods Programmers Believe About ATProto](https://lobste.rs/s/bjoete/falsehoods_programmers_believe_about) | 33 | 4 |
+| 7 | [scriptura: a cozy corner for your scripts](https://lobste.rs/s/oeamed/scriptura_cozy_corner_for_your_scripts) | 15 | 4 |
+| 8 | [On self-healing code and the obvious issue](https://lobste.rs/s/zorlwr/on_self_healing_code_obvious_issue) | 2 | 1 |
+| 9 | [Calculate radio link placement and node amount for your city's me…](https://lobste.rs/s/e89tey/calculate_radio_link_placement_node) | 7 | 3 |
+| 10 | [NixOS bring-up on an Alibaba RISC-V board](https://lobste.rs/s/6jloca/nixos_bring_up_on_alibaba_risc_v_board) | 34 | 13 |
+| 11 | [Steadfast Update II - Rewriting ASTs](https://lobste.rs/s/tmehas/steadfast_update_ii_rewriting_asts) | 1 | 0 |
+| 12 | [Testing Terraform with AWS Emulator](https://lobste.rs/s/g5msf2/testing_terraform_with_aws_emulator) | 7 | 1 |
+| 13 | [What If Netscape Did SSL the HTTP Way?](https://lobste.rs/s/yhl0jk/what_if_netscape_did_ssl_http_way) | 9 | 15 |
+| 14 | [De-fanging dangerous triggers in GitHub Actions across an organiz…](https://lobste.rs/s/rvvt6x/de_fanging_dangerous_triggers_github) | 4 | 0 |
+| 15 | [My Monitor Was Cutting My Download Speed by 75%](https://lobste.rs/s/qzerls/my_monitor_was_cutting_my_download_speed) | 129 | 11 |
+
+### Dev.to #showdev
+
+| # | article | reactions | comments |
+| --- | --- | --- | --- |
+| 1 | [My Linux Course Put Me to Sleep, So I Built Something That Wouldn…](https://dev.to/maame-codes/my-linux-course-put-me-to-sleep-so-i-built-something-that-wouldnt-5g4k) | 78 | 18 |
+| 2 | [Monuments of India, Part 3: Sixteen Statues Sculpted from Photogr…](https://dev.to/amananandrai/monuments-of-india-part-3-sixteen-statues-sculpted-from-photographs-a-rebuilt-mysore-palace-and-3bm) | 16 | 5 |
+| 3 | [Monuments of India, Part 4: 100 New Monuments, from Harappan Dhol…](https://dev.to/amananandrai/monuments-of-india-part-4-100-new-monuments-from-harappan-dholavira-to-the-chenab-rail-bridge-3n6p) | 8 | 2 |
+| 4 | [Feltbeat: count your own heartbeats while a webcam keeps the real…](https://dev.to/soumyadeepdey/feltbeat-count-your-own-heartbeats-while-a-webcam-keeps-the-real-number-to-itself-553b) | 8 | 1 |
+| 5 | [I built a dev.to comment reviser so I'd stop re-pasting the same …](https://dev.to/julies1/i-built-a-devto-comment-reviser-so-id-stop-re-pasting-the-same-ai-prompt-4oi8) | 9 | 16 |
+| 6 | [3Draft: Five Percent — 30 Minutes to Deadline](https://dev.to/pengeszikra/3draft-five-percent-30-minutes-to-deadline-1kfk) | 22 | 7 |
+| 7 | [I built an app so I stop crashing out at work](https://dev.to/daniel_ng/i-built-an-app-so-i-stop-crashing-out-at-work-2oei) | 12 | 6 |
+| 8 | [The $2,400 Auto Repair Estimate Nobody Can Read. I Built the Deco…](https://dev.to/debashish_ghosal/the-2400-auto-repair-estimate-nobody-can-read-i-built-the-decoder-that-doesnt-guess-prices-295p) | 15 | 2 |
+| 9 | [Roast My Dev Desktop: Zero Minimalism, Maximum Chaos](https://dev.to/quantumtechcoder/roast-my-dev-desktop-zero-minimalism-maximum-chaos-2paa) | 8 | 1 |
+| 10 | [Your GitHub review is still pending](https://dev.to/nikitathedev/your-github-review-is-still-pending-11lf) | 2 | 6 |
+| 11 | [Rivers that cannot run uphill: procedural rivers, lakes and water…](https://dev.to/freema/rivers-that-cannot-run-uphill-procedural-rivers-lakes-and-waterfalls-in-plain-webgl2-48bn) | 3 | 1 |
+| 12 | [3Draft : Game Engine Targetting System](https://dev.to/pengeszikra/3draft-game-engine-targetting-system-4gfp) | 21 | 3 |
+| 13 | [61 Hackathons, 2,000+ GitHub Contributions: The Free Chrome Plann…](https://dev.to/vero-code/61-hackathons-2000-github-contributions-the-free-chrome-planner-that-keeps-me-shipping-2gk7) | 6 | 1 |
+| 14 | [The Locked Store That Unlocked Itself](https://dev.to/debashish_ghosal/the-locked-store-that-unlocked-itself-31o8) | 19 | 2 |
+| 15 | [Designing a C++ desktop GUI toolkit where widgets never touch the…](https://dev.to/zze489/designing-a-c-desktop-gui-toolkit-where-widgets-never-touch-the-gpu-2p0n) | 4 | 0 |
+
+### Obsidian plugins · recently updated
+
+| # | plugin | downloads | updated |
+| --- | --- | --- | --- |
+| 1 | [Verbex](https://github.com/everydaymind/obsidian-verbex) | 61 | 2026-11-22 |
+| 2 | [Statblock Forge for Atlas VTT](https://github.com/guilhermebergerlopes-oss/statblock-forge-for-atlas-vtt) | 70 | 2026-11-22 |
+| 3 | [Lumina](https://github.com/lumina-apps/obsidian-lumina) | 8888 | 2026-11-22 |
+| 4 | [Seam](https://github.com/willacosta/obsidian-seam) | 148 | 2026-11-22 |
+| 5 | [Horme](https://github.com/ducktapekiller/horme) | 3880 | 2026-11-22 |
+| 6 | [Yoofloe](https://github.com/yoofloe/yoofloe-obsidian) | 523 | 2026-11-22 |
+| 7 | [Note Locker](https://github.com/felvesthe/Note-Locker) | 6798 | 2026-11-22 |
+| 8 | [Trama - Tasks and Kanban Boar…](https://github.com/legustavinho/trama-obsidian) | 3 | 2026-11-22 |
+| 9 | [specgit](https://github.com/fnfirst/specgit-obsidian) | 60 | 2026-11-22 |
+| 10 | [Writing Studio](https://github.com/writerp-777/obsidian-writing-studio) | 5564 | 2026-11-22 |
+| 11 | [Open Tab Settings](https://github.com/jesse-r-s-hines/obsidian-open-tab-settings) | 89.4k | 2026-11-22 |
+| 12 | [Filen Vault Sync](https://github.com/grizzzlyy/obsidian-filen-cloud-sync) | 20 | 2026-11-22 |
+| 13 | [Vault Syncryption](https://github.com/ibehren1/obsidian-vault-syncryption) | 1174 | 2026-11-22 |
+| 14 | [Simple Summary Base View](https://github.com/jarbochov/summary-base-view) | 44 | 2026-11-22 |
+| 15 | [Rudonium Anki Toolkit](https://github.com/dashiwak/rudonium-anki-toolkit) | 15 | 2026-11-22 |
+
+### Obsidian plugins · most downloaded
+
+| # | plugin | downloads |
+| --- | --- | --- |
+| 1 | [Excalidraw](https://github.com/zsviczian/obsidian-excalidraw-plugin) | 9.1M |
+| 2 | [Templater](https://github.com/silentvoid13/Templater) | 6.3M |
+| 3 | [Dataview](https://github.com/blacksmithgu/obsidian-dataview) | 5.4M |
+| 4 | [Tasks](https://github.com/obsidian-tasks-group/obsidian-tasks) | 4.7M |
+| 5 | [Copilot](https://github.com/logancyang/obsidian-copilot) | 3.8M |
+| 6 | [Git](https://github.com/vinzent03/obsidian-git) | 3.5M |
+| 7 | [Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian) | 3.4M |
+| 8 | [Calendar](https://github.com/liamcain/obsidian-calendar-plugin) | 3.3M |
+| 9 | [Style Settings](https://github.com/obsidian-community/obsidian-style-settings) | 2.9M |
+| 10 | [Kanban](https://github.com/obsidian-community/obsidian-kanban) | 2.9M |
+| 11 | [TaskNotes](https://github.com/callumalpass/tasknotes) | 2.8M |
+| 12 | [Claudian](https://github.com/yishentu/claudian) | 2.8M |
+| 13 | [Remotely Save](https://github.com/remotely-save/remotely-save) | 2.4M |
+| 14 | [QuickAdd](https://github.com/chhoumann/quickadd) | 2.4M |
+| 15 | [Iconize](https://github.com/florianwoelki/obsidian-iconize) | 2.3M |
+
+### Firefox extensions · newest
+
+| # | extension | daily users | created |
+| --- | --- | --- | --- |
+| 1 | [(Animated) Cutecore](https://addons.mozilla.org/firefox/addon/animated-cutecore/) | 0 | 2026-11-23 |
+| 2 | [Milan](https://addons.mozilla.org/firefox/addon/milan/) | 0 | 2026-11-23 |
+| 3 | [Rose Grid Dark](https://addons.mozilla.org/firefox/addon/rose-grid-dark/) | 0 | 2026-11-23 |
+| 4 | [Obsidian & Aqua](https://addons.mozilla.org/firefox/addon/obsidian-aqua/) | 0 | 2026-11-23 |
+| 5 | [Cyberpunk 2077 Vibes](https://addons.mozilla.org/firefox/addon/cyberpunk-2077-vibes/) | 0 | 2026-11-23 |
+| 6 | [Cyber Lime](https://addons.mozilla.org/firefox/addon/cyber-lime/) | 0 | 2026-11-23 |
+| 7 | [~~Apothecary Diaries~~](https://addons.mozilla.org/firefox/addon/apothecary-diaries/) | 0 | 2026-11-23 |
+| 8 | [Velvet Fold](https://addons.mozilla.org/firefox/addon/velvet-fold/) | 0 | 2026-11-22 |
+| 9 | [Powder Trail](https://addons.mozilla.org/firefox/addon/powder-trail/) | 0 | 2026-11-22 |
+| 10 | [Violin Grain](https://addons.mozilla.org/firefox/addon/violin-grain/) | 0 | 2026-11-22 |
+| 11 | [Petal Hearts](https://addons.mozilla.org/firefox/addon/petal-hearts/) | 0 | 2026-11-22 |
+| 12 | [Gambit](https://addons.mozilla.org/firefox/addon/gambit/) | 0 | 2026-11-22 |
+| 13 | [Pinkieandbluedragon](https://addons.mozilla.org/firefox/addon/pinkieandbluedragon/) | 0 | 2026-11-22 |
+| 14 | [Panzer Grey](https://addons.mozilla.org/firefox/addon/panzer-grey/) | 0 | 2026-11-22 |
+| 15 | [Lighting up the Fall by M♥Donna](https://addons.mozilla.org/firefox/addon/lighting-up-the-onna/) | 0 | 2026-11-22 |
+
+### Firefox extensions · most used
+
+| # | extension | daily users |
+| --- | --- | --- |
+| 1 | [uBlock Origin](https://addons.mozilla.org/firefox/addon/ublock-origin/) | 11.7M |
+| 2 | [Adblock Plus](https://addons.mozilla.org/firefox/addon/adblock-plus/) | 2.9M |
+| 3 | [Language: English (US)](https://addons.mozilla.org/firefox/addon/english-us-language-pack/) | 2.7M |
+| 4 | [Language: English (CA)](https://addons.mozilla.org/firefox/addon/english-ca-language-pack/) | 2.7M |
+| 5 | [Language: English (GB)](https://addons.mozilla.org/firefox/addon/english-gb-language-pack/) | 2.2M |
+| 6 | [Privacy Badger](https://addons.mozilla.org/firefox/addon/privacy-badger17/) | 2.0M |
+| 7 | [AdGuard AdBlocker](https://addons.mozilla.org/firefox/addon/adguard-adblocker/) | 1.9M |
+| 8 | [Video Download Helper](https://addons.mozilla.org/firefox/addon/video-downloadhelper/) | 1.9M |
+| 9 | [AdBlock for Firefox](https://addons.mozilla.org/firefox/addon/adblock-for-firefox/) | 1.5M |
+| 10 | [Language: Deutsch (German)](https://addons.mozilla.org/firefox/addon/deutsch-de-language-pack/) | 1.4M |
+| 11 | [Dark Reader](https://addons.mozilla.org/firefox/addon/darkreader/) | 1.4M |
+| 12 | [Easy Screenshot](https://addons.mozilla.org/firefox/addon/easyscreenshot/) | 1.3M |
+| 13 | [Language: Français (French)](https://addons.mozilla.org/firefox/addon/français-language-pack/) | 1.3M |
+| 14 | [DuckDuckGo Search & Tracker Protection](https://addons.mozilla.org/firefox/addon/duckduckgo-for-firefox/) | 1.1M |
+| 15 | [AdBlocker Ultimate](https://addons.mozilla.org/firefox/addon/adblocker-ultimate/) | 1.1M |
+
+### IzzyOnDroid · newest
+
+| # | app | added | what it does |
+| --- | --- | --- | --- |
+| 1 | [Fossify Gallery](https://apt.izzysoft.de/fdroid/index/apk/org.fossify.gallery) | 2026-11-21 | Gallery with Photo editor. No Ads, Open-source, Private. No strings a… |
+| 2 | [Fossify Documents Beta](https://apt.izzysoft.de/fdroid/index/apk/org.fossify.documents) | 2026-11-21 | Read PDF, DOCX, text, Markdown, CSV and HTML files privately and offl… |
+| 3 | [Inure App Manager (Trial)](https://apt.izzysoft.de/fdroid/index/apk/app.simple.inure) | 2026-11-21 | Fast, refined app manager for power users, with root and Shizuku supp… |
+| 4 | [JetBird](https://apt.izzysoft.de/fdroid/index/apk/dev.bg.jetbird) | 2026-11-20 | An unofficial, FLOSS, native Android NetBird client built with privac… |
+| 5 | [Clerotri](https://apt.izzysoft.de/fdroid/index/apk/app.upryzing.clerotri) | 2026-11-20 | Client for Upryzing and Revolt/Stoat |
+| 6 | [PipePipe](https://apt.izzysoft.de/fdroid/index/apk/InfinityLoop1309.NewPipeEnhanced) | 2026-11-20 | A FLOSS Android app to let you browse YouTube, NicoNico and BiliBili … |
+| 7 | [Materialious](https://apt.izzysoft.de/fdroid/index/apk/us.materialio.app) | 2026-11-19 | Modern material design for YouTube and Invidious. |
+| 8 | [Mindwtr - GTD Task Manager](https://apt.izzysoft.de/fdroid/index/apk/tech.dongdongbh.mindwtr) | 2026-11-19 | Clear your head: capture tasks fast, see your next step. Offline, fre… |
+| 9 | [WizeStream](https://apt.izzysoft.de/fdroid/index/apk/org.wisso.newpipematerial) | 2026-11-19 | Independent, privacy-friendly NewPipe-based streaming client. |
+| 10 | [Cryptomator](https://apt.izzysoft.de/fdroid/index/apk/org.cryptomator) | 2026-11-19 | Put a lock on your cloud: Take the security of your data into your ow… |
+| 11 | [Sable](https://apt.izzysoft.de/fdroid/index/apk/moe.sable.client) | 2026-11-19 | A Matrix client with quality-of-life features |
+| 12 | [PeerTube Redirect](https://apt.izzysoft.de/fdroid/index/apk/dev.zwander.peertuberedirect) | 2026-11-19 | Deep linking proxy for PeerTube, to launch your selected client autom… |
+| 13 | [Metrolist](https://apt.izzysoft.de/fdroid/index/apk/com.metrolist.music) | 2026-11-19 | Material 3 YouTube Music client for Android |
+| 14 | [Podcini.A - Extensible media …](https://apt.izzysoft.de/fdroid/index/apk/ac.mdiq.Podcini.A) | 2026-11-19 | Your premier podcast/media instrument, now extensible, capable of You… |
+| 15 | [WAFRN](https://apt.izzysoft.de/fdroid/index/apk/dev.djara.wafrn_rn) | 2026-11-19 | The social network that respects you |
+
+</details>
 
 ## Open source alternatives
 
