@@ -4,7 +4,7 @@ import { ROOT } from './lib/util.mjs';
 import { slugOf } from './charts.mjs';
 
 const read = (p, fb = null) => { try { return JSON.parse(readFileSync(join(ROOT, 'data', p), 'utf8')); } catch { return fb; } };
-const n = (v) => v == null ? '—' : (Math.abs(v) >= 10000 ? (v / 1000).toFixed(1) + 'k' : String(v));
+const n = (v) => v == null ? '—' : (Math.abs(v) >= 1e6 ? (v / 1e6).toFixed(1) + 'M' : Math.abs(v) >= 10000 ? (v / 1000).toFixed(1) + 'k' : String(v));
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const clip = (s, max) => { const t = String(s ?? '').replace(/\s+/g, ' ').trim(); return t.length > max ? t.slice(0, max - 1) + '…' : t; };
 const md = (s) => String(s ?? '').replace(/\|/g, '\\|').replace(/\s+/g, ' ').trim();
@@ -138,6 +138,44 @@ export function generateReadme(manifest) {
     parts.push(table(['#', 'app', 'added', 'what it does'], fd.items.slice(0, 20).map((x) => [
       x.rank, `[${md(clip(x.name, 30))}](${x.url})`, x.addedAt, md(clip(x.summary, 80)),
     ])));
+    parts.push('');
+  }
+
+  const more = [];
+  const lob = read('indie/lobsters.json');
+  if (lob?.items?.length) {
+    more.push('### Lobsters hottest', '', table(['#', 'post', 'score', 'comments'], lob.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 66))}](${x.url})`, x.points, x.comments])), '');
+  }
+  const dev = read('indie/devto.json');
+  if (dev?.items?.length) {
+    more.push('### Dev.to #showdev', '', table(['#', 'article', 'reactions', 'comments'], dev.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 66))}](${x.url})`, x.reactions, x.comments])), '');
+  }
+  const obsNew = read('indie/obsidian-new.json');
+  const obsTop = read('indie/obsidian-top.json');
+  if (obsNew?.items?.length) {
+    more.push('### Obsidian plugins · recently updated', '', table(['#', 'plugin', 'downloads', 'updated'], obsNew.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.name, 30))}](${x.url})`, n(x.downloads), x.addedAt])), '');
+  }
+  if (obsTop?.items?.length) {
+    more.push('### Obsidian plugins · most downloaded', '', table(['#', 'plugin', 'downloads'], obsTop.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.name, 34))}](${x.url})`, n(x.downloads)])), '');
+  }
+  const fxNew = read('indie/firefox-new.json');
+  const fxTop = read('indie/firefox-top.json');
+  if (fxNew?.items?.length) {
+    more.push('### Firefox extensions · newest', '', table(['#', 'extension', 'daily users', 'created'], fxNew.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 40))}](${x.url})`, n(x.users), x.createdAt ?? '—'])), '');
+  }
+  if (fxTop?.items?.length) {
+    more.push('### Firefox extensions · most used', '', table(['#', 'extension', 'daily users'], fxTop.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 44))}](${x.url})`, n(x.users)])), '');
+  }
+  const iz = read('indie/izzy.json');
+  if (iz?.items?.length) {
+    more.push('### IzzyOnDroid · newest', '', table(['#', 'app', 'added', 'what it does'], iz.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.name, 30))}](${x.url})`, x.addedAt, md(clip(x.summary, 70))])), '');
+  }
+  if (more.length) {
+    parts.push('<details>');
+    parts.push('<summary><b>More indie rankings</b> — Lobsters, Dev.to, Obsidian plugins, Firefox extensions, IzzyOnDroid</summary>');
+    parts.push('');
+    parts.push(...more);
+    parts.push('</details>');
     parts.push('');
   }
 

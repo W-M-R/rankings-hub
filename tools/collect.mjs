@@ -24,7 +24,7 @@ if (platforms.includes('github')) {
 }
 if (platforms.includes('indie')) {
   await collectIndie(health)
-    .then((r) => console.log(`indie: showhn=${r.showhn} hf=${r.hf} fdroid=${r.fdroid} ph=${r.ph}`))
+    .then((r) => console.log(`indie: showhn=${r.showhn} hf=${r.hf} fdroid=${r.fdroid} izzy=${r.izzy} lobsters=${r.lobsters} devto=${r.devto} obsidian=${r.obsidian} firefox=${r.firefox} ph=${r.ph}`))
     .catch((err) => health.push({ source: 'indie', ok: false, error: String(err) }));
 }
 

@@ -77,7 +77,7 @@ let MANIFEST = null;
 const CACHE = new Map();
 const $ = (s) => document.querySelector(s);
 const el = (t,c,x) => { const n=document.createElement(t); if(c)n.className=c; if(x!=null)n.textContent=x; return n; };
-const num = (v) => v == null ? '—' : (v >= 10000 ? (v/1000).toFixed(1)+'k' : String(v));
+const num = (v) => v == null ? '—' : (v >= 1e6 ? (v/1e6).toFixed(1)+'M' : v >= 10000 ? (v/1000).toFixed(1)+'k' : String(v));
 
 async function getJson(path){
   if (CACHE.has(path)) return CACHE.get(path);
@@ -219,10 +219,15 @@ function indieRow(x){
   if(x.summary) sub.appendChild(el('span',null,String(x.summary).slice(0,110)));
   if(x.author) sub.appendChild(el('span','dot','· by '+x.author));
   if(x.categories?.length) sub.appendChild(el('span','dot','· '+x.categories.join(' / ')));
+  if(x.tags?.length) sub.appendChild(el('span','dot','· '+x.tags.join(', ')));
+  if(x.updatedAt) sub.appendChild(el('span','dot','· '+x.updatedAt));
   mid.appendChild(sub); row.appendChild(mid);
   const stat=el('div','stat');
-  if(x.points!=null) stat.innerHTML=`<b>${x.points}</b><br><sub>${x.comments??0} comments</sub>`;
+  if(x.points!=null) stat.innerHTML=`<b>${x.points}</b><br><sub>${x.comments!=null?x.comments+' comments':'score'}</sub>`;
+  else if(x.reactions!=null) stat.innerHTML=`<b>${x.reactions}</b><br><sub>${x.comments??0} comments</sub>`;
   else if(x.likes!=null) stat.innerHTML=`<b>${x.likes}</b><br><sub>likes</sub>`;
+  else if(x.downloads!=null) stat.innerHTML=`<b>${num(x.downloads)}</b><br><sub>downloads</sub>`;
+  else if(x.users!=null) stat.innerHTML=`<b>${num(x.users)}</b><br><sub>daily users</sub>`;
   else if(x.addedAt) stat.innerHTML=`<b>${x.addedAt}</b><br><sub>added</sub>`;
   row.appendChild(stat);
   return row;
@@ -263,7 +268,18 @@ async function render(){
       $('#meta').textContent=`${state.platform==='apple'?'iOS':'Android'} ${state.cc.toUpperCase()} · ${rows.length}`;
     }
     if(state.view==='indie'){
-      const sources=[{key:'showhn',label:'Show HN'},{key:'hf-spaces',label:'HF Spaces'},{key:'fdroid',label:'F-Droid'}];
+      const sources=[
+        {key:'showhn',label:'Show HN'},
+        {key:'hf-spaces',label:'HF Spaces'},
+        {key:'fdroid',label:'F-Droid'},
+        {key:'izzy',label:'IzzyOnDroid'},
+        {key:'lobsters',label:'Lobsters'},
+        {key:'devto',label:'Dev.to'},
+        {key:'obsidian-new',label:'Obsidian new'},
+        {key:'obsidian-top',label:'Obsidian top'},
+        {key:'firefox-new',label:'Firefox new'},
+        {key:'firefox-top',label:'Firefox top'},
+      ];
       subTabs(controls,sources, state.indie, (k)=>{state.indie=k;render();});
       const d=await getJson(`./data/indie/${state.indie}.json`);
       content.innerHTML='';
