@@ -2,7 +2,7 @@
 
 Rising apps and GitHub repositories, rebuilt every day. Tables and star charts below are regenerated from the latest run.
 
-**Last update:** 2026-11-23 08:15 UTC · **[Open the site](https://w-m-r.github.io/rankings-hub/)**
+**Last update:** 2026-11-23 08:34 UTC · **[Open the site](https://w-m-r.github.io/rankings-hub/)**
 
 ## GitHub · daily
 
@@ -11,14 +11,14 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">1</td>
 <td><a href="https://github.com/omonkeyz/xbox-emulator"><b>omonkeyz/xbox-emulator</b></a><br><code>Rust</code> · GPL-3.0</td>
 <td>Progress notes for running Xbox Series X|S builds on PC (TomBox + rage9)</td>
-<td align="right"><b>1415</b><br><sub>~708/day avg</sub></td>
+<td align="right"><b>1420</b><br><sub>~710/day avg</sub></td>
 <td><img src="charts/spark/omonkeyz__xbox-emulator.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">2</td>
 <td><a href="https://github.com/os6/nospeaker"><b>os6/nospeaker</b></a><br><code>Swift</code> · MIT</td>
 <td>make your macbook's trackpad talk using its haptic motor</td>
-<td align="right"><b>682</b><br><sub>~682/day avg</sub></td>
+<td align="right"><b>696</b><br><sub>~696/day avg</sub></td>
 <td><img src="charts/spark/os6__nospeaker.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -49,6 +49,27 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right"><b>298</b><br><sub>~149/day avg</sub></td>
 <td><img src="charts/spark/MoritzPindorek__Five-Laws-of-AI-Agents.svg" width="120" height="36" alt="star trend"></td>
 </tr>
+<tr>
+<td align="right">7</td>
+<td><a href="https://github.com/xikhar/papercraft"><b>xikhar/papercraft</b></a><br><code>JavaScript</code> · MIT</td>
+<td>Agent skill to build games, interactive scenes, web pages and animations in a handcrafted pop-up papercraft style</td>
+<td align="right"><b>293</b><br><sub>~147/day avg</sub></td>
+<td><img src="charts/spark/xikhar__papercraft.svg" width="120" height="36" alt="star trend"></td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td><a href="https://github.com/m1guelpf/Exo"><b>m1guelpf/Exo</b></a><br><code>Rust</code> · MIT</td>
+<td>A fast, local and native Gmail client for macOS, inspired by Superhuman.</td>
+<td align="right"><b>272</b><br><sub>~136/day avg</sub></td>
+<td><img src="charts/spark/m1guelpf__Exo.svg" width="120" height="36" alt="star trend"></td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td><a href="https://github.com/jaredfreellm/FREELLM_INSTALL"><b>jaredfreellm/FREELLM_INSTALL</b></a><br><code>—</code> · MIT</td>
+<td>One OpenAI-compatible endpoint for many free LLM tiers. Add your own provider keys, and the router picks a healthy model for each request, fails over…</td>
+<td align="right"><b>250</b><br><sub>~250/day avg</sub></td>
+<td><img src="charts/spark/jaredfreellm__FREELLM_INSTALL.svg" width="120" height="36" alt="star trend"></td>
+</tr>
 </tbody></table>
 
 ## GitHub · weekly
@@ -58,14 +79,14 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">1</td>
 <td><a href="https://github.com/ItsNotRexed/Leonida"><b>ItsNotRexed/Leonida</b></a><br><code>Python</code> · GPL-3.0</td>
 <td>Leonida Is A Native PC Recompilation Of The Xbox Version Of Grand Theft Auto 6</td>
-<td align="right"><b>17.4k</b><br><sub>~5815/day avg</sub></td>
+<td align="right"><b>17.6k</b><br><sub>~5853/day avg</sub></td>
 <td><img src="charts/spark/ItsNotRexed__Leonida.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">2</td>
 <td><a href="https://github.com/omonkeyz/xbox-emulator"><b>omonkeyz/xbox-emulator</b></a><br><code>Rust</code> · GPL-3.0</td>
 <td>Progress notes for running Xbox Series X|S builds on PC (TomBox + rage9)</td>
-<td align="right"><b>1415</b><br><sub>~708/day avg</sub></td>
+<td align="right"><b>1420</b><br><sub>~710/day avg</sub></td>
 <td><img src="charts/spark/omonkeyz__xbox-emulator.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -79,14 +100,14 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">4</td>
 <td><a href="https://github.com/Lemxy/WinRust"><b>Lemxy/WinRust</b></a><br><code>Rust</code> · Apache-2.0</td>
 <td>Windows shell replacement in Rust: taskbar, file manager, NTFS search, task manager, disk cleaner. One installer exe.</td>
-<td align="right"><b>1289</b><br><sub>~215/day avg</sub></td>
+<td align="right"><b>1294</b><br><sub>~216/day avg</sub></td>
 <td><img src="charts/spark/Lemxy__WinRust.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">5</td>
 <td><a href="https://github.com/os6/nospeaker"><b>os6/nospeaker</b></a><br><code>Swift</code> · MIT</td>
 <td>make your macbook's trackpad talk using its haptic motor</td>
-<td align="right"><b>682</b><br><sub>~682/day avg</sub></td>
+<td align="right"><b>697</b><br><sub>~697/day avg</sub></td>
 <td><img src="charts/spark/os6__nospeaker.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -100,7 +121,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">7</td>
 <td><a href="https://github.com/danielwh2/sprite-stacking"><b>danielwh2/sprite-stacking</b></a><br><code>HTML</code> · MIT</td>
 <td>Agent skill: turn four pixel art views into fake-3D sprites you can spin. Works with Claude Code, Codex, Cursor, OpenCode, Gemini CLI, Pi.</td>
-<td align="right"><b>542</b><br><sub>~181/day avg</sub></td>
+<td align="right"><b>544</b><br><sub>~181/day avg</sub></td>
 <td><img src="charts/spark/danielwh2__sprite-stacking.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -114,14 +135,14 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">9</td>
 <td><a href="https://github.com/ItsNotRexed/Hookshot"><b>ItsNotRexed/Hookshot</b></a><br><code>C++</code> · GPL-3.0</td>
 <td>Hookshot Is A Native PC Recompilation Of The Switch 2 Ocarina Of Time Remake</td>
-<td align="right"><b>459</b><br><sub>~153/day avg</sub></td>
+<td align="right"><b>463</b><br><sub>~154/day avg</sub></td>
 <td><img src="charts/spark/ItsNotRexed__Hookshot.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">10</td>
 <td><a href="https://github.com/nkjDSLcvanv/antigravity-codex-theme"><b>nkjDSLcvanv/antigravity-codex-theme</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Google Antigravity 的 Codex 风格浅色与深色主题，提供简体中文界面、实时会话状态和每轮 Token 统计。主题、汉化和Token统计模块可按需安装与修改。全程不修改 Antigravity 安装包本体文件。支持右侧旁路提问（Side Question）与 SSH Remot…</td>
-<td align="right"><b>428</b><br><sub>~71/day avg</sub></td>
+<td align="right"><b>431</b><br><sub>~72/day avg</sub></td>
 <td><img src="charts/spark/nkjDSLcvanv__antigravity-codex-theme.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 </tbody></table>
@@ -140,7 +161,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">2</td>
 <td><a href="https://github.com/ccch1mneyyy/dsh-Go"><b>ccch1mneyyy/dsh-Go</b></a><br><code>Dart</code> · AGPL-3.0</td>
 <td>dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。</td>
-<td align="right"><b>30.4k</b><br><sub>~1049/day avg</sub></td>
+<td align="right"><b>30.4k</b><br><sub>~1050/day avg</sub></td>
 <td><img src="charts/spark/ccch1mneyyy__dsh-Go.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -161,7 +182,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">5</td>
 <td><a href="https://github.com/ItsNotRexed/Leonida"><b>ItsNotRexed/Leonida</b></a><br><code>Python</code> · GPL-3.0</td>
 <td>Leonida Is A Native PC Recompilation Of The Xbox Version Of Grand Theft Auto 6</td>
-<td align="right"><b>17.4k</b><br><sub>~5816/day avg</sub></td>
+<td align="right"><b>17.6k</b><br><sub>~5854/day avg</sub></td>
 <td><img src="charts/spark/ItsNotRexed__Leonida.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -189,56 +210,56 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">9</td>
 <td><a href="https://github.com/RoutineMiku/apkstart"><b>RoutineMiku/apkstart</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Windows 上的安卓应用运行器：双击 APK 即装，应用以独立窗口与桌面图标运行，自持 QEMU 运行时</td>
-<td align="right"><b>9332</b><br><sub>~373/day avg</sub></td>
+<td align="right"><b>9336</b><br><sub>~373/day avg</sub></td>
 <td><img src="charts/spark/RoutineMiku__apkstart.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">10</td>
 <td><a href="https://github.com/huami1314/GestaltX"><b>huami1314/GestaltX</b></a><br><code>Swift</code> · GPL-3.0</td>
 <td>An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups.</td>
-<td align="right"><b>8827</b><br><sub>~631/day avg</sub></td>
+<td align="right"><b>8828</b><br><sub>~631/day avg</sub></td>
 <td><img src="charts/spark/huami1314__GestaltX.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">11</td>
 <td><a href="https://github.com/patch-gg/pixelfx"><b>patch-gg/pixelfx</b></a><br><code>JavaScript</code> · MIT</td>
 <td>244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.</td>
-<td align="right"><b>8808</b><br><sub>~367/day avg</sub></td>
+<td align="right"><b>8811</b><br><sub>~367/day avg</sub></td>
 <td><img src="charts/spark/patch-gg__pixelfx.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">12</td>
 <td><a href="https://github.com/valentderah/totk-pc-recomp"><b>valentderah/totk-pc-recomp</b></a><br><code>C</code> · MIT</td>
 <td>Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows and Linux x86-64, with a Vulkan renderer. Game files not included.</td>
-<td align="right"><b>8075</b><br><sub>~323/day avg</sub></td>
+<td align="right"><b>8076</b><br><sub>~323/day avg</sub></td>
 <td><img src="charts/spark/valentderah__totk-pc-recomp.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">13</td>
 <td><a href="https://github.com/Lee-xeo/Claude-Cage"><b>Lee-xeo/Claude-Cage</b></a><br><code>Go</code> · MIT</td>
 <td>Cage：为 Claude 特化的轻量化虚拟机，彻底杜绝网络泄露。多平台适配，支持多账号管理、远程部署、移动端操控。</td>
-<td align="right"><b>7882</b><br><sub>~343/day avg</sub></td>
+<td align="right"><b>7884</b><br><sub>~343/day avg</sub></td>
 <td><img src="charts/spark/Lee-xeo__Claude-Cage.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">14</td>
 <td><a href="https://github.com/KKKKhazix/agent-autoloop"><b>KKKKhazix/agent-autoloop</b></a><br><code>TypeScript</code> · MIT</td>
 <td>让你的命令行 Agent 在后台自己接活、自己跟进到底；平时不烦你，遇到拿不准的事才发卡片找你拍板。</td>
-<td align="right"><b>6341</b><br><sub>~317/day avg</sub></td>
+<td align="right"><b>6342</b><br><sub>~317/day avg</sub></td>
 <td><img src="charts/spark/KKKKhazix__agent-autoloop.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">15</td>
 <td><a href="https://github.com/haydenschmitty/floorplan"><b>haydenschmitty/floorplan</b></a><br><code>JavaScript</code> · MIT</td>
 <td>See how your app actually fits together. An interactive, plain-English map of your codebase, drawn by Claude or Codex.</td>
-<td align="right"><b>6313</b><br><sub>~234/day avg</sub></td>
+<td align="right"><b>6317</b><br><sub>~234/day avg</sub></td>
 <td><img src="charts/spark/haydenschmitty__floorplan.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">16</td>
 <td><a href="https://github.com/Eglantine-Community/Eglantine"><b>Eglantine-Community/Eglantine</b></a><br><code>C++</code> · GPL-3.0</td>
 <td>An experimental Switch 2 Emulator built for Windows, Linux and MacOS.</td>
-<td align="right"><b>6211</b><br><sub>~248/day avg</sub></td>
+<td align="right"><b>6210</b><br><sub>~248/day avg</sub></td>
 <td><img src="charts/spark/Eglantine-Community__Eglantine.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -252,28 +273,28 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">18</td>
 <td><a href="https://github.com/expo/exact"><b>expo/exact</b></a><br><code>Rust</code> · MIT</td>
 <td>Write an app once. It runs natively on the web, macOS, iOS, and Linux, and an AI agent can build it, run it, see it, and test it on every one of them.</td>
-<td align="right"><b>4931</b><br><sub>~235/day avg</sub></td>
+<td align="right"><b>4932</b><br><sub>~235/day avg</sub></td>
 <td><img src="charts/spark/expo__exact.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">19</td>
 <td><a href="https://github.com/mromidev/claude-animated-shorts"><b>mromidev/claude-animated-shorts</b></a><br><code>TypeScript</code> · MIT</td>
 <td>Free Claude skill: viral animated story shorts (2D characters in a 3D world) with three.js + Remotion</td>
-<td align="right"><b>4621</b><br><sub>~210/day avg</sub></td>
+<td align="right"><b>4623</b><br><sub>~210/day avg</sub></td>
 <td><img src="charts/spark/mromidev__claude-animated-shorts.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">20</td>
 <td><a href="https://github.com/elvarofficial/teardown"><b>elvarofficial/teardown</b></a><br><code>JavaScript</code> · MIT</td>
 <td>A Claude Code skill that turns any machine into a 3D simulator you can take apart</td>
-<td align="right"><b>4051</b><br><sub>~169/day avg</sub></td>
+<td align="right"><b>4052</b><br><sub>~169/day avg</sub></td>
 <td><img src="charts/spark/elvarofficial__teardown.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">21</td>
 <td><a href="https://github.com/jhaizhou-ops/S2Arm"><b>jhaizhou-ops/S2Arm</b></a><br><code>C#</code> · Apache-2.0</td>
 <td>Run your own Switch games natively on iPhone, iPad and Mac: game code rewritten to ARM64, graphics direct to Metal, one app for the whole library. Br…</td>
-<td align="right"><b>3839</b><br><sub>~256/day avg</sub></td>
+<td align="right"><b>3838</b><br><sub>~256/day avg</sub></td>
 <td><img src="charts/spark/jhaizhou-ops__S2Arm.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -287,21 +308,21 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">23</td>
 <td><a href="https://github.com/havenicec/google-qr-sms-helper"><b>havenicec/google-qr-sms-helper</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Chrome Extension (MV3) to switch Google's mandatory QR code verification back to standard 6-digit SMS verification via iPad Mini profile &amp; [3,null,4]…</td>
-<td align="right"><b>3668</b><br><sub>~131/day avg</sub></td>
+<td align="right"><b>3690</b><br><sub>~132/day avg</sub></td>
 <td><img src="charts/spark/havenicec__google-qr-sms-helper.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">24</td>
 <td><a href="https://github.com/jamesondh/chimera-vocal-synth"><b>jamesondh/chimera-vocal-synth</b></a><br><code>Rust</code> · MIT</td>
 <td>the ultimate vocal synthesizer - sing, speak, beatbox, and more</td>
-<td align="right"><b>2979</b><br><sub>~166/day avg</sub></td>
+<td align="right"><b>2982</b><br><sub>~166/day avg</sub></td>
 <td><img src="charts/spark/jamesondh__chimera-vocal-synth.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">25</td>
 <td><a href="https://github.com/Immortal-Protocols/lastbook"><b>Immortal-Protocols/lastbook</b></a><br><code>Python</code> · MIT</td>
 <td>Offline knowledge AI, maps and videos for survival and rebuilding</td>
-<td align="right"><b>2977</b><br><sub>~298/day avg</sub></td>
+<td align="right"><b>2978</b><br><sub>~298/day avg</sub></td>
 <td><img src="charts/spark/Immortal-Protocols__lastbook.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -329,14 +350,14 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">29</td>
 <td><a href="https://github.com/Noniv/abyssal-garden"><b>Noniv/abyssal-garden</b></a><br><code>JavaScript</code> · MIT</td>
 <td>A dreamy underwater world you can swim through in your browser: swaying kelp forests, sunbeams, a sunken ship and manta rays. Everything is generated…</td>
-<td align="right"><b>2815</b><br><sub>~256/day avg</sub></td>
+<td align="right"><b>2816</b><br><sub>~256/day avg</sub></td>
 <td><img src="charts/spark/Noniv__abyssal-garden.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">30</td>
 <td><a href="https://github.com/caru-ini/stack-diagram"><b>caru-ini/stack-diagram</b></a><br><code>TypeScript</code> · MIT</td>
 <td>Agent skill: describe your stack in a sentence, get an architecture diagram with official logos</td>
-<td align="right"><b>2782</b><br><sub>~126/day avg</sub></td>
+<td align="right"><b>2784</b><br><sub>~127/day avg</sub></td>
 <td><img src="charts/spark/caru-ini__stack-diagram.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 </tbody></table>
@@ -355,7 +376,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">2</td>
 <td><a href="https://github.com/ccch1mneyyy/dsh-Go"><b>ccch1mneyyy/dsh-Go</b></a><br><code>Dart</code> · AGPL-3.0</td>
 <td>dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。</td>
-<td align="right"><b>30.4k</b><br><sub>~1049/day avg</sub></td>
+<td align="right"><b>30.4k</b><br><sub>~1050/day avg</sub></td>
 <td><img src="charts/spark/ccch1mneyyy__dsh-Go.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -376,7 +397,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">5</td>
 <td><a href="https://github.com/ItsNotRexed/Leonida"><b>ItsNotRexed/Leonida</b></a><br><code>Python</code> · GPL-3.0</td>
 <td>Leonida Is A Native PC Recompilation Of The Xbox Version Of Grand Theft Auto 6</td>
-<td align="right"><b>17.4k</b><br><sub>~5816/day avg</sub></td>
+<td align="right"><b>17.6k</b><br><sub>~5854/day avg</sub></td>
 <td><img src="charts/spark/ItsNotRexed__Leonida.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -418,7 +439,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">11</td>
 <td><a href="https://github.com/RoutineMiku/apkstart"><b>RoutineMiku/apkstart</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Windows 上的安卓应用运行器：双击 APK 即装，应用以独立窗口与桌面图标运行，自持 QEMU 运行时</td>
-<td align="right"><b>9332</b><br><sub>~373/day avg</sub></td>
+<td align="right"><b>9336</b><br><sub>~373/day avg</sub></td>
 <td><img src="charts/spark/RoutineMiku__apkstart.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -432,28 +453,28 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">13</td>
 <td><a href="https://github.com/huami1314/GestaltX"><b>huami1314/GestaltX</b></a><br><code>Swift</code> · GPL-3.0</td>
 <td>An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups.</td>
-<td align="right"><b>8827</b><br><sub>~631/day avg</sub></td>
+<td align="right"><b>8828</b><br><sub>~631/day avg</sub></td>
 <td><img src="charts/spark/huami1314__GestaltX.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">14</td>
 <td><a href="https://github.com/patch-gg/pixelfx"><b>patch-gg/pixelfx</b></a><br><code>JavaScript</code> · MIT</td>
 <td>244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.</td>
-<td align="right"><b>8808</b><br><sub>~367/day avg</sub></td>
+<td align="right"><b>8811</b><br><sub>~367/day avg</sub></td>
 <td><img src="charts/spark/patch-gg__pixelfx.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">15</td>
 <td><a href="https://github.com/rddmwmddr/android-ad-cleaner"><b>rddmwmddr/android-ad-cleaner</b></a><br><code>Python</code> · MIT</td>
 <td>关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。</td>
-<td align="right"><b>8802</b><br><sub>~293/day avg</sub></td>
+<td align="right"><b>8804</b><br><sub>~293/day avg</sub></td>
 <td><img src="charts/spark/rddmwmddr__android-ad-cleaner.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">16</td>
 <td><a href="https://github.com/valentderah/totk-pc-recomp"><b>valentderah/totk-pc-recomp</b></a><br><code>C</code> · MIT</td>
 <td>Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows and Linux x86-64, with a Vulkan renderer. Game files not included.</td>
-<td align="right"><b>8075</b><br><sub>~323/day avg</sub></td>
+<td align="right"><b>8076</b><br><sub>~323/day avg</sub></td>
 <td><img src="charts/spark/valentderah__totk-pc-recomp.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -467,7 +488,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">18</td>
 <td><a href="https://github.com/Lee-xeo/Claude-Cage"><b>Lee-xeo/Claude-Cage</b></a><br><code>Go</code> · MIT</td>
 <td>Cage：为 Claude 特化的轻量化虚拟机，彻底杜绝网络泄露。多平台适配，支持多账号管理、远程部署、移动端操控。</td>
-<td align="right"><b>7882</b><br><sub>~343/day avg</sub></td>
+<td align="right"><b>7884</b><br><sub>~343/day avg</sub></td>
 <td><img src="charts/spark/Lee-xeo__Claude-Cage.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -488,14 +509,14 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">21</td>
 <td><a href="https://github.com/Jakeschincariol/day-trader-skill"><b>Jakeschincariol/day-trader-skill</b></a><br><code>Python</code> · MIT</td>
 <td>11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk …</td>
-<td align="right"><b>9227</b><br><sub>~271/day avg</sub></td>
+<td align="right"><b>9231</b><br><sub>~272/day avg</sub></td>
 <td><img src="charts/spark/Jakeschincariol__day-trader-skill.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">22</td>
 <td><a href="https://github.com/anomalyco/rune"><b>anomalyco/rune</b></a><br><code>Rust</code> · MIT</td>
 <td>Rune: Native UI framework</td>
-<td align="right"><b>7834</b><br><sub>~245/day avg</sub></td>
+<td align="right"><b>7835</b><br><sub>~245/day avg</sub></td>
 <td><img src="charts/spark/anomalyco__rune.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -516,7 +537,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">25</td>
 <td><a href="https://github.com/LNPANDY/NX2Apple"><b>LNPANDY/NX2Apple</b></a><br><code>Swift</code> · MIT</td>
 <td>Play your own Switch games on iPhone/iPad — one-click macOS app, no terminal. | 把 Switch 游戏装进 iPhone：图形界面一键构建，不用命令行。Bring your own game.</td>
-<td align="right"><b>8182</b><br><sub>~241/day avg</sub></td>
+<td align="right"><b>8186</b><br><sub>~241/day avg</sub></td>
 <td><img src="charts/spark/LNPANDY__NX2Apple.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
@@ -535,17 +556,17 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 </tr>
 <tr>
 <td align="right">28</td>
-<td><a href="https://github.com/storytold/wordcraft"><b>storytold/wordcraft</b></a><br><code>Rust</code> · Apache-2.0</td>
-<td>WordCraft: an open-source, clean-room word processor in pure Rust</td>
-<td align="right"><b>18.5k</b><br><sub>~393/day avg</sub></td>
-<td><img src="charts/spark/storytold__wordcraft.svg" width="120" height="36" alt="star trend"></td>
-</tr>
-<tr>
-<td align="right">29</td>
 <td><a href="https://github.com/tangency-labs/solidcraft"><b>tangency-labs/solidcraft</b></a><br><code>Rust</code> · Apache-2.0</td>
 <td>SolidCraft: an open-source parametric 3D CAD application built in pure Rust. Desktop, web, and automation through MCP.</td>
 <td align="right"><b>17.8k</b><br><sub>~379/day avg</sub></td>
 <td><img src="charts/spark/tangency-labs__solidcraft.svg" width="120" height="36" alt="star trend"></td>
+</tr>
+<tr>
+<td align="right">29</td>
+<td><a href="https://github.com/storytold/wordcraft"><b>storytold/wordcraft</b></a><br><code>Rust</code> · Apache-2.0</td>
+<td>WordCraft: an open-source, clean-room word processor in pure Rust</td>
+<td align="right"><b>18.5k</b><br><sub>~393/day avg</sub></td>
+<td><img src="charts/spark/storytold__wordcraft.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">30</td>
@@ -766,7 +787,7 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td align="right">30</td>
 <td><a href="https://github.com/pingdotgg/t3code"><b>pingdotgg/t3code</b></a><br><code>TypeScript</code> · MIT</td>
 <td>The best way to control Claude Code, Codex and more from any computer or phone</td>
-<td align="right"><b>72.9k</b><br><sub>~254/day avg</sub></td>
+<td align="right"><b>73.0k</b><br><sub>~254/day avg</sub></td>
 <td><img src="charts/spark/pingdotgg__t3code.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 </tbody></table>
@@ -876,7 +897,6 @@ data/mac/{cc}.json · data/podcasts/{cc}.json
 data/github/{daily,weekly,monthly,quarterly,yearly}.json
 data/global/risers.json · data/alternatives.json · data/health.json
 charts/spark/{owner__repo}.svg       star history per repository
-history/stars/{owner__repo}.json     monthly backfill + daily snapshots
 ```
 
 ## License
