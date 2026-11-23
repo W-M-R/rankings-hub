@@ -1,6 +1,6 @@
 # rankings-hub
 
-**Live site:** https://w-m-r.github.io/rankings-hub/ — the homepage renders the rankings directly (GitHub windows, app risers by region, global risers, open source alternatives).
+**Showcase site:** https://w-m-r.github.io/top-ranking/ (repo [W-M-R/top-ranking](https://github.com/W-M-R/top-ranking)) — dated rankings with star and rank charts. This repo produces the data; the showcase repo turns it into per-date pages.
 
 Daily discovery data: under-the-radar apps that are **new and rising**, plus GitHub repositories ranked over several time windows. Built to be consumed by a mobile app or static site — this repo produces data only, it does not serve traffic.
 
