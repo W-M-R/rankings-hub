@@ -231,6 +231,10 @@ function indieRow(x){
   else if(x.users!=null) stat.innerHTML=`<b>${num(x.users)}</b><br><sub>daily users</sub>`;
   else if(x.stars!=null) stat.innerHTML=`<b>${num(x.stars)}</b><br><sub>stars</sub>`;
   else if(x.addedAt) stat.innerHTML=`<b>${x.addedAt}</b><br><sub>added</sub>`;
+  if(x.delta!=null) stat.innerHTML += `<br><span class="${x.delta>0?'up':'down'}">${x.delta>0?'+':''}${x.delta}</span>`;
+  if(x.spark && x.spark.filter(p=>p[1]!=null).length>1){
+    const sw=el('div'); sw.appendChild(sparkline(x.spark,{value:x.points??x.likes??x.downloads??x.stars??x.users})); row.appendChild(sw);
+  }
   row.appendChild(stat);
   return row;
 }

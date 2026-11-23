@@ -24,6 +24,8 @@ function pickRegion(platform) {
   return list.sort()[0] ?? null;
 }
 
+const dlt = (v) => (v == null ? '—' : v > 0 ? `+${v}` : String(v));
+
 const daysSince = (iso) => Math.max(1, Math.round((Date.now() - Date.parse(iso)) / 86400000));
 
 function githubSection(w) {
@@ -111,8 +113,8 @@ export function generateReadme(manifest) {
     parts.push('');
     parts.push('Things people built and posted themselves in the last 48 hours, ranked by points.');
     parts.push('');
-    parts.push(table(['#', 'project', 'points', 'comments', 'by'], showhn.items.slice(0, 20).map((x) => [
-      x.rank, `[${md(clip(x.title, 70))}](${x.url})`, x.points, x.comments, md(x.author),
+    parts.push(table(['#', 'project', 'points', 'Δ', 'comments', 'by'], showhn.items.slice(0, 20).map((x) => [
+      x.rank, `[${md(clip(x.title, 70))}](${x.url})`, x.points, dlt(x.delta), x.comments, md(x.author),
     ])));
     parts.push('');
   }
@@ -123,8 +125,8 @@ export function generateReadme(manifest) {
     parts.push('');
     parts.push('Trending demos and small AI apps, mostly built by individuals.');
     parts.push('');
-    parts.push(table(['#', 'space', 'likes', 'sdk', 'updated'], hf.items.slice(0, 20).map((x) => [
-      x.rank, `[${md(clip(x.id, 46))}](${x.url})`, x.likes, x.sdk ?? '—', (x.updatedAt ?? '').slice(0, 10),
+    parts.push(table(['#', 'space', 'likes', 'Δ', 'sdk', 'updated'], hf.items.slice(0, 20).map((x) => [
+      x.rank, `[${md(clip(x.id, 46))}](${x.url})`, x.likes, dlt(x.delta), x.sdk ?? '—', (x.updatedAt ?? '').slice(0, 10),
     ])));
     parts.push('');
   }
@@ -144,11 +146,11 @@ export function generateReadme(manifest) {
   const more = [];
   const lob = read('indie/lobsters.json');
   if (lob?.items?.length) {
-    more.push('### Lobsters hottest', '', table(['#', 'post', 'score', 'comments'], lob.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 66))}](${x.url})`, x.points, x.comments])), '');
+    more.push('### Lobsters hottest', '', table(['#', 'post', 'score', 'Δ', 'comments'], lob.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 66))}](${x.url})`, x.points, dlt(x.delta), x.comments])), '');
   }
   const dev = read('indie/devto.json');
   if (dev?.items?.length) {
-    more.push('### Dev.to #showdev', '', table(['#', 'article', 'reactions', 'comments'], dev.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 66))}](${x.url})`, x.reactions, x.comments])), '');
+    more.push('### Dev.to #showdev', '', table(['#', 'article', 'reactions', 'Δ', 'comments'], dev.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 66))}](${x.url})`, x.reactions, dlt(x.delta), x.comments])), '');
   }
   const obsNew = read('indie/obsidian-new.json');
   const obsTop = read('indie/obsidian-top.json');
@@ -156,7 +158,7 @@ export function generateReadme(manifest) {
     more.push('### Obsidian plugins · recently updated', '', table(['#', 'plugin', 'downloads', 'updated'], obsNew.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.name, 30))}](${x.url})`, n(x.downloads), x.addedAt])), '');
   }
   if (obsTop?.items?.length) {
-    more.push('### Obsidian plugins · most downloaded', '', table(['#', 'plugin', 'downloads'], obsTop.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.name, 34))}](${x.url})`, n(x.downloads)])), '');
+    more.push('### Obsidian plugins · most downloaded', '', table(['#', 'plugin', 'downloads', 'Δ'], obsTop.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.name, 34))}](${x.url})`, n(x.downloads), dlt(x.delta)])), '');
   }
   const fxNew = read('indie/firefox-new.json');
   const fxTop = read('indie/firefox-top.json');
@@ -164,11 +166,11 @@ export function generateReadme(manifest) {
     more.push('### Firefox extensions · newest', '', table(['#', 'extension', 'daily users', 'created'], fxNew.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 40))}](${x.url})`, n(x.users), x.createdAt ?? '—'])), '');
   }
   if (fxTop?.items?.length) {
-    more.push('### Firefox extensions · most used', '', table(['#', 'extension', 'daily users'], fxTop.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 44))}](${x.url})`, n(x.users)])), '');
+    more.push('### Firefox extensions · most used', '', table(['#', 'extension', 'daily users', 'Δ'], fxTop.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 44))}](${x.url})`, n(x.users), dlt(x.delta)])), '');
   }
   const hfm = read('indie/hf-models.json');
   if (hfm?.items?.length) {
-    more.push('### Hugging Face models · trending', '', table(['#', 'model', 'likes', 'downloads', 'task'], hfm.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.id, 42))}](${x.url})`, n(x.likes), n(x.downloads), md(x.sdk ?? '—')])), '');
+    more.push('### Hugging Face models · trending', '', table(['#', 'model', 'likes', 'Δ', 'downloads', 'task'], hfm.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.id, 42))}](${x.url})`, n(x.likes), dlt(x.delta), n(x.downloads), md(x.sdk ?? '—')])), '');
   }
   const lnch = read('indie/launch-hn.json');
   if (lnch?.items?.length) {
@@ -180,11 +182,11 @@ export function generateReadme(manifest) {
   }
   const gi = read('indie/github-indie.json');
   if (gi?.items?.length) {
-    more.push('### GitHub · topic:indie', '', table(['#', 'repo', 'stars', 'about'], gi.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 40))}](${x.url})`, n(x.stars), md(clip(x.summary, 60))])), '');
+    more.push('### GitHub · topic:indie', '', table(['#', 'repo', 'stars', 'Δ', 'about'], gi.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 40))}](${x.url})`, n(x.stars), dlt(x.delta), md(clip(x.summary, 60))])), '');
   }
   const gs = read('indie/github-selfhosted.json');
   if (gs?.items?.length) {
-    more.push('### GitHub · topic:self-hosted', '', table(['#', 'repo', 'stars', 'about'], gs.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 40))}](${x.url})`, n(x.stars), md(clip(x.summary, 60))])), '');
+    more.push('### GitHub · topic:self-hosted', '', table(['#', 'repo', 'stars', 'Δ', 'about'], gs.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 40))}](${x.url})`, n(x.stars), dlt(x.delta), md(clip(x.summary, 60))])), '');
   }
   const sh = read('indie/selfhosted.json');
   if (sh?.items?.length) {

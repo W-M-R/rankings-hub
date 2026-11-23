@@ -104,8 +104,26 @@ emit('global/risers.json', { generatedAt: new Date().toISOString(), items: globa
 
 const indie = readJson(join(ROOT, 'raw/indie.json'), null);
 if (indie) {
+  const history = {};
+  try {
+    const stDir = join(ROOT, 'state/indie');
+    const fsMod = await import('node:fs');
+    for (const f of fsMod.readdirSync(stDir).filter((x) => x.endsWith('.json')).sort()) {
+      const day = f.slice(0, -5);
+      const snap = readJson(join(stDir, f), {}) ?? {};
+      for (const [source, map] of Object.entries(snap)) {
+        history[source] ??= {};
+        for (const [id, pair] of Object.entries(map)) {
+          (history[source][id] ??= []).push([day, pair?.[1] ?? null]);
+        }
+      }
+    }
+  } catch {}
   for (const key of ['showhn', 'hf-spaces', 'hf-models', 'launch-hn', 'crates-new', 'github-indie', 'github-selfhosted', 'selfhosted', 'fdroid', 'izzy', 'lobsters', 'devto', 'obsidian-new', 'obsidian-top', 'firefox-new', 'firefox-top', 'producthunt']) {
-    const items = indie[key] ?? [];
+    const items = (indie[key] ?? []).map((it) => ({
+      ...it,
+      spark: (history[key]?.[it.id] ?? []).slice(-60),
+    }));
     if (!items.length) continue;
     emit(`indie/${key}.json`, { source: key, generatedAt: indie.generatedAt, items }, items.length);
   }

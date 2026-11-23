@@ -1,10 +1,72 @@
 import { execFileSync } from 'node:child_process';
 import { existsSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
+import { readdirSync } from 'node:fs';
 import { getJson } from './lib/http.mjs';
 import { ROOT, writeJson } from './lib/util.mjs';
 
 const LIMIT = Number(process.env.INDIE_LIMIT ?? 30);
+const METRIC = {
+  showhn: 'points',
+  'hf-spaces': 'likes',
+  'hf-models': 'likes',
+  'launch-hn': 'points',
+  'crates-new': 'downloads',
+  'github-indie': 'stars',
+  'github-selfhosted': 'stars',
+  lobsters: 'points',
+  devto: 'reactions',
+  'obsidian-new': 'downloads',
+  'obsidian-top': 'downloads',
+  'firefox-new': 'users',
+  'firefox-top': 'users',
+};
+const DATE = new Date().toISOString().slice(0, 10);
+const STATE_DIR = join(ROOT, 'state/indie');
+
+function previousState() {
+  try {
+    const files = readdirSync(STATE_DIR).filter((f) => f.endsWith('.json')).sort();
+    const prev = files.filter((f) => f.slice(0, -5) < DATE).pop();
+    if (!prev) return { date: null, data: {} };
+    return { date: prev.slice(0, -5), data: JSON.parse(readFileSync(join(STATE_DIR, prev), 'utf8')) };
+  } catch {
+    return { date: null, data: {} };
+  }
+}
+
+function annotate(all, prev) {
+  const state = {};
+  for (const [source, items] of Object.entries(all)) {
+    const metric = METRIC[source];
+    const prevMap = prev.data?.[source] ?? {};
+    state[source] = {};
+    for (const item of items ?? []) {
+      const m = metric ? item[metric] : null;
+      state[source][item.id] = [item.rank, m ?? null];
+      if (!metric || m == null) continue;
+      const before = prevMap[item.id];
+      if (before) {
+        item.prevValue = before[1];
+        item.delta = typeof before[1] === 'number' ? m - before[1] : null;
+        item.prevRank = before[0];
+        item.rankDelta = before[0] - item.rank;
+      }
+    }
+  }
+  writeJson(join(STATE_DIR, `${DATE}.json`), state);
+  return state;
+}
+
+function pruneState(days = 60) {
+  try {
+    const cutoff = Date.now() - days * 86400000;
+    for (const f of readdirSync(STATE_DIR)) {
+      const d = Date.parse(f.slice(0, -5));
+      if (Number.isFinite(d) && d < cutoff) execFileSync('rm', ['-f', join(STATE_DIR, f)]);
+    }
+  } catch {}
+}
 const HN_WINDOW_HOURS = Number(process.env.HN_WINDOW_HOURS ?? 48);
 
 const FDROID_MIRRORS = (process.env.FDROID_MIRRORS ??
@@ -455,6 +517,29 @@ export async function collectIndie(health) {
     await amo('users', health, 'top'),
     await productHunt(health),
   ];
+
+  const all = {
+    showhn: hn,
+    'hf-spaces': hf,
+    'hf-models': hm,
+    'launch-hn': hlaunch,
+    'crates-new': hcrates,
+    'github-indie': hgi,
+    'github-selfhosted': hgs,
+    selfhosted: hsh,
+    fdroid: fd,
+    izzy: iz,
+    lobsters: lb,
+    devto: dt,
+    'obsidian-new': ob.new,
+    'obsidian-top': ob.top,
+    'firefox-new': fxNew,
+    'firefox-top': fxTop,
+    producthunt: ph,
+  };
+  const prev = previousState();
+  annotate(all, prev);
+  pruneState();
 
   writeJson(join(ROOT, 'raw/indie.json'), {
     generatedAt: new Date().toISOString(),
