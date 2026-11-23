@@ -3,8 +3,9 @@ import { join } from 'node:path';
 import { collectItunes } from './collect-itunes.mjs';
 import { collectGithub } from './collect-github.mjs';
 import { collectGoogle } from './collect-google.mjs';
+import { collectIndie } from './collect-indie.mjs';
 
-const platforms = (process.env.PLATFORMS ?? 'apple,mac,podcasts,github')
+const platforms = (process.env.PLATFORMS ?? 'apple,mac,podcasts,github,indie')
   .split(',')
   .map((s) => s.trim())
   .filter(Boolean);
@@ -20,6 +21,11 @@ if (platforms.includes('google')) {
 }
 if (platforms.includes('github')) {
   await collectGithub(health).catch((err) => health.push({ source: 'github', ok: false, error: String(err) }));
+}
+if (platforms.includes('indie')) {
+  await collectIndie(health)
+    .then((r) => console.log(`indie: showhn=${r.showhn} hf=${r.hf} fdroid=${r.fdroid} ph=${r.ph}`))
+    .catch((err) => health.push({ source: 'indie', ok: false, error: String(err) }));
 }
 
 ensureDir(join(ROOT, 'raw'));

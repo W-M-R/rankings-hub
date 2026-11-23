@@ -105,6 +105,42 @@ export function generateReadme(manifest) {
     parts.push('');
   }
 
+  const showhn = read('indie/showhn.json');
+  if (showhn?.items?.length) {
+    parts.push('## Indie · Show HN');
+    parts.push('');
+    parts.push('Things people built and posted themselves in the last 48 hours, ranked by points.');
+    parts.push('');
+    parts.push(table(['#', 'project', 'points', 'comments', 'by'], showhn.items.slice(0, 20).map((x) => [
+      x.rank, `[${md(clip(x.title, 70))}](${x.url})`, x.points, x.comments, md(x.author),
+    ])));
+    parts.push('');
+  }
+
+  const hf = read('indie/hf-spaces.json');
+  if (hf?.items?.length) {
+    parts.push('## Indie · Hugging Face Spaces');
+    parts.push('');
+    parts.push('Trending demos and small AI apps, mostly built by individuals.');
+    parts.push('');
+    parts.push(table(['#', 'space', 'likes', 'sdk', 'updated'], hf.items.slice(0, 20).map((x) => [
+      x.rank, `[${md(clip(x.id, 46))}](${x.url})`, x.likes, x.sdk ?? '—', (x.updatedAt ?? '').slice(0, 10),
+    ])));
+    parts.push('');
+  }
+
+  const fd = read('indie/fdroid.json');
+  if (fd?.items?.length) {
+    parts.push('## Indie · F-Droid latest');
+    parts.push('');
+    parts.push('Newest open source Android apps added to F-Droid.');
+    parts.push('');
+    parts.push(table(['#', 'app', 'added', 'what it does'], fd.items.slice(0, 20).map((x) => [
+      x.rank, `[${md(clip(x.name, 30))}](${x.url})`, x.addedAt, md(clip(x.summary, 80)),
+    ])));
+    parts.push('');
+  }
+
   const alt = read('alternatives.json');
   if (alt?.items?.length) {
     parts.push('## Open source alternatives');

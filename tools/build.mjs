@@ -102,6 +102,15 @@ const globalItems = [...globalRisers(buckets.apple, 'apple'), ...globalRisers(bu
   .map((it, i) => ({ ...it, rank: i + 1 }));
 emit('global/risers.json', { generatedAt: new Date().toISOString(), items: globalItems }, globalItems.length);
 
+const indie = readJson(join(ROOT, 'raw/indie.json'), null);
+if (indie) {
+  for (const key of ['showhn', 'hf-spaces', 'fdroid', 'producthunt']) {
+    const items = indie[key] ?? [];
+    if (!items.length) continue;
+    emit(`indie/${key}.json`, { source: key, generatedAt: indie.generatedAt, items }, items.length);
+  }
+}
+
 const altSource = join(ROOT, 'content/alternatives.yml');
 let alternatives = [];
 if (existsSync(altSource)) {
@@ -128,6 +137,7 @@ const manifest = {
     githubWindows: gh ? Object.keys(gh.windows).length : 0,
     globalRisers: globalItems.length,
     alternatives: alternatives.length,
+    indie: indie ? ['showhn', 'hf-spaces', 'fdroid', 'producthunt'].filter((k) => (indie[k] ?? []).length).length : 0,
     shards: shards.length,
   },
   budget: { rawBytes, brBytes },

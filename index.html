@@ -62,6 +62,7 @@
   <nav id="tabs">
     <button class="tab on" data-view="github">GitHub repos</button>
     <button class="tab" data-view="apps">Apps</button>
+    <button class="tab" data-view="indie">Indie</button>
     <button class="tab" data-view="global">Global risers</button>
     <button class="tab" data-view="alts">Open source alternatives</button>
   </nav>
@@ -71,7 +72,7 @@
 <div id="overlay"><div class="modal" id="modal"></div></div>
 
 <script>
-const state = { view:'github', ghWindow:'daily', platform:'apple', cc:'us', appList:'risingNow' };
+const state = { view:'github', ghWindow:'daily', platform:'apple', cc:'us', appList:'risingNow', indie:'showhn' };
 let MANIFEST = null;
 const CACHE = new Map();
 const $ = (s) => document.querySelector(s);
@@ -205,6 +206,28 @@ function appRow(a){
   return row;
 }
 
+function indieRow(x){
+  const row=el('div','item');
+  row.firstElementChild;
+  row.appendChild(el('div','rank','#'+x.rank));
+  const mid=el('div');
+  const name=el('div','name');
+  const a=el('a',null,x.title||x.name||x.id); a.href=x.url||'#'; a.target='_blank'; a.rel='noopener'; name.appendChild(a);
+  if(x.sdk) name.appendChild(el('span','badge',x.sdk));
+  mid.appendChild(name);
+  const sub=el('div','sub2');
+  if(x.summary) sub.appendChild(el('span',null,String(x.summary).slice(0,110)));
+  if(x.author) sub.appendChild(el('span','dot','· by '+x.author));
+  if(x.categories?.length) sub.appendChild(el('span','dot','· '+x.categories.join(' / ')));
+  mid.appendChild(sub); row.appendChild(mid);
+  const stat=el('div','stat');
+  if(x.points!=null) stat.innerHTML=`<b>${x.points}</b><br><sub>${x.comments??0} comments</sub>`;
+  else if(x.likes!=null) stat.innerHTML=`<b>${x.likes}</b><br><sub>likes</sub>`;
+  else if(x.addedAt) stat.innerHTML=`<b>${x.addedAt}</b><br><sub>added</sub>`;
+  row.appendChild(stat);
+  return row;
+}
+
 function list(rows, emptyText){
   if(!rows.length) return el('div','empty',emptyText);
   const box=el('div','list'); rows.forEach(r=>box.appendChild(r)); return box;
@@ -238,6 +261,14 @@ async function render(){
       const rows=d[state.appList]||[];
       content.innerHTML=''; content.appendChild(list(rows.map(appRow),'Nothing here yet — small apps need a day of snapshots before movement shows up.'));
       $('#meta').textContent=`${state.platform==='apple'?'iOS':'Android'} ${state.cc.toUpperCase()} · ${rows.length}`;
+    }
+    if(state.view==='indie'){
+      const sources=[{key:'showhn',label:'Show HN'},{key:'hf-spaces',label:'HF Spaces'},{key:'fdroid',label:'F-Droid'}];
+      subTabs(controls,sources, state.indie, (k)=>{state.indie=k;render();});
+      const d=await getJson(`./data/indie/${state.indie}.json`);
+      content.innerHTML='';
+      content.appendChild(list((d.items||[]).map(indieRow),'No indie items yet.'));
+      $('#meta').textContent=`indie · ${state.indie} · ${(d.items||[]).length}`;
     }
     if(state.view==='global'){
       const d=await getJson('./data/global/risers.json');

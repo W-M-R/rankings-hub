@@ -93,12 +93,26 @@ async function lookupBatch(ids, cc) {
   return out;
 }
 
+async function topGrossingArtists(cc) {
+  try {
+    const list = await rss('topgrossingapplications', cc, 50);
+    const ids = list.map((e) => e.id).filter(Boolean);
+    if (!ids.length) return new Set();
+    const details = await lookupBatch(ids, cc);
+    return new Set(details.map((d) => d.artistId).filter(Boolean));
+  } catch {
+    return new Set();
+  }
+}
+
 async function collectAppleRegion(cc) {
   const [free, fresh] = await Promise.all([
     rss('topfreeapplications', cc, 100),
     rss('newfreeapplications', cc, 200),
   ]);
   if (!free.length && !fresh.length) throw new Error('empty feeds');
+
+  const bigArtists = MAJOR.has(cc) ? await topGrossingArtists(cc) : new Set();
 
   const genreFeeds = GENRE_REGIONS.has(cc)
     ? await Promise.all(GENRES.map((g) => rss('topfreeapplications', cc, GENRE_LIMIT, g.id).catch(() => [])))
@@ -139,6 +153,7 @@ async function collectAppleRegion(cc) {
       id,
       name: d.trackName ?? b.name,
       seller: d.sellerName ?? b.seller,
+      artistId: d.artistId ?? null,
       icon: d.artworkUrl100 ?? b.icon,
       price: d.formattedPrice ?? b.price,
       genre: d.primaryGenreName ?? b.genre,
@@ -156,6 +171,15 @@ async function collectAppleRegion(cc) {
       platform: 'apple',
       region: cc,
     });
+  }
+
+  const artistCount = new Map();
+  for (const it of items) {
+    if (it.catalogRank != null && it.artistId) artistCount.set(it.artistId, (artistCount.get(it.artistId) ?? 0) + 1);
+  }
+  for (const it of items) {
+    const n = artistCount.get(it.artistId) ?? 0;
+    it.bigPublisher = (it.artistId != null && bigArtists.has(it.artistId)) || n >= 3;
   }
 
   const chart = free.slice(0, 30).map((e, i) => ({ ...e, rank: i + 1 }));

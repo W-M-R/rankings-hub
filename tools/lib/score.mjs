@@ -26,6 +26,7 @@ export function selectLists(items) {
   const base = scored.filter(
     (i) =>
       !sellerBlocked(i.seller) &&
+      !i.bigPublisher &&
       !categoryBlocked(i.genre ?? '') &&
       (i.ageDays ?? 0) <= CONFIG.longTailDays &&
       ((i.ratingCount ?? 0) < CONFIG.smallRatingCount || i.catalogRank != null),
