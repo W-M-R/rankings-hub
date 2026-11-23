@@ -53,6 +53,6 @@ jobs:
           fi
           git config user.name "rankings-bot"
           git config user.email "rankings-bot@users.noreply.github.com"
-          git add data state
+          git add data state README.md
           git commit -m "data: $(node -p "require('./data/manifest.json').version")"
           git push

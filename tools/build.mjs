@@ -1,8 +1,10 @@
 import { join } from 'node:path';
 import { readdirSync, existsSync, rmSync, mkdirSync } from 'node:fs';
+import { writeFileSync } from 'node:fs';
 import { ROOT, readJson, writeJson, writeBrotli, sha, bytes, ensureDir } from './lib/util.mjs';
 import { selectLists, matrixPenalty } from './lib/score.mjs';
 import { CONFIG } from './lib/regions.mjs';
+import { generateReadme } from './readme.mjs';
 
 rmSync(join(ROOT, 'data'), { recursive: true, force: true });
 mkdirSync(join(ROOT, 'data'), { recursive: true });
@@ -129,6 +131,8 @@ const manifest = {
 };
 writeJson(out('manifest.json'), manifest, true);
 writeBrotli(out('manifest.json.br'), JSON.stringify(manifest, null, 2));
+
+writeFileSync(join(ROOT, 'README.md'), generateReadme(manifest));
 
 console.log(
   `build: shards=${shards.length} raw=${(rawBytes / 1048576).toFixed(2)}MB br=${(brBytes / 1024).toFixed(0)}KB ` +
