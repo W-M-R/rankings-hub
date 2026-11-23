@@ -47,7 +47,7 @@ jobs:
 
       - name: Commit
         run: |
-          if git diff --quiet -- data state; then
+          if [ -z "$(git status --porcelain -- data state README.md)" ]; then
             echo "no changes"
             exit 0
           fi
