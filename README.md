@@ -87,6 +87,15 @@ PLATFORMS=apple,github REGIONS_LIMIT=3 node tools/collect.mjs && \
 node tools/build.mjs && REGIONS_LIMIT=3 node tools/validate.mjs
 ```
 
+## Current scope and cadence
+
+- **iOS**: 167 storefronts total, but each run covers the 40 major markets plus a rotating third of the rest (82 regions per run, every region refreshed within 3 days). The top-20 markets also pull 10 genre charts (Utilities, Productivity, Health, Finance, Education, Photo, Music, Lifestyle, Shopping) so long-tail apps get into the candidate pool.
+- **Google Play**: 39 markets, `TOP_FREE` only (no `NEW_FREE` collection exists). Detail calls are capped at 3 long-tail apps per market per run; failures are recorded in `health.json`.
+- **Mac App Store / Podcasts**: 40 markets each.
+- **GitHub**: 5 windows, refreshed on every run.
+- **Rate control**: Apple requests are globally throttled (`APPLE_RPS`, default 3/s) with a circuit breaker after 8 consecutive 403s. A burst above ~10/s gets the runner's IP blocked for a while.
+- **First-run behaviour**: `is_new` is suppressed until a previous day's snapshot exists, so Android risers only appear after the second daily run.
+
 ## Quotas and runtime limits
 
 | Item | Limit | This project |
