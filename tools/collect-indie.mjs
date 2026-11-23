@@ -264,6 +264,144 @@ async function amo(sort, health, label) {
   }
 }
 
+
+async function hfModels(health) {
+  const started = Date.now();
+  try {
+    const j = await getJson('https://huggingface.co/api/models?sort=trendingScore&limit=100');
+    const items = (j ?? [])
+      .filter((m) => !isBigOrg(m.id))
+      .slice(0, LIMIT)
+      .map((m, i) => ({
+        rank: i + 1,
+        id: m.id,
+        title: m.id.split('/')[1] ?? m.id,
+        author: m.id.split('/')[0],
+        url: `https://huggingface.co/${m.id}`,
+        likes: m.likes ?? 0,
+        downloads: m.downloads ?? 0,
+        sdk: m.pipeline_tag ?? null,
+        updatedAt: (m.lastModified ?? '').slice(0, 10) || null,
+      }));
+    health.push({ source: 'hf-models', ok: true, items: items.length, ms: Date.now() - started });
+    return items;
+  } catch (e) {
+    health.push({ source: 'hf-models', ok: false, error: String(e.message ?? e) });
+    return [];
+  }
+}
+
+async function launchHn(health) {
+  const started = Date.now();
+  try {
+    const j = await getJson('https://hn.algolia.com/api/v1/search_by_date?tags=launch_hn&hitsPerPage=100');
+    const cutoff = Date.now() - 30 * 86400000;
+    const items = (j.hits ?? [])
+      .filter((h) => Date.parse(h.created_at) >= cutoff)
+      .sort((a, b) => (b.points ?? 0) - (a.points ?? 0))
+      .slice(0, LIMIT)
+      .map((h, i) => ({
+        rank: i + 1,
+        id: h.objectID,
+        title: h.title,
+        url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`,
+        points: h.points ?? 0,
+        comments: h.num_comments ?? 0,
+        author: h.author,
+        createdAt: h.created_at,
+      }));
+    health.push({ source: 'launch-hn', ok: true, items: items.length, ms: Date.now() - started });
+    return items;
+  } catch (e) {
+    health.push({ source: 'launch-hn', ok: false, error: String(e.message ?? e) });
+    return [];
+  }
+}
+
+async function cratesNew(health) {
+  const started = Date.now();
+  try {
+    const j = await getJson('https://crates.io/api/v1/crates?sort=new&per_page=30');
+    const items = (j.crates ?? []).slice(0, LIMIT).map((c, i) => ({
+      rank: i + 1,
+      id: c.id,
+      title: c.name,
+      summary: short(c.description ?? '', 120),
+      url: c.repository || c.homepage || `https://crates.io/crates/${c.name}`,
+      downloads: c.downloads ?? 0,
+      author: null,
+      createdAt: (c.created_at ?? '').slice(0, 10) || null,
+      addedAt: (c.created_at ?? '').slice(0, 10) || null,
+    }));
+    health.push({ source: 'crates-new', ok: true, items: items.length, ms: Date.now() - started });
+    return items;
+  } catch (e) {
+    health.push({ source: 'crates-new', ok: false, error: String(e.message ?? e) });
+    return [];
+  }
+}
+
+async function githubTopic(health, topic, label, days = 30, minStars = 5) {
+  const started = Date.now();
+  const token = process.env.GITHUB_TOKEN ?? '';
+  try {
+    const since = new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
+    const q = encodeURIComponent(`topic:${topic} created:>${since} stars:>${minStars}`);
+    const r = await fetch(`https://api.github.com/search/repositories?q=${q}&sort=stars&order=desc&per_page=${LIMIT}`, {
+      headers: { authorization: `Bearer ${token}`, accept: 'application/vnd.github+json', 'user-agent': 'rankings-hub' },
+    });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const j = await r.json();
+    const items = (j.items ?? []).map((it, i) => ({
+      rank: i + 1,
+      id: it.full_name,
+      title: it.full_name,
+      summary: short(it.description ?? '', 120),
+      url: it.html_url,
+      stars: it.stargazers_count ?? 0,
+      author: it.owner?.login ?? null,
+      sdk: it.language ?? null,
+      createdAt: (it.created_at ?? '').slice(0, 10),
+      addedAt: (it.created_at ?? '').slice(0, 10),
+    }));
+    health.push({ source: `github-${label}`, ok: true, items: items.length, ms: Date.now() - started });
+    return items;
+  } catch (e) {
+    health.push({ source: `github-${label}`, ok: false, error: String(e.message ?? e) });
+    return [];
+  }
+}
+
+async function selfhosted(health) {
+  const started = Date.now();
+  try {
+    const md = await (await fetch('https://raw.githubusercontent.com/awesome-selfhosted/awesome-selfhosted/master/README.md', { headers: { 'user-agent': 'rankings-hub' } })).text();
+    const items = [];
+    let category = '';
+    let sub = '';
+    for (const line of md.split('\n')) {
+      const h2 = /^##\s+(.+?)\s*$/.exec(line);
+      const h3 = /^###\s+(.+?)\s*$/.exec(line);
+      if (h2 && !/^Awesome|^Table|^License|^Contributing/i.test(h2[1])) { category = h2[1]; sub = ''; continue; }
+      if (h3) { sub = h3[1]; continue; }
+      const m = /^[-*]\s+\[([^\]]+)\]\(([^)]+)\)\s*(?:[-–—]\s*(.+))?$/.exec(line.trim());
+      if (!m) continue;
+      const name = m[1].replace(/`/g, '').trim();
+      const url = m[2];
+      const desc = short((m[3] ?? '').replace(/\[[^\]]*\]\([^)]*\)/g, '').replace(/`/g, '').trim(), 120);
+      if (!desc) continue;
+      items.push({ id: `${category}/${name}`, title: name, url, summary: desc, category: sub || category });
+      if (items.length >= 120) break;
+    }
+    const ranked = items.slice(0, 60).map((x, i) => ({ rank: i + 1, ...x }));
+    health.push({ source: 'selfhosted', ok: true, items: ranked.length, ms: Date.now() - started });
+    return ranked;
+  } catch (e) {
+    health.push({ source: 'selfhosted', ok: false, error: String(e.message ?? e) });
+    return [];
+  }
+}
+
 async function productHunt(health) {
   const token = process.env.PH_TOKEN;
   if (!token) {
@@ -299,9 +437,15 @@ async function productHunt(health) {
 }
 
 export async function collectIndie(health) {
-  const [hn, hf, fd, iz, lb, dt, ob, fxNew, fxTop, ph] = [
+  const [hn, hf, hm, hlaunch, hcrates, hgi, hgs, hsh, fd, iz, lb, dt, ob, fxNew, fxTop, ph] = [
     await showHn(health),
     await hfSpaces(health),
+    await hfModels(health),
+    await launchHn(health),
+    await cratesNew(health),
+    await githubTopic(health, 'indie', 'indie', 90, 2),
+    await githubTopic(health, 'self-hosted', 'selfhosted'),
+    await selfhosted(health),
     await fdroid(health),
     await izzy(health),
     await lobsters(health),
@@ -316,6 +460,12 @@ export async function collectIndie(health) {
     generatedAt: new Date().toISOString(),
     showhn: hn,
     'hf-spaces': hf,
+    'hf-models': hm,
+    'launch-hn': hlaunch,
+    'crates-new': hcrates,
+    'github-indie': hgi,
+    'github-selfhosted': hgs,
+    selfhosted: hsh,
     fdroid: fd,
     izzy: iz,
     lobsters: lb,
@@ -330,6 +480,12 @@ export async function collectIndie(health) {
   return {
     showhn: hn.length,
     hf: hf.length,
+    hfModels: hm.length,
+    launch: hlaunch.length,
+    crates: hcrates.length,
+    ghIndie: hgi.length,
+    ghSelfhosted: hgs.length,
+    selfhosted: hsh.length,
     fdroid: fd.length,
     izzy: iz.length,
     lobsters: lb.length,

@@ -104,7 +104,7 @@ emit('global/risers.json', { generatedAt: new Date().toISOString(), items: globa
 
 const indie = readJson(join(ROOT, 'raw/indie.json'), null);
 if (indie) {
-  for (const key of ['showhn', 'hf-spaces', 'fdroid', 'izzy', 'lobsters', 'devto', 'obsidian-new', 'obsidian-top', 'firefox-new', 'firefox-top', 'producthunt']) {
+  for (const key of ['showhn', 'hf-spaces', 'hf-models', 'launch-hn', 'crates-new', 'github-indie', 'github-selfhosted', 'selfhosted', 'fdroid', 'izzy', 'lobsters', 'devto', 'obsidian-new', 'obsidian-top', 'firefox-new', 'firefox-top', 'producthunt']) {
     const items = indie[key] ?? [];
     if (!items.length) continue;
     emit(`indie/${key}.json`, { source: key, generatedAt: indie.generatedAt, items }, items.length);
@@ -138,7 +138,7 @@ const manifest = {
     globalRisers: globalItems.length,
     alternatives: alternatives.length,
     indie: indie
-      ? ['showhn', 'hf-spaces', 'fdroid', 'izzy', 'lobsters', 'devto', 'obsidian-new', 'obsidian-top', 'firefox-new', 'firefox-top', 'producthunt'].filter(
+      ? ['showhn', 'hf-spaces', 'hf-models', 'launch-hn', 'crates-new', 'github-indie', 'github-selfhosted', 'selfhosted', 'fdroid', 'izzy', 'lobsters', 'devto', 'obsidian-new', 'obsidian-top', 'firefox-new', 'firefox-top', 'producthunt'].filter(
           (k) => (indie[k] ?? []).length,
         ).length
       : 0,

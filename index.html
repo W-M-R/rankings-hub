@@ -219,6 +219,7 @@ function indieRow(x){
   if(x.summary) sub.appendChild(el('span',null,String(x.summary).slice(0,110)));
   if(x.author) sub.appendChild(el('span','dot','· by '+x.author));
   if(x.categories?.length) sub.appendChild(el('span','dot','· '+x.categories.join(' / ')));
+  if(x.category) sub.appendChild(el('span','dot','· '+x.category));
   if(x.tags?.length) sub.appendChild(el('span','dot','· '+x.tags.join(', ')));
   if(x.updatedAt) sub.appendChild(el('span','dot','· '+x.updatedAt));
   mid.appendChild(sub); row.appendChild(mid);
@@ -228,6 +229,7 @@ function indieRow(x){
   else if(x.likes!=null) stat.innerHTML=`<b>${x.likes}</b><br><sub>likes</sub>`;
   else if(x.downloads!=null) stat.innerHTML=`<b>${num(x.downloads)}</b><br><sub>downloads</sub>`;
   else if(x.users!=null) stat.innerHTML=`<b>${num(x.users)}</b><br><sub>daily users</sub>`;
+  else if(x.stars!=null) stat.innerHTML=`<b>${num(x.stars)}</b><br><sub>stars</sub>`;
   else if(x.addedAt) stat.innerHTML=`<b>${x.addedAt}</b><br><sub>added</sub>`;
   row.appendChild(stat);
   return row;
@@ -275,6 +277,12 @@ async function render(){
         {key:'izzy',label:'IzzyOnDroid'},
         {key:'lobsters',label:'Lobsters'},
         {key:'devto',label:'Dev.to'},
+        {key:'hf-models',label:'HF models'},
+        {key:'launch-hn',label:'Launch HN'},
+        {key:'crates-new',label:'New crates'},
+        {key:'github-indie',label:'GitHub indie'},
+        {key:'github-selfhosted',label:'GitHub self-hosted'},
+        {key:'selfhosted',label:'Self-hosted'},
         {key:'obsidian-new',label:'Obsidian new'},
         {key:'obsidian-top',label:'Obsidian top'},
         {key:'firefox-new',label:'Firefox new'},

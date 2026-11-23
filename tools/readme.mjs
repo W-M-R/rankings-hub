@@ -166,6 +166,30 @@ export function generateReadme(manifest) {
   if (fxTop?.items?.length) {
     more.push('### Firefox extensions · most used', '', table(['#', 'extension', 'daily users'], fxTop.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 44))}](${x.url})`, n(x.users)])), '');
   }
+  const hfm = read('indie/hf-models.json');
+  if (hfm?.items?.length) {
+    more.push('### Hugging Face models · trending', '', table(['#', 'model', 'likes', 'downloads', 'task'], hfm.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.id, 42))}](${x.url})`, n(x.likes), n(x.downloads), md(x.sdk ?? '—')])), '');
+  }
+  const lnch = read('indie/launch-hn.json');
+  if (lnch?.items?.length) {
+    more.push('### Launch HN', '', table(['#', 'launch', 'points', 'comments'], lnch.items.slice(0, 12).map((x) => [x.rank, `[${md(clip(x.title, 70))}](${x.url})`, x.points, x.comments])), '');
+  }
+  const crt = read('indie/crates-new.json');
+  if (crt?.items?.length) {
+    more.push('### New Rust crates', '', table(['#', 'crate', 'published', 'what it does'], crt.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 26))}](${x.url})`, x.addedAt ?? '—', md(clip(x.summary, 70))])), '');
+  }
+  const gi = read('indie/github-indie.json');
+  if (gi?.items?.length) {
+    more.push('### GitHub · topic:indie', '', table(['#', 'repo', 'stars', 'about'], gi.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 40))}](${x.url})`, n(x.stars), md(clip(x.summary, 60))])), '');
+  }
+  const gs = read('indie/github-selfhosted.json');
+  if (gs?.items?.length) {
+    more.push('### GitHub · topic:self-hosted', '', table(['#', 'repo', 'stars', 'about'], gs.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.title, 40))}](${x.url})`, n(x.stars), md(clip(x.summary, 60))])), '');
+  }
+  const sh = read('indie/selfhosted.json');
+  if (sh?.items?.length) {
+    more.push('### Self-hosted catalog (awesome-selfhosted)', '', table(['#', 'project', 'category', 'what it does'], sh.items.slice(0, 20).map((x) => [x.rank, `[${md(clip(x.title, 28))}](${x.url})`, md(clip(x.category, 26)), md(clip(x.summary, 60))])), '');
+  }
   const iz = read('indie/izzy.json');
   if (iz?.items?.length) {
     more.push('### IzzyOnDroid · newest', '', table(['#', 'app', 'added', 'what it does'], iz.items.slice(0, 15).map((x) => [x.rank, `[${md(clip(x.name, 30))}](${x.url})`, x.addedAt, md(clip(x.summary, 70))])), '');
