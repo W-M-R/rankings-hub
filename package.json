@@ -1,0 +1,19 @@
+{
+  "name": "rankings-hub",
+  "private": false,
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Daily discovery feed: rising / new / under-the-radar apps and GitHub repositories.",
+  "scripts": {
+    "collect": "node tools/collect.mjs",
+    "build": "node tools/build.mjs",
+    "validate": "node tools/validate.mjs",
+    "all": "node tools/collect.mjs && node tools/build.mjs && node tools/validate.mjs"
+  },
+  "optionalDependencies": {
+    "google-play-scraper": "^10.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

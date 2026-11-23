@@ -1,0 +1,66 @@
+import { join } from 'node:path';
+import { existsSync, readFileSync } from 'node:fs';
+import { ROOT, readJson, sha, bytes } from './lib/util.mjs';
+
+const problems = [];
+const dataDir = join(ROOT, 'data');
+const manifest = readJson(join(dataDir, 'manifest.json'), null);
+
+if (!manifest) problems.push('manifest.json 缺失');
+
+const seen = new Set();
+for (const shard of manifest?.shards ?? []) {
+  if (seen.has(shard.path)) problems.push(`重复分片 ${shard.path}`);
+  seen.add(shard.path);
+  const p = join(dataDir, shard.path);
+  if (!existsSync(p)) {
+    problems.push(`缺文件 ${shard.path}`);
+    continue;
+  }
+  const text = readFileSync(p, 'utf8');
+  try {
+    JSON.parse(text);
+  } catch {
+    problems.push(`JSON 解析失败 ${shard.path}`);
+    continue;
+  }
+  if (sha(text).slice(0, 16) !== shard.sha256) problems.push(`sha256 不匹配 ${shard.path}`);
+  if (bytes(p) === 0) problems.push(`空文件 ${shard.path}`);
+}
+
+const required = ['github/daily.json'];
+for (const r of required) if (!seen.has(r)) problems.push(`缺必需分片 ${r}`);
+if (![...seen].some((p) => p.startsWith('rising/apple/'))) problems.push('缺 rising/apple 分片');
+if (![...seen].some((p) => p.startsWith('charts/apple/'))) problems.push('缺 charts/apple 分片');
+if (process.env.ENABLE_GOOGLE_PLAY === 'true' && ![...seen].some((p) => p.startsWith('rising/google/'))) {
+  problems.push('缺 rising/google 分片');
+}
+
+for (const name of ['github/daily.json', 'github/weekly.json', 'github/monthly.json', 'github/quarterly.json', 'github/yearly.json']) {
+  if (!seen.has(name)) continue;
+  const j = readJson(join(dataDir, name));
+  const min = name.endsWith('daily.json') ? 5 : 8;
+  if ((j.items?.length ?? 0) < min) problems.push(`${name} 条目过少 (${j.items?.length ?? 0} < ${min})`);
+}
+
+const appleRising = [...seen].filter((p) => p.startsWith('rising/apple/'));
+const minApple = Number(process.env.REGIONS_LIMIT ?? 0) || 20;
+if (manifest && appleRising.length < minApple) problems.push(`iOS 地区过少：${appleRising.length} < ${minApple}`);
+
+const brTotal = manifest?.budget?.brBytes ?? 0;
+if (brTotal > 2_500_000) problems.push(`Brotli 总量超预算：${(brTotal / 1048576).toFixed(2)}MB`);
+
+const health = readJson(join(dataDir, 'health.json'), { entries: [] });
+const sources = health.entries?.filter((e) => e.ok).length ?? 0;
+if (sources === 0) problems.push('health.json 没有任何成功源');
+
+if (problems.length) {
+  console.error(`❌ validate 失败 ${problems.length} 项`);
+  for (const p of problems.slice(0, 25)) console.error('  - ' + p);
+  process.exit(1);
+}
+
+console.log(
+  `✅ validate 通过：${seen.size} 个分片，raw ${((manifest.budget.rawBytes ?? 0) / 1048576).toFixed(2)}MB，` +
+    `br ${((manifest.budget.brBytes ?? 0) / 1024).toFixed(0)}KB，版本 ${manifest.version}`,
+);
