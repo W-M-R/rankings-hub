@@ -2,112 +2,115 @@
 
 Rising apps and GitHub repositories, rebuilt every day. The tables below are regenerated from the latest run.
 
-**Last update:** 2026-11-23 08:03 UTC · **[Open the site](https://w-m-r.github.io/rankings-hub/)**
+**Last update:** 2026-11-23 08:15 UTC · **[Open the site](https://w-m-r.github.io/rankings-hub/)**
 
 ## GitHub · daily
 
 | # | repository | stars | +/day | lang |
 | --- | --- | --- | --- | --- |
-| 1 | [omonkeyz/xbox-emulator](https://github.com/omonkeyz/xbox-emulator) | 1394 | — | Rust |
-| 2 | [os6/nospeaker](https://github.com/os6/nospeaker) | 602 | — | Swift |
-| 3 | [sybil-solutions/skill-distill](https://github.com/sybil-solutions/skill-distill) | 467 | — | Python |
-| 4 | [sshkeda/minecraft-server-on-orange-cloud](https://github.com/sshkeda/minecraft-server-on-orange-cloud) | 398 | — | TypeScript |
+| 1 | [omonkeyz/xbox-emulator](https://github.com/omonkeyz/xbox-emulator) | 1415 | — | Rust |
+| 2 | [os6/nospeaker](https://github.com/os6/nospeaker) | 682 | — | Swift |
+| 3 | [sybil-solutions/skill-distill](https://github.com/sybil-solutions/skill-distill) | 470 | — | Python |
+| 4 | [sshkeda/minecraft-server-on-orange-cloud](https://github.com/sshkeda/minecraft-server-on-orange-cloud) | 397 | — | TypeScript |
 | 5 | [dillithdillith4-cell/autodesk-cfd](https://github.com/dillithdillith4-cell/autodesk-cfd) | 340 | — | HTML |
+| 6 | [MoritzPindorek/Five-Laws-of-AI-Agents](https://github.com/MoritzPindorek/Five-Laws-of-AI-Agents) | 298 | — | HTML |
 
 ## GitHub · weekly
 
 | # | repository | stars | +/day | lang |
 | --- | --- | --- | --- | --- |
-| 1 | [ItsNotRexed/Leonida](https://github.com/ItsNotRexed/Leonida) | 16.8k | — | Python |
-| 2 | [omonkeyz/xbox-emulator](https://github.com/omonkeyz/xbox-emulator) | 1394 | — | Rust |
-| 3 | [R0Y00/Xbox2Windows](https://github.com/R0Y00/Xbox2Windows) | 1350 | — | Python |
-| 4 | [Lemxy/WinRust](https://github.com/Lemxy/WinRust) | 1268 | — | Rust |
-| 5 | [os6/nospeaker](https://github.com/os6/nospeaker) | 603 | — | Swift |
-| 6 | [replit/datacat](https://github.com/replit/datacat) | 564 | — | TypeScript |
-| 7 | [danielwh2/sprite-stacking](https://github.com/danielwh2/sprite-stacking) | 522 | — | HTML |
-| 8 | [sybil-solutions/skill-distill](https://github.com/sybil-solutions/skill-distill) | 467 | — | Python |
-| 9 | [ItsNotRexed/Hookshot](https://github.com/ItsNotRexed/Hookshot) | 449 | — | C++ |
-| 10 | [nkjDSLcvanv/antigravity-codex-theme](https://github.com/nkjDSLcvanv/antigravity-codex-theme) | 418 | — | JavaScript |
+| 1 | [ItsNotRexed/Leonida](https://github.com/ItsNotRexed/Leonida) | 17.4k | — | Python |
+| 2 | [omonkeyz/xbox-emulator](https://github.com/omonkeyz/xbox-emulator) | 1415 | — | Rust |
+| 3 | [R0Y00/Xbox2Windows](https://github.com/R0Y00/Xbox2Windows) | 1365 | — | Python |
+| 4 | [Lemxy/WinRust](https://github.com/Lemxy/WinRust) | 1289 | — | Rust |
+| 5 | [os6/nospeaker](https://github.com/os6/nospeaker) | 682 | — | Swift |
+| 6 | [replit/datacat](https://github.com/replit/datacat) | 568 | — | TypeScript |
+| 7 | [danielwh2/sprite-stacking](https://github.com/danielwh2/sprite-stacking) | 542 | — | HTML |
+| 8 | [sybil-solutions/skill-distill](https://github.com/sybil-solutions/skill-distill) | 470 | — | Python |
+| 9 | [ItsNotRexed/Hookshot](https://github.com/ItsNotRexed/Hookshot) | 459 | — | C++ |
+| 10 | [nkjDSLcvanv/antigravity-codex-theme](https://github.com/nkjDSLcvanv/antigravity-codex-theme) | 428 | — | JavaScript |
 
 ## GitHub · monthly
 
 | # | repository | stars | +/day | lang |
 | --- | --- | --- | --- | --- |
-| 1 | [storytold/craft-anything](https://github.com/storytold/craft-anything) | 41.5k | — | Rust |
+| 1 | [storytold/craft-anything](https://github.com/storytold/craft-anything) | 41.6k | — | Rust |
 | 2 | [ccch1mneyyy/dsh-Go](https://github.com/ccch1mneyyy/dsh-Go) | 30.4k | — | Dart |
 | 3 | [deepseek-ai/dsh-superagent-prototype](https://github.com/deepseek-ai/dsh-superagent-prototype) | 24.3k | — | TypeScript |
-| 4 | [heydamir/unslop](https://github.com/heydamir/unslop) | 20.4k | — | JavaScript |
-| 5 | [ItsNotRexed/Leonida](https://github.com/ItsNotRexed/Leonida) | 16.8k | — | Python |
-| 6 | [libracoder/kiri](https://github.com/libracoder/kiri) | 12.4k | — | Rust |
+| 4 | [heydamir/unslop](https://github.com/heydamir/unslop) | 20.5k | — | JavaScript |
+| 5 | [ItsNotRexed/Leonida](https://github.com/ItsNotRexed/Leonida) | 17.4k | — | Python |
+| 6 | [libracoder/kiri](https://github.com/libracoder/kiri) | 12.5k | — | Rust |
 | 7 | [zortos293/Lichii](https://github.com/zortos293/Lichii) | 10.1k | — | C++ |
-| 8 | [wangzan101/Mika](https://github.com/wangzan101/Mika) | 9681 | — | Kotlin |
-| 9 | [RoutineMiku/apkstart](https://github.com/RoutineMiku/apkstart) | 9305 | — | JavaScript |
-| 10 | [huami1314/GestaltX](https://github.com/huami1314/GestaltX) | 8825 | — | Swift |
+| 8 | [wangzan101/Mika](https://github.com/wangzan101/Mika) | 9704 | — | Kotlin |
+| 9 | [RoutineMiku/apkstart](https://github.com/RoutineMiku/apkstart) | 9332 | — | JavaScript |
+| 10 | [huami1314/GestaltX](https://github.com/huami1314/GestaltX) | 8827 | — | Swift |
 
 ## GitHub · quarterly
 
 | # | repository | stars | +/day | lang |
 | --- | --- | --- | --- | --- |
-| 1 | [storytold/craft-anything](https://github.com/storytold/craft-anything) | 41.5k | — | Rust |
+| 1 | [storytold/craft-anything](https://github.com/storytold/craft-anything) | 41.6k | — | Rust |
 | 2 | [ccch1mneyyy/dsh-Go](https://github.com/ccch1mneyyy/dsh-Go) | 30.4k | — | Dart |
 | 3 | [deepseek-ai/dsh-superagent-prototype](https://github.com/deepseek-ai/dsh-superagent-prototype) | 24.3k | — | TypeScript |
-| 4 | [heydamir/unslop](https://github.com/heydamir/unslop) | 20.4k | — | JavaScript |
-| 5 | [ItsNotRexed/Leonida](https://github.com/ItsNotRexed/Leonida) | 16.8k | — | Python |
+| 4 | [heydamir/unslop](https://github.com/heydamir/unslop) | 20.5k | — | JavaScript |
+| 5 | [ItsNotRexed/Leonida](https://github.com/ItsNotRexed/Leonida) | 17.4k | — | Python |
 | 6 | [storytold/photocraft](https://github.com/storytold/photocraft) | 81.1k | — | Rust |
-| 7 | [deepseek-ai/DeepInfer](https://github.com/deepseek-ai/DeepInfer) | 26.3k | — | Python |
-| 8 | [libracoder/kiri](https://github.com/libracoder/kiri) | 12.4k | — | Rust |
+| 7 | [libracoder/kiri](https://github.com/libracoder/kiri) | 12.5k | — | Rust |
+| 8 | [deepseek-ai/DeepInfer](https://github.com/deepseek-ai/DeepInfer) | 26.3k | — | Python |
 | 9 | [zortos293/Lichii](https://github.com/zortos293/Lichii) | 10.1k | — | C++ |
-| 10 | [wangzan101/Mika](https://github.com/wangzan101/Mika) | 9681 | — | Kotlin |
+| 10 | [wangzan101/Mika](https://github.com/wangzan101/Mika) | 9704 | — | Kotlin |
 
 ## GitHub · yearly
 
 | # | repository | stars | +/day | lang |
 | --- | --- | --- | --- | --- |
-| 1 | [storytold/craft-anything](https://github.com/storytold/craft-anything) | 41.5k | — | Rust |
+| 1 | [storytold/craft-anything](https://github.com/storytold/craft-anything) | 41.6k | — | Rust |
 | 2 | [storytold/photocraft](https://github.com/storytold/photocraft) | 81.1k | — | Rust |
 | 3 | [eternity4719/HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) | 77.2k | — | HTML |
 | 4 | [Niko1221/Strata](https://github.com/Niko1221/Strata) | 47.2k | — | C++ |
-| 5 | [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) | 285.7k | — | TypeScript |
+| 5 | [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) | 285.8k | — | TypeScript |
 | 6 | [yetone/magpie](https://github.com/yetone/magpie) | 40.2k | — | Go |
-| 7 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 197.0k | — | JavaScript |
+| 7 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 197.1k | — | JavaScript |
 | 8 | [odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus) | 95.9k | — | Python |
-| 9 | [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5) | 60.5k | — | C++ |
+| 9 | [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5) | 60.6k | — | C++ |
 | 10 | [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | 122.2k | — | Go |
 
-## iOS · Rising now (AE)
+## iOS · Rising now (US)
 
 | rank | app | rating | ratings | age |
 | --- | --- | --- | --- | --- |
-| 1 | [SultanOS](https://apps.apple.com/ae/app/sultanos/id6805409404?uo=4) | 4.8 | 19 | 30d |
-| 2 | [MabilisKwarta - Cash Now](https://apps.apple.com/ae/app/mabiliskwarta-cash-now/id6812927762?uo=4) | 2.2 | 13 | 19d |
-| 3 | [StreamLab - Live Simulator](https://apps.apple.com/ae/app/streamlab-live-simulator/id6789209659?uo=4) | 2.0 | 27 | 130d |
-| 4 | [American Hospital Dubai](https://apps.apple.com/ae/app/american-hospital-dubai/id6763379341?uo=4) | 4.6 | 593 | 138d |
-| 5 | [Mumayaz](https://apps.apple.com/ae/app/mumayaz/id6789906640?uo=4) | 4.7 | 82 | 66d |
-| 6 | [GymNation](https://apps.apple.com/ae/app/gymnation/id6759922886?uo=4) | 4.4 | 415 | 160d |
-| 7 | [budgenie](https://apps.apple.com/ae/app/budgenie/id6800877596?uo=4) | 4.2 | 67 | 46d |
-| 8 | [Music Player : Offline Videos](https://apps.apple.com/ae/app/music-player-offline-videos/id6779995115?uo=4) | 4.3 | 343 | 145d |
-| 9 | [CarTV - M3U IPTV Player & Cast](https://apps.apple.com/ae/app/cartv-m3u-iptv-player-cast/id6800211040?uo=4) | 4.3 | 512 | 98d |
-| 10 | [Movie Box : Movies & TV Series](https://apps.apple.com/ae/app/movie-box-movies-tv-series/id6793054307?uo=4) | 4.1 | 339 | 115d |
+| 1 | [Claude Duet by Anthropic](https://apps.apple.com/us/app/claude-duet-by-anthropic/id6803276000?uo=4) | 4.3 | 232 | 28d |
+| 2 | [AreaMap: Measure Land & Acres](https://apps.apple.com/us/app/areamap-measure-land-acres/id6816359797?uo=4) | 4.6 | 256 | 55d |
+| 3 | [Untraced: Find the Suspect](https://apps.apple.com/us/app/untraced-find-the-suspect/id6817187484?uo=4) | 4.5 | 801 | 32d |
+| 4 | [iTell: Second Phone Bridge](https://apps.apple.com/us/app/itell-second-phone-bridge/id6831699886?uo=4) | 4.2 | 15 | 15d |
+| 5 | [Health100](https://apps.apple.com/us/app/health100/id6760536822?uo=4) | 3.9 | 1444 | 145d |
+| 6 | [Empose: Aesthetic Poses](https://apps.apple.com/us/app/empose-aesthetic-poses/id6799978162?uo=4) | 4.0 | 170 | 91d |
+| 7 | [SleepSense: Sleep Tracker](https://apps.apple.com/us/app/sleepsense-sleep-tracker/id6791916451?uo=4) | 4.4 | 955 | 124d |
+| 8 | [melo: Playlists for Sounds](https://apps.apple.com/us/app/melo-playlists-for-sounds/id6832818349?uo=4) | 4.1 | 12 | 5d |
+| 9 | [Rocco - Fast Cash Advance](https://apps.apple.com/us/app/rocco-fast-cash-advance/id6764022479?uo=4) | 4.6 | 2415 | 104d |
+| 10 | [Headway Therapy & Psychiatry](https://apps.apple.com/us/app/headway-therapy-psychiatry/id6783091001?uo=4) | 4.6 | 79 | 61d |
 
-## iOS · Just launched (AE)
+## iOS · Just launched (US)
 
 | rank | app | rating | ratings | age |
 | --- | --- | --- | --- | --- |
-| 1 | [Charlotte Tilbury Arabia](https://apps.apple.com/ae/app/charlotte-tilbury-arabia/id6820956501?uo=4) | 4.8 | 80 | 16d |
-| 2 | [MabilisKwarta - Cash Now](https://apps.apple.com/ae/app/mabiliskwarta-cash-now/id6812927762?uo=4) | 2.2 | 13 | 19d |
-| 3 | [SultanOS](https://apps.apple.com/ae/app/sultanos/id6805409404?uo=4) | 4.8 | 19 | 30d |
-| 4 | [My LIC](https://apps.apple.com/ae/app/my-lic/id6740513802?uo=4) | 4.6 | 124 | 38d |
-| 5 | [budgenie](https://apps.apple.com/ae/app/budgenie/id6800877596?uo=4) | 4.2 | 67 | 46d |
-| 6 | [Mumayaz](https://apps.apple.com/ae/app/mumayaz/id6789906640?uo=4) | 4.7 | 82 | 66d |
-| 7 | [EVS Customer Portal](https://apps.apple.com/ae/app/evs-customer-portal/id6766456532?uo=4) | 4.5 | 30 | 67d |
+| 1 | [melo: Playlists for Sounds](https://apps.apple.com/us/app/melo-playlists-for-sounds/id6832818349?uo=4) | 4.1 | 12 | 5d |
+| 2 | [iTell: Second Phone Bridge](https://apps.apple.com/us/app/itell-second-phone-bridge/id6831699886?uo=4) | 4.2 | 15 | 15d |
+| 3 | [Claude Duet by Anthropic](https://apps.apple.com/us/app/claude-duet-by-anthropic/id6803276000?uo=4) | 4.3 | 232 | 28d |
+| 4 | [The Floor HQ](https://apps.apple.com/us/app/the-floor-hq/id6764116699?uo=4) | 4.5 | 22 | 28d |
+| 5 | [Untraced: Find the Suspect](https://apps.apple.com/us/app/untraced-find-the-suspect/id6817187484?uo=4) | 4.5 | 801 | 32d |
+| 6 | [GeoShare : GPS Tracker](https://apps.apple.com/us/app/geoshare-gps-tracker/id6822730153?uo=4) | 4.4 | 116 | 33d |
+| 7 | [AreaMap: Measure Land & Acres](https://apps.apple.com/us/app/areamap-measure-land-acres/id6816359797?uo=4) | 4.6 | 256 | 55d |
+| 8 | [Headway Therapy & Psychiatry](https://apps.apple.com/us/app/headway-therapy-psychiatry/id6783091001?uo=4) | 4.6 | 79 | 61d |
 
-## iOS · Hidden gems (AE)
+## iOS · Hidden gems (US)
 
 | rank | app | rating | ratings | rank? |
 | --- | --- | --- | --- | --- |
-| 1 | [Charlotte Tilbury Arabia](https://apps.apple.com/ae/app/charlotte-tilbury-arabia/id6820956501?uo=4) | 4.8 | 80 | #36 |
-| 2 | [My LIC](https://apps.apple.com/ae/app/my-lic/id6740513802?uo=4) | 4.6 | 124 | #47 |
-| 3 | [EVS Customer Portal](https://apps.apple.com/ae/app/evs-customer-portal/id6766456532?uo=4) | 4.5 | 30 | #44 |
+| 1 | [Rocco - Fast Cash Advance](https://apps.apple.com/us/app/rocco-fast-cash-advance/id6764022479?uo=4) | 4.6 | 2415 | #40 |
+| 2 | [Headway Therapy & Psychiatry](https://apps.apple.com/us/app/headway-therapy-psychiatry/id6783091001?uo=4) | 4.6 | 79 | #48 |
+| 3 | [AreaMap: Measure Land & Acres](https://apps.apple.com/us/app/areamap-measure-land-acres/id6816359797?uo=4) | 4.6 | 256 | #23 |
+| 4 | [The Floor HQ](https://apps.apple.com/us/app/the-floor-hq/id6764116699?uo=4) | 4.5 | 22 | #48 |
 
 ## Global risers
 
@@ -115,16 +118,16 @@ Apps climbing in three or more storefronts at once.
 
 | # | app | regions |
 | --- | --- | --- |
-| 1 | [Movie Box : Movies & TV Series](https://apps.apple.com/bw/app/movie-box-movies-tv-series/id6793054307?uo=4) | 16 |
-| 2 | [Speaker Headphones Connect](https://apps.apple.com/au/app/speaker-headphones-connect/id6781532389?uo=4) | 12 |
-| 3 | [CarTV - M3U IPTV Auto](https://apps.apple.com/cl/app/cartv-m3u-iptv-auto/id6800211040?uo=4) | 10 |
-| 4 | [Music Player : Offline Videos](https://apps.apple.com/gm/app/music-player-offline-videos/id6779995115?uo=4) | 9 |
-| 5 | [Seekee ~ películas y series](https://apps.apple.com/gt/app/seekee-pel%C3%ADculas-y-series/id6790784680?uo=4) | 8 |
-| 6 | [Xzuper TV : Movies & TV Shows](https://apps.apple.com/cl/app/xzuper-tv-movies-tv-shows/id6787539717?uo=4) | 8 |
-| 7 | [Seekee: Ai Buscar & Ai Tools](https://apps.apple.com/ar/app/seekee-ai-buscar-ai-tools/id6782837151?uo=4) | 8 |
-| 8 | [Larк Music Player: Offline mp3](https://apps.apple.com/ar/app/lar%D0%BA-music-player-offline-mp3/id6810215815?uo=4) | 7 |
-| 9 | [Intelligence: AI & Search](https://apps.apple.com/hn/app/intelligence-ai-search/id6803390779?uo=4) | 5 |
-| 10 | [StreamLab - Live Simulator](https://apps.apple.com/ae/app/streamlab-live-simulator/id6789209659?uo=4) | 5 |
+| 1 | [Movie Box : Movies & TV Series](https://apps.apple.com/mw/app/movie-box-movies-tv-series/id6793054307?uo=4) | 12 |
+| 2 | [Speaker Headphones Connect](https://apps.apple.com/no/app/speaker-headphones-connect/id6781532389?uo=4) | 11 |
+| 3 | [CarTV - M3U IPTV Player & Cast](https://apps.apple.com/pl/app/cartv-m3u-iptv-player-cast/id6800211040?uo=4) | 9 |
+| 4 | [Seekee: Ai Buscar & Ai Tools](https://apps.apple.com/ar/app/seekee-ai-buscar-ai-tools/id6782837151?uo=4) | 6 |
+| 5 | [StreamLab - Live Simulator](https://apps.apple.com/eg/app/streamlab-live-simulator/id6789209659?uo=4) | 5 |
+| 6 | [Seekee ~ películas y series](https://apps.apple.com/ar/app/seekee-pel%C3%ADculas-y-series/id6790784680?uo=4) | 5 |
+| 7 | [Xzuper TV : Movies & TV Shows](https://apps.apple.com/cl/app/xzuper-tv-movies-tv-shows/id6787539717?uo=4) | 5 |
+| 8 | [Mealbird: Macro Meal Planner](https://apps.apple.com/pl/app/mealbird-macro-meal-planner/id6794577462?uo=4) | 5 |
+| 9 | [Logr: Gym Tracker, Workout Log](https://apps.apple.com/no/app/logr-gym-tracker-workout-log/id6809832168?uo=4) | 4 |
+| 10 | [FreeDrama: Watch Short Stories](https://apps.apple.com/bb/app/freedrama-watch-short-stories/id6768240254?uo=4) | 4 |
 
 ## Open source alternatives
 

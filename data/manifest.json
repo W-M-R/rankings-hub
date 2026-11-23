@@ -1,0 +1,2323 @@
+{
+  "version": "2026-11-23T08:15Z",
+  "generatedAt": "2026-11-23T08:15:30.437Z",
+  "counts": {
+    "appleRegions": 82,
+    "googleRegions": 39,
+    "macRegions": 40,
+    "podcastRegions": 40,
+    "githubWindows": 5,
+    "globalRisers": 21,
+    "alternatives": 30,
+    "shards": 329
+  },
+  "budget": {
+    "rawBytes": 2743302,
+    "brBytes": 649819
+  },
+  "shards": [
+    {
+      "path": "rising/apple/ae.json",
+      "count": 15,
+      "bytes": 13852,
+      "brBytes": 1866,
+      "sha256": "eaee6e55d0711eb1"
+    },
+    {
+      "path": "charts/apple/ae.json",
+      "count": 30,
+      "bytes": 9666,
+      "brBytes": 2168,
+      "sha256": "bf11a0ae28013fad"
+    },
+    {
+      "path": "rising/apple/al.json",
+      "count": 5,
+      "bytes": 4750,
+      "brBytes": 892,
+      "sha256": "19df674f7c77207f"
+    },
+    {
+      "path": "charts/apple/al.json",
+      "count": 30,
+      "bytes": 9655,
+      "brBytes": 2233,
+      "sha256": "b5893d9f4764032b"
+    },
+    {
+      "path": "rising/apple/ar.json",
+      "count": 4,
+      "bytes": 4850,
+      "brBytes": 813,
+      "sha256": "65f8f4e541db07f6"
+    },
+    {
+      "path": "charts/apple/ar.json",
+      "count": 30,
+      "bytes": 9803,
+      "brBytes": 2218,
+      "sha256": "4b930a801ee909a0"
+    },
+    {
+      "path": "rising/apple/at.json",
+      "count": 2,
+      "bytes": 2385,
+      "brBytes": 562,
+      "sha256": "c1bbb2eb0bdf3bb5"
+    },
+    {
+      "path": "charts/apple/at.json",
+      "count": 30,
+      "bytes": 9793,
+      "brBytes": 2318,
+      "sha256": "b517529792e95f37"
+    },
+    {
+      "path": "rising/apple/au.json",
+      "count": 2,
+      "bytes": 1860,
+      "brBytes": 537,
+      "sha256": "50ed862ce440f8f0"
+    },
+    {
+      "path": "charts/apple/au.json",
+      "count": 30,
+      "bytes": 9709,
+      "brBytes": 2140,
+      "sha256": "f2c98528dc7f133d"
+    },
+    {
+      "path": "rising/apple/bb.json",
+      "count": 2,
+      "bytes": 2556,
+      "brBytes": 545,
+      "sha256": "4d43afa6baf2d4bd"
+    },
+    {
+      "path": "charts/apple/bb.json",
+      "count": 30,
+      "bytes": 9590,
+      "brBytes": 2134,
+      "sha256": "d81d1209b6f1c167"
+    },
+    {
+      "path": "rising/apple/bg.json",
+      "count": 5,
+      "bytes": 6049,
+      "brBytes": 939,
+      "sha256": "e9b7ec4e6c00d0b1"
+    },
+    {
+      "path": "charts/apple/bg.json",
+      "count": 30,
+      "bytes": 9608,
+      "brBytes": 2201,
+      "sha256": "0011eee3e2b0c65b"
+    },
+    {
+      "path": "rising/apple/bm.json",
+      "count": 1,
+      "bytes": 691,
+      "brBytes": 393,
+      "sha256": "6280724a3ebdf4a5"
+    },
+    {
+      "path": "charts/apple/bm.json",
+      "count": 30,
+      "bytes": 9672,
+      "brBytes": 2290,
+      "sha256": "fb1197f6d07bc044"
+    },
+    {
+      "path": "rising/apple/br.json",
+      "count": 5,
+      "bytes": 4748,
+      "brBytes": 908,
+      "sha256": "bbcf28ddccfaf5a9"
+    },
+    {
+      "path": "charts/apple/br.json",
+      "count": 30,
+      "bytes": 9741,
+      "brBytes": 2245,
+      "sha256": "dfe8cf793a4efc90"
+    },
+    {
+      "path": "rising/apple/bs.json",
+      "count": 0,
+      "bytes": 723,
+      "brBytes": 414,
+      "sha256": "6c77edc7367f5997"
+    },
+    {
+      "path": "charts/apple/bs.json",
+      "count": 30,
+      "bytes": 9678,
+      "brBytes": 2256,
+      "sha256": "92a7540146cddb36"
+    },
+    {
+      "path": "rising/apple/by.json",
+      "count": 4,
+      "bytes": 4228,
+      "brBytes": 807,
+      "sha256": "59804beebce3b9f1"
+    },
+    {
+      "path": "charts/apple/by.json",
+      "count": 30,
+      "bytes": 9894,
+      "brBytes": 2494,
+      "sha256": "a798ddc62aef4eae"
+    },
+    {
+      "path": "rising/apple/ca.json",
+      "count": 0,
+      "bytes": 124,
+      "brBytes": 108,
+      "sha256": "3c26163a7a487204"
+    },
+    {
+      "path": "charts/apple/ca.json",
+      "count": 30,
+      "bytes": 9625,
+      "brBytes": 2144,
+      "sha256": "2704a5e544efadf5"
+    },
+    {
+      "path": "rising/apple/ch.json",
+      "count": 2,
+      "bytes": 2344,
+      "brBytes": 504,
+      "sha256": "4e9640b066b66095"
+    },
+    {
+      "path": "charts/apple/ch.json",
+      "count": 30,
+      "bytes": 9670,
+      "brBytes": 2229,
+      "sha256": "cc1ab65fb99a6638"
+    },
+    {
+      "path": "rising/apple/cl.json",
+      "count": 2,
+      "bytes": 1891,
+      "brBytes": 574,
+      "sha256": "3f74ab03a43f97d5"
+    },
+    {
+      "path": "charts/apple/cl.json",
+      "count": 30,
+      "bytes": 9885,
+      "brBytes": 2247,
+      "sha256": "f1b993cd318a225f"
+    },
+    {
+      "path": "rising/apple/cn.json",
+      "count": 17,
+      "bytes": 20659,
+      "brBytes": 2619,
+      "sha256": "1c0608ac882d618d"
+    },
+    {
+      "path": "charts/apple/cn.json",
+      "count": 30,
+      "bytes": 9511,
+      "brBytes": 2500,
+      "sha256": "7fdeca6e2ba67885"
+    },
+    {
+      "path": "rising/apple/co.json",
+      "count": 4,
+      "bytes": 3632,
+      "brBytes": 809,
+      "sha256": "91ed8028722b05f4"
+    },
+    {
+      "path": "charts/apple/co.json",
+      "count": 30,
+      "bytes": 9831,
+      "brBytes": 2305,
+      "sha256": "e5f7ffc76e27eac7"
+    },
+    {
+      "path": "rising/apple/cr.json",
+      "count": 5,
+      "bytes": 5337,
+      "brBytes": 880,
+      "sha256": "4dceaf750642a031"
+    },
+    {
+      "path": "charts/apple/cr.json",
+      "count": 30,
+      "bytes": 9712,
+      "brBytes": 2152,
+      "sha256": "c39a70aa27fc8d7d"
+    },
+    {
+      "path": "rising/apple/cz.json",
+      "count": 1,
+      "bytes": 1194,
+      "brBytes": 377,
+      "sha256": "d119fce30aec185f"
+    },
+    {
+      "path": "charts/apple/cz.json",
+      "count": 30,
+      "bytes": 9586,
+      "brBytes": 2220,
+      "sha256": "0817eca0ecb1f4e8"
+    },
+    {
+      "path": "rising/apple/de.json",
+      "count": 14,
+      "bytes": 16456,
+      "brBytes": 2005,
+      "sha256": "df0cf1c19d9bff7b"
+    },
+    {
+      "path": "charts/apple/de.json",
+      "count": 30,
+      "bytes": 9793,
+      "brBytes": 2256,
+      "sha256": "60938a52b73fc070"
+    },
+    {
+      "path": "rising/apple/dk.json",
+      "count": 17,
+      "bytes": 17535,
+      "brBytes": 2073,
+      "sha256": "2a7894b31014024e"
+    },
+    {
+      "path": "charts/apple/dk.json",
+      "count": 30,
+      "bytes": 9549,
+      "brBytes": 2231,
+      "sha256": "d21237da7b82caf5"
+    },
+    {
+      "path": "rising/apple/dz.json",
+      "count": 5,
+      "bytes": 6030,
+      "brBytes": 957,
+      "sha256": "6d893580cbd8f730"
+    },
+    {
+      "path": "charts/apple/dz.json",
+      "count": 30,
+      "bytes": 9708,
+      "brBytes": 2198,
+      "sha256": "419505183817f8b4"
+    },
+    {
+      "path": "rising/apple/eg.json",
+      "count": 5,
+      "bytes": 4241,
+      "brBytes": 957,
+      "sha256": "e3c0386f9b3fa97f"
+    },
+    {
+      "path": "charts/apple/eg.json",
+      "count": 30,
+      "bytes": 9732,
+      "brBytes": 2249,
+      "sha256": "a92eac829bc3b1e9"
+    },
+    {
+      "path": "rising/apple/es.json",
+      "count": 17,
+      "bytes": 16512,
+      "brBytes": 2205,
+      "sha256": "0122c4dd0b044bf9"
+    },
+    {
+      "path": "charts/apple/es.json",
+      "count": 30,
+      "bytes": 9791,
+      "brBytes": 2237,
+      "sha256": "9d1a7f384be9b425"
+    },
+    {
+      "path": "rising/apple/fi.json",
+      "count": 9,
+      "bytes": 11358,
+      "brBytes": 1375,
+      "sha256": "f6bc3e0a18fe2ca0"
+    },
+    {
+      "path": "charts/apple/fi.json",
+      "count": 30,
+      "bytes": 9574,
+      "brBytes": 2208,
+      "sha256": "c80ca695351cfd70"
+    },
+    {
+      "path": "rising/apple/fj.json",
+      "count": 3,
+      "bytes": 3651,
+      "brBytes": 660,
+      "sha256": "3c3999311c487446"
+    },
+    {
+      "path": "charts/apple/fj.json",
+      "count": 30,
+      "bytes": 9672,
+      "brBytes": 2085,
+      "sha256": "ee4befcb604e242c"
+    },
+    {
+      "path": "rising/apple/fr.json",
+      "count": 11,
+      "bytes": 12907,
+      "brBytes": 1617,
+      "sha256": "dd9a81d43ba29b4a"
+    },
+    {
+      "path": "charts/apple/fr.json",
+      "count": 30,
+      "bytes": 9742,
+      "brBytes": 2250,
+      "sha256": "969bf8dc70c811fd"
+    },
+    {
+      "path": "rising/apple/gb.json",
+      "count": 8,
+      "bytes": 8402,
+      "brBytes": 1264,
+      "sha256": "16e07883debe639b"
+    },
+    {
+      "path": "charts/apple/gb.json",
+      "count": 30,
+      "bytes": 9654,
+      "brBytes": 2217,
+      "sha256": "6aeeb56849bcf532"
+    },
+    {
+      "path": "rising/apple/gd.json",
+      "count": 0,
+      "bytes": 124,
+      "brBytes": 111,
+      "sha256": "9272c4df3d9a35e3"
+    },
+    {
+      "path": "charts/apple/gd.json",
+      "count": 30,
+      "bytes": 9684,
+      "brBytes": 2285,
+      "sha256": "338f4c1d0639179e"
+    },
+    {
+      "path": "rising/apple/gm.json",
+      "count": 3,
+      "bytes": 3010,
+      "brBytes": 864,
+      "sha256": "89056e4ec2b00b3f"
+    },
+    {
+      "path": "charts/apple/gm.json",
+      "count": 30,
+      "bytes": 9648,
+      "brBytes": 2208,
+      "sha256": "53ad4ce4076b6dd1"
+    },
+    {
+      "path": "rising/apple/gw.json",
+      "count": 0,
+      "bytes": 124,
+      "brBytes": 112,
+      "sha256": "9c433af00e4298d4"
+    },
+    {
+      "path": "charts/apple/gw.json",
+      "count": 30,
+      "bytes": 9760,
+      "brBytes": 2254,
+      "sha256": "50d2bba6f37160ed"
+    },
+    {
+      "path": "rising/apple/hk.json",
+      "count": 2,
+      "bytes": 2239,
+      "brBytes": 713,
+      "sha256": "9b8cb306e23b6c0b"
+    },
+    {
+      "path": "charts/apple/hk.json",
+      "count": 30,
+      "bytes": 9426,
+      "brBytes": 2467,
+      "sha256": "90c1d8276fdd8d9f"
+    },
+    {
+      "path": "rising/apple/hr.json",
+      "count": 5,
+      "bytes": 6406,
+      "brBytes": 868,
+      "sha256": "aae7b5272030ba12"
+    },
+    {
+      "path": "charts/apple/hr.json",
+      "count": 30,
+      "bytes": 9645,
+      "brBytes": 2188,
+      "sha256": "391846087ff714cf"
+    },
+    {
+      "path": "rising/apple/id.json",
+      "count": 2,
+      "bytes": 2951,
+      "brBytes": 668,
+      "sha256": "28f153d2de509282"
+    },
+    {
+      "path": "charts/apple/id.json",
+      "count": 30,
+      "bytes": 9821,
+      "brBytes": 2295,
+      "sha256": "953e3b06a3a9878e"
+    },
+    {
+      "path": "rising/apple/il.json",
+      "count": 21,
+      "bytes": 23251,
+      "brBytes": 2799,
+      "sha256": "1a123bd9c2aa2648"
+    },
+    {
+      "path": "charts/apple/il.json",
+      "count": 30,
+      "bytes": 9767,
+      "brBytes": 2300,
+      "sha256": "05212b12f6a0fd91"
+    },
+    {
+      "path": "rising/apple/in.json",
+      "count": 3,
+      "bytes": 3701,
+      "brBytes": 699,
+      "sha256": "e2e56ebbb39393de"
+    },
+    {
+      "path": "charts/apple/in.json",
+      "count": 30,
+      "bytes": 9832,
+      "brBytes": 2242,
+      "sha256": "d735310dd3d148a3"
+    },
+    {
+      "path": "rising/apple/is.json",
+      "count": 0,
+      "bytes": 692,
+      "brBytes": 390,
+      "sha256": "c1fdef403ce529a7"
+    },
+    {
+      "path": "charts/apple/is.json",
+      "count": 30,
+      "bytes": 9443,
+      "brBytes": 2129,
+      "sha256": "638bcc6d20ba6d7d"
+    },
+    {
+      "path": "rising/apple/it.json",
+      "count": 9,
+      "bytes": 6898,
+      "brBytes": 1361,
+      "sha256": "76839bdc76ebef9d"
+    },
+    {
+      "path": "charts/apple/it.json",
+      "count": 30,
+      "bytes": 9830,
+      "brBytes": 2275,
+      "sha256": "b697971e5e4ee17e"
+    },
+    {
+      "path": "rising/apple/jp.json",
+      "count": 11,
+      "bytes": 13809,
+      "brBytes": 2043,
+      "sha256": "e793417656113344"
+    },
+    {
+      "path": "charts/apple/jp.json",
+      "count": 30,
+      "bytes": 9327,
+      "brBytes": 2431,
+      "sha256": "cecd17e10bcfea61"
+    },
+    {
+      "path": "rising/apple/ke.json",
+      "count": 1,
+      "bytes": 705,
+      "brBytes": 406,
+      "sha256": "a4cd7f31b07ef24e"
+    },
+    {
+      "path": "charts/apple/ke.json",
+      "count": 30,
+      "bytes": 9697,
+      "brBytes": 2182,
+      "sha256": "8f82466a0485d432"
+    },
+    {
+      "path": "rising/apple/kn.json",
+      "count": 0,
+      "bytes": 124,
+      "brBytes": 103,
+      "sha256": "a8755d2ba8a1d1d5"
+    },
+    {
+      "path": "charts/apple/kn.json",
+      "count": 30,
+      "bytes": 9707,
+      "brBytes": 2260,
+      "sha256": "0f97831b36e4895a"
+    },
+    {
+      "path": "rising/apple/kr.json",
+      "count": 17,
+      "bytes": 24276,
+      "brBytes": 2964,
+      "sha256": "d579bfbfa964e284"
+    },
+    {
+      "path": "charts/apple/kr.json",
+      "count": 30,
+      "bytes": 9256,
+      "brBytes": 2489,
+      "sha256": "65d6dcb69dbe071e"
+    },
+    {
+      "path": "rising/apple/kz.json",
+      "count": 5,
+      "bytes": 4614,
+      "brBytes": 873,
+      "sha256": "3355fb468e84b5da"
+    },
+    {
+      "path": "charts/apple/kz.json",
+      "count": 30,
+      "bytes": 9742,
+      "brBytes": 2350,
+      "sha256": "4afbfe0dcd2d29a6"
+    },
+    {
+      "path": "rising/apple/lc.json",
+      "count": 0,
+      "bytes": 124,
+      "brBytes": 96,
+      "sha256": "152d8f09e2cef66a"
+    },
+    {
+      "path": "charts/apple/lc.json",
+      "count": 30,
+      "bytes": 9728,
+      "brBytes": 2259,
+      "sha256": "dbde9ec8062e2fe9"
+    },
+    {
+      "path": "rising/apple/lt.json",
+      "count": 4,
+      "bytes": 2912,
+      "brBytes": 740,
+      "sha256": "86b04e3611d21992"
+    },
+    {
+      "path": "charts/apple/lt.json",
+      "count": 30,
+      "bytes": 9511,
+      "brBytes": 2153,
+      "sha256": "1abf9a9913a3d063"
+    },
+    {
+      "path": "rising/apple/ly.json",
+      "count": 3,
+      "bytes": 3038,
+      "brBytes": 688,
+      "sha256": "705710ed471bbe21"
+    },
+    {
+      "path": "charts/apple/ly.json",
+      "count": 30,
+      "bytes": 9695,
+      "brBytes": 2234,
+      "sha256": "27d1d00ea229493e"
+    },
+    {
+      "path": "rising/apple/me.json",
+      "count": 2,
+      "bytes": 1862,
+      "brBytes": 565,
+      "sha256": "c0a118f037475bf0"
+    },
+    {
+      "path": "charts/apple/me.json",
+      "count": 30,
+      "bytes": 9587,
+      "brBytes": 2198,
+      "sha256": "58100f2dafa52229"
+    },
+    {
+      "path": "rising/apple/ml.json",
+      "count": 3,
+      "bytes": 2438,
+      "brBytes": 654,
+      "sha256": "2ffb5c2fdc6629c4"
+    },
+    {
+      "path": "charts/apple/ml.json",
+      "count": 30,
+      "bytes": 9708,
+      "brBytes": 2215,
+      "sha256": "819cc31e26f625f1"
+    },
+    {
+      "path": "rising/apple/mo.json",
+      "count": 1,
+      "bytes": 701,
+      "brBytes": 434,
+      "sha256": "70abda22675efcc0"
+    },
+    {
+      "path": "charts/apple/mo.json",
+      "count": 30,
+      "bytes": 9474,
+      "brBytes": 2501,
+      "sha256": "d4f6d88960c85544"
+    },
+    {
+      "path": "rising/apple/mt.json",
+      "count": 2,
+      "bytes": 3112,
+      "brBytes": 546,
+      "sha256": "8c0fc49f0746376c"
+    },
+    {
+      "path": "charts/apple/mt.json",
+      "count": 30,
+      "bytes": 9655,
+      "brBytes": 2206,
+      "sha256": "56cb57de07aad6cb"
+    },
+    {
+      "path": "rising/apple/mw.json",
+      "count": 1,
+      "bytes": 1869,
+      "brBytes": 535,
+      "sha256": "4f16c8de96ed5e2f"
+    },
+    {
+      "path": "charts/apple/mw.json",
+      "count": 30,
+      "bytes": 9549,
+      "brBytes": 2082,
+      "sha256": "11c768a4f1676ffb"
+    },
+    {
+      "path": "rising/apple/mx.json",
+      "count": 1,
+      "bytes": 711,
+      "brBytes": 412,
+      "sha256": "1090fa30943e1e84"
+    },
+    {
+      "path": "charts/apple/mx.json",
+      "count": 30,
+      "bytes": 9774,
+      "brBytes": 2185,
+      "sha256": "31366147ac0b0e67"
+    },
+    {
+      "path": "rising/apple/my.json",
+      "count": 2,
+      "bytes": 1864,
+      "brBytes": 552,
+      "sha256": "50ab4d922006030d"
+    },
+    {
+      "path": "charts/apple/my.json",
+      "count": 30,
+      "bytes": 9770,
+      "brBytes": 2293,
+      "sha256": "c9595abea2ce35f2"
+    },
+    {
+      "path": "rising/apple/ne.json",
+      "count": 3,
+      "bytes": 2461,
+      "brBytes": 683,
+      "sha256": "274b86b0e35dc891"
+    },
+    {
+      "path": "charts/apple/ne.json",
+      "count": 30,
+      "bytes": 9610,
+      "brBytes": 2134,
+      "sha256": "c9189368aec53779"
+    },
+    {
+      "path": "rising/apple/ng.json",
+      "count": 7,
+      "bytes": 5809,
+      "brBytes": 1067,
+      "sha256": "f20024d5fcba223d"
+    },
+    {
+      "path": "charts/apple/ng.json",
+      "count": 30,
+      "bytes": 9782,
+      "brBytes": 2255,
+      "sha256": "561cefb392cef022"
+    },
+    {
+      "path": "rising/apple/nl.json",
+      "count": 8,
+      "bytes": 7409,
+      "brBytes": 1260,
+      "sha256": "196b254f717e5f79"
+    },
+    {
+      "path": "charts/apple/nl.json",
+      "count": 30,
+      "bytes": 9708,
+      "brBytes": 2219,
+      "sha256": "8a2745c8b456eb5e"
+    },
+    {
+      "path": "rising/apple/no.json",
+      "count": 10,
+      "bytes": 12060,
+      "brBytes": 1616,
+      "sha256": "3b20f9c23be04acc"
+    },
+    {
+      "path": "charts/apple/no.json",
+      "count": 30,
+      "bytes": 9583,
+      "brBytes": 2236,
+      "sha256": "14ead7a19d66d442"
+    },
+    {
+      "path": "rising/apple/nz.json",
+      "count": 2,
+      "bytes": 1850,
+      "brBytes": 530,
+      "sha256": "4c74ac6496a4060a"
+    },
+    {
+      "path": "charts/apple/nz.json",
+      "count": 30,
+      "bytes": 9615,
+      "brBytes": 2113,
+      "sha256": "771f6f922bf71b3e"
+    },
+    {
+      "path": "rising/apple/om.json",
+      "count": 0,
+      "bytes": 124,
+      "brBytes": 105,
+      "sha256": "c6b71e9e9b8c0998"
+    },
+    {
+      "path": "charts/apple/om.json",
+      "count": 30,
+      "bytes": 9784,
+      "brBytes": 2298,
+      "sha256": "9f5057c16e354440"
+    },
+    {
+      "path": "rising/apple/pg.json",
+      "count": 1,
+      "bytes": 1282,
+      "brBytes": 410,
+      "sha256": "066ff5c9c06a6eba"
+    },
+    {
+      "path": "charts/apple/pg.json",
+      "count": 30,
+      "bytes": 9760,
+      "brBytes": 2171,
+      "sha256": "d40b0d33e7429016"
+    },
+    {
+      "path": "rising/apple/ph.json",
+      "count": 2,
+      "bytes": 2449,
+      "brBytes": 529,
+      "sha256": "04eeb4ff33caec0a"
+    },
+    {
+      "path": "charts/apple/ph.json",
+      "count": 30,
+      "bytes": 9709,
+      "brBytes": 2255,
+      "sha256": "23fc55c26d7d3afe"
+    },
+    {
+      "path": "rising/apple/pl.json",
+      "count": 15,
+      "bytes": 13845,
+      "brBytes": 1998,
+      "sha256": "ee97de16db074325"
+    },
+    {
+      "path": "charts/apple/pl.json",
+      "count": 30,
+      "bytes": 9591,
+      "brBytes": 2204,
+      "sha256": "6eb8144b3c90e623"
+    },
+    {
+      "path": "rising/apple/pw.json",
+      "count": 1,
+      "bytes": 1260,
+      "brBytes": 403,
+      "sha256": "817ef5c2da5838b8"
+    },
+    {
+      "path": "charts/apple/pw.json",
+      "count": 30,
+      "bytes": 9691,
+      "brBytes": 2292,
+      "sha256": "d9962976a2fd3d14"
+    },
+    {
+      "path": "rising/apple/ro.json",
+      "count": 3,
+      "bytes": 2972,
+      "brBytes": 631,
+      "sha256": "583d2453b8a73264"
+    },
+    {
+      "path": "charts/apple/ro.json",
+      "count": 30,
+      "bytes": 9630,
+      "brBytes": 2204,
+      "sha256": "1a9b64c7fb2ba545"
+    },
+    {
+      "path": "rising/apple/ru.json",
+      "count": 30,
+      "bytes": 42167,
+      "brBytes": 5408,
+      "sha256": "b55e3949b4c92ab7"
+    },
+    {
+      "path": "charts/apple/ru.json",
+      "count": 30,
+      "bytes": 10056,
+      "brBytes": 2538,
+      "sha256": "a04d48bd0e52cd14"
+    },
+    {
+      "path": "rising/apple/sa.json",
+      "count": 30,
+      "bytes": 31572,
+      "brBytes": 3470,
+      "sha256": "4a1aa7f3f8a84b98"
+    },
+    {
+      "path": "charts/apple/sa.json",
+      "count": 30,
+      "bytes": 9664,
+      "brBytes": 2233,
+      "sha256": "1a4f7d891169c28a"
+    },
+    {
+      "path": "rising/apple/sb.json",
+      "count": 0,
+      "bytes": 703,
+      "brBytes": 407,
+      "sha256": "ade6ca3cc56f49c9"
+    },
+    {
+      "path": "charts/apple/sb.json",
+      "count": 30,
+      "bytes": 9735,
+      "brBytes": 2176,
+      "sha256": "ab63e6ac884c0998"
+    },
+    {
+      "path": "rising/apple/se.json",
+      "count": 7,
+      "bytes": 5894,
+      "brBytes": 1201,
+      "sha256": "4fb6449e5131a854"
+    },
+    {
+      "path": "charts/apple/se.json",
+      "count": 30,
+      "bytes": 9653,
+      "brBytes": 2257,
+      "sha256": "5ca5f0ad95da075e"
+    },
+    {
+      "path": "rising/apple/sg.json",
+      "count": 3,
+      "bytes": 3627,
+      "brBytes": 683,
+      "sha256": "db4d55da9209310f"
+    },
+    {
+      "path": "charts/apple/sg.json",
+      "count": 30,
+      "bytes": 9805,
+      "brBytes": 2297,
+      "sha256": "25ccc12e4b13aec4"
+    },
+    {
+      "path": "rising/apple/sk.json",
+      "count": 4,
+      "bytes": 4477,
+      "brBytes": 692,
+      "sha256": "121ac514f0ac281a"
+    },
+    {
+      "path": "charts/apple/sk.json",
+      "count": 30,
+      "bytes": 9645,
+      "brBytes": 2186,
+      "sha256": "12f6131d40af8883"
+    },
+    {
+      "path": "rising/apple/sr.json",
+      "count": 1,
+      "bytes": 1909,
+      "brBytes": 559,
+      "sha256": "197a8f81ac093377"
+    },
+    {
+      "path": "charts/apple/sr.json",
+      "count": 30,
+      "bytes": 9732,
+      "brBytes": 2222,
+      "sha256": "80c389edcf84aabd"
+    },
+    {
+      "path": "rising/apple/tc.json",
+      "count": 0,
+      "bytes": 691,
+      "brBytes": 394,
+      "sha256": "91336e09feabf2e8"
+    },
+    {
+      "path": "charts/apple/tc.json",
+      "count": 30,
+      "bytes": 9701,
+      "brBytes": 2245,
+      "sha256": "89e0467b3d09f165"
+    },
+    {
+      "path": "rising/apple/th.json",
+      "count": 4,
+      "bytes": 5133,
+      "brBytes": 832,
+      "sha256": "f75cc628e51ec12a"
+    },
+    {
+      "path": "charts/apple/th.json",
+      "count": 30,
+      "bytes": 9792,
+      "brBytes": 2273,
+      "sha256": "a1855a43ed740e9d"
+    },
+    {
+      "path": "rising/apple/tm.json",
+      "count": 2,
+      "bytes": 3055,
+      "brBytes": 709,
+      "sha256": "3d2b73bae80e35dc"
+    },
+    {
+      "path": "charts/apple/tm.json",
+      "count": 30,
+      "bytes": 9684,
+      "brBytes": 2245,
+      "sha256": "97893336c2b0cfb7"
+    },
+    {
+      "path": "rising/apple/tr.json",
+      "count": 30,
+      "bytes": 37187,
+      "brBytes": 4248,
+      "sha256": "6496e623eccf977a"
+    },
+    {
+      "path": "charts/apple/tr.json",
+      "count": 30,
+      "bytes": 9907,
+      "brBytes": 2375,
+      "sha256": "04eefdb6e29fcbd8"
+    },
+    {
+      "path": "rising/apple/tw.json",
+      "count": 7,
+      "bytes": 10723,
+      "brBytes": 1793,
+      "sha256": "3016f0c6ceaab597"
+    },
+    {
+      "path": "charts/apple/tw.json",
+      "count": 30,
+      "bytes": 9464,
+      "brBytes": 2505,
+      "sha256": "ab81fe0eabda2c06"
+    },
+    {
+      "path": "rising/apple/tz.json",
+      "count": 2,
+      "bytes": 1272,
+      "brBytes": 534,
+      "sha256": "70950feb349a265c"
+    },
+    {
+      "path": "charts/apple/tz.json",
+      "count": 30,
+      "bytes": 9819,
+      "brBytes": 2295,
+      "sha256": "0229a93dc4334759"
+    },
+    {
+      "path": "rising/apple/us.json",
+      "count": 12,
+      "bytes": 13944,
+      "brBytes": 1647,
+      "sha256": "6c32d88130019477"
+    },
+    {
+      "path": "charts/apple/us.json",
+      "count": 30,
+      "bytes": 9633,
+      "brBytes": 2194,
+      "sha256": "f827008e9328b23b"
+    },
+    {
+      "path": "rising/apple/uy.json",
+      "count": 4,
+      "bytes": 3606,
+      "brBytes": 769,
+      "sha256": "4097feefaa56a86f"
+    },
+    {
+      "path": "charts/apple/uy.json",
+      "count": 30,
+      "bytes": 9588,
+      "brBytes": 2132,
+      "sha256": "e9296c575c616208"
+    },
+    {
+      "path": "rising/apple/ve.json",
+      "count": 4,
+      "bytes": 3086,
+      "brBytes": 812,
+      "sha256": "ca3018ca71a896e7"
+    },
+    {
+      "path": "charts/apple/ve.json",
+      "count": 30,
+      "bytes": 9853,
+      "brBytes": 2308,
+      "sha256": "d0d5e453f42c3358"
+    },
+    {
+      "path": "rising/apple/vn.json",
+      "count": 0,
+      "bytes": 124,
+      "brBytes": 99,
+      "sha256": "e1acf24b5f2496f8"
+    },
+    {
+      "path": "charts/apple/vn.json",
+      "count": 30,
+      "bytes": 9894,
+      "brBytes": 2331,
+      "sha256": "e8ac533a622bda62"
+    },
+    {
+      "path": "rising/apple/za.json",
+      "count": 4,
+      "bytes": 4705,
+      "brBytes": 784,
+      "sha256": "9f033733d79dca4e"
+    },
+    {
+      "path": "charts/apple/za.json",
+      "count": 30,
+      "bytes": 9667,
+      "brBytes": 2210,
+      "sha256": "1d79316647d1f872"
+    },
+    {
+      "path": "rising/apple/zm.json",
+      "count": 4,
+      "bytes": 6038,
+      "brBytes": 1023,
+      "sha256": "77084987504d333e"
+    },
+    {
+      "path": "charts/apple/zm.json",
+      "count": 30,
+      "bytes": 9714,
+      "brBytes": 2207,
+      "sha256": "f87ba52db15f8b62"
+    },
+    {
+      "path": "rising/google/ae.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 104,
+      "sha256": "17c021e542d69c2f"
+    },
+    {
+      "path": "charts/google/ae.json",
+      "count": 30,
+      "bytes": 11142,
+      "brBytes": 3401,
+      "sha256": "3cc58c2f13abe291"
+    },
+    {
+      "path": "rising/google/ar.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 94,
+      "sha256": "1534a8cc07f1b798"
+    },
+    {
+      "path": "charts/google/ar.json",
+      "count": 30,
+      "bytes": 11079,
+      "brBytes": 3408,
+      "sha256": "2634fbe04306a398"
+    },
+    {
+      "path": "rising/google/au.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 103,
+      "sha256": "239c708dd5d9f7f7"
+    },
+    {
+      "path": "charts/google/au.json",
+      "count": 30,
+      "bytes": 10998,
+      "brBytes": 3344,
+      "sha256": "f5779a71f26f5262"
+    },
+    {
+      "path": "rising/google/br.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 111,
+      "sha256": "be8ff7a7c9d8ffb9"
+    },
+    {
+      "path": "charts/google/br.json",
+      "count": 30,
+      "bytes": 11006,
+      "brBytes": 3439,
+      "sha256": "e333591dcd01cb37"
+    },
+    {
+      "path": "rising/google/ca.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 112,
+      "sha256": "391456afafdcabed"
+    },
+    {
+      "path": "charts/google/ca.json",
+      "count": 30,
+      "bytes": 10914,
+      "brBytes": 3280,
+      "sha256": "3148a0ce99465230"
+    },
+    {
+      "path": "rising/google/cl.json",
+      "count": 1,
+      "bytes": 688,
+      "brBytes": 405,
+      "sha256": "0133e5573e43a920"
+    },
+    {
+      "path": "charts/google/cl.json",
+      "count": 30,
+      "bytes": 11032,
+      "brBytes": 3368,
+      "sha256": "a87e7b2d896b5b2f"
+    },
+    {
+      "path": "rising/google/co.json",
+      "count": 1,
+      "bytes": 1778,
+      "brBytes": 397,
+      "sha256": "5fad938836e95f10"
+    },
+    {
+      "path": "charts/google/co.json",
+      "count": 30,
+      "bytes": 11037,
+      "brBytes": 3429,
+      "sha256": "0a624097183fab6c"
+    },
+    {
+      "path": "rising/google/de.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 106,
+      "sha256": "07b127acc41c3f42"
+    },
+    {
+      "path": "charts/google/de.json",
+      "count": 30,
+      "bytes": 11065,
+      "brBytes": 3449,
+      "sha256": "2f827866e06d148e"
+    },
+    {
+      "path": "rising/google/dk.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 107,
+      "sha256": "688d5d2c062192cd"
+    },
+    {
+      "path": "charts/google/dk.json",
+      "count": 30,
+      "bytes": 11009,
+      "brBytes": 3444,
+      "sha256": "db8674fe4bdbf4e8"
+    },
+    {
+      "path": "rising/google/eg.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 104,
+      "sha256": "13706c5d28042fba"
+    },
+    {
+      "path": "charts/google/eg.json",
+      "count": 30,
+      "bytes": 11217,
+      "brBytes": 3428,
+      "sha256": "225e851ddda97970"
+    },
+    {
+      "path": "rising/google/es.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 104,
+      "sha256": "8d8fdd49ff0fbcc9"
+    },
+    {
+      "path": "charts/google/es.json",
+      "count": 30,
+      "bytes": 11064,
+      "brBytes": 3417,
+      "sha256": "d9572f7fba629756"
+    },
+    {
+      "path": "rising/google/fi.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 94,
+      "sha256": "c8c73c316559efb4"
+    },
+    {
+      "path": "charts/google/fi.json",
+      "count": 30,
+      "bytes": 10769,
+      "brBytes": 3387,
+      "sha256": "5c8ba3ac1110ed67"
+    },
+    {
+      "path": "rising/google/fr.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 94,
+      "sha256": "c8dec7beeed6e03e"
+    },
+    {
+      "path": "charts/google/fr.json",
+      "count": 30,
+      "bytes": 11130,
+      "brBytes": 3427,
+      "sha256": "96d77b3dc098f62c"
+    },
+    {
+      "path": "rising/google/gb.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 111,
+      "sha256": "5d732dbff01235e8"
+    },
+    {
+      "path": "charts/google/gb.json",
+      "count": 30,
+      "bytes": 11104,
+      "brBytes": 3390,
+      "sha256": "f237d8c25722d725"
+    },
+    {
+      "path": "rising/google/hk.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 94,
+      "sha256": "3ca5861b1b0cc281"
+    },
+    {
+      "path": "charts/google/hk.json",
+      "count": 30,
+      "bytes": 11022,
+      "brBytes": 3409,
+      "sha256": "3de8dc753eb2fa72"
+    },
+    {
+      "path": "rising/google/id.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 94,
+      "sha256": "940b81c3c80ee293"
+    },
+    {
+      "path": "charts/google/id.json",
+      "count": 30,
+      "bytes": 11114,
+      "brBytes": 3492,
+      "sha256": "c53f361ff6ba8920"
+    },
+    {
+      "path": "rising/google/il.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 108,
+      "sha256": "0435a5bcce8a89ac"
+    },
+    {
+      "path": "charts/google/il.json",
+      "count": 30,
+      "bytes": 11002,
+      "brBytes": 3327,
+      "sha256": "a922ea67e1173b9a"
+    },
+    {
+      "path": "rising/google/in.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 107,
+      "sha256": "3db63b715146c600"
+    },
+    {
+      "path": "charts/google/in.json",
+      "count": 30,
+      "bytes": 11004,
+      "brBytes": 3277,
+      "sha256": "8557e605616a633c"
+    },
+    {
+      "path": "rising/google/it.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 106,
+      "sha256": "6d7517abdc3b23fc"
+    },
+    {
+      "path": "charts/google/it.json",
+      "count": 30,
+      "bytes": 11209,
+      "brBytes": 3498,
+      "sha256": "6016d8292b2e7983"
+    },
+    {
+      "path": "rising/google/jp.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 112,
+      "sha256": "42b641d7113bc456"
+    },
+    {
+      "path": "charts/google/jp.json",
+      "count": 30,
+      "bytes": 11036,
+      "brBytes": 3669,
+      "sha256": "cafa304bddd97f62"
+    },
+    {
+      "path": "rising/google/kr.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 104,
+      "sha256": "75c2273710d11bd4"
+    },
+    {
+      "path": "charts/google/kr.json",
+      "count": 30,
+      "bytes": 11188,
+      "brBytes": 3682,
+      "sha256": "58d468fd0753ff10"
+    },
+    {
+      "path": "rising/google/mx.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 104,
+      "sha256": "ada19aca7b3f845d"
+    },
+    {
+      "path": "charts/google/mx.json",
+      "count": 30,
+      "bytes": 10995,
+      "brBytes": 3339,
+      "sha256": "2b5f4c021c48ceb6"
+    },
+    {
+      "path": "rising/google/my.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 102,
+      "sha256": "47976ee3e1efdb5d"
+    },
+    {
+      "path": "charts/google/my.json",
+      "count": 30,
+      "bytes": 11029,
+      "brBytes": 3454,
+      "sha256": "a48110a8ec3787b5"
+    },
+    {
+      "path": "rising/google/ng.json",
+      "count": 1,
+      "bytes": 1321,
+      "brBytes": 401,
+      "sha256": "b95070c948f13195"
+    },
+    {
+      "path": "charts/google/ng.json",
+      "count": 30,
+      "bytes": 11250,
+      "brBytes": 3401,
+      "sha256": "5397d50086a56320"
+    },
+    {
+      "path": "rising/google/nl.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 99,
+      "sha256": "a21f86ed94bcbefa"
+    },
+    {
+      "path": "charts/google/nl.json",
+      "count": 30,
+      "bytes": 10955,
+      "brBytes": 3367,
+      "sha256": "e3c866cfe6e6dba8"
+    },
+    {
+      "path": "rising/google/no.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 97,
+      "sha256": "37f7f2dad6801b65"
+    },
+    {
+      "path": "charts/google/no.json",
+      "count": 30,
+      "bytes": 10890,
+      "brBytes": 3418,
+      "sha256": "9f935ade2a2e1b75"
+    },
+    {
+      "path": "rising/google/nz.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 92,
+      "sha256": "01ddd3037bf2e0d7"
+    },
+    {
+      "path": "charts/google/nz.json",
+      "count": 30,
+      "bytes": 11071,
+      "brBytes": 3399,
+      "sha256": "4d6e66a54d342143"
+    },
+    {
+      "path": "rising/google/ph.json",
+      "count": 1,
+      "bytes": 1853,
+      "brBytes": 402,
+      "sha256": "653e6fd942812dc2"
+    },
+    {
+      "path": "charts/google/ph.json",
+      "count": 30,
+      "bytes": 10891,
+      "brBytes": 3365,
+      "sha256": "3df6acb12142b5f1"
+    },
+    {
+      "path": "rising/google/pl.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 93,
+      "sha256": "9a5bc574a572ca54"
+    },
+    {
+      "path": "charts/google/pl.json",
+      "count": 30,
+      "bytes": 10958,
+      "brBytes": 3486,
+      "sha256": "61f123c6ddc5acb1"
+    },
+    {
+      "path": "rising/google/ru.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 92,
+      "sha256": "197e22fa0f16f65a"
+    },
+    {
+      "path": "charts/google/ru.json",
+      "count": 30,
+      "bytes": 11137,
+      "brBytes": 3541,
+      "sha256": "1f007bc43f3f0656"
+    },
+    {
+      "path": "rising/google/sa.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 111,
+      "sha256": "08460a688aa14c2d"
+    },
+    {
+      "path": "charts/google/sa.json",
+      "count": 30,
+      "bytes": 10873,
+      "brBytes": 3328,
+      "sha256": "712beb82128cf660"
+    },
+    {
+      "path": "rising/google/se.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 104,
+      "sha256": "f062bbd706937ca7"
+    },
+    {
+      "path": "charts/google/se.json",
+      "count": 30,
+      "bytes": 10909,
+      "brBytes": 3418,
+      "sha256": "c7289778ff667d1d"
+    },
+    {
+      "path": "rising/google/sg.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 104,
+      "sha256": "92dd7329b88d264e"
+    },
+    {
+      "path": "charts/google/sg.json",
+      "count": 30,
+      "bytes": 10878,
+      "brBytes": 3365,
+      "sha256": "77ea495b781f1705"
+    },
+    {
+      "path": "rising/google/th.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 104,
+      "sha256": "78013a1fd6d5d5ce"
+    },
+    {
+      "path": "charts/google/th.json",
+      "count": 30,
+      "bytes": 11109,
+      "brBytes": 3478,
+      "sha256": "702a019f2cb20194"
+    },
+    {
+      "path": "rising/google/tr.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 112,
+      "sha256": "801b776d043d4430"
+    },
+    {
+      "path": "charts/google/tr.json",
+      "count": 30,
+      "bytes": 11130,
+      "brBytes": 3524,
+      "sha256": "65e8ad7580ac3415"
+    },
+    {
+      "path": "rising/google/tw.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 102,
+      "sha256": "efbdee24a286d784"
+    },
+    {
+      "path": "charts/google/tw.json",
+      "count": 30,
+      "bytes": 11051,
+      "brBytes": 3575,
+      "sha256": "fd2c7cdbf82069a1"
+    },
+    {
+      "path": "rising/google/us.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 109,
+      "sha256": "bfbc738493c5e15c"
+    },
+    {
+      "path": "charts/google/us.json",
+      "count": 30,
+      "bytes": 10967,
+      "brBytes": 3333,
+      "sha256": "aa8fe77a77c60849"
+    },
+    {
+      "path": "rising/google/vn.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 92,
+      "sha256": "48377aceeefe98a8"
+    },
+    {
+      "path": "charts/google/vn.json",
+      "count": 30,
+      "bytes": 11183,
+      "brBytes": 3586,
+      "sha256": "11a9d291e1d2cbb7"
+    },
+    {
+      "path": "rising/google/za.json",
+      "count": 0,
+      "bytes": 125,
+      "brBytes": 94,
+      "sha256": "9c1e8578123b1b7d"
+    },
+    {
+      "path": "charts/google/za.json",
+      "count": 30,
+      "bytes": 11128,
+      "brBytes": 3381,
+      "sha256": "62092ce2c7975163"
+    },
+    {
+      "path": "mac/ae.json",
+      "count": 30,
+      "bytes": 10963,
+      "brBytes": 2542,
+      "sha256": "497fd988b0efc20c"
+    },
+    {
+      "path": "mac/ar.json",
+      "count": 30,
+      "bytes": 10638,
+      "brBytes": 2466,
+      "sha256": "9145b07ddb9da4bd"
+    },
+    {
+      "path": "mac/au.json",
+      "count": 30,
+      "bytes": 10982,
+      "brBytes": 2526,
+      "sha256": "8d8a352058d37eb6"
+    },
+    {
+      "path": "mac/br.json",
+      "count": 30,
+      "bytes": 10777,
+      "brBytes": 2542,
+      "sha256": "3860f494736440ef"
+    },
+    {
+      "path": "mac/ca.json",
+      "count": 30,
+      "bytes": 10780,
+      "brBytes": 2511,
+      "sha256": "a25032a1914256a4"
+    },
+    {
+      "path": "mac/cl.json",
+      "count": 30,
+      "bytes": 10898,
+      "brBytes": 2542,
+      "sha256": "04b740ee2a356174"
+    },
+    {
+      "path": "mac/cn.json",
+      "count": 30,
+      "bytes": 11713,
+      "brBytes": 3167,
+      "sha256": "964d97228b8c9624"
+    },
+    {
+      "path": "mac/co.json",
+      "count": 30,
+      "bytes": 10737,
+      "brBytes": 2500,
+      "sha256": "6cb2f88c380ef224"
+    },
+    {
+      "path": "mac/de.json",
+      "count": 30,
+      "bytes": 10865,
+      "brBytes": 2567,
+      "sha256": "672b508e1bb5228e"
+    },
+    {
+      "path": "mac/dk.json",
+      "count": 30,
+      "bytes": 10649,
+      "brBytes": 2486,
+      "sha256": "16c5fc7259395154"
+    },
+    {
+      "path": "mac/eg.json",
+      "count": 30,
+      "bytes": 10762,
+      "brBytes": 2507,
+      "sha256": "0d1c8248812894e8"
+    },
+    {
+      "path": "mac/es.json",
+      "count": 30,
+      "bytes": 10974,
+      "brBytes": 2549,
+      "sha256": "3b0cd1c24edee25e"
+    },
+    {
+      "path": "mac/fi.json",
+      "count": 30,
+      "bytes": 10843,
+      "brBytes": 2509,
+      "sha256": "dd709a0729ae91f6"
+    },
+    {
+      "path": "mac/fr.json",
+      "count": 30,
+      "bytes": 11009,
+      "brBytes": 2622,
+      "sha256": "15a706a1b4f592a1"
+    },
+    {
+      "path": "mac/gb.json",
+      "count": 30,
+      "bytes": 10767,
+      "brBytes": 2487,
+      "sha256": "18ae986e96a7b9bc"
+    },
+    {
+      "path": "mac/hk.json",
+      "count": 30,
+      "bytes": 10731,
+      "brBytes": 2767,
+      "sha256": "37a717b19af40003"
+    },
+    {
+      "path": "mac/id.json",
+      "count": 30,
+      "bytes": 10984,
+      "brBytes": 2570,
+      "sha256": "860fba5104a2ea6b"
+    },
+    {
+      "path": "mac/il.json",
+      "count": 30,
+      "bytes": 10694,
+      "brBytes": 2387,
+      "sha256": "52b9eb842cc9d81e"
+    },
+    {
+      "path": "mac/in.json",
+      "count": 30,
+      "bytes": 10999,
+      "brBytes": 2607,
+      "sha256": "f5e027c844610135"
+    },
+    {
+      "path": "mac/it.json",
+      "count": 30,
+      "bytes": 10731,
+      "brBytes": 2529,
+      "sha256": "d50e7af23e4ea32d"
+    },
+    {
+      "path": "mac/jp.json",
+      "count": 30,
+      "bytes": 10784,
+      "brBytes": 2737,
+      "sha256": "3755376fdc64e379"
+    },
+    {
+      "path": "mac/kr.json",
+      "count": 30,
+      "bytes": 10882,
+      "brBytes": 2844,
+      "sha256": "e37b5c26fbd95835"
+    },
+    {
+      "path": "mac/mx.json",
+      "count": 30,
+      "bytes": 10855,
+      "brBytes": 2507,
+      "sha256": "098be36092ff0979"
+    },
+    {
+      "path": "mac/my.json",
+      "count": 30,
+      "bytes": 11148,
+      "brBytes": 2616,
+      "sha256": "e9cfa400e601cd1e"
+    },
+    {
+      "path": "mac/ng.json",
+      "count": 30,
+      "bytes": 10816,
+      "brBytes": 2605,
+      "sha256": "445a6e6b268f3cb6"
+    },
+    {
+      "path": "mac/nl.json",
+      "count": 30,
+      "bytes": 10921,
+      "brBytes": 2512,
+      "sha256": "d25de448ed7a40a5"
+    },
+    {
+      "path": "mac/no.json",
+      "count": 30,
+      "bytes": 10592,
+      "brBytes": 2403,
+      "sha256": "8f3f0f500fbc33e4"
+    },
+    {
+      "path": "mac/nz.json",
+      "count": 30,
+      "bytes": 10839,
+      "brBytes": 2525,
+      "sha256": "2e4ce5f56901b1c4"
+    },
+    {
+      "path": "mac/ph.json",
+      "count": 30,
+      "bytes": 10951,
+      "brBytes": 2551,
+      "sha256": "e3805a02aec71695"
+    },
+    {
+      "path": "mac/pl.json",
+      "count": 30,
+      "bytes": 10774,
+      "brBytes": 2538,
+      "sha256": "fb0eb84d483a4b1d"
+    },
+    {
+      "path": "mac/ru.json",
+      "count": 30,
+      "bytes": 10962,
+      "brBytes": 2686,
+      "sha256": "fa69cc947dc397fc"
+    },
+    {
+      "path": "mac/sa.json",
+      "count": 30,
+      "bytes": 10869,
+      "brBytes": 2589,
+      "sha256": "064e02aedce3b40c"
+    },
+    {
+      "path": "mac/se.json",
+      "count": 30,
+      "bytes": 10707,
+      "brBytes": 2508,
+      "sha256": "b89b846218a65eb5"
+    },
+    {
+      "path": "mac/sg.json",
+      "count": 30,
+      "bytes": 10803,
+      "brBytes": 2481,
+      "sha256": "cd539b3ff67caea8"
+    },
+    {
+      "path": "mac/th.json",
+      "count": 30,
+      "bytes": 10849,
+      "brBytes": 2484,
+      "sha256": "3977df3217129514"
+    },
+    {
+      "path": "mac/tr.json",
+      "count": 30,
+      "bytes": 10832,
+      "brBytes": 2572,
+      "sha256": "561f45e4a7fa1dd7"
+    },
+    {
+      "path": "mac/tw.json",
+      "count": 30,
+      "bytes": 10544,
+      "brBytes": 2707,
+      "sha256": "f6eb8f5fbb53de74"
+    },
+    {
+      "path": "mac/us.json",
+      "count": 30,
+      "bytes": 10653,
+      "brBytes": 2409,
+      "sha256": "476e903b9ea22cb2"
+    },
+    {
+      "path": "mac/vn.json",
+      "count": 30,
+      "bytes": 10892,
+      "brBytes": 2573,
+      "sha256": "b2ec0918fec5b583"
+    },
+    {
+      "path": "mac/za.json",
+      "count": 30,
+      "bytes": 10793,
+      "brBytes": 2561,
+      "sha256": "9c2774cdbc718af8"
+    },
+    {
+      "path": "podcasts/ae.json",
+      "count": 30,
+      "bytes": 11923,
+      "brBytes": 3021,
+      "sha256": "c923a0e1dd80f3cb"
+    },
+    {
+      "path": "podcasts/ar.json",
+      "count": 30,
+      "bytes": 11834,
+      "brBytes": 3085,
+      "sha256": "ae82d5e2e68fbdaf"
+    },
+    {
+      "path": "podcasts/au.json",
+      "count": 30,
+      "bytes": 11114,
+      "brBytes": 2592,
+      "sha256": "1a4b17c48fda0257"
+    },
+    {
+      "path": "podcasts/br.json",
+      "count": 30,
+      "bytes": 11327,
+      "brBytes": 2897,
+      "sha256": "0939cd3c33078174"
+    },
+    {
+      "path": "podcasts/ca.json",
+      "count": 30,
+      "bytes": 11287,
+      "brBytes": 2795,
+      "sha256": "16720ffd4fa8e5ce"
+    },
+    {
+      "path": "podcasts/cl.json",
+      "count": 30,
+      "bytes": 11653,
+      "brBytes": 2888,
+      "sha256": "97ba57064242bec4"
+    },
+    {
+      "path": "podcasts/cn.json",
+      "count": 30,
+      "bytes": 11187,
+      "brBytes": 3068,
+      "sha256": "1af5fcfcceadec2e"
+    },
+    {
+      "path": "podcasts/co.json",
+      "count": 30,
+      "bytes": 11738,
+      "brBytes": 2966,
+      "sha256": "2b64ee6957cff32a"
+    },
+    {
+      "path": "podcasts/de.json",
+      "count": 30,
+      "bytes": 12052,
+      "brBytes": 3193,
+      "sha256": "75d8d51342e1be1c"
+    },
+    {
+      "path": "podcasts/dk.json",
+      "count": 30,
+      "bytes": 11017,
+      "brBytes": 2683,
+      "sha256": "d0ac08edfdfa14eb"
+    },
+    {
+      "path": "podcasts/eg.json",
+      "count": 30,
+      "bytes": 13962,
+      "brBytes": 3357,
+      "sha256": "72b94a035d602ec6"
+    },
+    {
+      "path": "podcasts/es.json",
+      "count": 30,
+      "bytes": 11299,
+      "brBytes": 2735,
+      "sha256": "5a48f5fe785fe974"
+    },
+    {
+      "path": "podcasts/fi.json",
+      "count": 30,
+      "bytes": 11098,
+      "brBytes": 2676,
+      "sha256": "ada0eecae1330cfe"
+    },
+    {
+      "path": "podcasts/fr.json",
+      "count": 30,
+      "bytes": 11433,
+      "brBytes": 2800,
+      "sha256": "255ed69019e6c44b"
+    },
+    {
+      "path": "podcasts/gb.json",
+      "count": 30,
+      "bytes": 11663,
+      "brBytes": 2874,
+      "sha256": "7d09aea2abacb59e"
+    },
+    {
+      "path": "podcasts/hk.json",
+      "count": 30,
+      "bytes": 11732,
+      "brBytes": 3370,
+      "sha256": "8a0962180eb8b7ad"
+    },
+    {
+      "path": "podcasts/id.json",
+      "count": 30,
+      "bytes": 11472,
+      "brBytes": 2880,
+      "sha256": "9d6285f2b326ae06"
+    },
+    {
+      "path": "podcasts/il.json",
+      "count": 30,
+      "bytes": 12927,
+      "brBytes": 3177,
+      "sha256": "007f49eebe31af31"
+    },
+    {
+      "path": "podcasts/in.json",
+      "count": 30,
+      "bytes": 11455,
+      "brBytes": 2881,
+      "sha256": "44c7744f8e2e774d"
+    },
+    {
+      "path": "podcasts/it.json",
+      "count": 30,
+      "bytes": 11779,
+      "brBytes": 2958,
+      "sha256": "1d1c06911d31d805"
+    },
+    {
+      "path": "podcasts/jp.json",
+      "count": 30,
+      "bytes": 13768,
+      "brBytes": 3827,
+      "sha256": "66873084ab4aac02"
+    },
+    {
+      "path": "podcasts/kr.json",
+      "count": 30,
+      "bytes": 11997,
+      "brBytes": 3414,
+      "sha256": "ad131b586a3eabd3"
+    },
+    {
+      "path": "podcasts/mx.json",
+      "count": 30,
+      "bytes": 11695,
+      "brBytes": 3014,
+      "sha256": "a63db9c4acddbf20"
+    },
+    {
+      "path": "podcasts/my.json",
+      "count": 30,
+      "bytes": 11932,
+      "brBytes": 3432,
+      "sha256": "2c54e0252a6fa033"
+    },
+    {
+      "path": "podcasts/ng.json",
+      "count": 30,
+      "bytes": 11593,
+      "brBytes": 2899,
+      "sha256": "dee4739f84b54f4d"
+    },
+    {
+      "path": "podcasts/nl.json",
+      "count": 30,
+      "bytes": 11690,
+      "brBytes": 2819,
+      "sha256": "758f7e206150cba6"
+    },
+    {
+      "path": "podcasts/no.json",
+      "count": 30,
+      "bytes": 11290,
+      "brBytes": 2810,
+      "sha256": "4360b41cea19338b"
+    },
+    {
+      "path": "podcasts/nz.json",
+      "count": 30,
+      "bytes": 11184,
+      "brBytes": 2690,
+      "sha256": "f9e2cc75147871a7"
+    },
+    {
+      "path": "podcasts/ph.json",
+      "count": 30,
+      "bytes": 11804,
+      "brBytes": 2947,
+      "sha256": "185c44b3bf2d6ee0"
+    },
+    {
+      "path": "podcasts/pl.json",
+      "count": 30,
+      "bytes": 11673,
+      "brBytes": 2959,
+      "sha256": "92116ced85ab3bde"
+    },
+    {
+      "path": "podcasts/ru.json",
+      "count": 30,
+      "bytes": 13011,
+      "brBytes": 3355,
+      "sha256": "3311bd317272c7bd"
+    },
+    {
+      "path": "podcasts/sa.json",
+      "count": 30,
+      "bytes": 12867,
+      "brBytes": 3057,
+      "sha256": "65a37e465acb449d"
+    },
+    {
+      "path": "podcasts/se.json",
+      "count": 30,
+      "bytes": 11372,
+      "brBytes": 2710,
+      "sha256": "3ef631b5900ad615"
+    },
+    {
+      "path": "podcasts/sg.json",
+      "count": 30,
+      "bytes": 11459,
+      "brBytes": 2970,
+      "sha256": "5fb4d3107fc937a3"
+    },
+    {
+      "path": "podcasts/th.json",
+      "count": 30,
+      "bytes": 12051,
+      "brBytes": 3044,
+      "sha256": "22a765230a0936fc"
+    },
+    {
+      "path": "podcasts/tr.json",
+      "count": 30,
+      "bytes": 11361,
+      "brBytes": 2965,
+      "sha256": "eedb624024c5eb28"
+    },
+    {
+      "path": "podcasts/tw.json",
+      "count": 30,
+      "bytes": 11534,
+      "brBytes": 3204,
+      "sha256": "718c1d31cf519cc5"
+    },
+    {
+      "path": "podcasts/us.json",
+      "count": 30,
+      "bytes": 11469,
+      "brBytes": 2886,
+      "sha256": "56414553f81cc2fd"
+    },
+    {
+      "path": "podcasts/vn.json",
+      "count": 30,
+      "bytes": 11800,
+      "brBytes": 3120,
+      "sha256": "375044d6fcfffafb"
+    },
+    {
+      "path": "podcasts/za.json",
+      "count": 30,
+      "bytes": 11416,
+      "brBytes": 2850,
+      "sha256": "0829aec60d1aa462"
+    },
+    {
+      "path": "github/daily.json",
+      "count": 6,
+      "bytes": 3277,
+      "brBytes": 969,
+      "sha256": "cf16af3d2c87ea55"
+    },
+    {
+      "path": "github/weekly.json",
+      "count": 10,
+      "bytes": 5470,
+      "brBytes": 1623,
+      "sha256": "9404104bbb60ab03"
+    },
+    {
+      "path": "github/monthly.json",
+      "count": 30,
+      "bytes": 16039,
+      "brBytes": 4066,
+      "sha256": "92c3d6d67568e12b"
+    },
+    {
+      "path": "github/quarterly.json",
+      "count": 30,
+      "bytes": 15801,
+      "brBytes": 4172,
+      "sha256": "fcccb1c2fc86ffb1"
+    },
+    {
+      "path": "github/yearly.json",
+      "count": 30,
+      "bytes": 16871,
+      "brBytes": 4223,
+      "sha256": "7337f73f37226e39"
+    },
+    {
+      "path": "global/risers.json",
+      "count": 21,
+      "bytes": 13757,
+      "brBytes": 3038,
+      "sha256": "866f98ccc67af28e"
+    },
+    {
+      "path": "alternatives.json",
+      "count": 30,
+      "bytes": 10344,
+      "brBytes": 2293,
+      "sha256": "9ab506feaee8537f"
+    }
+  ]
+}
