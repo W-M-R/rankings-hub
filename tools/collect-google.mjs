@@ -66,6 +66,7 @@ async function collectRegion(g, cc) {
     };
   });
 
+  let detailFails = 0;
   if (DETAILS_LIMIT > 0) {
     const fresh = items
       .filter((i) => (i.catalogRank ?? 999) >= 40)
@@ -79,7 +80,7 @@ async function collectRegion(g, cc) {
         item.ratingCount = d.ratings ?? null;
         item.released = d.released ?? null;
       } catch {
-        /* detail optional */
+        detailFails++;
       }
     }
   }
@@ -97,6 +98,7 @@ async function collectRegion(g, cc) {
     items,
     chartFree,
     newCollectionAvailable: false,
+    detailFails,
   };
 }
 
@@ -118,6 +120,7 @@ export async function collectGoogle(health) {
       return;
     }
     ok++;
+    if (r.detailFails) health.push({ source: `google:${cc}:details`, ok: false, error: `${r.detailFails} detail calls failed` });
     writeJson(join(ROOT, 'raw/google', `${cc}.json`), r);
   });
   health.push({ source: 'google', ok: true, regions: regions.length, succeeded: ok, ms: Date.now() - started });

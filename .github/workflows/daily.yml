@@ -23,7 +23,7 @@ jobs:
       APPLE_RPS: '3'
       MINOR_SLICES: '3'
       GOOGLE_CONCURRENCY: '4'
-      GOOGLE_DETAILS_LIMIT: '8'
+      GOOGLE_DETAILS_LIMIT: '3'
     steps:
       - uses: actions/checkout@v4
 

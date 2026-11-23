@@ -34,7 +34,7 @@ export function selectLists(items) {
   const charted = base.filter(
     (i) =>
       (i.catalogRank != null || i.genreRank != null || i.bestRank != null) &&
-      (i.ratingCount ?? 0) >= 10 &&
+      ((i.ratingCount ?? 0) >= 10 || (i.rankDelta ?? 0) >= 5) &&
       (i.ratingCount ?? 0) < CONFIG.smallRatingCount,
   );
   const small = base.filter((i) => (i.ratingCount ?? 0) < CONFIG.smallRatingCount);
