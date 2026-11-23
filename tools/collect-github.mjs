@@ -3,7 +3,7 @@ import { getJson, sleep } from './lib/http.mjs';
 import { ROOT, today, readJson, writeJson, pruneDir, daysBetween } from './lib/util.mjs';
 
 const WINDOWS = [
-  { key: 'daily', days: 3, minStars: 3, pages: 3 },
+  { key: 'daily', days: 3, minStars: 2, pages: 4 },
   { key: 'weekly', days: 7, minStars: 10, pages: 2 },
   { key: 'monthly', days: 30, minStars: 300, pages: 1 },
   { key: 'quarterly', days: 90, minStars: 1000, pages: 1 },

@@ -67,7 +67,9 @@ async function collectRegion(g, cc) {
   });
 
   if (DETAILS_LIMIT > 0) {
-    const fresh = items.filter((i) => i.isNew).slice(0, DETAILS_LIMIT);
+    const fresh = items
+      .filter((i) => (i.catalogRank ?? 999) >= 40)
+      .slice(0, DETAILS_LIMIT);
     for (const item of fresh) {
       try {
         const d = await g.app({ appId: item.id, country: cc, lang: 'en' });
