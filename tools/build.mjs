@@ -1,11 +1,10 @@
 import { join } from 'node:path';
-import { readdirSync, existsSync, rmSync, mkdirSync } from 'node:fs';
-import { writeFileSync } from 'node:fs';
-import { ROOT, readJson, writeJson, writeBrotli, sha, bytes, ensureDir } from './lib/util.mjs';
-import { selectLists, matrixPenalty } from './lib/score.mjs';
+import { readdirSync, existsSync, rmSync, mkdirSync, writeFileSync } from 'node:fs';
+import { ROOT, readJson, writeJson, sha, byteLength, ensureDir } from './lib/util.mjs';
+import { scoreRisers, selectLists } from './lib/score.mjs';
 import { CONFIG } from './lib/regions.mjs';
 import { generateReadme } from './readme.mjs';
-import { generateCharts, snapshotSeries } from './charts.mjs';
+import { generateCharts, snapshotSeries, seriesFor } from './charts.mjs';
 
 rmSync(join(ROOT, 'data'), { recursive: true, force: true });
 mkdirSync(join(ROOT, 'data'), { recursive: true });
@@ -18,43 +17,79 @@ const shards = [];
 function emit(path, payload, count) {
   const text = JSON.stringify(payload);
   writeJson(out(path), payload);
-  const brBytes = writeBrotli(out(`${path}.br`), text);
-  shards.push({ path, count, bytes: text.length, brBytes, sha256: sha(text).slice(0, 16) });
+  // 用真实 UTF-8 字节数：text.length 数的是 UTF-16 码元，中文/emoji 会算小
+  shards.push({ path, count, bytes: byteLength(text), sha256: sha(text).slice(0, 16) });
 }
 
 const buckets = { apple: [], google: [], mac: [], podcasts: [] };
 
+/** 榜单里每一条都带上同一份 region/platform，属于纯冗余；字段名写死在代码里，去掉能省体积。 */
+function slimRows(items) {
+  return items.map(({ region: _r, platform: _p, newRank: _n, bigPublisher: _b, ...rest }) => rest);
+}
+
+/** 榜单里每条都带上自己的历史序列，前端 sparkline 才有数据可画。 */
+function withSparks(items, series) {
+  // spark 用 [day, rank, ratings] 三元组；day 只保留 MM-DD（同一年内足够，
+  // 跨年由 chart 端点自己补齐），能把每条从 3×11 字节压到 3×5 字节。
+  return items.map((it) => ({
+    ...it,
+    spark: (series[it.id] ?? []).map(([d, r, n]) => [String(d).slice(5), r, n]),
+  }));
+}
+
+/** 从 state/<platform>/<cc>/<day>.json 还原每个地区的榜单名次序列。 */
+function appSeriesFrom(platform) {
+  const series = {};
+  const root = join(ROOT, `state/${platform}`);
+  if (!existsSync(root)) return series;
+  for (const cc of readdirSync(root)) {
+    const dir = join(root, cc);
+    if (!existsSync(dir) || !readdirSync(dir).some((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f))) continue;
+    const byId = (series[`${platform}:${cc}`] ??= {});
+    for (const f of readdirSync(dir).filter((x) => /^\d{4}-\d{2}-\d{2}\.json$/.test(x)).sort()) {
+      const day = f.slice(0, 10);
+      const snap = readJson(join(dir, f), null) ?? {};
+      const ranks = platform === 'google' ? snap.free : snap.all;
+      for (const [id, rank] of Object.entries(ranks ?? {})) {
+        (byId[id] ??= []).push([day, rank, snap.ratings?.[id] ?? null]);
+      }
+    }
+  }
+  return series;
+}
+
+const appSeries = { apple: appSeriesFrom('apple'), google: appSeriesFrom('google') };
+
 for (const r of readAll(join(ROOT, 'raw/apple'))) {
-  const { risingNow, justLaunched, hiddenGems } = selectLists(matrixPenalty(r.items));
+  const scored = scoreRisers(r.items);
+  const { risingNow, justLaunched, hiddenGems } = selectLists(scored);
+  const series = appSeries.apple[`apple:${r.region}`] ?? {};
   emit(`rising/apple/${r.region}.json`, {
     region: r.region,
     platform: 'apple',
     generatedAt: r.generatedAt,
-    risingNow,
-    justLaunched,
-    hiddenGems,
+    risingNow: slimRows(withSparks(risingNow, series)),
+    justLaunched: slimRows(withSparks(justLaunched, series)),
+    hiddenGems: slimRows(withSparks(hiddenGems, series)),
   }, risingNow.length);
-  emit(`charts/apple/${r.region}.json`, { region: r.region, platform: 'apple', generatedAt: r.generatedAt, items: r.chart }, r.chart.length);
   buckets.apple.push({ region: r.region, risingNow });
 }
 
 for (const r of readAll(join(ROOT, 'raw/google'))) {
-  const { risingNow, justLaunched, hiddenGems } = selectLists(matrixPenalty(r.items));
+  const scored = scoreRisers(r.items);
+  // Play 的 Top Free 100 里只有约 3% 的应用评分数 < 5000，"小应用"前提在 Android 不成立，
+  // 所以 Android 侧只按名次变化 + 大厂过滤来选，不再套 iOS 的 smallRatingCount 门槛。
+  const { risingNow, justLaunched, hiddenGems } = selectLists(scored, { smallOnly: false });
+  const series = appSeries.google[`google:${r.region}`] ?? {};
   emit(`rising/google/${r.region}.json`, {
     region: r.region,
     platform: 'google',
     generatedAt: r.generatedAt,
-    risingNow,
-    justLaunched,
-    hiddenGems,
+    risingNow: slimRows(withSparks(risingNow, series)),
+    justLaunched: slimRows(withSparks(justLaunched, series)),
+    hiddenGems: slimRows(withSparks(hiddenGems, series)),
   }, risingNow.length);
-  emit(`charts/google/${r.region}.json`, {
-    region: r.region,
-    platform: 'google',
-    generatedAt: r.generatedAt,
-    free: r.chartFree ?? [],
-    new: r.chartNew ?? [],
-  }, (r.chartFree?.length ?? 0) + (r.chartNew?.length ?? 0));
   buckets.google.push({ region: r.region, risingNow });
 }
 
@@ -68,10 +103,9 @@ for (const r of readAll(join(ROOT, 'raw/podcasts'))) {
   buckets.podcasts.push({ region: r.region });
 }
 
-const gh = readJson(join(ROOT, 'raw/github.json'), null);
-if (gh) {
+// iOS/Android 每个地区的榜单条目的历史（用于站点详情弹窗）
+const gh = readJson(join(ROOT, 'raw/github.json'), null);if (gh) {
   const snaps = snapshotSeries();
-  const { seriesFor } = await import('./charts.mjs');
   for (const [key, windowsItems] of Object.entries(gh.windows)) {
     const items = windowsItems.map((it) => ({ ...it, spark: seriesFor(it, snaps) }));
     emit(`github/${key}.json`, { window: key, generatedAt: gh.generatedAt, items }, items.length);
@@ -141,7 +175,6 @@ const health = readJson(join(ROOT, 'raw/health.json'), { entries: [] });
 writeJson(out('health.json'), health);
 
 const rawBytes = shards.reduce((n, s) => n + s.bytes, 0);
-const brBytes = shards.reduce((n, s) => n + s.brBytes, 0);
 const version = new Date().toISOString().slice(0, 16) + 'Z';
 
 const manifest = {
@@ -162,16 +195,15 @@ const manifest = {
       : 0,
     shards: shards.length,
   },
-  budget: { rawBytes, brBytes },
+  budget: { rawBytes },
   shards,
 };
 writeJson(out('manifest.json'), manifest, true);
-writeBrotli(out('manifest.json.br'), JSON.stringify(manifest, null, 2));
 
 const chartInfo = generateCharts();
 writeFileSync(join(ROOT, 'README.md'), generateReadme(manifest));
 
 console.log(
-  `build: shards=${shards.length} raw=${(rawBytes / 1048576).toFixed(2)}MB br=${(brBytes / 1024).toFixed(0)}KB ` +
+  `build: shards=${shards.length} raw=${(rawBytes / 1048576).toFixed(2)}MB ` +
     `apple=${buckets.apple.length} google=${buckets.google.length} mac=${buckets.mac.length} podcasts=${buckets.podcasts.length} charts=${chartInfo.count}`,
 );

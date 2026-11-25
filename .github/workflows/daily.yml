@@ -2,6 +2,7 @@ name: daily
 
 on:
   schedule:
+    # 02:00 UTC；GitHub 的 cron 常有 10~60 分钟排队，实际数据时间以 manifest.version 为准
     - cron: '0 2 * * *'
   workflow_dispatch:
 
@@ -13,7 +14,7 @@ concurrency: daily
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     env:
       TZ: UTC
       ENABLE_GOOGLE_PLAY: 'true'
@@ -23,7 +24,7 @@ jobs:
       APPLE_RPS: '3'
       MINOR_SLICES: '3'
       GOOGLE_CONCURRENCY: '4'
-      GOOGLE_DETAILS_LIMIT: '3'
+      GOOGLE_DETAILS_LIMIT: '0'
     steps:
       - uses: actions/checkout@v4
 
@@ -33,6 +34,9 @@ jobs:
 
       - name: Install optional collector
         run: npm install --no-audit --no-fund --omit=dev || true
+
+      - name: Test
+        run: node --test tests/
 
       - name: Collect
         env:
@@ -47,12 +51,12 @@ jobs:
 
       - name: Commit
         run: |
-          if [ -z "$(git status --porcelain -- data state README.md)" ]; then
+          if [ -z "$(git status --porcelain -- data state charts README.md)" ]; then
             echo "no changes"
             exit 0
           fi
           git config user.name "rankings-bot"
           git config user.email "rankings-bot@users.noreply.github.com"
-          git add data state README.md
+          git add data state charts README.md
           git commit -m "data: $(node -p "require('./data/manifest.json').version")"
           git push

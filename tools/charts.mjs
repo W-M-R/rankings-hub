@@ -6,12 +6,10 @@ const OUT = join(ROOT, 'charts/spark');
 const READ_JSON = (p, fb = null) => { try { return JSON.parse(readFileSync(p, 'utf8')); } catch { return fb; } };
 const slugOf = (fullName) => fullName.replace('/', '__');
 
+// GitHub 的 stargazers 接口已对所有 token 返回 404，没有历史可回填。
+// 这里只用自己的每日快照，序列随天数自然变长。
 function seriesFor(repo, snapshots) {
-  const file = join(ROOT, 'history/stars', `${slugOf(repo.fullName)}.json`);
-  const hist = READ_JSON(file);
-  if (hist?.points?.length > 1) return hist.points;
-  if (snapshots[repo.fullName]?.length) return snapshots[repo.fullName];
-  return [];
+  return snapshots[repo.fullName] ?? [];
 }
 
 function sparkSvg(points, stars, { w = 120, h = 36 } = {}) {

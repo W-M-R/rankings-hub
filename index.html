@@ -62,6 +62,7 @@
   <nav id="tabs">
     <button class="tab on" data-view="github">GitHub repos</button>
     <button class="tab" data-view="apps">Apps</button>
+    <button class="tab" data-view="desktop">Mac &amp; Podcasts</button>
     <button class="tab" data-view="indie">Indie</button>
     <button class="tab" data-view="global">Global risers</button>
     <button class="tab" data-view="alts">Open source alternatives</button>
@@ -72,7 +73,7 @@
 <div id="overlay"><div class="modal" id="modal"></div></div>
 
 <script>
-const state = { view:'github', ghWindow:'daily', platform:'apple', cc:'us', appList:'risingNow', indie:'showhn' };
+const state = { view:'github', ghWindow:'daily', platform:'apple', desktop:'mac', cc:'us', appList:'risingNow', indie:'showhn' };
 let MANIFEST = null;
 const CACHE = new Map();
 const $ = (s) => document.querySelector(s);
@@ -160,8 +161,8 @@ function repoRow(r){
   const age = r.createdAt ? Math.max(1, Math.round((Date.now()-Date.parse(r.createdAt))/86400000)) : null;
   const avg = r.stars!=null && age ? Math.round(r.stars/age) : null;
   const stat=el('div','stat');
-  stat.innerHTML = `<b>${num(r.stars)}</b> stars` + (r.starsToday!=null
-    ? `<br><span class="${r.starsToday>=0?'up':'down'}">${r.starsToday>=0?'+':''}${r.starsToday}/day</span>`
+  stat.innerHTML = `<b>${num(r.stars)}</b> stars` + (r.velocity!=null
+    ? `<br><span class="${r.velocity>=0?'up':'down'}">${r.velocity>=0?'+':''}${r.velocity}/day</span>`
     : (avg!=null?`<br><sub>~${avg}/day avg</sub>`:''));
   row.appendChild(stat);
 
@@ -191,12 +192,14 @@ function appRow(a){
   const sw=el('div');
   const pts=(a.spark||[]).map(([d,r,n])=>[d,r]).filter(p=>p[1]!=null);
   const rate=(a.spark||[]).map(([d,r,n])=>[d,n]).filter(p=>p[1]!=null);
-  sw.appendChild(sparkline(pts.length>1?pts:rate,{invert:pts.length>1,value:a.ratingCount}));
+  if(pts.length>1) sw.appendChild(sparkline(pts,{invert:true}));
+  else sw.appendChild(sparkline(rate,{value:a.ratingCount}));
   row.appendChild(sw);
 
   const stat=el('div','stat');
-  const delta=a.rankDelta||0;
-  stat.innerHTML=delta?`<span class="${delta>0?'up':'down'}">${delta>0?'+':''}${delta}</span> ranks`:(a.riserScore!=null?`score ${a.riserScore}`:'');
+  const delta=a.rankPerDay ?? a.rankDelta ?? 0;
+  const deltaDays=a.deltaDays;
+  stat.innerHTML=delta?`<span class="${delta>0?'up':'down'}">${delta>0?'+':''}${delta}</span> ranks${deltaDays>1?`<br><sub>per day · ${deltaDays}d gap</sub>`:''}`:(a.riserScore!=null?`score ${a.riserScore}`:'');
   row.appendChild(stat);
 
   row.onclick=(e)=>{ if(e.target.tagName==='A') return;
@@ -256,10 +259,15 @@ async function render(){
   const content=$('#content'); content.innerHTML=''; content.appendChild(el('div','empty','Loading…'));
   try{
     if(state.view==='github'){
-      subTabs(controls,['daily','weekly','monthly','quarterly','yearly'].map(k=>({key:k,label:k[0].toUpperCase()+k.slice(1)})), state.ghWindow, (k)=>{state.ghWindow=k;render();});
+      subTabs(controls,['daily','weekly','monthly','quarterly','yearly','tracked'].map(k=>({key:k,label:k==='tracked'?'Star velocity':k[0].toUpperCase()+k.slice(1)})), state.ghWindow, (k)=>{state.ghWindow=k;render();});
       const d=await getJson(`./data/github/${state.ghWindow}.json`);
-      content.innerHTML=''; content.appendChild(list((d.items||[]).map(repoRow),'No repositories in this window yet.'));
-      $('#meta').textContent=`${d.items?.length??0} repos · ${state.ghWindow}`;
+      let items=d.items||[];
+      // 「按日涨星」榜单：跨窗口跟踪到的、今天涨得最快的仓库
+      if(state.ghWindow==='tracked'){
+        try{ const t=await getJson('./data/github/tracked.json'); items=t.items||[]; }catch{ items=[]; }
+      }
+      content.innerHTML=''; content.appendChild(list(items.map(repoRow),'No repositories in this window yet.'));
+      $('#meta').textContent=`${items.length} repos · ${state.ghWindow}`;
     }
     if(state.view==='apps'){
       subTabs(controls,[{key:'apple',label:'iOS'},{key:'google',label:'Android'}], state.platform, (k)=>{state.platform=k;state.cc='us';render();});
@@ -272,6 +280,19 @@ async function render(){
       const rows=d[state.appList]||[];
       content.innerHTML=''; content.appendChild(list(rows.map(appRow),'Nothing here yet — small apps need a day of snapshots before movement shows up.'));
       $('#meta').textContent=`${state.platform==='apple'?'iOS':'Android'} ${state.cc.toUpperCase()} · ${rows.length}`;
+    }
+    if(state.view==='desktop'){
+      subTabs(controls,[{key:'mac',label:'Mac apps'},{key:'podcasts',label:'Podcasts'}], state.desktop, (k)=>{state.desktop=k;render();});
+      const regs = MANIFEST ? [...new Set(MANIFEST.shards.map(s=>{const m=new RegExp('^'+state.desktop+'/([a-z]{2})\\.json$').exec(s.path);return m?m[1]:null;}).filter(Boolean))].sort() : ['us'];
+      if(!regs.includes(state.cc)) state.cc = regs.includes('us')?'us':(regs[0]||'us');
+      const sel=el('select'); for(const cc of regs){ const o=el('option',null,cc.toUpperCase()); o.value=cc; if(cc===state.cc)o.selected=true; sel.appendChild(o); }
+      sel.onchange=()=>{state.cc=sel.value;render();}; controls.appendChild(sel);
+      const d=await getJson(`./data/${state.desktop}/${state.cc}.json`);
+      const rows = state.desktop==='mac'
+        ? [...(d.free||[]).map(x=>({...x,list:'Free'})), ...(d.paid||[]).map(x=>({...x,list:'Paid'}))]
+        : (d.items||[]);
+      content.innerHTML=''; content.appendChild(list(rows.map(x=>{const r=appRow({...x,ratingCount:null,ageDays:null}); r.querySelector('.stat').innerHTML=x.list?`<b>#${x.rank}</b><br><sub>${x.list}</sub>`:`<b>#${x.rank}</b><br><sub>chart</sub>`; return r;}),'No data for this storefront yet.'));
+      $('#meta').textContent=`${state.desktop} ${state.cc.toUpperCase()} · ${rows.length}`;
     }
     if(state.view==='indie'){
       const sources=[
@@ -291,8 +312,14 @@ async function render(){
         {key:'obsidian-top',label:'Obsidian top'},
         {key:'firefox-new',label:'Firefox new'},
         {key:'firefox-top',label:'Firefox top'},
+        {key:'producthunt',label:'Product Hunt'},
       ];
-      subTabs(controls,sources, state.indie, (k)=>{state.indie=k;render();});
+      const available = MANIFEST
+        ? new Set((MANIFEST.shards||[]).map(s=>s.path).filter(p=>p.startsWith('indie/')).map(p=>p.slice(6,-5)))
+        : null;
+      const shown = available ? sources.filter(s=>available.has(s.key)) : sources;
+      if(!shown.some(s=>s.key===state.indie)) state.indie = shown[0]?.key ?? 'showhn';
+      subTabs(controls,shown, state.indie, (k)=>{state.indie=k;render();});
       const d=await getJson(`./data/indie/${state.indie}.json`);
       content.innerHTML='';
       content.appendChild(list((d.items||[]).map(indieRow),'No indie items yet.'));

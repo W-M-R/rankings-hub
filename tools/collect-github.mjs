@@ -1,6 +1,7 @@
 import { join } from 'node:path';
 import { getJson, sleep } from './lib/http.mjs';
 import { ROOT, today, readJson, writeJson, pruneDir, daysBetween } from './lib/util.mjs';
+import { diversify } from './lib/score.mjs';
 
 const WINDOWS = [
   { key: 'daily', days: 3, minStars: 2, pages: 4 },
@@ -12,29 +13,36 @@ const WINDOWS = [
 
 const TOKEN = process.env.GITHUB_TOKEN || '';
 
-const SPAM_WORDS = [
-  'cheat', 'hack', 'crack', 'spoofer', 'keygen', 'autofarm', 'exploit', 'bypass',
-  'free account', 'premium unlocked', 'mod apk', 'nulled', 'torrent', 'x64 script',
-  'script hub', 'aimbot', 'wallhack', 'generator', 'robux', 'netflix cookie',
-  'keyless', 'injector', 'executor', 'mod menu', 'mod loader', 'no recoil', ' esp',
-  'aim assist', 'unlimited cash', 'bootstrapper', 'auto-dungeon', 'auto-spin', 'macro',
+// 用词边界匹配，避免 ' esp' 命中 ESP32、'macro' 命中 "Rust macro library"、
+// 'generator' 命中 "OpenAPI client generator" 这类误杀。
+const SPAM_PATTERNS = [
+  /\b(aimbot|wallhack|aim assist|no recoil|unlimited cash|auto-?farm|auto-?dungeon|auto-?spin)\b/i,
+  /\b(cheat|spoofer|keygen|crack(ed)?|nulled|torrent)\b/i,
+  /\b(robux|netflix cookie|premium unlocked|mod apk|mod menu|mod loader|script hub|executor hack)\b/i,
+  /\b(hack|exploit|bypass) (account|game|tool|detection|ban)\b/i,
 ];
 
-function looksLikeSpam(item) {
-  const hay = `${item.full_name} ${item.description ?? ''}`.toLowerCase();
-  if (SPAM_WORDS.some((w) => hay.includes(w))) return true;
-  if (item.fork) return true;
-  if ((item.description ?? '').trim().length < 20) return true;
+// 这些只是「可疑信号」，命中后降权而不是直接丢弃 —— 很多正经项目也用自定义协议。
+const SUSPICIOUS_SIGNALS = [
+  (i) => (i.topics ?? []).length >= 15,
+  (i) => !i.license,
+  (i) => i.license?.spdx_id === 'NOASSERTION',
+  (i) => (i.stargazers_count ?? 0) >= 100 && (i.forks_count ?? 0) === 0,
+  (i) => (i.description ?? '').length < 40,
+];
 
-  const stars = item.stargazers_count ?? 0;
-  if (stars >= 100) {
-    if (item.forks_count === 0) return true;
-    if (item.license?.spdx_id === 'NOASSERTION') return true;
-    if ((item.topics ?? []).length >= 15) return true;
-    if (!item.license && (item.topics ?? []).length === 0) return true;
-  }
-  return false;
+function spamReason(item) {
+  const hay = `${item.full_name} ${item.description ?? ''}`;
+  const hit = SPAM_PATTERNS.find((re) => re.test(hay));
+  if (hit) return `pattern:${hit.source.slice(0, 28)}`;
+  if (item.fork) return 'fork';
+  if ((item.description ?? '').trim().length < 20) return 'no-description';
+  if (item.archived) return 'archived';
+  return null;
 }
+
+const spamScore = (item) => SUSPICIOUS_SIGNALS.reduce((n, test) => n + (test(item) ? 1 : 0), 0);
+
 const PER_PAGE = 100;
 const KEEP = 30;
 const DATE = today();
@@ -57,6 +65,7 @@ function normalize(item) {
     pushedAt: item.pushed_at,
     avatar: item.owner?.avatar_url ?? null,
     archived: !!item.archived,
+    spamSignals: spamScore(item),
   };
 }
 
@@ -75,6 +84,7 @@ export async function collectGithub(health) {
   const headers = TOKEN ? { authorization: `Bearer ${TOKEN}` } : {};
   const windows = {};
   const all = new Map();
+  const filtered = {};
 
   for (const w of WINDOWS) {
     const q = encodeURIComponent(`created:>${isoDaysAgo(w.days)} stars:>${w.minStars}`);
@@ -83,27 +93,38 @@ export async function collectGithub(health) {
       const url = `https://api.github.com/search/repositories?q=${q}&sort=stars&order=desc&per_page=${PER_PAGE}&page=${page}`;
       const j = await getJson(url, { headers, retries: 2 });
       raw.push(...(j.items ?? []));
-      const seen = new Set();
       if ((j.items ?? []).length < PER_PAGE) break;
       await sleep(MIN_GAP);
     }
-    const items = raw.filter((it) => !looksLikeSpam(it)).map(normalize);
-    const filtered = raw.length - items.length;
+
+    const reasons = {};
+    const kept = [];
+    for (const it of raw) {
+      const reason = spamReason(it);
+      if (reason) {
+        reasons[reason.split(':')[0]] = (reasons[reason.split(':')[0]] ?? 0) + 1;
+        continue;
+      }
+      kept.push(it);
+    }
+    const items = kept.map(normalize);
     for (const it of items) if (!all.has(it.fullName)) all.set(it.fullName, it);
     windows[w.key] = items;
-    if (filtered) health.push({ source: `github:${w.key}`, ok: true, filtered });
+    filtered[w.key] = { raw: raw.length, kept: items.length, reasons };
+    if (Object.keys(reasons).length) health.push({ source: `github:${w.key}`, ok: true, filtered: reasons });
     await sleep(MIN_GAP);
   }
 
   const snaps = previousSnapshots();
   const velocityFor = (fullName) => {
+    const stars = all.get(fullName)?.stars ?? 0;
     for (const s of snaps) {
       if (s.stars[fullName] != null) {
         const days = Math.max(1, daysBetween(s.day, DATE));
-        return { velocity: Number(((0 - 0 + (all.get(fullName).stars - s.stars[fullName])) / days).toFixed(2)), since: s.day };
+        return { velocity: Number(((stars - s.stars[fullName]) / days).toFixed(2)), since: s.day, windowDays: days };
       }
     }
-    return { velocity: null, since: null };
+    return { velocity: null, since: null, windowDays: null };
   };
 
   for (const key of Object.keys(windows)) {
@@ -115,11 +136,14 @@ export async function collectGithub(health) {
           (
             0.6 * Math.min(1, (it.velocity ?? 0) / Math.max(1, it.stars / 30)) +
             0.3 * Math.min(1, Math.log10(1 + it.stars) / 5) +
-            0.1 * Math.min(1, 30 / Math.max(1, daysBetween(it.createdAt, new Date().toISOString())))
+            0.1 * Math.min(1, 30 / Math.max(1, daysBetween(it.createdAt, new Date().toISOString()))) -
+            0.05 * (it.spamSignals ?? 0)
           ).toFixed(4),
         ),
       }))
-      .sort((a, b) => b.hot - a.hot)
+      .sort((a, b) => b.hot - a.hot);
+    // 同一 owner 只留一条，同一热点主题最多 3 条
+    windows[key] = diversify(windows[key], { maxPerOwner: 1, maxPerTopic: 3 })
       .slice(0, KEEP)
       .map((it, i) => ({ ...it, rank: i + 1 }));
   }
@@ -142,5 +166,12 @@ export async function collectGithub(health) {
     trackedSupported: snaps.length > 0,
   });
 
-  health.push({ source: 'github', ok: true, windows: WINDOWS.length, tracked: tracked.length, ms: Date.now() - started });
+  health.push({
+    source: 'github',
+    ok: true,
+    windows: WINDOWS.length,
+    tracked: tracked.length,
+    filtered: Object.fromEntries(Object.entries(filtered).map(([k, v]) => [k, `${v.kept}/${v.raw}`])),
+    ms: Date.now() - started,
+  });
 }

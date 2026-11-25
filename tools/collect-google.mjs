@@ -1,15 +1,19 @@
 import { join } from 'node:path';
-import { ROOT, today, readJson, writeJson, pool, pruneDir } from './lib/util.mjs';
-import { GOOGLE_MARKETS } from './lib/regions.mjs';
+import { ROOT, today, daysBetween, readJson, writeJson, pool, pruneStateTree, latestSnapshot } from './lib/util.mjs';
+import { GOOGLE_MARKETS, SELLER_BLOCKLIST } from './lib/regions.mjs';
 
 const LIMIT = Number(process.env.REGIONS_LIMIT ?? 0);
 const CONCURRENCY = Number(process.env.GOOGLE_CONCURRENCY ?? 4);
 const DETAILS_LIMIT = Number(process.env.GOOGLE_DETAILS_LIMIT ?? 0);
 const DATE = today();
-const YESTERDAY = today(new Date(Date.now() - 86400000));
 const regions = LIMIT ? GOOGLE_MARKETS.slice(0, LIMIT) : GOOGLE_MARKETS;
 
 const enabled = process.env.ENABLE_GOOGLE_PLAY === 'true';
+
+const blockedSeller = (seller = '') => {
+  const s = seller.toLowerCase();
+  return SELLER_BLOCKLIST.some((b) => s.includes(b));
+};
 
 async function loadLib(health) {
   try {
@@ -23,16 +27,37 @@ async function loadLib(health) {
   }
 }
 
+const parseReleased = (released) => {
+  if (!released) return null;
+  const t = Date.parse(released);
+  return Number.isFinite(t) ? Math.max(0, Math.floor((Date.now() - t) / 86400000)) : null;
+};
+
+/** "10,000,000+" -> 10000000。Play 的安装量是比评分数更可靠的体量信号。 */
+const parseInstalls = (installs) => {
+  if (!installs) return null;
+  const m = /([\d,.]+)/.exec(String(installs));
+  if (!m) return null;
+  const n = Number(m[1].replace(/[,.]/g, ''));
+  return Number.isFinite(n) ? n : null;
+};
+
+const BIG_INSTALLS = 5_000_000;
+
 const entryOf = (a) => ({
   id: a.appId,
   name: a.title,
   seller: a.developer,
   icon: a.icon,
   price: a.free ? 'Free' : null,
-  genre: null,
+  genre: a.genre ?? null,
   url: `https://play.google.com/store/apps/details?id=${a.appId}`,
   rating: Number((a.score ?? 0).toFixed(2)),
-  ratingCount: null,
+  // fullDetail 一次就把 ratings / released / genre / installs 带回来，不用再逐条 app() 打详情
+  ratingCount: a.ratings ?? null,
+  installs: a.installs ?? null,
+  installsNum: parseInstalls(a.installs),
+  ageDays: parseReleased(a.released),
 });
 
 async function collectRegion(g, cc) {
@@ -42,25 +67,30 @@ async function collectRegion(g, cc) {
     country: cc,
     lang: 'en',
     num: 100,
+    fullDetail: true,
   })) ?? [];
   if (!list.length) throw new Error('empty collection');
 
-  const prev = readJson(join(ROOT, 'state/google', cc, `${YESTERDAY}.json`), null);
+  const prevSnap = latestSnapshot(join(ROOT, 'state/google', cc), DATE);
+  const [prevDay, prev, gapDays] = prevSnap ?? [null, null, 1];
   const rankFree = new Map(list.map((a, i) => [a.appId, i + 1]));
 
   const items = list.map((a) => {
     const e = entryOf(a);
     const catalogRank = rankFree.get(e.id) ?? null;
     const prevRank = prev?.free?.[e.id] ?? null;
+    const rankDelta = prevRank && catalogRank ? prevRank - catalogRank : 0;
     return {
       ...e,
       rankFree: catalogRank,
       catalogRank,
       newRank: null,
-      rankDelta: prevRank && catalogRank ? prevRank - catalogRank : 0,
+      rankDelta,
+      rankPerDay: Number((rankDelta / gapDays).toFixed(2)),
       isNew: prev ? prevRank == null : false,
       ratingDelta: 0,
-      ageDays: null,
+      deltaDays: prevSnap ? gapDays : null,
+      bigPublisher: blockedSeller(e.seller) || (e.installsNum ?? 0) >= BIG_INSTALLS,
       platform: 'google',
       region: cc,
     };
@@ -74,10 +104,10 @@ async function collectRegion(g, cc) {
     for (const item of fresh) {
       try {
         const d = await g.app({ appId: item.id, country: cc, lang: 'en' });
-        item.installs = d.installs ?? null;
-        item.ageDays = d.released ? Math.max(0, Math.floor((Date.now() - Date.parse(d.released)) / 86400000)) : null;
-        item.genre = d.genre ?? null;
-        item.ratingCount = d.ratings ?? null;
+        item.installs = d.installs ?? item.installs;
+        item.ageDays = parseReleased(d.released) ?? item.ageDays;
+        item.genre = d.genre ?? item.genre;
+        item.ratingCount = d.ratings ?? item.ratingCount;
         item.released = d.released ?? null;
       } catch {
         detailFails++;
@@ -124,5 +154,5 @@ export async function collectGoogle(health) {
     writeJson(join(ROOT, 'raw/google', `${cc}.json`), r);
   });
   health.push({ source: 'google', ok: true, regions: regions.length, succeeded: ok, ms: Date.now() - started });
-  pruneDir(join(ROOT, 'state/google'), 35, (name) => name.replace(/\.json$/, ''));
+  pruneStateTree(join(ROOT, 'state/google'), 35);
 }

@@ -1,6 +1,6 @@
 import { join } from 'node:path';
 import { getJson, createLimiter } from './lib/http.mjs';
-import { ROOT, today, daysBetween, ensureDir, readJson, writeJson, pool, pruneDir } from './lib/util.mjs';
+import { ROOT, today, daysBetween, ensureDir, readJson, writeJson, pool, pruneStateTree, latestSnapshot } from './lib/util.mjs';
 import { APPLE_ALL, MAJOR_40 } from './lib/regions.mjs';
 
 const LIMIT = Number(process.env.REGIONS_LIMIT ?? 0);
@@ -10,7 +10,6 @@ const gate = createLimiter(RPS);
 let consecutive403 = 0;
 let tripped = false;
 const DATE = today();
-const YESTERDAY = today(new Date(Date.now() - 86400000));
 
 const REGIONS_LIST = (process.env.REGIONS_LIST ?? '').split(',').map((x) => x.trim()).filter(Boolean);
 const MINOR = APPLE_ALL.filter((c) => !MAJOR_40.includes(c));
@@ -52,7 +51,7 @@ const GENRES = [
   { id: 6012, name: 'Lifestyle' },
   { id: 6024, name: 'Shopping' },
 ];
-const GENRE_REGIONS = new Set(MAJOR_40.slice(0, 20));
+const GENRE_REGIONS = new Set(MAJOR_40);
 const GENRE_LIMIT = 50;
 const MAJOR = new Set(MAJOR_40);
 
@@ -74,10 +73,7 @@ const rss = async (kind, cc, limit, genre) => {
 };
 
 function previousState(cc) {
-  const dir = join(ROOT, 'state/apple', cc);
-  const prev = readJson(join(dir, `${YESTERDAY}.json`), null);
-  if (prev) return prev;
-  return null;
+  return latestSnapshot(join(ROOT, 'state/apple', cc), DATE);
 }
 
 async function lookupBatch(ids, cc) {
@@ -133,8 +129,13 @@ async function collectAppleRegion(cc) {
   for (const e of [...free, ...fresh, ...genreFeeds.flat()]) if (e.id && !base.has(e.id)) base.set(e.id, e);
 
   const details = await lookupBatch([...base.keys()], cc);
-  const prev = previousState(cc);
+  const prevSnap = previousState(cc);
+  const [prevDay, prev, gapDays] = prevSnap ?? [null, null, 1];
   const prevRatings = prev?.ratings ?? {};
+  const prevCoverage = Object.keys(prev?.all ?? {}).length;
+  // 覆盖度差异过大时（比如刚扩了 genre 流、候选从 100 涨到 487），
+  // "昨天没见到" 只是因为昨天没抓那么广，不能当作新上榜。
+  const isNewTrustworthy = prevCoverage >= 0.5 * base.size;
 
   const items = [];
   for (const d of details) {
@@ -144,7 +145,7 @@ async function collectAppleRegion(cc) {
     const catalogRank = rankFree.get(id) ?? null;
     const genreRank = rankGenre.get(id) ?? null;
     const bestRank = Math.min(catalogRank ?? 9999, genreRank ?? 9999);
-    const prevAll = prev?.all ?? prev?.free ?? null;
+    const prevAll = prev?.all ?? null;
     const prevRank = prevAll ? (prevAll[id] ?? null) : null;
     const rankDelta = prevRank && bestRank < 9999 ? prevRank - bestRank : 0;
     const ratingCount = d.userRatingCount ?? 0;
@@ -163,10 +164,14 @@ async function collectAppleRegion(cc) {
       bestRank: bestRank < 9999 ? bestRank : null,
       newRank: rankNew.get(id) ?? null,
       rankDelta,
-      isNew: prev ? prevRank == null : false,
+      rankPerDay: Number((rankDelta / gapDays).toFixed(2)),
+      ratingDelta,
+      ratingPerDay: Number((ratingDelta / gapDays).toFixed(2)),
+      // 轮转地区上次采集可能是 2~3 天前，delta 要按天数归一才能和其他地区比较
+      deltaDays: prevSnap ? gapDays : null,
+      isNew: prev && isNewTrustworthy ? prevRank == null : false,
       rating: Number((d.averageUserRating ?? 0).toFixed(2)),
       ratingCount,
-      ratingDelta,
       ageDays: d.releaseDate ? Math.max(0, daysBetween(d.releaseDate, new Date().toISOString())) : null,
       platform: 'apple',
       region: cc,
@@ -185,10 +190,8 @@ async function collectAppleRegion(cc) {
   const chart = free.slice(0, 30).map((e, i) => ({ ...e, rank: i + 1 }));
 
   const state = {
+    // free / genre / new 三个映射从来没有被读回来过，只写不读，白占 35% 体积
     all: Object.fromEntries(items.filter((i) => i.bestRank).map((i) => [i.id, i.bestRank])),
-    free: Object.fromEntries(items.filter((i) => i.catalogRank).map((i) => [i.id, i.catalogRank])),
-    genre: Object.fromEntries(items.filter((i) => i.genreRank).map((i) => [i.id, i.genreRank])),
-    new: Object.fromEntries(items.filter((i) => i.newRank).map((i) => [i.id, i.newRank])),
     ratings: Object.fromEntries(items.map((i) => [i.id, i.ratingCount])),
   };
   writeJson(join(ROOT, 'state/apple', cc, `${DATE}.json`), state);
@@ -243,6 +246,6 @@ export async function collectItunes(health) {
   await run('mac', regionsMajor, collectMacRegion);
   await run('podcasts', regionsMajor, collectPodcastsRegion);
 
-  pruneDir(join(ROOT, 'state/apple'), 35, (name) => name.replace(/\.json$/, ''));
+  pruneStateTree(join(ROOT, 'state/apple'), 35);
   ensureDir(join(ROOT, 'raw/apple'));
 }

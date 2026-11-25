@@ -57,8 +57,7 @@ function githubSection(w) {
 function appsSection(platform, label) {
   const cc = pickRegion(platform);
   if (!cc) return '';
-  const d = read(`rising/${platform}/${cc}.json`);
-  if (!d) return '';
+  const d = read(`rising/${platform}/${cc}.json`);  if (!d) return '';
   const out = [];
   for (const [key, title] of [['risingNow', 'Rising now'], ['justLaunched', 'Just launched'], ['hiddenGems', 'Hidden gems']]) {
     const items = (d[key] ?? []).slice(0, 15);
@@ -223,6 +222,7 @@ export function generateReadme(manifest) {
   parts.push('- Apple storefront RSS (charts, new releases, genre charts), Google Play top charts, GitHub Search API.');
   parts.push('- Stores do not publish download counts: rising lists use **rank movement** and **rating deltas**; `+/day` switches on once two daily snapshots exist, until then the table shows the lifetime **avg/day**.');
   parts.push('- Star charts are built from our daily snapshots; on day one they show a size bar and switch to a line as soon as a second snapshot exists. The GitHub `stargazers` endpoint now returns 404 for everyone, so there is no historic backfill.');
+  parts.push('- Rotating storefronts are sampled every few days; rank and rating deltas are normalised per day so regions with a 2–3 day gap stay comparable.');
   parts.push('- Small = fewer than 5,000 ratings; big publishers, gambling, dating and VPN apps are filtered. GitHub recent-creation results are ~90% star-farm spam and are filtered.');
   parts.push('');
   parts.push('### Files');
@@ -232,10 +232,10 @@ export function generateReadme(manifest) {
   parts.push('data/rising/{apple,google}/{cc}.json  risingNow / justLaunched / hiddenGems');
   parts.push('data/charts/{apple,google}/{cc}.json  mainstream charts');
   parts.push('data/mac/{cc}.json · data/podcasts/{cc}.json');
-  parts.push('data/github/{daily,weekly,monthly,quarterly,yearly}.json');
+  parts.push('data/github/{daily,weekly,monthly,quarterly,yearly,tracked}.json');
   parts.push('data/global/risers.json · data/alternatives.json · data/health.json');
   parts.push('charts/spark/{owner__repo}.svg       star history per repository');
-    parts.push('```');
+  parts.push('```');
   parts.push('');
   parts.push('## License');
   parts.push('');

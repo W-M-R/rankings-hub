@@ -36,7 +36,8 @@ export const CATEGORY_BLOCKLIST = [/casino/i, /gambling/i, /dating/i, /vpn/i, /b
 export const CONFIG = {
   smallRatingCount: 5000,
   freshDays: 90,
-  longTailDays: 180,
+  // 新上榜只有在名次足够靠前时才算 "rising"；50 名开外多是长尾抖动
+  newEntrantRank: 50,
   perList: 30,
   matrixSellerPerDay: 3,
   matrixPenalty: 0.5,
