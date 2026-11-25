@@ -113,8 +113,8 @@ export async function collectGithub(health) {
         ),
       }))
       .sort((a, b) => b.hot - a.hot);
-    // 同一 owner 只留一条，同一热点主题最多 3 条
-    windows[key] = diversify(windows[key], { maxPerOwner: 1, maxPerTopic: 3 })
+    // 同一 owner 只留一条；同一热点主题最多 2 条（19 条里 7 条同话题会让榜单失去信息量）
+    windows[key] = diversify(windows[key], { maxPerOwner: 1, maxPerTopic: 2 })
       .slice(0, KEEP)
       .map((it, i) => ({ ...it, rank: i + 1 }));
   }

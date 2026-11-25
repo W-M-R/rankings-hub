@@ -2,7 +2,7 @@
 
 Rising apps and GitHub repositories, rebuilt every day. Tables and star charts below are regenerated from the latest run.
 
-**Last update:** 2026-11-25 16:10 UTC · **[Open the site](https://w-m-r.github.io/rankings-hub/)**
+**Last update:** 2026-11-25 16:12 UTC · **[Open the site](https://w-m-r.github.io/rankings-hub/)**
 
 ## GitHub · daily
 

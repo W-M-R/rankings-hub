@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-25T16:10Z",
-  "generatedAt": "2026-11-25T16:10:04.750Z",
+  "version": "2026-11-25T16:12Z",
+  "generatedAt": "2026-11-25T16:12:53.523Z",
   "counts": {
     "appleRegions": 167,
     "googleRegions": 39,
@@ -1772,7 +1772,7 @@
       "path": "global/risers.json",
       "count": 30,
       "bytes": 22414,
-      "sha256": "64f0a18637005d34"
+      "sha256": "1ef40c14d20ff99a"
     },
     {
       "path": "indie/showhn.json",
@@ -1868,7 +1868,7 @@
       "path": "alternatives.json",
       "count": 30,
       "bytes": 10344,
-      "sha256": "b97b3482d64d894d"
+      "sha256": "469051893c11470e"
     }
   ]
 }
