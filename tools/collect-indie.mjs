@@ -153,9 +153,15 @@ function downloadCached(url, file, mirrors = null) {
   const urls = mirrors ?? [url];
   let lastErr;
   for (const u of urls) {
-    for (let attempt = 1; attempt <= 2; attempt++) {
+    for (let attempt = 1; attempt <= 3; attempt++) {
       try {
-        execFileSync('curl', ['-sSL', '--max-time', '300', '-o', file, u], { stdio: 'pipe' });
+        // --retry 让 curl 自己处理传输中断（服务器中途 close 时很常见），
+        // 比在外层重下整个几十 MB 的索引快得多。
+        execFileSync(
+          'curl',
+          ['-sSL', '--max-time', '300', '--retry', '3', '--retry-delay', '2', '--retry-all-errors', '-C', '-', '-o', file, u],
+          { stdio: 'pipe' },
+        );
         const text = readFileSync(file, 'utf8');
         if (text.length > 1e6) return text;
         throw new Error('index too small');

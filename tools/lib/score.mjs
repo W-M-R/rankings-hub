@@ -79,10 +79,14 @@ export function selectLists(scored, { smallOnly = true } = {}) {
       .slice(0, CONFIG.perList),
   );
 
+  // Hidden gems 的定位是「名次不显眼但口碑好」，必须排除已经在 risingNow 里的，
+  // 否则两个榜单 83% 重合，等于同一个列表换个标题。
+  const risingIds = new Set(risingNow.map((i) => i.id));
   const hiddenGems = withRank(
     base
       .filter(
         (i) =>
+          !risingIds.has(i.id) &&
           (i.rating ?? 0) >= 4.5 &&
           (i.ratingCount ?? 0) >= 5 &&
           (i.ratingCount ?? 0) <= CONFIG.smallRatingCount &&

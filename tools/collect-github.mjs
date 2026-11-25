@@ -2,6 +2,7 @@ import { join } from 'node:path';
 import { getJson, sleep } from './lib/http.mjs';
 import { ROOT, today, readJson, writeJson, pruneDir, daysBetween } from './lib/util.mjs';
 import { diversify } from './lib/score.mjs';
+import { spamReason, spamScore } from './lib/spam.mjs';
 
 const WINDOWS = [
   { key: 'daily', days: 3, minStars: 2, pages: 4 },
@@ -12,36 +13,6 @@ const WINDOWS = [
 ];
 
 const TOKEN = process.env.GITHUB_TOKEN || '';
-
-// 用词边界匹配，避免 ' esp' 命中 ESP32、'macro' 命中 "Rust macro library"、
-// 'generator' 命中 "OpenAPI client generator" 这类误杀。
-const SPAM_PATTERNS = [
-  /\b(aimbot|wallhack|aim assist|no recoil|unlimited cash|auto-?farm|auto-?dungeon|auto-?spin)\b/i,
-  /\b(cheat|spoofer|keygen|crack(ed)?|nulled|torrent)\b/i,
-  /\b(robux|netflix cookie|premium unlocked|mod apk|mod menu|mod loader|script hub|executor hack)\b/i,
-  /\b(hack|exploit|bypass) (account|game|tool|detection|ban)\b/i,
-];
-
-// 这些只是「可疑信号」，命中后降权而不是直接丢弃 —— 很多正经项目也用自定义协议。
-const SUSPICIOUS_SIGNALS = [
-  (i) => (i.topics ?? []).length >= 15,
-  (i) => !i.license,
-  (i) => i.license?.spdx_id === 'NOASSERTION',
-  (i) => (i.stargazers_count ?? 0) >= 100 && (i.forks_count ?? 0) === 0,
-  (i) => (i.description ?? '').length < 40,
-];
-
-function spamReason(item) {
-  const hay = `${item.full_name} ${item.description ?? ''}`;
-  const hit = SPAM_PATTERNS.find((re) => re.test(hay));
-  if (hit) return `pattern:${hit.source.slice(0, 28)}`;
-  if (item.fork) return 'fork';
-  if ((item.description ?? '').trim().length < 20) return 'no-description';
-  if (item.archived) return 'archived';
-  return null;
-}
-
-const spamScore = (item) => SUSPICIOUS_SIGNALS.reduce((n, test) => n + (test(item) ? 1 : 0), 0);
 
 const PER_PAGE = 100;
 const KEEP = 30;

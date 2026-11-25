@@ -34,13 +34,15 @@ function githubSection(w) {
   const rows = d.items.map((r) => {
     const avg = r.stars != null && r.createdAt ? Math.round(r.stars / daysSince(r.createdAt)) : null;
     const perDay = r.velocity != null ? (r.velocity > 0 ? `+${r.velocity}` : String(r.velocity)) : null;
-    const trendLabel = perDay ?? (avg != null ? `~${avg}` : '—');
+    // velocity 是「最近一次快照到今天」的差值；样本只有 1~2 天时要标注，否则读者会当成长期均值
+    const windowNote = r.velocity != null && (r.windowDays ?? 1) <= 2 ? ` · ${r.windowDays ?? 1}d` : '';
+    const trendLabel = perDay != null ? `${perDay}/day${windowNote}` : avg != null ? `~${avg}/day avg` : '—';
     const spark = `<img src="charts/spark/${slugOf(r.fullName)}.svg" width="120" height="36" alt="star trend">`;
     return `<tr>
 <td align="right">${r.rank}</td>
 <td><a href="${esc(r.url)}"><b>${esc(r.fullName)}</b></a><br><code>${esc(r.language ?? '—')}</code>${r.license ? ` · ${esc(r.license)}` : ''}</td>
 <td>${esc(clip(r.description ?? '—', 150))}</td>
-<td align="right"><b>${n(r.stars)}</b><br><sub>${trendLabel}/day${perDay == null && avg != null ? ' avg' : ''}</sub></td>
+<td align="right"><b>${n(r.stars)}</b><br><sub>${trendLabel}</sub></td>
 <td>${spark}</td>
 </tr>`;
   });

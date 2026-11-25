@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { scoreRisers, selectLists, diversify } from '../tools/lib/score.mjs';
+import { spamReason } from '../tools/lib/spam.mjs';
 import { byteLength, pruneStateTree, latestSnapshot, norm } from '../tools/lib/util.mjs';
 import { mkdirSync, writeFileSync, rmSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
@@ -121,6 +122,54 @@ test('pruneStateTree 递归删除过期快照，并清掉空目录', () => {
   assert.equal(existsSync(join(root, 'us', '2999-01-01.json')), true);
   assert.equal(existsSync(join(root, 'old')), false, '清空后的目录应被移除');
   rmSync(root, { recursive: true, force: true });
+});
+
+test('hiddenGems 不与 risingNow 重复', () => {
+  const scored = scoreRisers([
+    mk({ id: 'rising', rankDelta: 30, rating: 4.8, ratingCount: 50, bestRank: 30 }),
+    mk({ id: 'gem', rankDelta: 0, rating: 4.9, ratingCount: 40, bestRank: 60 }),
+  ]);
+  const { risingNow, hiddenGems } = selectLists(scored);
+  assert.ok(risingNow.some((i) => i.id === 'rising'));
+  assert.ok(hiddenGems.every((i) => i.id !== 'rising'), 'hiddenGems 不应包含已在 risingNow 的条目');
+});
+
+test('反垃圾：作弊/盗版仓库被拦截，正常项目不被误杀', () => {
+  const bad = [
+    ['HoangMinh-sikula/rob-run-mod-trainer', 'Rob Run Mod Trainer: Shape Your Run, Bend the Rules'],
+    ['Norao01/fabfilter-total-bundle-2026-vst3-pc', 'iZotope Ozone 11 & FabFilter Total Bundle [2026] — VST3'],
+    ['YutozeXesi67/clair-obscur-expedition-33-parry-trainer-mod', 'Clair Obscur: Expedition 33 Parry Timing Trainer'],
+    ['henkbonnet297/steal-a-brainrot-roblox-index-macro', 'Steal a Brainrot Script & Roblox Index Macro [2026]'],
+    ['kprice417/rust-recoil-script-esp-macro-2026', 'Rust Recoil Script & Rust Macro Suite [2026]'],
+    ['JisungDiaz447/blox-fruits-script-keyless-2026', 'Blox Fruits Script [2026] — Keyless Auto Farm'],
+    ['KimberlyReddy52140/valorant-colorbot-triggerbot', 'Valorant Colorbot & Arduino Pixel Triggerbot [2026]'],
+  ];
+  for (const [full_name, description] of bad) {
+    assert.ok(spamReason({ full_name, description }), `${full_name} 应被拦截`);
+  }
+
+  // 这些曾经被裸子串规则误杀（' esp' / 'macro' / 'generator'）
+  const good = [
+    ['foo/esp32-firmware', 'Firmware for ESP32 boards with WiFi and BLE support'],
+    ['foo/rust-macro-lib', 'A fast procedural macro library for Rust'],
+    ['foo/openapi-gen', 'OpenAPI client generator for TypeScript'],
+    ['foo/task-executor', 'A tiny task executor with cancellation support'],
+    ['foo/torrent-client', 'A BitTorrent client written in Rust'],
+    ['foo/hackathon-kit', 'Hackathon starter kit with auth and billing'],
+    ['foo/crack-detect', 'Crack detection in concrete using computer vision'],
+    ['foo/game-mod-manager', 'Free Windows game mod manager to discover and install mods'],
+    ['foo/model-trainer', 'A training engine for your local model using idle compute'],
+    ['foo/vst3-synth', 'A polyphonic VST3 synthesizer built with JUCE'],
+    ['foo/roblox-api-wrapper', 'Unofficial Roblox API wrapper for game stats'],
+    ['foo/parry', 'A 3D collision detection library in Rust'],
+  ];
+  for (const [full_name, description] of good) {
+    assert.equal(
+      spamReason({ full_name, description, license: { spdx_id: 'MIT' }, topics: ['x'], stargazers_count: 500, forks_count: 10 }),
+      null,
+      `${full_name} 不应被误杀`,
+    );
+  }
 });
 
 test('norm 对全等输入返回 0.5 而不是 NaN', () => {

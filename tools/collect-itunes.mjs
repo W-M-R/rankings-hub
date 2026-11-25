@@ -228,7 +228,23 @@ async function collectPodcastsRegion(cc) {
 export async function collectItunes(health) {
   const run = async (label, regions, fn) => {
     const started = Date.now();
-    const results = await pool(regions, CONCURRENCY, async (cc) => fn(cc));
+    let results = await pool(regions, CONCURRENCY, async (cc) => fn(cc));
+
+    // 单个地区失败后立刻丢空会直接少一天的数据；用更低的并发重试一轮。
+    const failed = regions.filter((_, k) => !results[k] || results[k].__error);
+    let retried = 0;
+    if (failed.length) {
+      const retryResults = await pool(failed, Math.max(1, Math.min(3, CONCURRENCY)), async (cc) => fn(cc));
+      failed.forEach((cc, i) => {
+        const k = regions.indexOf(cc);
+        if (retryResults[i] && !retryResults[i].__error) {
+          results[k] = retryResults[i];
+          retried++;
+        }
+      });
+      if (retried) health.push({ source: `${label}:retry`, ok: true, recovered: retried, failed: failed.length });
+    }
+
     let ok = 0;
     results.forEach((r, k) => {
       const cc = regions[k];
@@ -239,7 +255,7 @@ export async function collectItunes(health) {
       ok++;
       writeJson(join(ROOT, 'raw', label, `${cc}.json`), r);
     });
-    health.push({ source: label, ok: true, regions: regions.length, succeeded: ok, ms: Date.now() - started });
+    health.push({ source: label, ok: true, regions: regions.length, succeeded: ok, retried, ms: Date.now() - started });
   };
 
   await run('apple', regionsAll, collectAppleRegion);
