@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rankings Hub — rising apps and repos</title>
 <meta name="description" content="Daily rankings: small apps that are new and rising, plus GitHub repositories by day, week, month, quarter and year, with star history charts.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233451b2'/%3E%3Cpath d='M8 21l5-6 4 3 7-9' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <style>
   :root{--bg:#fff;--bg2:#f6f6f7;--line:#e4e4e7;--t1:#18181b;--t2:#52525b;--t3:#8b8b93;--accent:#3451b2;--accent-soft:#eef1fb;--green:#18794e;--red:#b8272c;--radius:12px}
   @media (prefers-color-scheme:dark){:root{--bg:#101013;--bg2:#17171b;--line:#27272c;--t1:#f4f4f5;--t2:#a1a1aa;--t3:#71717a;--accent:#7c93f5;--accent-soft:#1b2033;--green:#4ade80;--red:#f87171}}
@@ -177,7 +178,7 @@ function appRow(a){
   row.appendChild(el('div','rank','#'+a.rank));
   const mid=el('div');
   const name=el('div','name');
-  if(a.icon){ const img=el('img','icon'); img.src=a.icon; img.loading='lazy'; img.onerror=()=>img.remove(); name.appendChild(img); }
+  if(a.icon){ const img=el('img','icon'); img.src=a.icon; img.loading='lazy'; img.referrerPolicy='no-referrer'; img.crossOrigin='anonymous'; img.onerror=()=>img.remove(); name.appendChild(img); }
   const link=el('a',null,a.name||'Untitled'); link.href=a.url||'#'; link.target='_blank'; link.rel='noopener'; name.appendChild(link);
   mid.appendChild(name);
   const s=el('div','sub2');

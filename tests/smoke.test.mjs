@@ -172,6 +172,16 @@ test('反垃圾：作弊/盗版仓库被拦截，正常项目不被误杀', () =
   }
 });
 
+test('新上线应用没有评分时仍能进 justLaunched', () => {
+  // 实测小地区新应用评分数 p95 = 0，用 ratingCount>=10 会把整列清空
+  const scored = scoreRisers([
+    mk({ id: 'fresh', ageDays: 20, ratingCount: 0, catalogRank: 40, bestRank: 40, rankDelta: 0 }),
+    mk({ id: 'fresh2', ageDays: 30, ratingCount: 0, catalogRank: 70, bestRank: 70, rankDelta: 0 }),
+  ]);
+  const { justLaunched } = selectLists(scored);
+  assert.equal(justLaunched.length, 2, '没有评分但在榜的新应用应入选');
+});
+
 test('norm 对全等输入返回 0.5 而不是 NaN', () => {
   assert.deepEqual(norm([3, 3, 3]), [0.5, 0.5, 0.5]);
 });

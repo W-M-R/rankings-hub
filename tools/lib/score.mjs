@@ -67,13 +67,14 @@ export function selectLists(scored, { smallOnly = true } = {}) {
 
   const risingNow = withRank([...charted].sort(byMovement).slice(0, CONFIG.perList));
 
+  // 新上线的应用通常还没有评分（实测小地区新应用评分数 p95 = 0），
+  // 用 ratingCount>=10 会把 justLaunched 整列清空。改为「在榜 或 有一定评分」二选一。
   const justLaunched = withRank(
     small
       .filter(
         (i) =>
           (i.ageDays ?? 999) <= CONFIG.freshDays &&
-          (i.ratingCount ?? 0) >= 10 &&
-          (i.catalogRank != null || i.genreRank != null || (i.ratingCount ?? 0) >= 50),
+          (i.catalogRank != null || i.genreRank != null || (i.ratingCount ?? 0) >= CONFIG.freshRatingFloor),
       )
       .sort((a, b) => b.riserScore - a.riserScore || byMovement(a, b))
       .slice(0, CONFIG.perList),

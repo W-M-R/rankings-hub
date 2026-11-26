@@ -36,6 +36,8 @@ export const CATEGORY_BLOCKLIST = [/casino/i, /gambling/i, /dating/i, /vpn/i, /b
 export const CONFIG = {
   smallRatingCount: 5000,
   freshDays: 90,
+  // 新上线应用通常还没有评分；只有在没有任何榜单名次时才回退到评分门槛
+  freshRatingFloor: 5,
   // 新上榜只有在名次足够靠前时才算 "rising"；50 名开外多是长尾抖动
   newEntrantRank: 50,
   perList: 30,
