@@ -36,7 +36,7 @@ jobs:
         run: npm install --no-audit --no-fund --omit=dev || true
 
       - name: Test
-        run: node --test tests/
+        run: node --test tests/*.test.mjs
 
       - name: Collect
         env:
