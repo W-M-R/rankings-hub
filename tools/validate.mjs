@@ -53,15 +53,32 @@ if (manifest && appleRising.length < minApple) problems.push(`iOS 地区过少�
 const rawTotal = [...seen].reduce((n, p) => n + bytes(join(dataDir, p)), 0);
 if (rawTotal > 12_000_000) problems.push(`分片总量超预算：${(rawTotal / 1048576).toFixed(2)}MB`);
 
-// README 里引用的星标图必须真实存在 —— 之前 charts/ 没进 CI，74 张图 404 一直没人发现
+// README 里引用的星标图必须真实存在。charts/ 现在只发布到 gh-pages，
+// 所以同时校验本地文件（构建期）和线上 URL（发布后由 CI 的第二步兜底）。
 const readmePath = join(ROOT, 'README.md');
 if (existsSync(readmePath)) {
   const readme = readFileSync(readmePath, 'utf8');
   // 代码块里的 charts/spark/{owner__repo}.svg 是文件名说明，不是真实引用
   const outsideCode = readme.replace(/```[\s\S]*?```/g, '').replace(/`[^`]*`/g, '');
-  const refs = [...new Set([...outsideCode.matchAll(/src="(charts\/spark\/[^"]+\.svg)"/g)].map((m) => m[1]))];
-  const missing = refs.filter((p) => !existsSync(join(ROOT, p)));
-  if (missing.length) problems.push(`README 引用了 ${missing.length} 个不存在的图表（例：${missing[0]}）`);
+  const refs = [...new Set([...outsideCode.matchAll(/src="([^"]*charts\/spark\/[^"]+\.svg)"/g)].map((m) => m[1]))];
+  const local = refs.filter((p) => !/^https?:/.test(p));
+  const remote = refs.filter((p) => /^https?:/.test(p));
+  const missingLocal = local.filter((p) => !existsSync(join(ROOT, p)));
+  if (missingLocal.length) problems.push(`README 引用了 ${missingLocal.length} 个本地不存在的图表（例：${missingLocal[0]}）`);
+
+  // 绝对 URL 指向线上站点：逐条 HEAD 太重，抽 3 个 + 检查域名是否与 SITE_BASE 一致
+  const siteBase = process.env.SITE_BASE ?? 'https://w-m-r.github.io/rankings-hub';
+  const wrongHost = remote.filter((p) => !p.startsWith(siteBase));
+  if (wrongHost.length) problems.push(`README 有 ${wrongHost.length} 个图表指向了非站点域名（例：${wrongHost[0]}）`);
+  if (process.env.CHECK_REMOTE_CHARTS === '1' && remote.length) {
+    const sample = remote.slice(0, 3);
+    for (const url of sample) {
+      const ok = await fetch(url, { method: 'HEAD' })
+        .then((r) => r.ok)
+        .catch(() => false);
+      if (!ok) problems.push(`README 的线上图表不可访问：${url}`);
+    }
+  }
 }
 
 // 榜单里出现 spark 字段但序列为空，说明 state 历史没接上

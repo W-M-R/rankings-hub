@@ -4,6 +4,9 @@ import { ROOT } from './lib/util.mjs';
 import { slugOf } from './charts.mjs';
 
 const read = (p, fb = null) => { try { return JSON.parse(readFileSync(join(ROOT, 'data', p), 'utf8')); } catch { return fb; } };
+
+// 图表由 Pages 站点提供；README 用绝对地址引用，因此 charts/ 不需要进 main 分支
+const SITE = process.env.SITE_BASE ?? 'https://w-m-r.github.io/rankings-hub';
 const n = (v) => v == null ? '—' : (Math.abs(v) >= 1e6 ? (v / 1e6).toFixed(1) + 'M' : Math.abs(v) >= 10000 ? (v / 1000).toFixed(1) + 'k' : String(v));
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const clip = (s, max) => { const t = String(s ?? '').replace(/\s+/g, ' ').trim(); return t.length > max ? t.slice(0, max - 1) + '…' : t; };
@@ -37,7 +40,9 @@ function githubSection(w) {
     // velocity 是「最近一次快照到今天」的差值；样本只有 1~2 天时要标注，否则读者会当成长期均值
     const windowNote = r.velocity != null && (r.windowDays ?? 1) <= 2 ? ` · ${r.windowDays ?? 1}d` : '';
     const trendLabel = perDay != null ? `${perDay}/day${windowNote}` : avg != null ? `~${avg}/day avg` : '—';
-    const spark = `<img src="charts/spark/${slugOf(r.fullName)}.svg" width="120" height="36" alt="star trend">`;
+    // 用绝对 URL：charts/ 不再进 main 分支，改由 Pages 提供，
+    // 这样 README 里的图表仍然能显示，而 main 的体积不再每天增长。
+    const spark = `<img src="${SITE}/charts/spark/${slugOf(r.fullName)}.svg" width="120" height="36" alt="star trend">`;
     return `<tr>
 <td align="right">${r.rank}</td>
 <td><a href="${esc(r.url)}"><b>${esc(r.fullName)}</b></a><br><code>${esc(r.language ?? '—')}</code>${r.license ? ` · ${esc(r.license)}` : ''}</td>

@@ -25,6 +25,7 @@ jobs:
       MINOR_SLICES: '3'
       GOOGLE_CONCURRENCY: '4'
       GOOGLE_DETAILS_LIMIT: '0'
+      SITE_BASE: 'https://w-m-r.github.io/rankings-hub'
     steps:
       - uses: actions/checkout@v4
 
@@ -49,14 +50,31 @@ jobs:
       - name: Validate
         run: node tools/validate.mjs
 
-      - name: Commit
+      # main 只保留源码 + state（滚动窗口，有上限）+ README。
+      # data/ 与 charts/ 是纯派生产物，每天全量重建，进 git 会让历史无限膨胀
+      # （实测 5.6MB/天 ≈ 2GB/年），所以只发布到 gh-pages。
+      - name: Commit state and README
         run: |
-          if [ -z "$(git status --porcelain -- data state charts README.md)" ]; then
+          if [ -z "$(git status --porcelain -- state README.md)" ]; then
             echo "no changes"
             exit 0
           fi
           git config user.name "rankings-bot"
           git config user.email "rankings-bot@users.noreply.github.com"
-          git add data state charts README.md
+          git add state README.md
           git commit -m "data: $(node -p "require('./data/manifest.json').version")"
           git push
+
+      # gh-pages 每次用 orphan 单提交覆盖，历史永远只有 1 个 commit
+      - name: Publish site to gh-pages
+        run: |
+          mkdir -p _site
+          cp -R index.html data charts _site/
+          touch _site/.nojekyll
+          cd _site
+          git init -q -b gh-pages
+          git config user.name "rankings-bot"
+          git config user.email "rankings-bot@users.noreply.github.com"
+          git add -A
+          git commit -q -m "site: $(node -p "require('../data/manifest.json').version")"
+          git push -q --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" gh-pages

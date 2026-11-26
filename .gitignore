@@ -3,3 +3,5 @@ raw/
 _site/
 .DS_Store
 *.log
+data/
+charts/

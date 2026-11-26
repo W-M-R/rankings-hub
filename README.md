@@ -2,7 +2,7 @@
 
 Rising apps and GitHub repositories, rebuilt every day. Tables and star charts below are regenerated from the latest run.
 
-**Last update:** 2026-11-26 03:35 UTC · **[Open the site](https://w-m-r.github.io/rankings-hub/)**
+**Last update:** 2026-11-26 03:39 UTC · **[Open the site](https://w-m-r.github.io/rankings-hub/)**
 
 ## GitHub · daily
 
@@ -12,210 +12,210 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td><a href="https://github.com/ubiquitarianism/leonida"><b>ubiquitarianism/leonida</b></a><br><code>Python</code> · GPL-3.0</td>
 <td>A continuation of Leonida, the Xbox &gt; PC port interface for GTA VI</td>
 <td align="right"><b>2215</b><br><sub>+1125/day · 1d</sub></td>
-<td><img src="charts/spark/ubiquitarianism__leonida.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/ubiquitarianism__leonida.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">2</td>
 <td><a href="https://github.com/Marvisak/VIctory"><b>Marvisak/VIctory</b></a><br><code>Rust</code> · GPL-3.0</td>
 <td>An attempt at running GTA VI on PC</td>
 <td align="right"><b>12.3k</b><br><sub>+4059/day · 1d</sub></td>
-<td><img src="charts/spark/Marvisak__VIctory.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Marvisak__VIctory.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">3</td>
 <td><a href="https://github.com/SulphurS16/Regaliant"><b>SulphurS16/Regaliant</b></a><br><code>Rust</code> · GPL-3.0</td>
 <td>Unofficial Windows PC port of Demon's Souls (2020), Bluepoint's PS5 remake. Runs your own copy of the PS5 game (PPSA01341, version 1.07). No game fil…</td>
 <td align="right"><b>377</b><br><sub>+140/day · 1d</sub></td>
-<td><img src="charts/spark/SulphurS16__Regaliant.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/SulphurS16__Regaliant.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">4</td>
 <td><a href="https://github.com/duwqijlk/browser-capture"><b>duwqijlk/browser-capture</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Zero-dependency browser CDP + stealth Hook capture &amp; reverse-engineering AI Skill / CLI for BitBrowser, AdsPower, and Chrome/VisibleV8</td>
 <td align="right"><b>196</b><br><sub>+10/day · 1d</sub></td>
-<td><img src="charts/spark/duwqijlk__browser-capture.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/duwqijlk__browser-capture.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">5</td>
 <td><a href="https://github.com/MaryCache/tsuzuri"><b>MaryCache/tsuzuri</b></a><br><code>Python</code> · MIT</td>
 <td>Claude Code・Codex・Antigravity などの AI コーディングエージェントに、執筆意図と文機能つきで一文ずつ日本語の文章を執筆・レビューさせるスキルと閲覧アプリ</td>
 <td align="right"><b>138</b><br><sub>+20/day · 1d</sub></td>
-<td><img src="charts/spark/MaryCache__tsuzuri.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/MaryCache__tsuzuri.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">6</td>
 <td><a href="https://github.com/chanke17/KuroCat"><b>chanke17/KuroCat</b></a><br><code>C++</code> · MIT</td>
 <td>KuroCat — Free open-source native desktop cat pet &amp; OBS overlay (Bongo Cat alternative, Swift/C++, 802 KB)｜开源免费原生桌面萌猫（全平台 macOS·Win·Linux·UOS / 2.5D转…</td>
 <td align="right"><b>506</b><br><sub>+180/day · 1d</sub></td>
-<td><img src="charts/spark/chanke17__KuroCat.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/chanke17__KuroCat.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">7</td>
 <td><a href="https://github.com/uxpilot-ai/user-interview-skill"><b>uxpilot-ai/user-interview-skill</b></a><br><code>—</code> · Apache-2.0</td>
 <td>Free agent skill that writes neutral 1:1 user interview guides for Claude Code, Codex and Cursor</td>
 <td align="right"><b>120</b><br><sub>+1/day · 1d</sub></td>
-<td><img src="charts/spark/uxpilot-ai__user-interview-skill.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/uxpilot-ai__user-interview-skill.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">8</td>
 <td><a href="https://github.com/EL4CTEO/shrink-anything"><b>EL4CTEO/shrink-anything</b></a><br><code>Rust</code> · MIT</td>
 <td>Less code, same tests passing: delete the dead code, files, dependencies and assets in any codebase, and keep each cut only if your own tests still p…</td>
 <td align="right"><b>261</b><br><sub>~131/day avg</sub></td>
-<td><img src="charts/spark/EL4CTEO__shrink-anything.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/EL4CTEO__shrink-anything.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">9</td>
 <td><a href="https://github.com/ElloboDK/KeyCat"><b>ElloboDK/KeyCat</b></a><br><code>JavaScript</code> · GPL-3.0</td>
 <td>菜单栏桌面宠物黑猫：跟着键盘动爪、跟着鼠标转头，烦躁时甩尾捶桌（macOS 13+，通用二进制）</td>
 <td align="right"><b>224</b><br><sub>~75/day avg</sub></td>
-<td><img src="charts/spark/ElloboDK__KeyCat.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/ElloboDK__KeyCat.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">10</td>
 <td><a href="https://github.com/AyushRajSinghParihar/weaponized-curiosity"><b>AyushRajSinghParihar/weaponized-curiosity</b></a><br><code>Python</code> · MIT</td>
 <td>Portable Agent Skill for evidence-driven research, experimentation, and bounded optimization</td>
 <td align="right"><b>178</b><br><sub>~89/day avg</sub></td>
-<td><img src="charts/spark/AyushRajSinghParihar__weaponized-curiosity.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/AyushRajSinghParihar__weaponized-curiosity.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">11</td>
 <td><a href="https://github.com/MarcosDupont37/adobe-acrobat-pro-2026-x64-suite"><b>MarcosDupont37/adobe-acrobat-pro-2026-x64-suite</b></a><br><code>C#</code> · MIT</td>
 <td>Adobe Acrobat Pro 2026 (64-Bit) Offline PDF Editor, OCR &amp; Preflight Configuration Suite for Windows 10/11</td>
 <td align="right"><b>170</b><br><sub>~170/day avg</sub></td>
-<td><img src="charts/spark/MarcosDupont37__adobe-acrobat-pro-2026-x64-suite.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/MarcosDupont37__adobe-acrobat-pro-2026-x64-suite.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">12</td>
 <td><a href="https://github.com/zero5122/offline-file-converter-windows"><b>zero5122/offline-file-converter-windows</b></a><br><code>Python</code> · MIT</td>
 <td>Free offline file converter for Windows – convert PDF, documents, images, audio and video privately.</td>
 <td align="right"><b>1062</b><br><sub>~531/day avg</sub></td>
-<td><img src="charts/spark/zero5122__offline-file-converter-windows.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/zero5122__offline-file-converter-windows.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">13</td>
 <td><a href="https://github.com/matheusmongarde/garimpo"><b>matheusmongarde/garimpo</b></a><br><code>TypeScript</code> · MIT</td>
 <td>Prospecção open source do Google Maps ao Pix: acha negócios no Maps, gera um site-prévia com o nome de cada um, conversa no WhatsApp e cobra por Pix,…</td>
 <td align="right"><b>146</b><br><sub>~146/day avg</sub></td>
-<td><img src="charts/spark/matheusmongarde__garimpo.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/matheusmongarde__garimpo.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">14</td>
 <td><a href="https://github.com/brainintelli/BioSignal-Guided-LLM-Reinforcement-Learning"><b>brainintelli/BioSignal-Guided-LLM-Reinforcement-Learning</b></a><br><code>Python</code> · MIT</td>
 <td>Biosignal-guided reinforcement learning for LLM agents: offline organoid neural recordings as policy inputs in a Godot survival game, with paired eva…</td>
 <td align="right"><b>144</b><br><sub>~72/day avg</sub></td>
-<td><img src="charts/spark/brainintelli__BioSignal-Guided-LLM-Reinforcement-Learning.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/brainintelli__BioSignal-Guided-LLM-Reinforcement-Learning.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">15</td>
 <td><a href="https://github.com/Allencake/mit-trader-skill"><b>Allencake/mit-trader-skill</b></a><br><code>Python</code> · MIT</td>
 <td>把 MIT 18.S096 公开课里的量化方法做成 Claude skill：回测三关 + GARCH 止损 + Kelly 仓位 + VaR，默认模拟账本</td>
 <td align="right"><b>142</b><br><sub>~71/day avg</sub></td>
-<td><img src="charts/spark/Allencake__mit-trader-skill.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Allencake__mit-trader-skill.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">16</td>
 <td><a href="https://github.com/mallahyari/tiny-ava"><b>mallahyari/tiny-ava</b></a><br><code>Kotlin</code> · Apache-2.0</td>
 <td>tiny-ava: 4.5M-parameter Persian (Farsi) TTS models (PyTorch &amp; ONNX, 24 kHz, 38-77x real-time on CPU)</td>
 <td align="right"><b>130</b><br><sub>~43/day avg</sub></td>
-<td><img src="charts/spark/mallahyari__tiny-ava.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/mallahyari__tiny-ava.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">17</td>
 <td><a href="https://github.com/iniwex5/VoWiFiX"><b>iniwex5/VoWiFiX</b></a><br><code>Java</code> · GPL-3.0</td>
 <td>原生基带 VoWiFi 与跨国漫游全栈增强方案（高通骁龙 / KernelSU / APatch / Magisk / LSPosed）</td>
 <td align="right"><b>127</b><br><sub>~64/day avg</sub></td>
-<td><img src="charts/spark/iniwex5__VoWiFiX.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/iniwex5__VoWiFiX.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">18</td>
 <td><a href="https://github.com/aykhanium/MacBox"><b>aykhanium/MacBox</b></a><br><code>Rust</code> · GPL-2.0</td>
 <td>Experimental Apple Silicon (ARM macOS) compatibility layer for XCL using CrossOver, Rosetta 2 and D3DMetal. Native ARM64 runtime is not implemented; …</td>
 <td align="right"><b>125</b><br><sub>~125/day avg</sub></td>
-<td><img src="charts/spark/aykhanium__MacBox.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/aykhanium__MacBox.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">19</td>
 <td><a href="https://github.com/tensorfish/squid5090"><b>tensorfish/squid5090</b></a><br><code>Cuda</code> · NOASSERTION</td>
 <td>Highly Optimized Inference Engine for Inkling Mini 2 on NVIDIA 5090</td>
 <td align="right"><b>242</b><br><sub>~81/day avg</sub></td>
-<td><img src="charts/spark/tensorfish__squid5090.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/tensorfish__squid5090.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">20</td>
 <td><a href="https://github.com/Cinderella-Man/how-to-enable-p2p-on-nvidia-gpus"><b>Cinderella-Man/how-to-enable-p2p-on-nvidia-gpus</b></a><br><code>Cuda</code></td>
 <td>Notes on enabling GPU-to-GPU (p2p) data exchange</td>
 <td align="right"><b>225</b><br><sub>~75/day avg</sub></td>
-<td><img src="charts/spark/Cinderella-Man__how-to-enable-p2p-on-nvidia-gpus.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Cinderella-Man__how-to-enable-p2p-on-nvidia-gpus.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">21</td>
 <td><a href="https://github.com/Hiroshis198/lossless-scaling-3-dlss4-unlocked-2026"><b>Hiroshis198/lossless-scaling-3-dlss4-unlocked-2026</b></a><br><code>C#</code> · NOASSERTION</td>
 <td>Lossless Scaling 3 Dlss4 Unlocked 2026 [2026] — Standalone Windows 10/11 (x64) Release, Setup &amp; Config</td>
 <td align="right"><b>205</b><br><sub>~103/day avg</sub></td>
-<td><img src="charts/spark/Hiroshis198__lossless-scaling-3-dlss4-unlocked-2026.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Hiroshis198__lossless-scaling-3-dlss4-unlocked-2026.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">22</td>
 <td><a href="https://github.com/MikhailMa649/polymarket-trading-bot-clob-arbitrage"><b>MikhailMa649/polymarket-trading-bot-clob-arbitrage</b></a><br><code>Python</code> · NOASSERTION</td>
 <td>Polymarket Trading Bot &amp; CLOB Arbitrage Engine [2026] — Automated Prediction Market Whale Copytrade &amp; Kelly Sizing</td>
 <td align="right"><b>202</b><br><sub>~202/day avg</sub></td>
-<td><img src="charts/spark/MikhailMa649__polymarket-trading-bot-clob-arbitrage.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/MikhailMa649__polymarket-trading-bot-clob-arbitrage.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">23</td>
 <td><a href="https://github.com/marthason52665/fortnite-hwid-spoofer-eac-battleye-cleaner"><b>marthason52665/fortnite-hwid-spoofer-eac-battleye-cleaner</b></a><br><code>C#</code> · NOASSERTION</td>
 <td>Valorant HWID Spoofer &amp; Fortnite HWID Spoofer [2026] — Vanguard Van 152, EAC &amp; BattlEye TPM 2.0 Cleaner (x64)</td>
 <td align="right"><b>201</b><br><sub>~201/day avg</sub></td>
-<td><img src="charts/spark/marthason52665__fortnite-hwid-spoofer-eac-battleye-cleaner.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/marthason52665__fortnite-hwid-spoofer-eac-battleye-cleaner.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">24</td>
 <td><a href="https://github.com/Indigo-0167/universal-game-mod-manager"><b>Indigo-0167/universal-game-mod-manager</b></a><br><code>Rust</code> · MIT</td>
 <td>Free Windows game mod manager to discover, install, update and manage universal Unity and Unreal Engine mods.</td>
 <td align="right"><b>1300</b><br><sub>~650/day avg</sub></td>
-<td><img src="charts/spark/Indigo-0167__universal-game-mod-manager.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Indigo-0167__universal-game-mod-manager.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">25</td>
 <td><a href="https://github.com/Umbra9179/clipboard-history-manager-windows"><b>Umbra9179/clipboard-history-manager-windows</b></a><br><code>C#</code> · MIT</td>
 <td>Free open-source Windows clipboard manager with searchable history, image previews, tags, editing and backup.</td>
 <td align="right"><b>1265</b><br><sub>~633/day avg</sub></td>
-<td><img src="charts/spark/Umbra9179__clipboard-history-manager-windows.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Umbra9179__clipboard-history-manager-windows.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">26</td>
 <td><a href="https://github.com/nam66229/forza-horizon-6-telemetry-tuning-hud"><b>nam66229/forza-horizon-6-telemetry-tuning-hud</b></a><br><code>C#</code> · NOASSERTION</td>
 <td>Forza Horizon 6 (FH6) Auto Telemetry Dashboard, Suspension Tuning Calculator &amp; Wheel Force Feedback HUD (2026)</td>
 <td align="right"><b>182</b><br><sub>~182/day avg</sub></td>
-<td><img src="charts/spark/nam66229__forza-horizon-6-telemetry-tuning-hud.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/nam66229__forza-horizon-6-telemetry-tuning-hud.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">27</td>
 <td><a href="https://github.com/Norao01/solana-pump-fun-jito-bundler-sniper"><b>Norao01/solana-pump-fun-jito-bundler-sniper</b></a><br><code>Python</code> · NOASSERTION</td>
 <td>Jito MEV Bot &amp; Solana Pump.fun gRPC Sniper Bundler [2026] — Sub-Millisecond ShredStream Arbitrage &amp; Tip Optimizer</td>
 <td align="right"><b>182</b><br><sub>~182/day avg</sub></td>
-<td><img src="charts/spark/Norao01__solana-pump-fun-jito-bundler-sniper.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Norao01__solana-pump-fun-jito-bundler-sniper.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">28</td>
 <td><a href="https://github.com/virtualonno/lain"><b>virtualonno/lain</b></a><br><code>C</code> · NOASSERTION</td>
 <td>A matching decompilation of Serial Experiments Lain for PS1</td>
 <td align="right"><b>178</b><br><sub>~59/day avg</sub></td>
-<td><img src="charts/spark/virtualonno__lain.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/virtualonno__lain.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">29</td>
 <td><a href="https://github.com/marek8606/hollow-knight-silksong-map-crest-tracker"><b>marek8606/hollow-knight-silksong-map-crest-tracker</b></a><br><code>C#</code> · NOASSERTION</td>
 <td>Hollow Knight: Silksong Pharloom Interactive Map Overlay, Crest Build Planner &amp; 100% Save Analyzer (2026)</td>
 <td align="right"><b>173</b><br><sub>~173/day avg</sub></td>
-<td><img src="charts/spark/marek8606__hollow-knight-silksong-map-crest-tracker.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/marek8606__hollow-knight-silksong-map-crest-tracker.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">30</td>
 <td><a href="https://github.com/pinargomez/raydium-meteora-grpc-sniper-bot"><b>pinargomez/raydium-meteora-grpc-sniper-bot</b></a><br><code>Python</code> · NOASSERTION</td>
 <td>Raydium Sniper Bot &amp; Solana Copy Trading Bot [2026] — Sub-Millisecond Yellowstone gRPC &amp; Jito MEV Executor</td>
 <td align="right"><b>171</b><br><sub>~86/day avg</sub></td>
-<td><img src="charts/spark/pinargomez__raydium-meteora-grpc-sniper-bot.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/pinargomez__raydium-meteora-grpc-sniper-bot.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 </tbody></table>
 
@@ -227,210 +227,210 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td><a href="https://github.com/ubiquitarianism/leonida"><b>ubiquitarianism/leonida</b></a><br><code>Python</code> · GPL-3.0</td>
 <td>A continuation of Leonida, the Xbox &gt; PC port interface for GTA VI</td>
 <td align="right"><b>2215</b><br><sub>+1125/day · 1d</sub></td>
-<td><img src="charts/spark/ubiquitarianism__leonida.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/ubiquitarianism__leonida.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">2</td>
 <td><a href="https://github.com/R0Y00/Xbox2Windows"><b>R0Y00/Xbox2Windows</b></a><br><code>Python</code> · MIT</td>
 <td>Static recompilation research for Xbox Series X|S software on x64 Windows, with source-built CPU and GPU tests. Full-game startup is unverified.</td>
 <td align="right"><b>1944</b><br><sub>+160/day · 1d</sub></td>
-<td><img src="charts/spark/R0Y00__Xbox2Windows.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/R0Y00__Xbox2Windows.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">3</td>
 <td><a href="https://github.com/os6/nospeaker"><b>os6/nospeaker</b></a><br><code>Swift</code> · MIT</td>
 <td>make your macbook's trackpad talk using its haptic motor</td>
 <td align="right"><b>1851</b><br><sub>+226/day · 1d</sub></td>
-<td><img src="charts/spark/os6__nospeaker.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/os6__nospeaker.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">4</td>
 <td><a href="https://github.com/omonkeyz/xbox-emulator"><b>omonkeyz/xbox-emulator</b></a><br><code>Rust</code> · GPL-3.0</td>
 <td>Progress notes for running Xbox Series X|S builds on PC (TomBox + rage9)</td>
 <td align="right"><b>1841</b><br><sub>+98/day · 1d</sub></td>
-<td><img src="charts/spark/omonkeyz__xbox-emulator.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/omonkeyz__xbox-emulator.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">5</td>
 <td><a href="https://github.com/Avaneesh-Inamdar/Stream-Tube-Desktop"><b>Avaneesh-Inamdar/Stream-Tube-Desktop</b></a><br><code>Rust</code> · MIT</td>
 <td>Native YouTube client for Windows in Rust, with SponsorBlock, DeArrow and Return YouTube Dislike built in</td>
 <td align="right"><b>1140</b><br><sub>+725/day · 1d</sub></td>
-<td><img src="charts/spark/Avaneesh-Inamdar__Stream-Tube-Desktop.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Avaneesh-Inamdar__Stream-Tube-Desktop.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">6</td>
 <td><a href="https://github.com/danielwh2/sprite-stacking"><b>danielwh2/sprite-stacking</b></a><br><code>HTML</code> · MIT</td>
 <td>Agent skill: turn four pixel art views into fake-3D sprites you can spin. Works with Claude Code, Codex, Cursor, OpenCode, Gemini CLI, Pi.</td>
 <td align="right"><b>879</b><br><sub>+150/day · 1d</sub></td>
-<td><img src="charts/spark/danielwh2__sprite-stacking.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/danielwh2__sprite-stacking.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">7</td>
 <td><a href="https://github.com/sous-labs/songe"><b>sous-labs/songe</b></a><br><code>Python</code> · Apache-2.0</td>
 <td>A training engine for your local model, using your idle compute</td>
 <td align="right"><b>829</b><br><sub>+465/day · 1d</sub></td>
-<td><img src="charts/spark/sous-labs__songe.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/sous-labs__songe.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">8</td>
 <td><a href="https://github.com/sybil-solutions/skill-distill"><b>sybil-solutions/skill-distill</b></a><br><code>Python</code> · MIT</td>
 <td>Distill a good Claude Code / Codex session into a skill an open-weight model can follow to reproduce the task</td>
 <td align="right"><b>795</b><br><sub>+221/day · 1d</sub></td>
-<td><img src="charts/spark/sybil-solutions__skill-distill.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/sybil-solutions__skill-distill.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">9</td>
 <td><a href="https://github.com/ItsNotRexed/Hookshot"><b>ItsNotRexed/Hookshot</b></a><br><code>C++</code> · GPL-3.0</td>
 <td>Hookshot Is A Native PC Recompilation Of The Switch 2 Ocarina Of Time Remake</td>
 <td align="right"><b>723</b><br><sub>+55/day · 1d</sub></td>
-<td><img src="charts/spark/ItsNotRexed__Hookshot.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/ItsNotRexed__Hookshot.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">10</td>
 <td><a href="https://github.com/xikhar/papercraft"><b>xikhar/papercraft</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Agent skill to build games, interactive scenes, web pages and animations in a handcrafted pop-up papercraft style</td>
 <td align="right"><b>684</b><br><sub>+131/day · 1d</sub></td>
-<td><img src="charts/spark/xikhar__papercraft.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/xikhar__papercraft.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">11</td>
 <td><a href="https://github.com/Developing-Gamer/agent-sim"><b>Developing-Gamer/agent-sim</b></a><br><code>Rust</code> · Apache-2.0</td>
 <td>iOS simulators for AI agents, on Linux. The agent layer for x86Sim.</td>
 <td align="right"><b>587</b><br><sub>+219/day · 1d</sub></td>
-<td><img src="charts/spark/Developing-Gamer__agent-sim.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Developing-Gamer__agent-sim.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">12</td>
 <td><a href="https://github.com/tweak-for-me/impulse"><b>tweak-for-me/impulse</b></a><br><code>Rust</code> · GPL-3.0</td>
 <td>Lightweight alternative Windows client for game trainers: hotkeys, overlay and phone control.</td>
 <td align="right"><b>436</b><br><sub>+72/day · 1d</sub></td>
-<td><img src="charts/spark/tweak-for-me__impulse.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/tweak-for-me__impulse.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">13</td>
 <td><a href="https://github.com/cyb3rl00m/prune-debloater"><b>cyb3rl00m/prune-debloater</b></a><br><code>Kotlin</code> · GPL-3.0</td>
 <td>An opensource tool for Android devices to debloat and optimize them. Enhancing speed and privacy.</td>
 <td align="right"><b>397</b><br><sub>+57/day · 1d</sub></td>
-<td><img src="charts/spark/cyb3rl00m__prune-debloater.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/cyb3rl00m__prune-debloater.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">14</td>
 <td><a href="https://github.com/deterministic-machines/deslop-please"><b>deterministic-machines/deslop-please</b></a><br><code>Rust</code> · MIT</td>
 <td>Bring (back) sanity to your code</td>
 <td align="right"><b>1018</b><br><sub>+530/day · 1d</sub></td>
-<td><img src="charts/spark/deterministic-machines__deslop-please.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/deterministic-machines__deslop-please.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">15</td>
 <td><a href="https://github.com/chanke17/KuroCat"><b>chanke17/KuroCat</b></a><br><code>C++</code> · MIT</td>
 <td>KuroCat — Free open-source native desktop cat pet &amp; OBS overlay (Bongo Cat alternative, Swift/C++, 802 KB)｜开源免费原生桌面萌猫（全平台 macOS·Win·Linux·UOS / 2.5D转…</td>
 <td align="right"><b>506</b><br><sub>+180/day · 1d</sub></td>
-<td><img src="charts/spark/chanke17__KuroCat.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/chanke17__KuroCat.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">16</td>
 <td><a href="https://github.com/sshkeda/minecraft-server-on-orange-cloud"><b>sshkeda/minecraft-server-on-orange-cloud</b></a><br><code>TypeScript</code> · MIT</td>
 <td>Run a Minecraft Java server entirely on Cloudflare. Sleeps when nobody's playing.</td>
 <td align="right"><b>436</b><br><sub>+12/day · 1d</sub></td>
-<td><img src="charts/spark/sshkeda__minecraft-server-on-orange-cloud.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/sshkeda__minecraft-server-on-orange-cloud.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">17</td>
 <td><a href="https://github.com/MSNightmare/FastUnlock"><b>MSNightmare/FastUnlock</b></a><br><code>—</code> · MIT</td>
 <td>FastUnlock : Windows Narrator LockScreen Bypass 0day Vulnerability</td>
 <td align="right"><b>734</b><br><sub>~105/day avg</sub></td>
-<td><img src="charts/spark/MSNightmare__FastUnlock.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/MSNightmare__FastUnlock.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">18</td>
 <td><a href="https://github.com/AFK-surf/xnulinux"><b>AFK-surf/xnulinux</b></a><br><code>C</code> · NOASSERTION</td>
 <td>XNU as a loadable kernel module inside Linux (macOS personality for arm64 Linux)</td>
 <td align="right"><b>3805</b><br><sub>~634/day avg</sub></td>
-<td><img src="charts/spark/AFK-surf__xnulinux.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/AFK-surf__xnulinux.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">19</td>
 <td><a href="https://github.com/iamajmeena/neonclipping"><b>iamajmeena/neonclipping</b></a><br><code>Python</code> · AGPL-3.0</td>
 <td>Paste a link, get captioned 9:16 clips in ~2 min. Free, local, open-source clipping engine (audio-first, YouTube captions, local LLM).</td>
 <td align="right"><b>2595</b><br><sub>~371/day avg</sub></td>
-<td><img src="charts/spark/iamajmeena__neonclipping.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/iamajmeena__neonclipping.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">20</td>
 <td><a href="https://github.com/INK-Q/agy-fast"><b>INK-Q/agy-fast</b></a><br><code>TypeScript</code> · MIT</td>
 <td>Non-invasive MCP accelerator plugin for Google Antigravity (CLI/Desktop/IDE): cuts LLM turns (-34%), token quota (-31%), and upload traffic (-40%) wi…</td>
 <td align="right"><b>1467</b><br><sub>~210/day avg</sub></td>
-<td><img src="charts/spark/INK-Q__agy-fast.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/INK-Q__agy-fast.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">21</td>
 <td><a href="https://github.com/leanprover-community/riemann-hypothesis"><b>leanprover-community/riemann-hypothesis</b></a><br><code>Lean</code></td>
 <td>Lean formalization of the Riemann Hypothesis (Alpöge, 2026-11-20) being cleaned up by members of the Lean community.</td>
 <td align="right"><b>1169</b><br><sub>~195/day avg</sub></td>
-<td><img src="charts/spark/leanprover-community__riemann-hypothesis.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/leanprover-community__riemann-hypothesis.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">22</td>
 <td><a href="https://github.com/zero5122/offline-file-converter-windows"><b>zero5122/offline-file-converter-windows</b></a><br><code>Python</code> · MIT</td>
 <td>Free offline file converter for Windows – convert PDF, documents, images, audio and video privately.</td>
 <td align="right"><b>1062</b><br><sub>~531/day avg</sub></td>
-<td><img src="charts/spark/zero5122__offline-file-converter-windows.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/zero5122__offline-file-converter-windows.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">23</td>
 <td><a href="https://github.com/qianyiai/kurocat"><b>qianyiai/kurocat</b></a><br><code>TypeScript</code> · MIT</td>
 <td>KuroCat — Free open-source desktop typing cat pet &amp; OBS overlay (Bongo Cat alternative, Tauri v2 + Rust + MCP)｜轻量级透明置顶桌面打字小黑猫伴侣（6款猫咪+鲸鱼娘大肥鱼 / 输密码防偷窥 …</td>
 <td align="right"><b>931</b><br><sub>~233/day avg</sub></td>
-<td><img src="charts/spark/qianyiai__kurocat.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/qianyiai__kurocat.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">24</td>
 <td><a href="https://github.com/erkamyaman/safe-anything"><b>erkamyaman/safe-anything</b></a><br><code>Rust</code> · MIT</td>
 <td>Find the holes before someone else does. A fast, 100% Rust vulnerability scanner: XSS, SQL injection, leaked secrets, dependency CVEs and AI agent se…</td>
 <td align="right"><b>681</b><br><sub>~227/day avg</sub></td>
-<td><img src="charts/spark/erkamyaman__safe-anything.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/erkamyaman__safe-anything.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">25</td>
 <td><a href="https://github.com/ThreatDefence/agentic-attack-detections"><b>ThreatDefence/agentic-attack-detections</b></a><br><code>Python</code> · MIT</td>
 <td>Detection rules and IOCs for AI agent attack frameworks: ARTEX, Cairn, PentAGI, HexStrike, CyberStrikeAI, Strix, Hermes Agent, Agent Zero, RedAmon, X…</td>
 <td align="right"><b>672</b><br><sub>~112/day avg</sub></td>
-<td><img src="charts/spark/ThreatDefence__agentic-attack-detections.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/ThreatDefence__agentic-attack-detections.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">26</td>
 <td><a href="https://github.com/w01fb0ss/PiBot"><b>w01fb0ss/PiBot</b></a><br><code>TypeScript</code> · Apache-2.0</td>
 <td>Open-source, local-first AI agent team for your desktop: multi-agent group chats, computer use, browser, MCP, routines and approvals. macOS, Windows,…</td>
 <td align="right"><b>583</b><br><sub>~117/day avg</sub></td>
-<td><img src="charts/spark/w01fb0ss__PiBot.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/w01fb0ss__PiBot.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">27</td>
 <td><a href="https://github.com/CocoSgt/riemann-hypothesis-lean"><b>CocoSgt/riemann-hypothesis-lean</b></a><br><code>Lean</code></td>
 <td>Mirror of Levent Alpöge's Lean proof of the Riemann Hypothesis (with Claude). All credit to Levent Alpöge. Source: alpo.ge</td>
 <td align="right"><b>567</b><br><sub>~95/day avg</sub></td>
-<td><img src="charts/spark/CocoSgt__riemann-hypothesis-lean.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/CocoSgt__riemann-hypothesis-lean.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">28</td>
 <td><a href="https://github.com/sohzm/winedroid"><b>sohzm/winedroid</b></a><br><code>Rust</code> · NOASSERTION</td>
 <td>run android apps on web, linux, macOS and windows</td>
 <td align="right"><b>370</b><br><sub>~74/day avg</sub></td>
-<td><img src="charts/spark/sohzm__winedroid.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/sohzm__winedroid.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">29</td>
 <td><a href="https://github.com/Adabi0304/studioonepro7-release"><b>Adabi0304/studioonepro7-release</b></a><br><code>HTML</code> · MIT</td>
 <td>Studioonepro7 Release: Complete Desktop Suite with All Features Included</td>
 <td align="right"><b>340</b><br><sub>~85/day avg</sub></td>
-<td><img src="charts/spark/Adabi0304__studioonepro7-release.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Adabi0304__studioonepro7-release.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">30</td>
 <td><a href="https://github.com/juniordroid/better-discord-client"><b>juniordroid/better-discord-client</b></a><br><code>HTML</code> · MIT</td>
 <td>Better Discord Client: Remastered Desktop Experience for Modders</td>
 <td align="right"><b>339</b><br><sub>~68/day avg</sub></td>
-<td><img src="charts/spark/juniordroid__better-discord-client.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/juniordroid__better-discord-client.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 </tbody></table>
 
@@ -442,210 +442,210 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td><a href="https://github.com/libracoder/kiri"><b>libracoder/kiri</b></a><br><code>Rust</code> · Apache-2.0</td>
 <td>A small, fast container runtime for macOS, Windows and Linux with free Ngrok alternative</td>
 <td align="right"><b>13.3k</b><br><sub>+470/day · 1d</sub></td>
-<td><img src="charts/spark/libracoder__kiri.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/libracoder__kiri.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">2</td>
 <td><a href="https://github.com/haydenschmitty/floorplan"><b>haydenschmitty/floorplan</b></a><br><code>JavaScript</code> · MIT</td>
 <td>See how your app actually fits together. An interactive, plain-English map of your codebase, drawn by Claude or Codex.</td>
 <td align="right"><b>6813</b><br><sub>+262/day · 1d</sub></td>
-<td><img src="charts/spark/haydenschmitty__floorplan.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/haydenschmitty__floorplan.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">3</td>
 <td><a href="https://github.com/Lee-xeo/Claude-Cage"><b>Lee-xeo/Claude-Cage</b></a><br><code>Go</code> · MIT</td>
 <td>Cage：为 Claude 特化的轻量化虚拟机，彻底杜绝网络泄露。多平台适配，支持多账号管理、远程部署、移动端操控。</td>
 <td align="right"><b>8530</b><br><sub>+280/day · 1d</sub></td>
-<td><img src="charts/spark/Lee-xeo__Claude-Cage.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Lee-xeo__Claude-Cage.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">4</td>
 <td><a href="https://github.com/Hut-hzf/ung220z-tool"><b>Hut-hzf/ung220z-tool</b></a><br><code>Python</code> · MIT</td>
 <td>ung220z-tool 是一个针对 UNG220Z，另含中兴/烽火/华为/九联多厂商适配、固件指纹识别与分家族排障建议的一键凭据提取工具，仅限在你自己的设备上用于找回忘记的管理密码、迁移宽带配置或安全自查。</td>
 <td align="right"><b>4765</b><br><sub>+670/day · 1d</sub></td>
-<td><img src="charts/spark/Hut-hzf__ung220z-tool.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Hut-hzf__ung220z-tool.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">5</td>
 <td><a href="https://github.com/wquguru/cicada"><b>wquguru/cicada</b></a><br><code>Swift</code> · Apache-2.0</td>
 <td>知了 Cicada · 任何会议和直播的实时字幕、同声传译、AI 会议纪要，Mac、Windows、Linux、Android 免费开源。Live subtitles, interpreting and meeting notes for any call or stream, on Mac, W…</td>
 <td align="right"><b>3255</b><br><sub>+328/day · 1d</sub></td>
-<td><img src="charts/spark/wquguru__cicada.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/wquguru__cicada.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">6</td>
 <td><a href="https://github.com/jamesondh/chimera-vocal-synth"><b>jamesondh/chimera-vocal-synth</b></a><br><code>Rust</code> · MIT</td>
 <td>the ultimate vocal synthesizer - sing, speak, beatbox, and more</td>
 <td align="right"><b>3170</b><br><sub>+114/day · 1d</sub></td>
-<td><img src="charts/spark/jamesondh__chimera-vocal-synth.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/jamesondh__chimera-vocal-synth.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">7</td>
 <td><a href="https://github.com/Eynnzerr/TelemetryCleaner"><b>Eynnzerr/TelemetryCleaner</b></a><br><code>Kotlin</code> · MIT</td>
 <td>基于 Shizuku 免 Root 清除国产安卓 SystemHelper、RegService 等系统预装隐私数据收集模块</td>
 <td align="right"><b>3007</b><br><sub>+137/day · 1d</sub></td>
-<td><img src="charts/spark/Eynnzerr__TelemetryCleaner.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Eynnzerr__TelemetryCleaner.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">8</td>
 <td><a href="https://github.com/s1dashu/quiet-md"><b>s1dashu/quiet-md</b></a><br><code>Rust</code> · MIT</td>
 <td>Blazing-fast native notes app and rich-text editor for macOS, Windows, and Linux. Built with Rust + GPUI. Local-first and beautifully designed.</td>
 <td align="right"><b>2799</b><br><sub>+98/day · 1d</sub></td>
-<td><img src="charts/spark/s1dashu__quiet-md.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/s1dashu__quiet-md.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">9</td>
 <td><a href="https://github.com/ZiChuanLan/freebie-radar"><b>ZiChuanLan/freebie-radar</b></a><br><code>TypeScript</code> · MIT</td>
 <td>白嫖与资讯资源聚合雷达：100+个源定时采集 + AI 二审过滤假福利 + 获取方式分级隔离抽奖/试用/推广 + Telegram 即时推送</td>
 <td align="right"><b>2715</b><br><sub>+192/day · 1d</sub></td>
-<td><img src="charts/spark/ZiChuanLan__freebie-radar.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/ZiChuanLan__freebie-radar.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">10</td>
 <td><a href="https://github.com/sybil-solutions/inference-optimisation-skill"><b>sybil-solutions/inference-optimisation-skill</b></a><br><code>Python</code> · MIT</td>
 <td>Agent skill for hill-climbing local LLM serving speed (decode, speculative decoding, prefill, KV, startup, TTFT) on any hardware and quantization</td>
 <td align="right"><b>2671</b><br><sub>+265/day · 1d</sub></td>
-<td><img src="charts/spark/sybil-solutions__inference-optimisation-skill.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/sybil-solutions__inference-optimisation-skill.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">11</td>
 <td><a href="https://github.com/NiazMorshed2007/reanimate"><b>NiazMorshed2007/reanimate</b></a><br><code>JavaScript</code> · MIT</td>
 <td>A Claude Code skill that reverse-engineers any animation frame by frame, then proves the copy moves the same.</td>
 <td align="right"><b>2534</b><br><sub>+90/day · 1d</sub></td>
-<td><img src="charts/spark/NiazMorshed2007__reanimate.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/NiazMorshed2007__reanimate.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">12</td>
 <td><a href="https://github.com/elripalda/RecompLauncher"><b>elripalda/RecompLauncher</b></a><br><code>Rust</code> · GPL-3.0</td>
 <td>PC recomps, all in one place. Find, install, update and play PC recomps from one launcher.</td>
 <td align="right"><b>2373</b><br><sub>+151/day · 1d</sub></td>
-<td><img src="charts/spark/elripalda__RecompLauncher.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/elripalda__RecompLauncher.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">13</td>
 <td><a href="https://github.com/ubiquitarianism/leonida"><b>ubiquitarianism/leonida</b></a><br><code>Python</code> · GPL-3.0</td>
 <td>A continuation of Leonida, the Xbox &gt; PC port interface for GTA VI</td>
 <td align="right"><b>2216</b><br><sub>+1125/day · 1d</sub></td>
-<td><img src="charts/spark/ubiquitarianism__leonida.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/ubiquitarianism__leonida.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">14</td>
 <td><a href="https://github.com/atuizz/posewear"><b>atuizz/posewear</b></a><br><code>JavaScript</code> · MIT</td>
 <td>姿势、服装、人像参考图库，附中英文提示词，可在浏览器里 AI 试穿 · Pose, outfit &amp; portrait reference library with bilingual prompts and in-browser AI try-on</td>
 <td align="right"><b>2098</b><br><sub>+81/day · 1d</sub></td>
-<td><img src="charts/spark/atuizz__posewear.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/atuizz__posewear.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">15</td>
 <td><a href="https://github.com/R0Y00/Xbox2Windows"><b>R0Y00/Xbox2Windows</b></a><br><code>Python</code> · MIT</td>
 <td>Static recompilation research for Xbox Series X|S software on x64 Windows, with source-built CPU and GPU tests. Full-game startup is unverified.</td>
 <td align="right"><b>1944</b><br><sub>+160/day · 1d</sub></td>
-<td><img src="charts/spark/R0Y00__Xbox2Windows.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/R0Y00__Xbox2Windows.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">16</td>
 <td><a href="https://github.com/Renly1994/xiaotang-daozai"><b>Renly1994/xiaotang-daozai</b></a><br><code>Rust</code> · MIT</td>
 <td>岛仔 Daozai：Rust 构建的 Windows 桌面信息岛。音乐歌词、邮件验证码、日程提醒、待办与 AI 额度，让重要信息轻轻出现在屏幕顶部。</td>
 <td align="right"><b>1919</b><br><sub>+98/day · 1d</sub></td>
-<td><img src="charts/spark/Renly1994__xiaotang-daozai.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Renly1994__xiaotang-daozai.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">17</td>
 <td><a href="https://github.com/os6/nospeaker"><b>os6/nospeaker</b></a><br><code>Swift</code> · MIT</td>
 <td>make your macbook's trackpad talk using its haptic motor</td>
 <td align="right"><b>1851</b><br><sub>+226/day · 1d</sub></td>
-<td><img src="charts/spark/os6__nospeaker.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/os6__nospeaker.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">18</td>
 <td><a href="https://github.com/omonkeyz/xbox-emulator"><b>omonkeyz/xbox-emulator</b></a><br><code>Rust</code> · GPL-3.0</td>
 <td>Progress notes for running Xbox Series X|S builds on PC (TomBox + rage9)</td>
 <td align="right"><b>1841</b><br><sub>+98/day · 1d</sub></td>
-<td><img src="charts/spark/omonkeyz__xbox-emulator.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/omonkeyz__xbox-emulator.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">19</td>
 <td><a href="https://github.com/CzzzzzzJ/mdldm-maitian"><b>CzzzzzzJ/mdldm-maitian</b></a><br><code>JavaScript</code> · MIT</td>
 <td>麦田：自媒体多平台发布中控与数据监控（B站/抖音/小红书/视频号/YouTube/X），飞书卡片通知 + 数据大屏</td>
 <td align="right"><b>2057</b><br><sub>+67/day · 1d</sub></td>
-<td><img src="charts/spark/CzzzzzzJ__mdldm-maitian.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/CzzzzzzJ__mdldm-maitian.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">20</td>
 <td><a href="https://github.com/imxieyi/Kernarium"><b>imxieyi/Kernarium</b></a><br><code>C++</code> · GPL-2.0</td>
 <td>Run real Linux kernel natively on iOS</td>
 <td align="right"><b>3030</b><br><sub>+127/day · 1d</sub></td>
-<td><img src="charts/spark/imxieyi__Kernarium.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/imxieyi__Kernarium.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">21</td>
 <td><a href="https://github.com/haziqahmedqasmi/PeakCut"><b>haziqahmedqasmi/PeakCut</b></a><br><code>Python</code> · MIT</td>
 <td>AI clipping for long videos and live streams. Self-hosted, bring your own AI key.</td>
 <td align="right"><b>1933</b><br><sub>+56/day · 1d</sub></td>
-<td><img src="charts/spark/haziqahmedqasmi__PeakCut.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/haziqahmedqasmi__PeakCut.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">22</td>
 <td><a href="https://github.com/patch-gg/pixelfx"><b>patch-gg/pixelfx</b></a><br><code>JavaScript</code> · MIT</td>
 <td>244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.</td>
 <td align="right"><b>9214</b><br><sub>+242/day · 1d</sub></td>
-<td><img src="charts/spark/patch-gg__pixelfx.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/patch-gg__pixelfx.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">23</td>
 <td><a href="https://github.com/mromidev/claude-animated-shorts"><b>mromidev/claude-animated-shorts</b></a><br><code>TypeScript</code> · MIT</td>
 <td>Free Claude skill: viral animated story shorts (2D characters in a 3D world) with three.js + Remotion</td>
 <td align="right"><b>4891</b><br><sub>+130/day · 1d</sub></td>
-<td><img src="charts/spark/mromidev__claude-animated-shorts.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/mromidev__claude-animated-shorts.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">24</td>
 <td><a href="https://github.com/heydamir/unslop"><b>heydamir/unslop</b></a><br><code>JavaScript</code> · CC-BY-4.0</td>
 <td>A Claude skill that turns vibecoded, AI-looking UI into a designed interface</td>
 <td align="right"><b>21.6k</b><br><sub>+519/day · 1d</sub></td>
-<td><img src="charts/spark/heydamir__unslop.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/heydamir__unslop.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">25</td>
 <td><a href="https://github.com/RoutineMiku/apkstart"><b>RoutineMiku/apkstart</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Windows 上的安卓应用运行器：双击 APK 即装，应用以独立窗口与桌面图标运行，自持 QEMU 运行时</td>
 <td align="right"><b>9818</b><br><sub>+211/day · 1d</sub></td>
-<td><img src="charts/spark/RoutineMiku__apkstart.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/RoutineMiku__apkstart.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">26</td>
 <td><a href="https://github.com/Noniv/abyssal-garden"><b>Noniv/abyssal-garden</b></a><br><code>JavaScript</code> · MIT</td>
 <td>A dreamy underwater world you can swim through in your browser: swaying kelp forests, sunbeams, a sunken ship and manta rays. Everything is generated…</td>
 <td align="right"><b>2969</b><br><sub>+66/day · 1d</sub></td>
-<td><img src="charts/spark/Noniv__abyssal-garden.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Noniv__abyssal-garden.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">27</td>
 <td><a href="https://github.com/storytold/craft-anything"><b>storytold/craft-anything</b></a><br><code>Rust</code> · Apache-2.0</td>
 <td>Craft Anything: understand how any software works, and craft your own.</td>
 <td align="right"><b>43.3k</b><br><sub>+791/day · 1d</sub></td>
-<td><img src="charts/spark/storytold__craft-anything.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/storytold__craft-anything.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">28</td>
 <td><a href="https://github.com/Kianuni/Erosion-CN"><b>Kianuni/Erosion-CN</b></a><br><code>Swift</code> · GPL-3.0</td>
 <td>iOS / iPadOS 国行 Apple 智能、eSIM 与 MobileGestalt 系统配置工具箱（中英双语 · 防白苹果安全加固版） | Bootloop-Safe iOS / iPadOS MobileGestalt, Apple Intelligence &amp; eSIM Toolbox…</td>
 <td align="right"><b>2838</b><br><sub>+59/day · 1d</sub></td>
-<td><img src="charts/spark/Kianuni__Erosion-CN.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Kianuni__Erosion-CN.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">29</td>
 <td><a href="https://github.com/HolyArrs/HolyArrs"><b>HolyArrs/HolyArrs</b></a><br><code>Go</code> · AGPL-3.0</td>
 <td>One self-hosted app for your shows, movies and music.</td>
 <td align="right"><b>2917</b><br><sub>+60/day · 1d</sub></td>
-<td><img src="charts/spark/HolyArrs__HolyArrs.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/HolyArrs__HolyArrs.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">30</td>
 <td><a href="https://github.com/Sandflow-ai/sand3d"><b>Sandflow-ai/sand3d</b></a><br><code>HTML</code> · Apache-2.0</td>
 <td>3D modeling in Python, built for LLMs.</td>
 <td align="right"><b>2307</b><br><sub>+48/day · 1d</sub></td>
-<td><img src="charts/spark/Sandflow-ai__sand3d.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Sandflow-ai__sand3d.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 </tbody></table>
 
@@ -657,210 +657,210 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td><a href="https://github.com/libracoder/kiri"><b>libracoder/kiri</b></a><br><code>Rust</code> · Apache-2.0</td>
 <td>A small, fast container runtime for macOS, Windows and Linux with free Ngrok alternative</td>
 <td align="right"><b>13.3k</b><br><sub>+470/day · 1d</sub></td>
-<td><img src="charts/spark/libracoder__kiri.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/libracoder__kiri.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">2</td>
 <td><a href="https://github.com/haydenschmitty/floorplan"><b>haydenschmitty/floorplan</b></a><br><code>JavaScript</code> · MIT</td>
 <td>See how your app actually fits together. An interactive, plain-English map of your codebase, drawn by Claude or Codex.</td>
 <td align="right"><b>6813</b><br><sub>+262/day · 1d</sub></td>
-<td><img src="charts/spark/haydenschmitty__floorplan.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/haydenschmitty__floorplan.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">3</td>
 <td><a href="https://github.com/Lee-xeo/Claude-Cage"><b>Lee-xeo/Claude-Cage</b></a><br><code>Go</code> · MIT</td>
 <td>Cage：为 Claude 特化的轻量化虚拟机，彻底杜绝网络泄露。多平台适配，支持多账号管理、远程部署、移动端操控。</td>
 <td align="right"><b>8530</b><br><sub>+280/day · 1d</sub></td>
-<td><img src="charts/spark/Lee-xeo__Claude-Cage.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Lee-xeo__Claude-Cage.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">4</td>
 <td><a href="https://github.com/amosblomqvist/learnharness"><b>amosblomqvist/learnharness</b></a><br><code>TypeScript</code> · AGPL-3.0</td>
 <td>Agent harness for learning difficult things.</td>
 <td align="right"><b>12.4k</b><br><sub>+669/day · 1d</sub></td>
-<td><img src="charts/spark/amosblomqvist__learnharness.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/amosblomqvist__learnharness.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">5</td>
 <td><a href="https://github.com/kingcharleslzy-ai/dsh-purge"><b>kingcharleslzy-ai/dsh-purge</b></a><br><code>JavaScript</code> · MIT</td>
 <td>dsh-purge Community · DeepSeek Harness 社区维护版：宿主兼容、状态诊断、提示词管理、更新与本机备份回滚。基于小杨 / YuJunZhiXue 的 dsh-purge。</td>
 <td align="right"><b>12.6k</b><br><sub>+420/day · 1d</sub></td>
-<td><img src="charts/spark/kingcharleslzy-ai__dsh-purge.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/kingcharleslzy-ai__dsh-purge.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">6</td>
 <td><a href="https://github.com/Marvisak/VIctory"><b>Marvisak/VIctory</b></a><br><code>Rust</code> · GPL-3.0</td>
 <td>An attempt at running GTA VI on PC</td>
 <td align="right"><b>12.3k</b><br><sub>+4059/day · 1d</sub></td>
-<td><img src="charts/spark/Marvisak__VIctory.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Marvisak__VIctory.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">7</td>
 <td><a href="https://github.com/Jakeschincariol/instagram-agent-skill"><b>Jakeschincariol/instagram-agent-skill</b></a><br><code>Python</code> · MIT</td>
 <td>Thirteen Claude skills that run an Instagram account: Reels off 26 scored hook formulas, a viral research skill, a caption linter, and a humanizer. F…</td>
 <td align="right"><b>9186</b><br><sub>+394/day · 1d</sub></td>
-<td><img src="charts/spark/Jakeschincariol__instagram-agent-skill.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Jakeschincariol__instagram-agent-skill.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">8</td>
 <td><a href="https://github.com/patch-gg/pixelfx"><b>patch-gg/pixelfx</b></a><br><code>JavaScript</code> · MIT</td>
 <td>244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.</td>
 <td align="right"><b>9214</b><br><sub>+242/day · 1d</sub></td>
-<td><img src="charts/spark/patch-gg__pixelfx.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/patch-gg__pixelfx.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">9</td>
 <td><a href="https://github.com/heydamir/unslop"><b>heydamir/unslop</b></a><br><code>JavaScript</code> · CC-BY-4.0</td>
 <td>A Claude skill that turns vibecoded, AI-looking UI into a designed interface</td>
 <td align="right"><b>21.6k</b><br><sub>+519/day · 1d</sub></td>
-<td><img src="charts/spark/heydamir__unslop.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/heydamir__unslop.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">10</td>
 <td><a href="https://github.com/ccch1mneyyy/dsh-Go"><b>ccch1mneyyy/dsh-Go</b></a><br><code>Dart</code> · AGPL-3.0</td>
 <td>dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。</td>
 <td align="right"><b>31.8k</b><br><sub>+702/day · 1d</sub></td>
-<td><img src="charts/spark/ccch1mneyyy__dsh-Go.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/ccch1mneyyy__dsh-Go.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">11</td>
 <td><a href="https://github.com/RoutineMiku/apkstart"><b>RoutineMiku/apkstart</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Windows 上的安卓应用运行器：双击 APK 即装，应用以独立窗口与桌面图标运行，自持 QEMU 运行时</td>
 <td align="right"><b>9818</b><br><sub>+211/day · 1d</sub></td>
-<td><img src="charts/spark/RoutineMiku__apkstart.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/RoutineMiku__apkstart.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">12</td>
 <td><a href="https://github.com/storytold/craft-anything"><b>storytold/craft-anything</b></a><br><code>Rust</code> · Apache-2.0</td>
 <td>Craft Anything: understand how any software works, and craft your own.</td>
 <td align="right"><b>43.3k</b><br><sub>+791/day · 1d</sub></td>
-<td><img src="charts/spark/storytold__craft-anything.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/storytold__craft-anything.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">13</td>
 <td><a href="https://github.com/LNPANDY/NX2Apple"><b>LNPANDY/NX2Apple</b></a><br><code>Swift</code> · MIT</td>
 <td>Play your own Switch games on iPhone/iPad — one-click macOS app, no terminal. | 把 Switch 游戏装进 iPhone：图形界面一键构建，不用命令行。Bring your own game.</td>
 <td align="right"><b>8473</b><br><sub>+174/day · 1d</sub></td>
-<td><img src="charts/spark/LNPANDY__NX2Apple.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/LNPANDY__NX2Apple.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">14</td>
 <td><a href="https://github.com/tidain/YunX-Desktop"><b>tidain/YunX-Desktop</b></a><br><code>Kotlin</code> · AGPL-3.0</td>
 <td>YunX（云析）的官方 windows 桌面端</td>
 <td align="right"><b>7712</b><br><sub>+178/day · 1d</sub></td>
-<td><img src="charts/spark/tidain__YunX-Desktop.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/tidain__YunX-Desktop.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">15</td>
 <td><a href="https://github.com/openfilm/openfilm"><b>openfilm/openfilm</b></a><br><code>TypeScript</code> · MIT</td>
 <td>The open source AI video agent: turns any coding agent into a video agent, with editors to change anything it makes.</td>
 <td align="right"><b>9383</b><br><sub>+149/day · 1d</sub></td>
-<td><img src="charts/spark/openfilm__openfilm.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/openfilm__openfilm.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">16</td>
 <td><a href="https://github.com/wangzan101/Mika"><b>wangzan101/Mika</b></a><br><code>Kotlin</code> · Apache-2.0</td>
 <td>An on-device AI agent for Android that operates apps and the web to get things done for you.</td>
 <td align="right"><b>9965</b><br><sub>+131/day · 1d</sub></td>
-<td><img src="charts/spark/wangzan101__Mika.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/wangzan101__Mika.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">17</td>
 <td><a href="https://github.com/HeyPuter/everything"><b>HeyPuter/everything</b></a><br><code>JavaScript</code> · MIT</td>
 <td>We're rebuilding and open-sourcing the world’s software from scratch.</td>
 <td align="right"><b>9556</b><br><sub>+136/day · 1d</sub></td>
-<td><img src="charts/spark/HeyPuter__everything.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/HeyPuter__everything.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">18</td>
 <td><a href="https://github.com/yetone/magpie"><b>yetone/magpie</b></a><br><code>Go</code> · MIT</td>
 <td>Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.</td>
 <td align="right"><b>41.4k</b><br><sub>+548/day · 1d</sub></td>
-<td><img src="charts/spark/yetone__magpie.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/yetone__magpie.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">19</td>
 <td><a href="https://github.com/kaankiziltug/logo-design-skill"><b>kaankiziltug/logo-design-skill</b></a><br><code>HTML</code> · MIT</td>
 <td>A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo …</td>
 <td align="right"><b>7734</b><br><sub>+117/day · 1d</sub></td>
-<td><img src="charts/spark/kaankiziltug__logo-design-skill.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/kaankiziltug__logo-design-skill.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">20</td>
 <td><a href="https://github.com/anomalyco/rune"><b>anomalyco/rune</b></a><br><code>Rust</code> · MIT</td>
 <td>Rune: Native UI framework</td>
 <td align="right"><b>8054</b><br><sub>+124/day · 1d</sub></td>
-<td><img src="charts/spark/anomalyco__rune.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/anomalyco__rune.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">21</td>
 <td><a href="https://github.com/valentderah/totk-pc-recomp"><b>valentderah/totk-pc-recomp</b></a><br><code>C</code> · MIT</td>
 <td>Static recompilation of The Legend of Zelda: Tears of the Kingdom to native Windows and Linux x86-64, with a Vulkan renderer. Game files not included.</td>
 <td align="right"><b>8270</b><br><sub>+93/day · 1d</sub></td>
-<td><img src="charts/spark/valentderah__totk-pc-recomp.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/valentderah__totk-pc-recomp.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">22</td>
 <td><a href="https://github.com/tangency-labs/solidcraft"><b>tangency-labs/solidcraft</b></a><br><code>Rust</code> · Apache-2.0</td>
 <td>SolidCraft: an open-source parametric 3D CAD application built in pure Rust. Desktop, web, and automation through MCP.</td>
 <td align="right"><b>18.2k</b><br><sub>+193/day · 1d</sub></td>
-<td><img src="charts/spark/tangency-labs__solidcraft.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/tangency-labs__solidcraft.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">23</td>
 <td><a href="https://github.com/rddmwmddr/android-ad-cleaner"><b>rddmwmddr/android-ad-cleaner</b></a><br><code>Python</code> · MIT</td>
 <td>关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。</td>
 <td align="right"><b>8996</b><br><sub>+85/day · 1d</sub></td>
-<td><img src="charts/spark/rddmwmddr__android-ad-cleaner.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/rddmwmddr__android-ad-cleaner.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">24</td>
 <td><a href="https://github.com/Fei-Craft/DS-Bot"><b>Fei-Craft/DS-Bot</b></a><br><code>JavaScript</code> · Apache-2.0</td>
 <td>A team of long-lived bots for DeepSeek Harness, with main bots, bot-to-bot messages and group chats.</td>
 <td align="right"><b>8931</b><br><sub>+100/day · 1d</sub></td>
-<td><img src="charts/spark/Fei-Craft__DS-Bot.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Fei-Craft__DS-Bot.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">25</td>
 <td><a href="https://github.com/Droid-Deck/DroidDeck"><b>Droid-Deck/DroidDeck</b></a><br><code>Kotlin</code> · GPL-3.0</td>
 <td>DroidDeck brings the SteamOS experience to Android</td>
 <td align="right"><b>21.9k</b><br><sub>+223/day · 1d</sub></td>
-<td><img src="charts/spark/Droid-Deck__DroidDeck.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Droid-Deck__DroidDeck.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">26</td>
 <td><a href="https://github.com/Niko1221/Strata"><b>Niko1221/Strata</b></a><br><code>C++</code> · MIT</td>
 <td>Qwen3.8-Flash-Next on any consumer hardware: one-click install for Windows / Linux. Strata inference engine, OpenAI/Anthropic API on localhost, optio…</td>
 <td align="right"><b>48.1k</b><br><sub>+410/day · 1d</sub></td>
-<td><img src="charts/spark/Niko1221__Strata.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Niko1221__Strata.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">27</td>
 <td><a href="https://github.com/pengchujin/aerial-tv"><b>pengchujin/aerial-tv</b></a><br><code>Kotlin</code> · MIT</td>
 <td>给国产电视的一块干净桌面：参照 tvOS 设计的开源 Android TV 桌面，没有广告，开机自动接管。A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.</td>
 <td align="right"><b>13.3k</b><br><sub>+107/day · 1d</sub></td>
-<td><img src="charts/spark/pengchujin__aerial-tv.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/pengchujin__aerial-tv.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">28</td>
 <td><a href="https://github.com/zortos293/Lichii"><b>zortos293/Lichii</b></a><br><code>C++</code> · GPL-3.0</td>
 <td>VERY experimental Nintendo Switch 2 emulator</td>
 <td align="right"><b>10.3k</b><br><sub>+74/day · 1d</sub></td>
-<td><img src="charts/spark/zortos293__Lichii.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/zortos293__Lichii.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">29</td>
 <td><a href="https://github.com/egoist/mygo"><b>egoist/mygo</b></a><br><code>Go</code> · MIT</td>
 <td>Develop desktop apps with native UI or web frontend in Go</td>
 <td align="right"><b>6857</b><br><sub>+67/day · 1d</sub></td>
-<td><img src="charts/spark/egoist__mygo.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/egoist__mygo.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">30</td>
 <td><a href="https://github.com/huami1314/GestaltX"><b>huami1314/GestaltX</b></a><br><code>Swift</code> · GPL-3.0</td>
 <td>An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups.</td>
 <td align="right"><b>8944</b><br><sub>+55/day · 1d</sub></td>
-<td><img src="charts/spark/huami1314__GestaltX.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/huami1314__GestaltX.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 </tbody></table>
 
@@ -872,210 +872,210 @@ Rising apps and GitHub repositories, rebuilt every day. Tables and star charts b
 <td><a href="https://github.com/pingdotgg/t3code"><b>pingdotgg/t3code</b></a><br><code>TypeScript</code> · MIT</td>
 <td>The best way to control Claude Code, Codex and more from any computer or phone</td>
 <td align="right"><b>79.0k</b><br><sub>+2617/day · 1d</sub></td>
-<td><img src="charts/spark/pingdotgg__t3code.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/pingdotgg__t3code.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">2</td>
 <td><a href="https://github.com/storytold/craft-anything"><b>storytold/craft-anything</b></a><br><code>Rust</code> · Apache-2.0</td>
 <td>Craft Anything: understand how any software works, and craft your own.</td>
 <td align="right"><b>43.3k</b><br><sub>+791/day · 1d</sub></td>
-<td><img src="charts/spark/storytold__craft-anything.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/storytold__craft-anything.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">3</td>
 <td><a href="https://github.com/HKUDS/CLI-Anything"><b>HKUDS/CLI-Anything</b></a><br><code>Python</code> · Apache-2.0</td>
 <td>&quot;CLI-Anything: Making ALL Software Agent-Native&quot; -- CLI-Hub: https://clianything.cc/</td>
 <td align="right"><b>65.5k</b><br><sub>+1231/day · 1d</sub></td>
-<td><img src="charts/spark/HKUDS__CLI-Anything.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/HKUDS__CLI-Anything.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">4</td>
 <td><a href="https://github.com/cathrynlavery/diagram-design"><b>cathrynlavery/diagram-design</b></a><br><code>HTML</code> · MIT</td>
 <td>Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. N…</td>
 <td align="right"><b>72.7k</b><br><sub>+1269/day · 1d</sub></td>
-<td><img src="charts/spark/cathrynlavery__diagram-design.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/cathrynlavery__diagram-design.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">5</td>
 <td><a href="https://github.com/yetone/magpie"><b>yetone/magpie</b></a><br><code>Go</code> · MIT</td>
 <td>Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.</td>
 <td align="right"><b>41.4k</b><br><sub>+548/day · 1d</sub></td>
-<td><img src="charts/spark/yetone__magpie.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/yetone__magpie.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">6</td>
 <td><a href="https://github.com/tashfeenahmed/freellmapi"><b>tashfeenahmed/freellmapi</b></a><br><code>TypeScript</code> · MIT</td>
 <td>10.1 billion tokens per month. 87 free LLM providers. 1,313 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endp…</td>
 <td align="right"><b>58.2k</b><br><sub>+615/day · 1d</sub></td>
-<td><img src="charts/spark/tashfeenahmed__freellmapi.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/tashfeenahmed__freellmapi.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">7</td>
 <td><a href="https://github.com/Niko1221/Strata"><b>Niko1221/Strata</b></a><br><code>C++</code> · MIT</td>
 <td>Qwen3.8-Flash-Next on any consumer hardware: one-click install for Windows / Linux. Strata inference engine, OpenAI/Anthropic API on localhost, optio…</td>
 <td align="right"><b>48.1k</b><br><sub>+410/day · 1d</sub></td>
-<td><img src="charts/spark/Niko1221__Strata.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Niko1221__Strata.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">8</td>
 <td><a href="https://github.com/Nutlope/hallmark"><b>Nutlope/hallmark</b></a><br><code>CSS</code> · MIT</td>
 <td>Anti-AI-slop design skill for Claude Code, Cursor, and Codex.</td>
 <td align="right"><b>60.9k</b><br><sub>+610/day · 1d</sub></td>
-<td><img src="charts/spark/Nutlope__hallmark.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Nutlope__hallmark.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">9</td>
 <td><a href="https://github.com/blader/humanizer"><b>blader/humanizer</b></a><br><code>Python</code> · MIT</td>
 <td>Agent skill that removes signs of AI-generated writing from text</td>
 <td align="right"><b>73.5k</b><br><sub>+541/day · 1d</sub></td>
-<td><img src="charts/spark/blader__humanizer.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/blader__humanizer.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">10</td>
 <td><a href="https://github.com/cloudflare/security-audit-skill"><b>cloudflare/security-audit-skill</b></a><br><code>JavaScript</code> · MIT</td>
 <td>A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings</td>
 <td align="right"><b>78.2k</b><br><sub>+505/day · 1d</sub></td>
-<td><img src="charts/spark/cloudflare__security-audit-skill.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/cloudflare__security-audit-skill.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">11</td>
 <td><a href="https://github.com/alibaba/open-code-review"><b>alibaba/open-code-review</b></a><br><code>Go</code> · Apache-2.0</td>
 <td>Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-le…</td>
 <td align="right"><b>56.3k</b><br><sub>+352/day · 1d</sub></td>
-<td><img src="charts/spark/alibaba__open-code-review.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/alibaba__open-code-review.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">12</td>
 <td><a href="https://github.com/hugohe3/ppt-master"><b>hugohe3/ppt-master</b></a><br><code>Python</code> · MIT</td>
 <td>AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on dema…</td>
 <td align="right"><b>80.2k</b><br><sub>+384/day · 1d</sub></td>
-<td><img src="charts/spark/hugohe3__ppt-master.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/hugohe3__ppt-master.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">13</td>
 <td><a href="https://github.com/Leonxlnx/taste-skill"><b>Leonxlnx/taste-skill</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages</td>
 <td align="right"><b>121.4k</b><br><sub>+521/day · 1d</sub></td>
-<td><img src="charts/spark/Leonxlnx__taste-skill.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/Leonxlnx__taste-skill.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">14</td>
 <td><a href="https://github.com/boykopovar/AnyPS5"><b>boykopovar/AnyPS5</b></a><br><code>C++</code> · GPL-2.0</td>
 <td>Tool for automatic PS5 executables porting to Linux and Windows</td>
 <td align="right"><b>61.4k</b><br><sub>+250/day · 1d</sub></td>
-<td><img src="charts/spark/boykopovar__AnyPS5.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/boykopovar__AnyPS5.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">15</td>
 <td><a href="https://github.com/DietrichGebert/ponytail"><b>DietrichGebert/ponytail</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.</td>
 <td align="right"><b>198.6k</b><br><sub>+753/day · 1d</sub></td>
-<td><img src="charts/spark/DietrichGebert__ponytail.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/DietrichGebert__ponytail.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">16</td>
 <td><a href="https://github.com/ZhuLinsen/daily_stock_analysis"><b>ZhuLinsen/daily_stock_analysis</b></a><br><code>Python</code> · MIT</td>
 <td>LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decis…</td>
 <td align="right"><b>74.5k</b><br><sub>+340/day · 1d</sub></td>
-<td><img src="charts/spark/ZhuLinsen__daily_stock_analysis.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/ZhuLinsen__daily_stock_analysis.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">17</td>
 <td><a href="https://github.com/eternity4719/HowToLiveBetter"><b>eternity4719/HowToLiveBetter</b></a><br><code>HTML</code> · CC-BY-4.0</td>
 <td>高性价比人生指南: 长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。</td>
 <td align="right"><b>77.6k</b><br><sub>+190/day · 1d</sub></td>
-<td><img src="charts/spark/eternity4719__HowToLiveBetter.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/eternity4719__HowToLiveBetter.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">18</td>
 <td><a href="https://github.com/JustVugg/colibri"><b>JustVugg/colibri</b></a><br><code>C</code> · Apache-2.0</td>
 <td>A hierarchical inference engine for frontier MoE models: hot experts on the GPU (CUDA, Vulkan), warm ones in RAM, cold ones streamed from NVMe. Writt…</td>
 <td align="right"><b>53.4k</b><br><sub>+197/day · 1d</sub></td>
-<td><img src="charts/spark/JustVugg__colibri.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/JustVugg__colibri.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">19</td>
 <td><a href="https://github.com/deepseek-ai/deepseek-harness"><b>deepseek-ai/deepseek-harness</b></a><br><code>TypeScript</code> · MIT</td>
 <td>DeepSeek Harness: Everything is a Plugin.</td>
 <td align="right"><b>286.9k</b><br><sub>+539/day · 1d</sub></td>
-<td><img src="charts/spark/deepseek-ai__deepseek-harness.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/deepseek-ai__deepseek-harness.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">20</td>
 <td><a href="https://github.com/ai-job-search-dev/ai-job-search"><b>ai-job-search-dev/ai-job-search</b></a><br><code>Python</code> · MIT</td>
 <td>The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep…</td>
 <td align="right"><b>73.4k</b><br><sub>+238/day · 1d</sub></td>
-<td><img src="charts/spark/ai-job-search-dev__ai-job-search.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/ai-job-search-dev__ai-job-search.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">21</td>
 <td><a href="https://github.com/h4ckf0r0day/obscura"><b>h4ckf0r0day/obscura</b></a><br><code>Rust</code> · Apache-2.0</td>
 <td>The headless browser for AI agents and web scraping</td>
 <td align="right"><b>37.3k</b><br><sub>+146/day · 1d</sub></td>
-<td><img src="charts/spark/h4ckf0r0day__obscura.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/h4ckf0r0day__obscura.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">22</td>
 <td><a href="https://github.com/mattpocock/skills"><b>mattpocock/skills</b></a><br><code>Shell</code> · MIT</td>
 <td>Skills for Real Engineers. Straight from my .agents directory.</td>
 <td align="right"><b>332.7k</b><br><sub>+870/day · 1d</sub></td>
-<td><img src="charts/spark/mattpocock__skills.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/mattpocock__skills.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">23</td>
 <td><a href="https://github.com/ayghri/i-have-adhd"><b>ayghri/i-have-adhd</b></a><br><code>Python</code> · MIT</td>
 <td>A skill to stop your coding agent from burying the answer. ADHD-friendly output.</td>
 <td align="right"><b>62.3k</b><br><sub>+166/day · 1d</sub></td>
-<td><img src="charts/spark/ayghri__i-have-adhd.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/ayghri__i-have-adhd.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">24</td>
 <td><a href="https://github.com/addyosmani/agent-skills"><b>addyosmani/agent-skills</b></a><br><code>JavaScript</code> · MIT</td>
 <td>Production-grade engineering skills for AI coding agents.</td>
 <td align="right"><b>120.4k</b><br><sub>+261/day · 1d</sub></td>
-<td><img src="charts/spark/addyosmani__agent-skills.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/addyosmani__agent-skills.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">25</td>
 <td><a href="https://github.com/affaan-m/ECC"><b>affaan-m/ECC</b></a><br><code>JavaScript</code> · MIT</td>
 <td>The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Openco…</td>
 <td align="right"><b>310.5k</b><br><sub>+679/day · 1d</sub></td>
-<td><img src="charts/spark/affaan-m__ECC.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/affaan-m__ECC.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">26</td>
 <td><a href="https://github.com/JuliusBrussee/caveman"><b>JuliusBrussee/caveman</b></a><br><code>Go</code> · Apache-2.0</td>
 <td>why use many token when few token do trick. Skill + local proxy for coding agents: shorter answers, smaller tool output, every original recoverable.</td>
 <td align="right"><b>122.8k</b><br><sub>+226/day · 1d</sub></td>
-<td><img src="charts/spark/JuliusBrussee__caveman.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/JuliusBrussee__caveman.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">27</td>
 <td><a href="https://github.com/anthropics/knowledge-work-plugins"><b>anthropics/knowledge-work-plugins</b></a><br><code>Python</code> · Apache-2.0</td>
 <td>Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork</td>
 <td align="right"><b>36.9k</b><br><sub>+126/day · 1d</sub></td>
-<td><img src="charts/spark/anthropics__knowledge-work-plugins.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/anthropics__knowledge-work-plugins.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">28</td>
 <td><a href="https://github.com/anywhere-labs/dsh-desktop"><b>anywhere-labs/dsh-desktop</b></a><br><code>TypeScript</code> · MIT</td>
 <td>为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。</td>
 <td align="right"><b>36.8k</b><br><sub>+81/day · 1d</sub></td>
-<td><img src="charts/spark/anywhere-labs__dsh-desktop.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/anywhere-labs__dsh-desktop.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">29</td>
 <td><a href="https://github.com/VoltAgent/awesome-design-md"><b>VoltAgent/awesome-design-md</b></a><br><code>—</code> · MIT</td>
 <td>A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.</td>
 <td align="right"><b>129.0k</b><br><sub>+165/day · 1d</sub></td>
-<td><img src="charts/spark/VoltAgent__awesome-design-md.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/VoltAgent__awesome-design-md.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 <tr>
 <td align="right">30</td>
 <td><a href="https://github.com/virgiliojr94/book-to-skill"><b>virgiliojr94/book-to-skill</b></a><br><code>Python</code> · MIT</td>
 <td>Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.</td>
 <td align="right"><b>39.0k</b><br><sub>+99/day · 1d</sub></td>
-<td><img src="charts/spark/virgiliojr94__book-to-skill.svg" width="120" height="36" alt="star trend"></td>
+<td><img src="https://w-m-r.github.io/rankings-hub/charts/spark/virgiliojr94__book-to-skill.svg" width="120" height="36" alt="star trend"></td>
 </tr>
 </tbody></table>
 
