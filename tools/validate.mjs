@@ -57,7 +57,9 @@ if (rawTotal > 12_000_000) problems.push(`分片总量超预算：${(rawTotal / 
 const readmePath = join(ROOT, 'README.md');
 if (existsSync(readmePath)) {
   const readme = readFileSync(readmePath, 'utf8');
-  const refs = [...new Set([...readme.matchAll(/src="(charts\/spark\/[^"]+\.svg)"/g)].map((m) => m[1]))];
+  // 代码块里的 charts/spark/{owner__repo}.svg 是文件名说明，不是真实引用
+  const outsideCode = readme.replace(/```[\s\S]*?```/g, '').replace(/`[^`]*`/g, '');
+  const refs = [...new Set([...outsideCode.matchAll(/src="(charts\/spark\/[^"]+\.svg)"/g)].map((m) => m[1]))];
   const missing = refs.filter((p) => !existsSync(join(ROOT, p)));
   if (missing.length) problems.push(`README 引用了 ${missing.length} 个不存在的图表（例：${missing[0]}）`);
 }
