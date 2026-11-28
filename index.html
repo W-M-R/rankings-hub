@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rankings Hub — rising apps and repos</title>
+<meta name="description" content="Daily rankings: small apps that are new and rising, plus GitHub repositories by day, week, month, quarter and year, with star history charts.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233451b2'/%3E%3Cpath d='M8 21l5-6 4 3 7-9' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  :root{--bg:#fff;--bg2:#f6f6f7;--line:#e4e4e7;--t1:#18181b;--t2:#52525b;--t3:#8b8b93;--accent:#3451b2;--accent-soft:#eef1fb;--green:#18794e;--red:#b8272c;--radius:12px}
+  @media (prefers-color-scheme:dark){:root{--bg:#101013;--bg2:#17171b;--line:#27272c;--t1:#f4f4f5;--t2:#a1a1aa;--t3:#71717a;--accent:#7c93f5;--accent-soft:#1b2033;--green:#4ade80;--red:#f87171}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--t1);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC",sans-serif}
+  a{color:inherit;text-decoration:none}
+  header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+  .top{display:flex;align-items:center;gap:12px;padding:12px 0}
+  .logo{font-weight:700;font-size:17px;letter-spacing:-.2px}.logo span{color:var(--accent)}
+  .meta{margin-left:auto;font-size:12px;color:var(--t3);text-align:right}
+  nav{display:flex;gap:6px;padding:0 0 10px;overflow:auto}
+  .tab{border:1px solid var(--line);background:var(--bg2);color:var(--t2);padding:6px 12px;border-radius:999px;font-size:13px;cursor:pointer;white-space:nowrap}
+  .tab.on{background:var(--accent-soft);border-color:transparent;color:var(--accent);font-weight:600}
+  main{padding:18px 0 60px}
+  .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 14px}
+  select{background:var(--bg2);color:var(--t1);border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:13px}
+  .sub{display:flex;gap:6px;overflow:auto}.sub .tab{font-size:12.5px;padding:5px 10px}
+  .list{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .item{display:grid;grid-template-columns:34px 1fr 96px auto;gap:10px;padding:10px 12px;border-top:1px solid var(--line);align-items:center;cursor:pointer}
+  .item:first-child{border-top:0}.item:hover{background:var(--bg2)}
+  .rank{font-variant-numeric:tabular-nums;color:var(--t3);font-size:13px;text-align:right}
+  .name{font-weight:600;font-size:14.5px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .sub2{font-size:12.5px;color:var(--t2);margin-top:2px;display:flex;gap:8px;flex-wrap:wrap}
+  .dot{color:var(--t3)}
+  .badge{font-size:11px;padding:1px 6px;border-radius:999px;background:var(--bg2);color:var(--t2);border:1px solid var(--line)}
+  .up{color:var(--green);font-weight:600}.down{color:var(--red)}
+  .stat{font-variant-numeric:tabular-nums;text-align:right;font-size:13px;color:var(--t2);white-space:nowrap}
+  .stat b{color:var(--t1);font-size:14px}
+  .spark{width:96px;height:26px;display:block}
+  .empty{padding:28px;text-align:center;color:var(--t3);border:1px dashed var(--line);border-radius:var(--radius)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+  .card{border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px}
+  .card h3{margin:0 0 8px;font-size:14px}
+  .alt{display:flex;justify-content:space-between;gap:8px;font-size:13px;padding:4px 0;border-top:1px dashed var(--line)}
+  .alt:first-of-type{border-top:0}.alt span:last-child{color:var(--t3);font-size:12px}
+  footer{border-top:1px solid var(--line);padding:16px 0;color:var(--t3);font-size:12px}
+  img.icon{width:22px;height:22px;border-radius:6px;object-fit:cover;background:var(--bg2)}
+  #overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+  #overlay.on{display:flex}
+  .modal{background:var(--bg);border:1px solid var(--line);border-radius:16px;max-width:640px;width:100%;max-height:80vh;overflow:auto;padding:18px}
+  .modal h2{margin:0 0 4px;font-size:17px}
+  .modal .m-sub{color:var(--t2);font-size:13px;margin-bottom:12px}
+  .modal svg{width:100%;height:180px;display:block}
+  .modal table{width:100%;border-collapse:collapse;font-size:13px;margin-top:10px}
+  .modal td{padding:4px 0;border-top:1px dashed var(--line);font-variant-numeric:tabular-nums}
+  .modal td:last-child{text-align:right;color:var(--t2)}
+  .close{float:right;border:1px solid var(--line);background:var(--bg2);color:var(--t2);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:13px}
+  @media (max-width:640px){.meta{display:none}.item{grid-template-columns:26px 1fr auto}.spark{width:70px}.stat{grid-column:2;text-align:left}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="top"><div class="logo">Rankings <span>Hub</span></div><div class="meta" id="meta">loading…</div></div>
+  <nav id="tabs">
+    <button class="tab on" data-view="github">GitHub repos</button>
+    <button class="tab" data-view="apps">Apps</button>
+    <button class="tab" data-view="desktop">Mac &amp; Podcasts</button>
+    <button class="tab" data-view="indie">Indie</button>
+    <button class="tab" data-view="global">Global risers</button>
+    <button class="tab" data-view="alts">Open source alternatives</button>
+  </nav>
+</div></header>
+<main class="wrap"><div id="controls"></div><div id="content"></div></main>
+<footer><div class="wrap">Rebuilt daily. Stores do not publish download counts, so rising lists use rank movement and rating deltas. Star charts use our daily snapshots and grow over time.</div></footer>
+<div id="overlay"><div class="modal" id="modal"></div></div>
+
+<script>
+const state = { view:'github', ghWindow:'daily', platform:'apple', desktop:'mac', cc:'us', appList:'risingNow', indie:'showhn' };
+let MANIFEST = null;
+const CACHE = new Map();
+const $ = (s) => document.querySelector(s);
+const el = (t,c,x) => { const n=document.createElement(t); if(c)n.className=c; if(x!=null)n.textContent=x; return n; };
+const num = (v) => v == null ? '—' : (v >= 1e6 ? (v/1e6).toFixed(1)+'M' : v >= 10000 ? (v/1000).toFixed(1)+'k' : String(v));
+
+async function getJson(path){
+  if (CACHE.has(path)) return CACHE.get(path);
+  const r = await fetch(path + (MANIFEST ? '?v=' + encodeURIComponent(MANIFEST.version) : ''), { cache:'no-cache' });
+  if (!r.ok) throw new Error(path);
+  const j = await r.json(); CACHE.set(path, j); return j;
+}
+
+function sparkline(points, { w=96, h=26, invert=false, value=null } = {}){
+  const ns='http://www.w3.org/2000/svg';
+  const svg=document.createElementNS(ns,'svg');
+  svg.setAttribute('class','spark'); svg.setAttribute('viewBox',`0 0 ${w} ${h}`); svg.setAttribute('preserveAspectRatio','none');
+  const vals=(points||[]).map(p=>p[1]).filter(v=>v!=null);
+  if (vals.length < 2){
+    const v = value ?? vals[0] ?? 0;
+    const ratio = Math.min(1, Math.log10(1+v)/4.3);
+    svg.innerHTML = `<rect x="1" y="${h/2-4}" width="${w-2}" height="8" rx="4" fill="#d4d4d8" opacity=".5"/><rect x="1" y="${h/2-4}" width="${Math.max(4,(w-2)*ratio).toFixed(1)}" height="8" rx="4" fill="#3451b2"/>`;
+    return svg;
+  }
+  const min=Math.min(...vals), max=Math.max(...vals), span=max-min||1, pad=2;
+  const pts=points.map((p,i)=>{ if(p[1]==null) return null;
+    const x=pad+(i/Math.max(1,points.length-1))*(w-pad*2);
+    let y=h-pad-((p[1]-min)/span)*(h-pad*2);
+    if (invert) y=h-y;
+    return [x,y];
+  }).filter(Boolean);
+  const up = vals[vals.length-1] >= vals[0];
+  const color = up ? '#18794e' : '#b8272c';
+  const d=pts.map((p,i)=>`${i?'L':'M'}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ');
+  const last=pts[pts.length-1];
+  svg.innerHTML=`<path d="${d}" fill="none" stroke="${color}" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="2" fill="${color}"/>`;
+  return svg;
+}
+
+function bigChart(points, { invert=false, label='' } = {}){
+  const ns='http://www.w3.org/2000/svg', w=600, h=180, pad=10;
+  const svg=document.createElementNS(ns,'svg'); svg.setAttribute('viewBox',`0 0 ${w} ${h}`);
+  const vals=points.map(p=>p[1]).filter(v=>v!=null);
+  if (vals.length<2){ svg.innerHTML='<text x="10" y="95" fill="#8b8b93" font-size="13">not enough history yet — charts grow daily</text>'; return svg; }
+  const min=Math.min(...vals), max=Math.max(...vals), span=max-min||1;
+  const path=points.map((p,i)=>{ if(p[1]==null) return null;
+    const x=pad+(i/Math.max(1,points.length-1))*(w-pad*2);
+    let y=h-pad-((p[1]-min)/span)*(h-pad*2);
+    if (invert) y=h-y;
+    return [x,y];
+  }).filter(Boolean);
+  const d=path.map((p,i)=>`${i?'L':'M'}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ');
+  svg.innerHTML=`<path d="${d}" fill="none" stroke="#3451b2" stroke-width="2" stroke-linejoin="round"/><text x="${pad}" y="14" fill="#8b8b93" font-size="11">${label} max ${max}</text><text x="${pad}" y="${h-2}" fill="#8b8b93" font-size="11">${points[0][0]} → ${points[points.length-1][0]}</text>`;
+  return svg;
+}
+
+function openDetail({ title, subtitle, points, invert, label, unit }){
+  const modal=$('#modal'); modal.innerHTML='';
+  const close=el('button','close','Close'); close.onclick=()=>$('#overlay').classList.remove('on'); modal.appendChild(close);
+  modal.appendChild(el('h2',null,title));
+  if (subtitle) modal.appendChild(el('div','m-sub',subtitle));
+  modal.appendChild(bigChart(points,{invert,label}));
+  const table=el('table');
+  points.slice(-10).reverse().forEach(([d,v])=>{ const tr=el('tr'); tr.appendChild(el('td',null,d)); tr.appendChild(el('td',null, v==null?'—':`${v}${unit||''}`)); table.appendChild(tr); });
+  modal.appendChild(table);
+  $('#overlay').classList.add('on');
+}
+$('#overlay').onclick=(e)=>{ if(e.target.id==='overlay') e.currentTarget.classList.remove('on'); };
+
+function repoRow(r){
+  const row=el('div','item');
+  row.appendChild(el('div','rank','#'+r.rank));
+  const mid=el('div');
+  const name=el('div','name');
+  const a=el('a',null,r.fullName); a.href=r.url||'#'; a.target='_blank'; a.rel='noopener'; name.appendChild(a);
+  if(r.language) name.appendChild(el('span','badge',r.language));
+  if(r.license) name.appendChild(el('span','badge',r.license));
+  mid.appendChild(name);
+  const s=el('div','sub2');
+  if(r.description) s.appendChild(el('span',null,r.description.slice(0,110)+(r.description.length>110?'…':'')));
+  mid.appendChild(s); row.appendChild(mid);
+
+  const sw=el('div'); sw.appendChild(sparkline(r.spark,{value:r.stars})); row.appendChild(sw);
+
+  const age = r.createdAt ? Math.max(1, Math.round((Date.now()-Date.parse(r.createdAt))/86400000)) : null;
+  const avg = r.stars!=null && age ? Math.round(r.stars/age) : null;
+  const stat=el('div','stat');
+  stat.innerHTML = `<b>${num(r.stars)}</b> stars` + (r.velocity!=null
+    ? `<br><span class="${r.velocity>=0?'up':'down'}">${r.velocity>=0?'+':''}${r.velocity}/day</span>`
+    : (avg!=null?`<br><sub>~${avg}/day avg</sub>`:''));
+  row.appendChild(stat);
+
+  row.onclick=(e)=>{ if(e.target.tagName==='A') return;
+    openDetail({ title:r.fullName, subtitle:`${r.stars} stars${r.language?' · '+r.language:''}${r.description?' · '+r.description.slice(0,80):''}`, points:(r.spark||[]).map(([d,v])=>[d,v]), label:'stars', unit:' ★' });
+  };
+  return row;
+}
+
+function appRow(a){
+  const row=el('div','item');
+  row.appendChild(el('div','rank','#'+a.rank));
+  const mid=el('div');
+  const name=el('div','name');
+  if(a.icon){ const img=el('img','icon'); img.src=a.icon; img.loading='lazy'; img.referrerPolicy='no-referrer'; img.crossOrigin='anonymous'; img.onerror=()=>img.remove(); name.appendChild(img); }
+  const link=el('a',null,a.name||'Untitled'); link.href=a.url||'#'; link.target='_blank'; link.rel='noopener'; name.appendChild(link);
+  mid.appendChild(name);
+  const s=el('div','sub2');
+  if(a.seller) s.appendChild(el('span',null,a.seller));
+  if(a.rating) s.appendChild(el('span','dot','· '+a.rating+'★'));
+  if(a.ratingCount!=null) s.appendChild(el('span','dot','· '+num(a.ratingCount)+' ratings'));
+  if(a.ageDays!=null) s.appendChild(el('span','dot','· '+a.ageDays+'d old'));
+  const rank=a.bestRank??a.catalogRank??a.genreRank;
+  if(rank!=null) s.appendChild(el('span','dot','· #'+rank));
+  mid.appendChild(s); row.appendChild(mid);
+
+  const sw=el('div');
+  const pts=(a.spark||[]).map(([d,r,n])=>[d,r]).filter(p=>p[1]!=null);
+  const rate=(a.spark||[]).map(([d,r,n])=>[d,n]).filter(p=>p[1]!=null);
+  if(pts.length>1) sw.appendChild(sparkline(pts,{invert:true}));
+  else sw.appendChild(sparkline(rate,{value:a.ratingCount}));
+  row.appendChild(sw);
+
+  const stat=el('div','stat');
+  const delta=a.rankPerDay ?? a.rankDelta ?? 0;
+  const deltaDays=a.deltaDays;
+  stat.innerHTML=delta?`<span class="${delta>0?'up':'down'}">${delta>0?'+':''}${delta}</span> ranks${deltaDays>1?`<br><sub>per day · ${deltaDays}d gap</sub>`:''}`:(a.riserScore!=null?`score ${a.riserScore}`:'');
+  row.appendChild(stat);
+
+  row.onclick=(e)=>{ if(e.target.tagName==='A') return;
+    const useRank=pts.length>1;
+    openDetail({ title:a.name||'Untitled', subtitle:[a.seller,a.rating?a.rating+'★':null,useRank?'chart position (lower is better)':'ratings'].filter(Boolean).join(' · '), points:useRank?pts:rate, invert:useRank, label:useRank?'rank':'ratings' });
+  };
+  return row;
+}
+
+function indieRow(x){
+  const row=el('div','item');
+  row.firstElementChild;
+  row.appendChild(el('div','rank','#'+x.rank));
+  const mid=el('div');
+  const name=el('div','name');
+  const a=el('a',null,x.title||x.name||x.id); a.href=x.url||'#'; a.target='_blank'; a.rel='noopener'; name.appendChild(a);
+  if(x.sdk) name.appendChild(el('span','badge',x.sdk));
+  mid.appendChild(name);
+  const sub=el('div','sub2');
+  if(x.summary) sub.appendChild(el('span',null,String(x.summary).slice(0,110)));
+  if(x.author) sub.appendChild(el('span','dot','· by '+x.author));
+  if(x.categories?.length) sub.appendChild(el('span','dot','· '+x.categories.join(' / ')));
+  if(x.category) sub.appendChild(el('span','dot','· '+x.category));
+  if(x.tags?.length) sub.appendChild(el('span','dot','· '+x.tags.join(', ')));
+  if(x.updatedAt) sub.appendChild(el('span','dot','· '+x.updatedAt));
+  mid.appendChild(sub); row.appendChild(mid);
+  const stat=el('div','stat');
+  if(x.points!=null) stat.innerHTML=`<b>${x.points}</b><br><sub>${x.comments!=null?x.comments+' comments':'score'}</sub>`;
+  else if(x.reactions!=null) stat.innerHTML=`<b>${x.reactions}</b><br><sub>${x.comments??0} comments</sub>`;
+  else if(x.likes!=null) stat.innerHTML=`<b>${x.likes}</b><br><sub>likes</sub>`;
+  else if(x.downloads!=null) stat.innerHTML=`<b>${num(x.downloads)}</b><br><sub>downloads</sub>`;
+  else if(x.users!=null) stat.innerHTML=`<b>${num(x.users)}</b><br><sub>daily users</sub>`;
+  else if(x.stars!=null) stat.innerHTML=`<b>${num(x.stars)}</b><br><sub>stars</sub>`;
+  else if(x.addedAt) stat.innerHTML=`<b>${x.addedAt}</b><br><sub>added</sub>`;
+  if(x.delta!=null) stat.innerHTML += `<br><span class="${x.delta>0?'up':'down'}">${x.delta>0?'+':''}${x.delta}</span>`;
+  if(x.spark && x.spark.filter(p=>p[1]!=null).length>1){
+    const sw=el('div'); sw.appendChild(sparkline(x.spark,{value:x.points??x.likes??x.downloads??x.stars??x.users})); row.appendChild(sw);
+  }
+  row.appendChild(stat);
+  return row;
+}
+
+function list(rows, emptyText){
+  if(!rows.length) return el('div','empty',emptyText);
+  const box=el('div','list'); rows.forEach(r=>box.appendChild(r)); return box;
+}
+
+function subTabs(container, items, active, onPick){
+  const bar=el('div','sub');
+  for(const it of items){ const b=el('button','tab'+(it.key===active?' on':''),it.label); b.onclick=()=>onPick(it.key); bar.appendChild(b); }
+  container.appendChild(bar);
+}
+
+async function render(){
+  $('#tabs').querySelectorAll('.tab').forEach(b=>b.classList.toggle('on', b.dataset.view===state.view));
+  const controls=$('#controls'); controls.innerHTML='';
+  const content=$('#content'); content.innerHTML=''; content.appendChild(el('div','empty','Loading…'));
+  try{
+    if(state.view==='github'){
+      subTabs(controls,['daily','weekly','monthly','quarterly','yearly','tracked'].map(k=>({key:k,label:k==='tracked'?'Star velocity':k[0].toUpperCase()+k.slice(1)})), state.ghWindow, (k)=>{state.ghWindow=k;render();});
+      const d=await getJson(`./data/github/${state.ghWindow}.json`);
+      let items=d.items||[];
+      // 「按日涨星」榜单：跨窗口跟踪到的、今天涨得最快的仓库
+      if(state.ghWindow==='tracked'){
+        try{ const t=await getJson('./data/github/tracked.json'); items=t.items||[]; }catch{ items=[]; }
+      }
+      content.innerHTML=''; content.appendChild(list(items.map(repoRow),'No repositories in this window yet.'));
+      $('#meta').textContent=`${items.length} repos · ${state.ghWindow}`;
+    }
+    if(state.view==='apps'){
+      subTabs(controls,[{key:'apple',label:'iOS'},{key:'google',label:'Android'}], state.platform, (k)=>{state.platform=k;state.cc='us';render();});
+      const regs = MANIFEST ? [...new Set(MANIFEST.shards.map(s=>{const m=new RegExp('^rising/'+state.platform+'/([a-z]{2})\\.json$').exec(s.path);return m?m[1]:null;}).filter(Boolean))].sort() : ['us'];
+      if(!regs.includes(state.cc)) state.cc = regs.includes('us')?'us':(regs[0]||'us');
+      const sel=el('select'); for(const cc of regs){ const o=el('option',null,cc.toUpperCase()); o.value=cc; if(cc===state.cc)o.selected=true; sel.appendChild(o); }
+      sel.onchange=()=>{state.cc=sel.value;render();}; controls.appendChild(sel);
+      subTabs(controls,[{key:'risingNow',label:'Rising now'},{key:'justLaunched',label:'Just launched'},{key:'hiddenGems',label:'Hidden gems'}], state.appList, (k)=>{state.appList=k;render();});
+      const d=await getJson(`./data/rising/${state.platform}/${state.cc}.json`);
+      const rows=d[state.appList]||[];
+      content.innerHTML=''; content.appendChild(list(rows.map(appRow),'Nothing here yet — small apps need a day of snapshots before movement shows up.'));
+      $('#meta').textContent=`${state.platform==='apple'?'iOS':'Android'} ${state.cc.toUpperCase()} · ${rows.length}`;
+    }
+    if(state.view==='desktop'){
+      subTabs(controls,[{key:'mac',label:'Mac apps'},{key:'podcasts',label:'Podcasts'}], state.desktop, (k)=>{state.desktop=k;render();});
+      const regs = MANIFEST ? [...new Set(MANIFEST.shards.map(s=>{const m=new RegExp('^'+state.desktop+'/([a-z]{2})\\.json$').exec(s.path);return m?m[1]:null;}).filter(Boolean))].sort() : ['us'];
+      if(!regs.includes(state.cc)) state.cc = regs.includes('us')?'us':(regs[0]||'us');
+      const sel=el('select'); for(const cc of regs){ const o=el('option',null,cc.toUpperCase()); o.value=cc; if(cc===state.cc)o.selected=true; sel.appendChild(o); }
+      sel.onchange=()=>{state.cc=sel.value;render();}; controls.appendChild(sel);
+      const d=await getJson(`./data/${state.desktop}/${state.cc}.json`);
+      const rows = state.desktop==='mac'
+        ? [...(d.free||[]).map(x=>({...x,list:'Free'})), ...(d.paid||[]).map(x=>({...x,list:'Paid'}))]
+        : (d.items||[]);
+      content.innerHTML=''; content.appendChild(list(rows.map(x=>{const r=appRow({...x,ratingCount:null,ageDays:null}); r.querySelector('.stat').innerHTML=x.list?`<b>#${x.rank}</b><br><sub>${x.list}</sub>`:`<b>#${x.rank}</b><br><sub>chart</sub>`; return r;}),'No data for this storefront yet.'));
+      $('#meta').textContent=`${state.desktop} ${state.cc.toUpperCase()} · ${rows.length}`;
+    }
+    if(state.view==='indie'){
+      const sources=[
+        {key:'showhn',label:'Show HN'},
+        {key:'hf-spaces',label:'HF Spaces'},
+        {key:'fdroid',label:'F-Droid'},
+        {key:'izzy',label:'IzzyOnDroid'},
+        {key:'lobsters',label:'Lobsters'},
+        {key:'devto',label:'Dev.to'},
+        {key:'hf-models',label:'HF models'},
+        {key:'launch-hn',label:'Launch HN'},
+        {key:'crates-new',label:'New crates'},
+        {key:'github-indie',label:'GitHub indie'},
+        {key:'github-selfhosted',label:'GitHub self-hosted'},
+        {key:'selfhosted',label:'Self-hosted'},
+        {key:'obsidian-new',label:'Obsidian new'},
+        {key:'obsidian-top',label:'Obsidian top'},
+        {key:'firefox-new',label:'Firefox new'},
+        {key:'firefox-top',label:'Firefox top'},
+        {key:'producthunt',label:'Product Hunt'},
+      ];
+      const available = MANIFEST
+        ? new Set((MANIFEST.shards||[]).map(s=>s.path).filter(p=>p.startsWith('indie/')).map(p=>p.slice(6,-5)))
+        : null;
+      const shown = available ? sources.filter(s=>available.has(s.key)) : sources;
+      if(!shown.some(s=>s.key===state.indie)) state.indie = shown[0]?.key ?? 'showhn';
+      subTabs(controls,shown, state.indie, (k)=>{state.indie=k;render();});
+      const d=await getJson(`./data/indie/${state.indie}.json`);
+      content.innerHTML='';
+      content.appendChild(list((d.items||[]).map(indieRow),'No indie items yet.'));
+      $('#meta').textContent=`indie · ${state.indie} · ${(d.items||[]).length}`;
+    }
+    if(state.view==='global'){
+      const d=await getJson('./data/global/risers.json');
+      content.innerHTML='';
+      const rows=(d.items||[]).map(x=>{ const r=appRow(x); r.querySelector('.stat').innerHTML=`<b>${x.regionCount}</b> regions`; return r; });
+      content.appendChild(list(rows,'No app is rising in 3+ regions yet.'));
+      $('#meta').textContent='global risers';
+    }
+    if(state.view==='alts'){
+      const d=await getJson('./data/alternatives.json');
+      content.innerHTML='';
+      const grid=el('div','grid');
+      for(const cat of d.items||[]){
+        const card=el('div','card'); card.appendChild(el('h3',null,cat.paid+(cat.category?' · '+cat.category:'')));
+        for(const alt of cat.alternatives||[]){
+          const line=el('div','alt'); const left=el('span');
+          const a=el('a',null,alt.name); a.href=alt.url; a.target='_blank'; a.rel='noopener'; left.appendChild(a); line.appendChild(left);
+          line.appendChild(el('span',null,[alt.license,alt.selfHosted?'self-hosted':null].filter(Boolean).join(' · ')));
+          card.appendChild(line);
+        }
+        grid.appendChild(card);
+      }
+      content.appendChild(grid); $('#meta').textContent='open source alternatives';
+    }
+  }catch(e){ content.innerHTML=''; content.appendChild(el('div','empty','No data yet.')); }
+}
+
+$('#tabs').addEventListener('click',(e)=>{ const b=e.target.closest('.tab'); if(!b)return; state.view=b.dataset.view; render(); });
+
+(async function boot(){
+  try{
+    MANIFEST=await getJson('./data/manifest.json');
+    $('#meta').textContent='updated '+MANIFEST.version.replace('T',' ').replace('Z',' UTC');
+  }catch{ $('#meta').textContent='data unavailable'; }
+  render();
+})();
+</script>
+</body>
+</html>
